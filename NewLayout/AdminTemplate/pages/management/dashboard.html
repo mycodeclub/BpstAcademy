@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · BPST Edu Admin</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="management.dashboard" data-roles="admin" data-title="Dashboard">
+
+<main id="main" class="content">
+
+  <div class="page-head">
+    <div>
+      <h1 id="greeting">Good morning</h1>
+      <p id="todayLine">Here's how the center is doing today.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center">
+      <div class="segmented nav nav-pills" role="group" aria-label="Period">
+        <button class="nav-link active" aria-pressed="true" data-demo-toast="Showing today. Period filters work with the real data in the backend phase." data-tone="info">Today</button>
+        <button class="nav-link" aria-pressed="false" data-demo-toast="7-day view comes with real data in the backend phase." data-tone="info">7 days</button>
+        <button class="nav-link" aria-pressed="false" data-demo-toast="30-day view comes with real data in the backend phase." data-tone="info">30 days</button>
+      </div>
+      <button class="btn btn-primary" data-soon="2"><i class="bi bi-plus-lg me-1"></i>Add lead</button>
+    </div>
+  </div>
+
+  <!-- Sticky SLA bar: always visible while any lead is breaching -->
+  <div class="sla-bar" id="slaBar" role="status" aria-live="polite">
+    <i class="bi bi-alarm-fill"></i>
+    <span id="slaBarText" class="flex-grow-1">Checking leads…</span>
+    <button class="btn btn-sm" data-soon="2">Open lead inbox</button>
+  </div>
+
+  <!-- KPI row 1 -->
+  <div class="row g-3 mb-3">
+    <div class="col-6 col-xl-3">
+      <a href="#" class="kpi" data-soon="2">
+        <div class="kpi-label"><i class="bi bi-inbox"></i>New leads today</div>
+        <div class="kpi-value" id="kLeads">–</div>
+        <div class="kpi-foot"><span class="delta up" id="kLeadsDelta"></span>vs yesterday</div>
+      </a>
+    </div>
+    <div class="col-6 col-xl-3">
+      <a href="#" class="kpi is-alert" id="kRiskTile" data-soon="2">
+        <div class="kpi-label"><i class="bi bi-alarm"></i>Leads at risk now</div>
+        <div class="kpi-value" id="kRisk">–</div>
+        <div class="kpi-foot" id="kRiskFoot">–</div>
+      </a>
+    </div>
+    <div class="col-6 col-xl-3">
+      <a href="#" class="kpi" data-soon="7">
+        <div class="kpi-label"><i class="bi bi-funnel"></i>Lead → admission (30 days)</div>
+        <div class="kpi-value" id="kConv">–</div>
+        <div class="kpi-foot"><span class="delta up" id="kConvDelta"></span>vs previous 30 days</div>
+      </a>
+    </div>
+    <div class="col-6 col-xl-3">
+      <a href="#" class="kpi" data-soon="4">
+        <div class="kpi-label"><i class="bi bi-cash-coin"></i>Collected today</div>
+        <div class="kpi-value" id="kToday">–</div>
+        <div class="kpi-foot"><span class="delta" id="kTodayDelta"></span>vs yesterday · incl. GST</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- KPI row 2 -->
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-xl-3">
+      <a href="#" class="kpi" data-soon="4">
+        <div class="kpi-label"><i class="bi bi-graph-up"></i>Collected this month</div>
+        <div class="kpi-value kpi-value-sm" id="kMonth">–</div>
+        <div class="progress mt-2" role="progressbar" aria-label="Monthly target" id="kMonthBar"><div class="progress-bar"></div></div>
+        <div class="kpi-foot" id="kMonthFoot">–</div>
+      </a>
+    </div>
+    <div class="col-6 col-xl-3">
+      <a href="#" class="kpi" data-soon="4">
+        <div class="kpi-label"><i class="bi bi-hourglass-split"></i>Fees outstanding</div>
+        <div class="kpi-value kpi-value-sm" id="kDues">–</div>
+        <div class="kpi-foot"><span class="chip chip--danger" id="kOverdue">–</span></div>
+      </a>
+    </div>
+    <div class="col-6 col-xl-3">
+      <a href="#" class="kpi" data-soon="3">
+        <div class="kpi-label"><i class="bi bi-calendar-check"></i>Attendance today</div>
+        <div class="kpi-value kpi-value-sm" id="kAtt">–</div>
+        <div class="kpi-foot" id="kAttFoot">–</div>
+      </a>
+    </div>
+    <div class="col-6 col-xl-3">
+      <div class="kpi">
+        <div class="kpi-label"><i class="bi bi-list-check"></i>Waiting for you</div>
+        <div class="d-flex gap-4 mt-2">
+          <a href="#" class="text-reset" data-soon="5"><div class="kpi-value kpi-value-sm mt-0" id="kVer">–</div><div class="caption">verifications</div></a>
+          <a href="#approvals" class="text-reset"><div class="kpi-value kpi-value-sm mt-0" id="kAppr">–</div><div class="caption">approvals</div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leads needing attention + approvals -->
+  <div class="row g-3 mb-4">
+    <div class="col-xl-8">
+      <div class="card h-100">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Leads needing attention</h2>
+            <p class="card-sub">Every new lead must be contacted within 1 hour. Most urgent first.</p>
+          </div>
+          <a href="#" class="small" data-soon="2">All leads <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="filter-bar" data-filter-group="leadRows" role="group" aria-label="Filter leads">
+          <button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class="count" id="fAll"></span></button>
+          <button class="filter-chip" data-filter="breach" aria-pressed="false">High risk <span class="count" id="fBreach"></span></button>
+          <button class="filter-chip" data-filter="hot" aria-pressed="false">Under 15 min <span class="count" id="fHot"></span></button>
+          <button class="filter-chip" data-filter="unassigned" aria-pressed="false">Unassigned <span class="count" id="fUn"></span></button>
+        </div>
+        <div class="table-wrap is-scroll">
+          <table class="table table-hover" aria-describedby="leadsNote">
+            <thead>
+              <tr><th>Lead</th><th>Source</th><th>Counsellor</th><th>Time to contact</th><th class="text-end"><span class="visually-hidden">Actions</span></th></tr>
+            </thead>
+            <tbody id="leadRows"></tbody>
+          </table>
+        </div>
+        <div class="card-footer caption" id="leadsNote">Timers turn amber at 30 min and red at 45 min. At 60 min the lead is marked <b>HIGH RISK</b> and the manager is alerted.</div>
+      </div>
+    </div>
+
+    <div class="col-xl-4" id="approvals">
+      <div class="card h-100">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Approvals</h2>
+            <p class="card-sub">Discounts, fine waivers and leave need your OK.</p>
+          </div>
+          <span class="chip chip--warning" id="apprCount">–</span>
+        </div>
+        <div id="apprList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="row g-3 mb-4">
+    <div class="col-xl-8">
+      <div class="card h-100" id="collCard">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Fees collected per day</h2>
+            <p class="card-sub">Last 4 weeks, including GST</p>
+          </div>
+          <div class="segmented nav nav-pills" data-view-toggle="collCard" role="group" aria-label="Show as">
+            <button class="nav-link active" data-view="chart" aria-pressed="true">Chart</button>
+            <button class="nav-link" data-view="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div data-view-pane="chart"><div class="chart-box"><canvas id="collChart" role="img" aria-label="Line chart of fees collected per day over the last 4 weeks"></canvas></div></div>
+          <div data-view-pane="table" hidden><div class="table-wrap is-scroll"><table class="table"><thead><tr><th>Date</th><th class="num text-end">Collected</th></tr></thead><tbody id="collTable"></tbody></table></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="card h-100" id="srcCard">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Where leads come from</h2>
+            <p class="card-sub">Leads in the last 30 days</p>
+          </div>
+          <div class="segmented nav nav-pills" data-view-toggle="srcCard" role="group" aria-label="Show as">
+            <button class="nav-link active" data-view="chart" aria-pressed="true">Chart</button>
+            <button class="nav-link" data-view="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div data-view-pane="chart"><div class="chart-box"><canvas id="srcChart" role="img" aria-label="Bar chart of leads by source"></canvas></div></div>
+          <div data-view-pane="table" hidden><table class="table"><thead><tr><th>Source</th><th class="num text-end">Leads</th></tr></thead><tbody id="srcTable"></tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Funnel, counsellors, classes -->
+  <div class="row g-3 mb-4">
+    <div class="col-lg-6 col-xl-4">
+      <div class="card h-100">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Admissions funnel</h2>
+            <p class="card-sub">Last 30 days · % of all leads</p>
+          </div>
+        </div>
+        <div class="card-body" id="funnel"></div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-xl-4">
+      <div class="card h-100">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Counsellors</h2>
+            <p class="card-sub">Last 30 days</p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Name</th><th class="num text-end">Leads</th><th class="num text-end">Admitted</th><th class="num text-end" title="Average time to first contact">Reply</th><th class="num text-end">Late</th></tr></thead>
+            <tbody id="counsRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="card h-100">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Today's classes</h2>
+            <p class="card-sub" id="classesSub">–</p>
+          </div>
+          <a href="#" class="small" data-soon="3">Timetable <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div id="classList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dues + verification -->
+  <div class="row g-3">
+    <div class="col-xl-6">
+      <div class="card h-100">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Overdue fees</h2>
+            <p class="card-sub">Late fine is added after a 7-day grace period</p>
+          </div>
+          <a href="#" class="small" data-soon="4">All dues <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Student</th><th class="num text-end">Due</th><th class="num text-end">Fine</th><th>Overdue</th><th class="text-end"><span class="visually-hidden">Actions</span></th></tr></thead>
+            <tbody id="dueRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="card h-100">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Document verification</h2>
+            <p class="card-sub">Originals are checked in person at the office before HR approves</p>
+          </div>
+          <a href="#" class="small" data-soon="5">Queue <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div id="verList"></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/chartjs/chart.umd.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+(function () {
+  'use strict';
+  var B = window.BPST, D = window.DEMO, K = D.kpis;
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* greeting */
+  var now = new Date(), h = now.getHours();
+  $('greeting').textContent = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+  $('todayLine').textContent = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][now.getDay()] + ', ' + B.fmtDate(now) + ' · here is how the center is doing today.';
+
+  /* KPIs */
+  function delta(node, cur, prev, unit) {
+    var d = cur - prev, up = d >= 0;
+    node.className = 'delta ' + (up ? 'up' : 'down');
+    node.innerHTML = '<i class="bi bi-arrow-' + (up ? 'up' : 'down') + '-short"></i>' + (unit === '₹' ? B.fmtINR(Math.abs(d)) : Math.abs(Math.round(d * 10) / 10) + (unit || ''));
+  }
+  $('kLeads').textContent = K.leadsToday;
+  delta($('kLeadsDelta'), K.leadsToday, K.leadsYesterday);
+  $('kConv').textContent = K.conversion30d + '%';
+  delta($('kConvDelta'), K.conversion30d, K.conversionPrev, ' pts');
+  $('kToday').textContent = B.fmtINR(K.collectedToday);
+  delta($('kTodayDelta'), K.collectedToday, K.collectedYesterday, '₹');
+  var month = D.collections.slice(-now.getDate()).reduce(function (a, b) { return a + b; }, 0);
+  var pct = Math.round(month / K.monthTarget * 100);
+  $('kMonth').textContent = B.fmtINR(month);
+  $('kMonthBar').querySelector('.progress-bar').style.width = Math.min(pct, 100) + '%';
+  $('kMonthBar').setAttribute('aria-valuenow', pct);
+  $('kMonthFoot').textContent = pct + '% of ' + B.fmtINR(K.monthTarget) + ' target';
+  $('kDues').textContent = B.fmtINR(K.dues);
+  $('kOverdue').textContent = B.fmtINR(K.overdue) + ' overdue';
+  $('kAtt').textContent = Math.round(K.attendancePresent / K.attendanceTotal * 100) + '%';
+  $('kAttFoot').textContent = K.attendancePresent + ' of ' + K.attendanceTotal + ' students present';
+  $('kVer').textContent = K.verifications;
+
+  /* leads needing attention (live SLA) */
+  function leadOrder(a, b) {
+    var ia = B.slaInfo(a.createdAt, a.contactedAt), ib = B.slaInfo(b.createdAt, b.contactedAt);
+    if (!!a.contactedAt !== !!b.contactedAt) return a.contactedAt ? 1 : -1;
+    return ib.elapsed - ia.elapsed;
+  }
+  function renderLeads() {
+    var rows = D.leads.slice().sort(leadOrder).map(function (l) {
+      var st = B.slaInfo(l.createdAt, l.contactedAt).state;
+      var un = l.owner === 'Unassigned';
+      var tags = st + (un ? ' unassigned' : '');
+      return '<tr data-filter-value="' + tags + '" data-id="' + l.id + '">' +
+        '<td><div class="cell-person"><span class="avatar">' + B.initials(l.name) + '</span><div><div class="name">' + B.esc(l.name) + '</div><div class="meta">' + B.esc(l.course) + ' · ' + l.phone + '</div></div></div></td>' +
+        '<td>' + B.esc(l.source) + (l.paid ? ' <span class="chip chip--success chip--nodot ms-1" title="₹49 pre-booking paid">Paid</span>' : '') + '</td>' +
+        '<td>' + (un ? '<span class="chip chip--warning">Unassigned</span>' : B.esc(l.owner)) + '</td>' +
+        '<td><span data-sla data-created-at="' + l.createdAt + '"' + (l.contactedAt ? ' data-contacted-at="' + l.contactedAt + '"' : '') + '></span></td>' +
+        '<td><div class="row-actions">' +
+        (l.contactedAt ? '<span class="caption">Logged</span>' :
+          '<a class="btn btn-ghost btn-icon btn-sm" href="tel:+910000000000" data-demo-toast="Demo: this would dial ' + l.phone + '." data-tone="info" aria-label="Call ' + B.esc(l.name) + '"><i class="bi bi-telephone"></i></a>' +
+          '<a class="btn btn-ghost btn-icon btn-sm" href="#" data-demo-toast="Demo: WhatsApp chat with ' + B.esc(l.name) + ' would open." data-tone="info" aria-label="WhatsApp ' + B.esc(l.name) + '"><i class="bi bi-whatsapp"></i></a>' +
+          '<button class="btn btn-outline-secondary btn-sm" data-log="' + l.id + '">Log contact</button>') +
+        '</div></td></tr>';
+    });
+    $('leadRows').innerHTML = rows.join('');
+    B.tickSla();
+    var active = document.querySelector('[data-filter-group="leadRows"] .active');
+    if (active && active.getAttribute('data-filter') !== 'all') active.click();
+  }
+  renderLeads();
+  $('leadRows').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-log]');
+    if (!b) return;
+    var l = D.leads.filter(function (x) { return x.id === b.getAttribute('data-log'); })[0];
+    l.contactedAt = new Date().toISOString();
+    var info = B.slaInfo(l.createdAt, l.contactedAt);
+    B.toast('Contact logged for <b>' + B.esc(l.name) + '</b>. Timer stopped' + (info.breached ? ' (late; it stays in the SLA breach report).' : ' within the hour.'), info.breached ? 'warning' : 'success');
+    renderLeads();
+  });
+
+  /* SLA bar, risk tile, filter counts: refreshed every tick */
+  var lastBarState = '';
+  document.addEventListener('bpst:sla', function (e) {
+    var c = e.detail, risk = c.breach + c.hot;
+    $('kRisk').textContent = risk;
+    $('kRiskTile').classList.toggle('is-alert', risk > 0);
+    $('kRiskFoot').textContent = c.breach + ' breached · ' + c.hot + ' under 15 min';
+    var bar = $('slaBar');
+    bar.classList.toggle('is-clear', !risk);
+    var txt = risk
+      ? '<b>' + c.breach + ' lead' + (c.breach === 1 ? '' : 's') + ' breached the 1-hour SLA</b>' + (c.hot ? ' · ' + c.hot + ' more will breach in under 15 minutes' : '') + '. The manager has been alerted.'
+      : 'All new leads have been contacted on time.';
+    if (txt !== lastBarState) { $('slaBarText').innerHTML = txt; lastBarState = txt; }
+    var un = D.leads.filter(function (l) { return l.owner === 'Unassigned' && !l.contactedAt; }).length;
+    $('fAll').textContent = D.leads.length; $('fBreach').textContent = c.breach; $('fHot').textContent = c.hot; $('fUn').textContent = un;
+    /* keep row filter tags in sync as timers cross thresholds */
+    document.querySelectorAll('#leadRows tr').forEach(function (tr) {
+      var s = tr.querySelector('[data-sla]');
+      if (!s) return;
+      var tags = s.getAttribute('data-state') + (/unassigned/.test(tr.getAttribute('data-filter-value')) ? ' unassigned' : '');
+      tr.setAttribute('data-filter-value', tags);
+    });
+  });
+
+  /* approvals */
+  function renderApprovals() {
+    var n = D.approvals.length;
+    $('apprCount').textContent = n + ' waiting';
+    $('kAppr').textContent = n;
+    document.querySelectorAll('[data-count="approvals"]').forEach(function (x) { x.textContent = n; x.hidden = !n; });
+    $('apprList').innerHTML = n ? D.approvals.map(function (a) {
+      return '<div class="list-row" data-ap="' + a.id + '"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi ' + a.icon + '"></i></span>' +
+        '<div class="grow"><div class="eyebrow">' + B.esc(a.type) + '</div><div class="title">' + B.esc(a.text) + '</div><div class="meta">' + B.esc(a.who) + '</div></div>' +
+        '<div class="d-flex flex-column gap-1"><button class="btn btn-primary btn-sm" data-ap-ok="' + a.id + '">Approve</button><button class="btn btn-outline-secondary btn-sm" data-ap-no="' + a.id + '">Reject</button></div></div>';
+    }).join('') : '<div class="empty"><i class="bi bi-check2-all"></i><div class="empty-title">All caught up</div>New requests from counsellors, accounts and staff appear here.</div>';
+  }
+  renderApprovals();
+  $('apprList').addEventListener('click', function (e) {
+    var ok = e.target.closest('[data-ap-ok]'), no = e.target.closest('[data-ap-no]');
+    if (!ok && !no) return;
+    var id = (ok || no).getAttribute(ok ? 'data-ap-ok' : 'data-ap-no');
+    var a = D.approvals.filter(function (x) { return x.id === id; })[0];
+    D.approvals = D.approvals.filter(function (x) { return x.id !== id; });
+    renderApprovals();
+    B.toast(B.esc(a.type) + ' ' + (ok ? 'approved' : 'rejected') + ': ' + B.esc(a.text) + '. Recorded in the audit log.', ok ? 'success' : 'warning');
+  });
+
+  /* funnel (CSS bars; single hue, values labelled) */
+  var top = D.funnel[0].value;
+  $('funnel').innerHTML = D.funnel.map(function (f) {
+    var p = Math.round(f.value / top * 100);
+    return '<div class="funnel-row"><span>' + f.label + '</span><div class="funnel-track"><div class="funnel-fill" style="width:' + p + '%"></div></div><span class="num">' + f.value + '</span></div>';
+  }).join('') + '<p class="caption mt-2 mb-0">' + Math.round(D.funnel[4].value / top * 1000) / 10 + '% of leads became admissions.</p>';
+
+  /* counsellors */
+  $('counsRows').innerHTML = D.counsellors.map(function (c) {
+    return '<tr><td><div class="cell-person" style="min-width:0"><span class="avatar avatar-sm">' + c.initials + '</span><span class="name">' + B.esc(c.name) + '</span></div></td>' +
+      '<td class="num text-end">' + c.leads + '</td><td class="num text-end">' + c.admitted + '</td><td class="num text-end">' + c.avgResponse + '</td>' +
+      '<td class="num text-end">' + (c.breaches > 3 ? '<span class="chip chip--danger">' + c.breaches + '</span>' : c.breaches) + '</td></tr>';
+  }).join('');
+
+  /* classes today */
+  var stTone = { Done: 'neutral', Live: 'success', Upcoming: 'accent' };
+  $('classesSub').textContent = D.classesToday.length + ' classes · 2 labs, 1 classroom';
+  $('classList').innerHTML = D.classesToday.map(function (c) {
+    return '<div class="list-row"><div class="num fw-semibold" style="width:72px">' + c.time + '</div><div class="grow"><div class="title">' + B.esc(c.batch) + '</div><div class="meta">' + B.esc(c.trainer) + ' · ' + c.room + ' · ' + c.strength + '</div></div><span class="chip chip--' + stTone[c.status] + '">' + c.status + '</span></div>';
+  }).join('');
+
+  /* dues */
+  $('dueRows').innerHTML = D.dues.map(function (d) {
+    var tone = d.days > 30 ? 'danger' : d.days > 7 ? 'warning' : 'info';
+    return '<tr><td><div class="cell-person"><span class="avatar">' + d.initials + '</span><div><div class="name">' + B.esc(d.name) + '</div><div class="meta">' + B.esc(d.course) + '</div></div></div></td>' +
+      '<td class="money text-end">' + B.fmtINR(d.due) + '</td><td class="money text-end">' + (d.fine ? B.fmtINR(d.fine) : '<span class="text-muted">–</span>') + '</td>' +
+      '<td><span class="chip chip--' + tone + '">' + d.days + ' days</span></td>' +
+      '<td><div class="row-actions"><button class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: fee reminder sent to ' + B.esc(d.name) + ' by SMS and email.">Remind</button></div></td></tr>';
+  }).join('');
+
+  /* verification */
+  var vTone = { 'Session booked': 'accent', 'Submitted': 'info', 'Documents pending': 'warning' };
+  $('verList').innerHTML = D.verifications.map(function (v) {
+    return '<div class="list-row"><span class="avatar">' + v.initials + '</span><div class="grow"><div class="title">' + B.esc(v.name) + ' <span class="caption">· ' + v.kind + '</span></div><div class="meta">' + B.esc(v.docs) + '</div></div>' +
+      '<div class="text-end"><span class="chip chip--' + vTone[v.status] + '">' + v.status + '</span><div class="caption mt-1">' + B.esc(v.when) + '</div></div></div>';
+  }).join('');
+
+  /* ---------- charts ---------- */
+  var days = D.collections.map(function (_, i) { var d = new Date(); d.setDate(d.getDate() - (D.collections.length - 1 - i)); return d; });
+  $('collTable').innerHTML = days.slice().reverse().map(function (d, i) {
+    return '<tr><td>' + B.fmtDate(d) + (i === 0 ? ' <span class="caption">(today)</span>' : '') + '</td><td class="money text-end">' + B.fmtINR(D.collections[D.collections.length - 1 - i]) + '</td></tr>';
+  }).join('');
+  $('srcTable').innerHTML = D.sources.map(function (s) { return '<tr><td>' + B.esc(s.label) + '</td><td class="num text-end">' + s.value + '</td></tr>'; }).join('');
+
+  var charts = [];
+  function shortINR(v) { return v >= 1000 ? '₹' + (v / 1000) + 'k' : '₹' + v; }
+  function drawCharts() {
+    charts.forEach(function (c) { c.destroy(); });
+    charts = [];
+    if (!window.Chart) return;
+    var T = B.chartTheme();
+    Chart.defaults.font.family = T.font;
+    Chart.defaults.font.size = 12;
+    Chart.defaults.color = T.muted;
+    var tooltip = {
+      backgroundColor: T.surface, titleColor: T.text, bodyColor: T.text, borderColor: T.border, borderWidth: 1,
+      padding: 10, cornerRadius: 8, displayColors: false, titleFont: { weight: '600' }
+    };
+
+    /* crosshair + end label for the line chart */
+    var lineExtras = {
+      id: 'lineExtras',
+      afterDatasetsDraw: function (chart) {
+        var ctx = chart.ctx, meta = chart.getDatasetMeta(0), last = meta.data[meta.data.length - 1];
+        var act = chart.tooltip && chart.tooltip.getActiveElements().length ? chart.tooltip.getActiveElements()[0] : null;
+        ctx.save();
+        if (act) {
+          ctx.strokeStyle = T.muted; ctx.lineWidth = 1; ctx.globalAlpha = .5;
+          ctx.beginPath(); ctx.moveTo(act.element.x, chart.chartArea.top); ctx.lineTo(act.element.x, chart.chartArea.bottom); ctx.stroke();
+          ctx.globalAlpha = 1;
+        }
+        ctx.fillStyle = T.accent; ctx.strokeStyle = T.surface; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(last.x, last.y, 4, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        ctx.fillStyle = T.text; ctx.font = '600 12px ' + T.font; ctx.textAlign = 'right';
+        ctx.fillText('Today ' + B.fmtINR(D.collections[D.collections.length - 1]), last.x - 8, last.y - 10);
+        ctx.restore();
+      }
+    };
+    charts.push(new Chart($('collChart'), {
+      type: 'line',
+      data: {
+        labels: days.map(function (d) { return d.getDate() + ' ' + ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getMonth()]; }),
+        datasets: [{
+          data: D.collections, borderColor: T.accent, borderWidth: 2, cubicInterpolationMode: 'monotone', fill: true,
+          backgroundColor: T.accent + '1a', pointRadius: 0, pointHoverRadius: 5, pointHoverBorderWidth: 2,
+          pointHoverBackgroundColor: T.accent, pointHoverBorderColor: T.surface, borderJoinStyle: 'round', borderCapStyle: 'round'
+        }]
+      },
+      options: {
+        maintainAspectRatio: false, animation: false,
+        interaction: { mode: 'index', intersect: false },
+        layout: { padding: { top: 18, right: 8 } },
+        plugins: {
+          legend: { display: false },
+          tooltip: Object.assign({}, tooltip, {
+            callbacks: {
+              title: function (i) { return B.fmtDate(days[i[0].dataIndex]); },
+              label: function (i) { return B.fmtINR(i.raw) + ' collected'; }
+            }
+          })
+        },
+        scales: {
+          x: { grid: { display: false }, border: { color: T.grid }, ticks: { maxTicksLimit: 7, maxRotation: 0 } },
+          y: { beginAtZero: true, grid: { color: T.grid }, border: { display: false }, ticks: { maxTicksLimit: 5, callback: shortINR } }
+        }
+      },
+      plugins: [lineExtras]
+    }));
+
+    /* value at the tip of each bar */
+    var barLabels = {
+      id: 'barLabels',
+      afterDatasetsDraw: function (chart) {
+        var ctx = chart.ctx;
+        ctx.save(); ctx.fillStyle = T.text; ctx.font = '600 12px ' + T.font; ctx.textBaseline = 'middle';
+        chart.getDatasetMeta(0).data.forEach(function (bar, i) { ctx.fillText(D.sources[i].value, bar.x + 6, bar.y); });
+        ctx.restore();
+      }
+    };
+    charts.push(new Chart($('srcChart'), {
+      type: 'bar',
+      data: {
+        labels: D.sources.map(function (s) { return s.label; }),
+        datasets: [{ data: D.sources.map(function (s) { return s.value; }), backgroundColor: T.accent, hoverBackgroundColor: T.accent, borderRadius: { topRight: 4, bottomRight: 4 }, borderSkipped: 'start', maxBarThickness: 18, categoryPercentage: .8, barPercentage: .9 }]
+      },
+      options: {
+        indexAxis: 'y', maintainAspectRatio: false, animation: false,
+        layout: { padding: { right: 28 } },
+        plugins: {
+          legend: { display: false },
+          tooltip: Object.assign({}, tooltip, { callbacks: { label: function (i) { return i.raw + ' leads (' + Math.round(i.raw / D.sources.reduce(function (a, s) { return a + s.value; }, 0) * 100) + '%)'; } } })
+        },
+        scales: {
+          x: { beginAtZero: true, grid: { color: T.grid }, border: { display: false }, ticks: { maxTicksLimit: 4 } },
+          y: { grid: { display: false }, border: { color: T.grid }, ticks: { color: T.text, autoSkip: false } }
+        }
+      },
+      plugins: [barLabels]
+    }));
+  }
+  drawCharts();
+  document.addEventListener('bpst:theme', function () { requestAnimationFrame(drawCharts); });
+})();
+</script>
+</body>
+</html>

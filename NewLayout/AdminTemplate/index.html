@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in · BPST Edu Admin</title>
+  <meta name="description" content="BPST Software Education admin panel prototype: CRM, admissions, fees, HR and portals.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body data-root="" data-no-shell>
+
+<main class="auth" id="main">
+  <section class="auth-panel">
+    <div class="auth-form">
+      <img src="assets/img/bpst-logo.svg" alt="BPST Software Education" height="36" class="mb-4 logo-on-light">
+      <img src="assets/img/bpst-logo-white.svg" alt="BPST Software Education" height="36" class="mb-4 logo-on-dark">
+      <h1>Sign in</h1>
+      <p class="text-muted mb-4">Staff, trainers and students all sign in here.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="mb-3">
+          <label class="form-label" for="loginId">Email or ID</label>
+          <input class="form-control" id="loginId" type="text" autocomplete="username" placeholder="you@example.com or BPST26S0001" required>
+          <div class="invalid-feedback">Enter your email or BPST ID.</div>
+        </div>
+        <div class="mb-2">
+          <div class="d-flex justify-content-between">
+            <label class="form-label" for="loginPw">Password</label>
+            <a href="pages/auth/forgot-password.html" class="small">Forgot password?</a>
+          </div>
+          <div class="input-group">
+            <input class="form-control" id="loginPw" type="password" autocomplete="current-password" required>
+            <button class="btn btn-outline-secondary" type="button" id="pwShow" aria-label="Show password"><i class="bi bi-eye"></i></button>
+            <div class="invalid-feedback">Enter your password.</div>
+          </div>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="remember">
+          <label class="form-check-label" for="remember">Keep me signed in on this device</label>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">Sign in</button>
+        <p class="caption mt-2 mb-0">New students and employees get a temporary password by email and set their own at first sign-in.</p>
+      </form>
+
+      <hr class="my-4">
+
+      <div class="eyebrow mb-2">Prototype: view as</div>
+      <div class="d-grid gap-2" id="roleCards"></div>
+    </div>
+  </section>
+
+  <aside class="auth-aside" aria-label="About this panel">
+    <div class="auth-aside-inner">
+      <div class="eyebrow mb-2">BPST Edu Admin</div>
+      <h2 class="h1 mb-3" style="font-size:2rem">Every lead answered within the hour.</h2>
+      <p class="text-muted mb-4">One place for enquiries, counselling, admissions, fees, attendance, HR and payroll, with portals for trainers, students and staff.</p>
+
+      <div class="card mb-3">
+        <div class="card-header"><span class="card-title">New leads</span><span class="caption">live</span></div>
+        <div id="asideLeads"></div>
+      </div>
+      <ul class="list-unstyled small text-muted mb-0 d-grid gap-2">
+        <li><i class="bi bi-shield-check me-2" style="color:var(--c-success-text)"></i>Documents checked in person before anyone gets an ID card</li>
+        <li><i class="bi bi-receipt me-2" style="color:var(--c-success-text)"></i>GST receipts, instalments, fines and waivers with approval</li>
+        <li><i class="bi bi-calendar-check me-2" style="color:var(--c-success-text)"></i>Batches without timing clashes, attendance and payslips</li>
+      </ul>
+    </div>
+  </aside>
+</main>
+
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/demo-data.js"></script>
+<script src="assets/js/admin.js"></script>
+<script>
+(function () {
+  var B = window.BPST;
+  var admin = window.BPST_ROLES[0];
+
+  document.getElementById('roleCards').innerHTML = window.BPST_ROLES.map(function (r) {
+    return '<a class="role-card" href="' + admin.home + '" data-role="' + r.id + '"><span class="role-icon"><i class="bi ' + r.icon + '"></i></span>' +
+      '<span class="flex-grow-1"><span class="role-name d-block">' + B.esc(r.label) + '</span><span class="role-desc">' + B.esc(r.desc) + '</span></span><i class="bi bi-chevron-right text-muted"></i></a>';
+  }).join('');
+  document.getElementById('roleCards').addEventListener('click', function (e) {
+    var c = e.target.closest('[data-role]');
+    if (c) B.store('role', c.getAttribute('data-role'));
+  });
+
+  document.getElementById('pwShow').addEventListener('click', function () {
+    var i = document.getElementById('loginPw'), show = i.type === 'password';
+    i.type = show ? 'text' : 'password';
+    this.innerHTML = '<i class="bi ' + (show ? 'bi-eye-slash' : 'bi-eye') + '"></i>';
+    this.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+  });
+
+  document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    this.classList.add('was-validated');
+    if (!this.checkValidity()) return;
+    B.store('role', 'admin');
+    location.href = admin.home;
+  });
+
+  /* live SLA preview */
+  var L = window.DEMO.leads, demo = [L[9], L[6], L[4], L[0]]; /* one of each SLA state */
+  document.getElementById('asideLeads').innerHTML = demo.map(function (l) {
+    return '<div class="list-row"><span class="avatar avatar-sm">' + B.initials(l.name) + '</span><div class="grow"><div class="title">' + B.esc(l.name) + '</div><div class="meta">' + B.esc(l.course) + '</div></div>' +
+      '<span data-sla data-created-at="' + l.createdAt + '"></span></div>';
+  }).join('');
+  B.tickSla();
+})();
+</script>
+</body>
+</html>

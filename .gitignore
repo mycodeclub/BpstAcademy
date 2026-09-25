@@ -1,0 +1,34 @@
+# Personal data and reference material — never commit
+# (Old Assets holds brochures and ads with the removed phone number, a photo of real students, and two spreadsheets of personal data)
+Old Assets/
+*.xls
+*.xlsx
+
+# .NET
+bin/
+obj/
+*.user
+.vs/
+TestResults/
+
+# Secrets / local config
+.env
+.env.*
+appsettings.*.local.json
+secrets.json
+
+# Local data
+pgdata/
+*.log
+.DS_Store
+
+# Site build tooling
+site/node_modules/
+site/.build-manifest.json
+
+site/dist/
+
+# Application server
+app/src/BpstEdu.Api/outbox/
+appsettings.Production.json
+publish/
