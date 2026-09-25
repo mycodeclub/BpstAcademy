@@ -65,6 +65,12 @@
     if (target && 'IntersectionObserver' in window) {
       new IntersectionObserver((es) => es.forEach((e) => { pill.style.opacity = e.isIntersecting ? '0' : ''; pill.style.pointerEvents = e.isIntersecting ? 'none' : ''; })).observe(target);
     }
+    // The offer strip and hero already show the offer, so the pill waits until the hero is off screen
+    const hero = $('.bpst-hero, .bpst-page-hero');
+    if (hero && 'IntersectionObserver' in window) {
+      pill.classList.add('is-hidden');
+      new IntersectionObserver((es) => es.forEach((e) => pill.classList.toggle('is-hidden', e.isIntersecting))).observe(hero);
+    }
   }
 
   /* ---------- Category tabs: deep links (#slug), prev/next ---------- */
@@ -368,6 +374,23 @@
       await sendLead({ form_type: 'enquiry', name: f.name.value.trim(), mobile: '+91' + f.mobile.value, course: f.course.value, message: f.message.value.trim(), consent: true });
       $('[data-enquiry-ok]', enq).classList.remove('d-none'); enq.reset(); enq.classList.remove('was-validated');
     });
+  }
+
+  /* ---------- Photo gallery lightbox ---------- */
+  const gallery = $('[data-bpst-gallery]');
+  const box = $('.bpst-lightbox');
+  if (gallery && box && typeof box.showModal === 'function') {
+    const boxImg = $('img', box), boxCap = $('.bpst-lightbox-caption', box);
+    gallery.addEventListener('click', (e) => {
+      const a = e.target.closest('.bpst-gallery-item');
+      if (!a) return;
+      e.preventDefault();
+      const img = $('img', a);
+      boxImg.src = a.href; boxImg.alt = img.alt; boxCap.textContent = $('span', a).textContent;
+      box.showModal();
+    });
+    $('.bpst-lightbox-close', box).addEventListener('click', () => box.close());
+    box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
   }
 
   /* ---------- Misc ---------- */
