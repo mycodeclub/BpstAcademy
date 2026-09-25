@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Approvals · BPST Edu Admin</title>
+  <meta name="description" content="Approvals in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="management.approvals" data-roles="admin" data-title="Approvals">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Approvals</h1>
+      <p>Discounts, fine waivers, leave, refunds and batch changes in one place. Maker-checker: nobody approves their own request.</p>
+    </div>
+    
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-inbox" aria-hidden="true"></i>Waiting</div>
+      <div class="kpi-value">7</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-currency-rupee" aria-hidden="true"></i>Money waiting</div>
+      <div class="kpi-value">₹16,000</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-stopwatch" aria-hidden="true"></i>Avg decision time</div>
+      <div class="kpi-value">3 h 10 min</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-check2-all" aria-hidden="true"></i>Decided this month</div>
+      <div class="kpi-value">46</div>
+      <div class="kpi-foot">38 approved</div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Requests</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search requests" data-table-search="apRows" aria-label="Search requests"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="apRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>7</span></button><button class="filter-chip" data-filter="discount" aria-pressed="false">Discounts <span class=count>3</span></button><button class="filter-chip" data-filter="waiver" aria-pressed="false">Waivers <span class=count>1</span></button><button class="filter-chip" data-filter="leave" aria-pressed="false">Leave <span class=count>1</span></button><button class="filter-chip" data-filter="refund" aria-pressed="false">Refunds <span class=count>1</span></button><button class="filter-chip" data-filter="batch" aria-pressed="false">Batch changes <span class=count>1</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Request</th><th class="d-none d-md-table-cell" scope="col">For</th><th class="num text-end" scope="col">Amount</th><th class="d-none d-lg-table-cell" scope="col">Requested by</th><th class="d-none d-lg-table-cell" scope="col">When</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody id="apRows">
+            <tr data-filter-value="discount"><td><div class="d-flex gap-2 align-items-center"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi bi-ticket-perforated" aria-hidden="true"></i></span><div><div class="eyebrow">Discount</div><div class="fw-medium">Upfront 10% on Full Stack</div></div></div></td><td class="d-none d-md-table-cell">Aditi Verma</td><td class="money text-end">₹3,500</td><td class="d-none d-lg-table-cell">Neha S.</td><td class="d-none d-lg-table-cell">Today 10:40 AM</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Request rejected. The requester is told why; recorded in the audit log.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Approved. Applied at once and recorded in the audit log.">Approve</button></div></td></tr>
+            <tr data-filter-value="waiver"><td><div class="d-flex gap-2 align-items-center"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi bi-slash-circle" aria-hidden="true"></i></span><div><div class="eyebrow">Fine waiver</div><div class="fw-medium">Waive late fine (partial)</div></div></div></td><td class="d-none d-md-table-cell">Harsh Kumar</td><td class="money text-end">₹500</td><td class="d-none d-lg-table-cell">Sunita Pal (Accounts)</td><td class="d-none d-lg-table-cell">Today 9:15 AM</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Request rejected. The requester is told why; recorded in the audit log.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Approved. Applied at once and recorded in the audit log.">Approve</button></div></td></tr>
+            <tr data-filter-value="discount"><td><div class="d-flex gap-2 align-items-center"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi bi-people" aria-hidden="true"></i></span><div><div class="eyebrow">Discount</div><div class="fw-medium">Sibling discount · Class 6–12 Coding</div></div></div></td><td class="d-none d-md-table-cell">Meera &amp; Kabir Singh</td><td class="money text-end">₹2,000</td><td class="d-none d-lg-table-cell">Rahul T.</td><td class="d-none d-lg-table-cell">Yesterday</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Request rejected. The requester is told why; recorded in the audit log.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Approved. Applied at once and recorded in the audit log.">Approve</button></div></td></tr>
+            <tr data-filter-value="leave"><td><div class="d-flex gap-2 align-items-center"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi bi-calendar-x" aria-hidden="true"></i></span><div><div class="eyebrow">Leave</div><div class="fw-medium">Casual leave · 29–30 Sep (affects PY-M1, SC-E1)</div></div></div></td><td class="d-none d-md-table-cell">Pooja Nigam</td><td class="money text-end">–</td><td class="d-none d-lg-table-cell">Self</td><td class="d-none d-lg-table-cell">Yesterday</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Request rejected. The requester is told why; recorded in the audit log.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Approved. Applied at once and recorded in the audit log.">Approve</button></div></td></tr>
+            <tr data-filter-value="discount"><td><div class="d-flex gap-2 align-items-center"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi bi-ticket" aria-hidden="true"></i></span><div><div class="eyebrow">Coupon</div><div class="fw-medium">DIWALI49 on Data Analyst</div></div></div></td><td class="d-none d-md-table-cell">Nikhil Arora</td><td class="money text-end">₹1,500</td><td class="d-none d-lg-table-cell">Neha S.</td><td class="d-none d-lg-table-cell">Yesterday</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Request rejected. The requester is told why; recorded in the audit log.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Approved. Applied at once and recorded in the audit log.">Approve</button></div></td></tr>
+            <tr data-filter-value="refund"><td><div class="d-flex gap-2 align-items-center"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i></span><div><div class="eyebrow">Refund</div><div class="fw-medium">Double UPI payment</div></div></div></td><td class="d-none d-md-table-cell">Akash Verma</td><td class="money text-end">₹8,500</td><td class="d-none d-lg-table-cell">Sunita Pal (Accounts)</td><td class="d-none d-lg-table-cell">22 Sep</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Request rejected. The requester is told why; recorded in the audit log.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Approved. Applied at once and recorded in the audit log.">Approve</button></div></td></tr>
+            <tr data-filter-value="batch"><td><div class="d-flex gap-2 align-items-center"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi bi-arrow-left-right" aria-hidden="true"></i></span><div><div class="eyebrow">Batch change</div><div class="fw-medium">Reschedule CS-E1 Fri 6 PM → 7 PM</div></div></div></td><td class="d-none d-md-table-cell">Batch CS-E1</td><td class="money text-end">–</td><td class="d-none d-lg-table-cell">Vikas Dubey</td><td class="d-none d-lg-table-cell">Today</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Request rejected. The requester is told why; recorded in the audit log.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Approved. Applied at once and recorded in the audit log.">Approve</button></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

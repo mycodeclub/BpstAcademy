@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My dashboard · BPST Edu Admin</title>
+  <meta name="description" content="My dashboard in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="student.dashboard" data-roles="student" data-title="My dashboard">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Hi Harsh 👋</h1>
+      <p>Full Stack Development · batch FS-M2 · Lab 2</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="courses.html" ><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>Timetable</a><a class="btn btn-primary" href="fees.html" ><i class="bi bi-cash-coin me-1" aria-hidden="true"></i>Pay fees</a></div>
+  </div>
+  <div class="hero-card mb-4 d-flex flex-wrap gap-3 justify-content-between align-items-center"><div><div class="eyebrow">Next class</div><h2 class="mb-1">Routing · Today 11:00 AM</h2><div class="small">FS-M2 · Arjun Mehta · Lab 2</div></div><button type="button" class="btn btn-primary" data-demo-toast="Checked in for FS-M2 at 10:58 AM." data-tone="success"><i class="bi bi-qr-code-scan me-1" aria-hidden="true"></i>Check in with class QR</button></div>
+  <div class="grid-auto grid-kpi mb-4">
+<a class="kpi is-alert" href="attendance.html">
+      <div class="kpi-label"><i class="bi bi-calendar-check" aria-hidden="true"></i>Attendance (Sep)</div>
+      <div class="kpi-value">71%</div>
+      <div class="kpi-foot">below 75%: certificate at risk</div>
+    </a>
+<a class="kpi" href="fees.html">
+      <div class="kpi-label"><i class="bi bi-cash-coin" aria-hidden="true"></i>Fee due</div>
+      <div class="kpi-value">₹13,500</div>
+      <div class="kpi-foot">incl. ₹1,000 fine · due now</div>
+    </a>
+<a class="kpi" href="assignments.html">
+      <div class="kpi-label"><i class="bi bi-journal-check" aria-hidden="true"></i>Assignments pending</div>
+      <div class="kpi-value">1</div>
+      <div class="kpi-foot">Todo app · due tomorrow</div>
+    </a>
+<a class="kpi" href="results.html">
+      <div class="kpi-label"><i class="bi bi-clipboard2-check" aria-hidden="true"></i>Average marks</div>
+      <div class="kpi-value">73%</div>
+      
+    </a>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-7">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Announcements</h2></div>
+        
+      </div>
+      <div class="list-row"><span class="avatar" style="background:var(--c-accent-soft);color:var(--c-accent)"><i class="bi bi-megaphone" aria-hidden="true"></i></span><div class="grow"><div class="title">Makeup class on Sat 4 Oct, 11 AM</div><div class=meta>FS-M2 · for the Dussehra holiday on 29 Sep</div></div></div><div class="list-row"><span class="avatar" style="background:var(--c-success-soft);color:var(--c-success-text)"><i class="bi bi-briefcase" aria-hidden="true"></i></span><div class="grow"><div class="title">TechNova drive on 3 Oct</div><div class=meta>Full Stack students with 60%+ attendance can apply</div></div></div><div class="list-row"><span class="avatar" style="background:var(--c-info-soft);color:var(--c-info-text)"><i class="bi bi-calendar-event" aria-hidden="true"></i></span><div class="grow"><div class="title">Office closed 2 Oct</div><div class=meta>Gandhi Jayanti</div></div></div>
+      
+    </div>
+    </div>
+    <div class="col-xl-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">This week</h2></div>
+        
+      </div>
+      <div class="list-row"><span class="num fw-semibold" style="width:70px">Thu 25</span><div class="grow"><div class="title">Routing</div><div class=meta>11:00 AM · Lab 2</div></div></div><div class="list-row"><span class="num fw-semibold" style="width:70px">Fri 26</span><div class="grow"><div class="title">Sprint review</div><div class=meta>11:00 AM · Lab 2</div></div></div><div class="list-row"><span class="num fw-semibold" style="width:70px">Sat 27</span><div class="grow"><div class="title">DSA · arrays</div><div class=meta>10:00 AM · Room 3</div></div></div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

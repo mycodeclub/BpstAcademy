@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Feedback · BPST Edu Admin</title>
+  <meta name="description" content="Feedback in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="management.feedback" data-roles="admin trainer" data-title="Feedback">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Feedback</h1>
+      <p>Trainer rating (1–5) and recommend score (NPS, −100 to +100) after each module. Students stay anonymous to trainers.</p>
+    </div>
+    
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-star-half" aria-hidden="true"></i>Avg trainer rating</div>
+      <div class="kpi-value">4.4 / 5</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-emoji-smile" aria-hidden="true"></i>NPS</div>
+      <div class="kpi-value">+47</div>
+      <div class="kpi-foot">last 30 days</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-chat-square-text" aria-hidden="true"></i>Responses</div>
+      <div class="kpi-value">113</div>
+      <div class="kpi-foot">78% response rate</div>
+    </div>
+<div class="kpi is-alert">
+      <div class="kpi-label"><i class="bi bi-flag" aria-hidden="true"></i>Flagged</div>
+      <div class="kpi-value">1</div>
+      <div class="kpi-foot">Vikas Dubey · 3.6</div>
+    </div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-7">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">By trainer</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Trainer</th><th data-sort tabindex="0" scope="col">Rating</th><th class="num text-end" data-sort tabindex="0" scope="col">NPS</th><th class="num text-end d-none d-md-table-cell" scope="col">Responses</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">AM</span><div><div class="name">Arjun Mehta</div><div class=meta>FS-M2 · Module 3</div></div></div></td><td data-sort-value="4.6"><span class="stars" aria-hidden="true">★★★★★</span> 4.6</td><td class="num text-end" data-sort-value="52">52</td><td class="num text-end d-none d-md-table-cell">21</td><td><span class="chip chip--success">Good</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">RS</span><div><div class="name">Ritu Saxena</div><div class=meta>DA-A1 · Module 2</div></div></div></td><td data-sort-value="4.8"><span class="stars" aria-hidden="true">★★★★★</span> 4.8</td><td class="num text-end" data-sort-value="68">68</td><td class="num text-end d-none d-md-table-cell">16</td><td><span class="chip chip--success">Good</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">PN</span><div><div class="name">Pooja Nigam</div><div class=meta>PY-M1 · Module 5</div></div></div></td><td data-sort-value="4.4"><span class="stars" aria-hidden="true">★★★★☆</span> 4.4</td><td class="num text-end" data-sort-value="41">41</td><td class="num text-end d-none d-md-table-cell">17</td><td><span class="chip chip--success">Good</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">SR</span><div><div class="name">Sameer Rizvi</div><div class=meta>AI-O1 · Module 1</div></div></div></td><td data-sort-value="4.7"><span class="stars" aria-hidden="true">★★★★★</span> 4.7</td><td class="num text-end" data-sort-value="60">60</td><td class="num text-end d-none d-md-table-cell">28</td><td><span class="chip chip--success">Good</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">VD</span><div><div class="name">Vikas Dubey</div><div class=meta>CS-E1 · Module 4</div></div></div></td><td data-sort-value="3.6"><span class="stars" aria-hidden="true">★★★★☆</span> 3.6</td><td class="num text-end" data-sort-value="5">5</td><td class="num text-end d-none d-md-table-cell">12</td><td><span class="chip chip--danger">Low score</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">KT</span><div><div class="name">Kavya Tandon</div><div class=meta>ST-M1 · Module 2</div></div></div></td><td data-sort-value="4.3"><span class="stars" aria-hidden="true">★★★★☆</span> 4.3</td><td class="num text-end" data-sort-value="38">38</td><td class="num text-end d-none d-md-table-cell">19</td><td><span class="chip chip--success">Good</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+    <div class="col-xl-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Latest comments</h2></div>
+        
+      </div>
+      <div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-chat-quote" aria-hidden="true"></i></span><div class="grow"><div class="title">“Live project sprints are the best part.”</div><div class=meta>FS-M2 · 5★</div></div></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-chat-quote" aria-hidden="true"></i></span><div class="grow"><div class="title">“Please share recordings of every class.”</div><div class=meta>CS-E1 · 3★</div></div></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-chat-quote" aria-hidden="true"></i></span><div class="grow"><div class="title">“Doubt sessions helped a lot before the SQL test.”</div><div class=meta>DA-A1 · 5★</div></div></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-chat-quote" aria-hidden="true"></i></span><div class="grow"><div class="title">“Lab 2 AC is too cold in the morning.”</div><div class=meta>FS-M2 · 4★</div></div></div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

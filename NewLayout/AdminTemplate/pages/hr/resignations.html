@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Resignations · BPST Edu Admin</title>
+  <meta name="description" content="Resignations in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="hr.exits" data-roles="admin hr" data-title="Resignations">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Resignations & exit</h1>
+      <p>Submitted → accepted → notice period → handover → full & final settlement → experience letter.</p>
+    </div>
+    
+  </div>
+  <div class="card mb-3">
+      
+      <div class="card-body"><ol class="stepper"><li class="is-done">Submitted</li><li class="is-done">Accepted</li><li class="is-done">Notice period</li><li class="is-current">Handover</li><li>F&amp;F settlement</li><li>Exited</li></ol></div>
+      
+    </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-6">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Resignations</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Employee</th><th scope="col">Submitted</th><th scope="col">Last day</th><th scope="col">Stage</th><th class="num text-end" scope="col">Checklist</th></tr></thead>
+          <tbody>
+            <tr><td><div class="cell-person"><span class="avatar">VD</span><div><div class="name">Vikas Dubey</div><div class=meta>Trainer · Cyber Security</div></div></div></td><td>10 Sep</td><td>10 Oct</td><td><span class="chip chip--warning">Handover</span></td><td class="num text-end">3 / 6</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">MG</span><div><div class="name">Manish Gupta</div><div class=meta>Counsellor</div></div></div></td><td>2 Jun</td><td>2 Jul</td><td><span class="chip chip--neutral">Exited</span></td><td class="num text-end">6 / 6</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+    <div class="col-xl-6">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Handover · Vikas Dubey</h2><p class="card-sub">Last day Fri 10 Oct</p></div>
+        
+      </div>
+      <div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="flex-grow-1">Batch CS-E1 handed to substitute trainer</div><span class="chip chip--success">Done</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="flex-grow-1">Course material and recordings uploaded</div><span class="chip chip--success">Done</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="flex-grow-1">Laptop and lab keys returned</div><span class="chip chip--success">Done</span></div><div class="check-row"><span class="check-ico "><i class="bi bi-circle"></i></span><div class="flex-grow-1">Student marks for module 3 entered</div><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Student marks for module 3 entered marked done." data-tone="success">Mark done</button></div><div class="check-row"><span class="check-ico "><i class="bi bi-circle"></i></span><div class="flex-grow-1">Exit interview</div><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Exit interview marked done." data-tone="success">Mark done</button></div><div class="check-row"><span class="check-ico "><i class="bi bi-circle"></i></span><div class="flex-grow-1">Full & final settlement</div><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Full &amp; final settlement marked done." data-tone="success">Mark done</button></div>
+      <div class="card-footer caption">F&amp;F: salary for 10 days + 7 leave days encashed − notice shortfall 0. Experience letter after settlement.</div>
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -26,7 +26,7 @@
         <button class="nav-link" aria-pressed="false" data-demo-toast="7-day view comes with real data in the backend phase." data-tone="info">7 days</button>
         <button class="nav-link" aria-pressed="false" data-demo-toast="30-day view comes with real data in the backend phase." data-tone="info">30 days</button>
       </div>
-      <button class="btn btn-primary" data-soon="2"><i class="bi bi-plus-lg me-1"></i>Add lead</button>
+      <a class="btn btn-primary" href="../crm/add-lead.html"><i class="bi bi-plus-lg me-1"></i>Add lead</a>
     </div>
   </div>
 
@@ -34,34 +34,34 @@
   <div class="sla-bar" id="slaBar" role="status" aria-live="polite">
     <i class="bi bi-alarm-fill"></i>
     <span id="slaBarText" class="flex-grow-1">Checking leads…</span>
-    <button class="btn btn-sm" data-soon="2">Open lead inbox</button>
+    <a class="btn btn-sm" href="../crm/leads.html">Open lead inbox</a>
   </div>
 
   <!-- KPI row 1 -->
   <div class="row g-3 mb-3">
     <div class="col-6 col-xl-3">
-      <a href="#" class="kpi" data-soon="2">
+      <a href="../crm/leads.html" class="kpi">
         <div class="kpi-label"><i class="bi bi-inbox"></i>New leads today</div>
         <div class="kpi-value" id="kLeads">–</div>
         <div class="kpi-foot"><span class="delta up" id="kLeadsDelta"></span>vs yesterday</div>
       </a>
     </div>
     <div class="col-6 col-xl-3">
-      <a href="#" class="kpi is-alert" id="kRiskTile" data-soon="2">
+      <a href="../crm/leads.html" class="kpi is-alert" id="kRiskTile">
         <div class="kpi-label"><i class="bi bi-alarm"></i>Leads at risk now</div>
         <div class="kpi-value" id="kRisk">–</div>
         <div class="kpi-foot" id="kRiskFoot">–</div>
       </a>
     </div>
     <div class="col-6 col-xl-3">
-      <a href="#" class="kpi" data-soon="7">
+      <a href="reports.html" class="kpi">
         <div class="kpi-label"><i class="bi bi-funnel"></i>Lead → admission (30 days)</div>
         <div class="kpi-value" id="kConv">–</div>
         <div class="kpi-foot"><span class="delta up" id="kConvDelta"></span>vs previous 30 days</div>
       </a>
     </div>
     <div class="col-6 col-xl-3">
-      <a href="#" class="kpi" data-soon="4">
+      <a href="../fees/collections.html" class="kpi">
         <div class="kpi-label"><i class="bi bi-cash-coin"></i>Collected today</div>
         <div class="kpi-value" id="kToday">–</div>
         <div class="kpi-foot"><span class="delta" id="kTodayDelta"></span>vs yesterday · incl. GST</div>
@@ -72,7 +72,7 @@
   <!-- KPI row 2 -->
   <div class="row g-3 mb-4">
     <div class="col-6 col-xl-3">
-      <a href="#" class="kpi" data-soon="4">
+      <a href="../fees/collections.html" class="kpi">
         <div class="kpi-label"><i class="bi bi-graph-up"></i>Collected this month</div>
         <div class="kpi-value kpi-value-sm" id="kMonth">–</div>
         <div class="progress mt-2" role="progressbar" aria-label="Monthly target" id="kMonthBar"><div class="progress-bar"></div></div>
@@ -80,14 +80,14 @@
       </a>
     </div>
     <div class="col-6 col-xl-3">
-      <a href="#" class="kpi" data-soon="4">
+      <a href="../fees/dues.html" class="kpi">
         <div class="kpi-label"><i class="bi bi-hourglass-split"></i>Fees outstanding</div>
         <div class="kpi-value kpi-value-sm" id="kDues">–</div>
         <div class="kpi-foot"><span class="chip chip--danger" id="kOverdue">–</span></div>
       </a>
     </div>
     <div class="col-6 col-xl-3">
-      <a href="#" class="kpi" data-soon="3">
+      <a href="../attendance/reports.html" class="kpi">
         <div class="kpi-label"><i class="bi bi-calendar-check"></i>Attendance today</div>
         <div class="kpi-value kpi-value-sm" id="kAtt">–</div>
         <div class="kpi-foot" id="kAttFoot">–</div>
@@ -97,7 +97,7 @@
       <div class="kpi">
         <div class="kpi-label"><i class="bi bi-list-check"></i>Waiting for you</div>
         <div class="d-flex gap-4 mt-2">
-          <a href="#" class="text-reset" data-soon="5"><div class="kpi-value kpi-value-sm mt-0" id="kVer">–</div><div class="caption">verifications</div></a>
+          <a href="../verification/queue.html" class="text-reset"><div class="kpi-value kpi-value-sm mt-0" id="kVer">–</div><div class="caption">verifications</div></a>
           <a href="#approvals" class="text-reset"><div class="kpi-value kpi-value-sm mt-0" id="kAppr">–</div><div class="caption">approvals</div></a>
         </div>
       </div>
@@ -113,7 +113,7 @@
             <h2 class="card-title">Leads needing attention</h2>
             <p class="card-sub">Every new lead must be contacted within 1 hour. Most urgent first.</p>
           </div>
-          <a href="#" class="small" data-soon="2">All leads <i class="bi bi-arrow-right"></i></a>
+          <a href="../crm/leads.html" class="small">All leads <i class="bi bi-arrow-right"></i></a>
         </div>
         <div class="filter-bar" data-filter-group="leadRows" role="group" aria-label="Filter leads">
           <button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class="count" id="fAll"></span></button>
@@ -223,7 +223,7 @@
             <h2 class="card-title">Today's classes</h2>
             <p class="card-sub" id="classesSub">–</p>
           </div>
-          <a href="#" class="small" data-soon="3">Timetable <i class="bi bi-arrow-right"></i></a>
+          <a href="../admissions/timetable.html" class="small">Timetable <i class="bi bi-arrow-right"></i></a>
         </div>
         <div id="classList"></div>
       </div>
@@ -239,7 +239,7 @@
             <h2 class="card-title">Overdue fees</h2>
             <p class="card-sub">Late fine is added after a 7-day grace period</p>
           </div>
-          <a href="#" class="small" data-soon="4">All dues <i class="bi bi-arrow-right"></i></a>
+          <a href="../fees/dues.html" class="small">All dues <i class="bi bi-arrow-right"></i></a>
         </div>
         <div class="table-wrap">
           <table class="table">
@@ -256,7 +256,7 @@
             <h2 class="card-title">Document verification</h2>
             <p class="card-sub">Originals are checked in person at the office before HR approves</p>
           </div>
-          <a href="#" class="small" data-soon="5">Queue <i class="bi bi-arrow-right"></i></a>
+          <a href="../verification/queue.html" class="small">Queue <i class="bi bi-arrow-right"></i></a>
         </div>
         <div id="verList"></div>
       </div>

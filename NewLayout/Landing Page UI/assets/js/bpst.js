@@ -215,10 +215,29 @@
     b.replaceWith(f);
   }));
 
+  /* ---------- Links to the portal (student / staff sign-in, certificate check) ----------
+     <a data-portal-link="index.html"> → CFG.portalUrl + path. Opened from disk, it uses the sibling AdminTemplate folder. */
+  const portalBase = location.protocol === 'file:' ? (CFG.portalLocal || '../AdminTemplate/') : (CFG.portalUrl || '/portal/');
+  $$('[data-portal-link]').forEach((a) => {
+    let base = portalBase;
+    if (location.protocol === 'file:' && /\/courses\/[^/]*$/.test(location.pathname)) base = '../' + base; // course pages sit one folder deeper
+    a.href = base + a.dataset.portalLink;
+  });
+
   /* ---------- Lead delivery ---------- */
-  function utm() { const o = {}; ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach((k) => { if (params.get(k)) o[k] = params.get(k); }); return o; }
+  /* campaign tags: the first ones seen in this visit are kept, so they survive clicks to other pages */
+  const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+  (function keepUtm() {
+    const o = {}; UTM_KEYS.forEach((k) => { if (params.get(k)) o[k] = params.get(k); });
+    if (Object.keys(o).length && !store.get('bpst.utm')) store.set('bpst.utm', JSON.stringify(Object.assign(o, { landing_page: location.pathname, referrer: document.referrer || '' })));
+  })();
+  function utm() {
+    const o = {}; UTM_KEYS.forEach((k) => { if (params.get(k)) o[k] = params.get(k); });
+    if (Object.keys(o).length) return o;
+    try { return JSON.parse(store.get('bpst.utm') || '{}'); } catch (e) { return {}; }
+  }
   async function sendLead(payload) {
-    const body = Object.assign({ page: location.pathname, page_title: document.title, utm: utm(), submitted_at: new Date().toISOString() }, payload);
+    const body = Object.assign({ page: location.pathname, page_url: location.href.split('#')[0], page_title: document.title, utm: utm(), submitted_at: new Date().toISOString() }, payload);
     if (!CFG.leadEndpoint) { console.info('[BPST demo mode] lead payload:', body); return true; }
     try {
       const ctl = new AbortController(); const to = setTimeout(() => ctl.abort(), 15000);

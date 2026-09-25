@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Counselling · BPST Edu Admin</title>
+  <meta name="description" content="Counselling in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="crm.counselling" data-roles="admin counsellor" data-title="Counselling">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Counselling</h1>
+      <p>Week of 22–27 Sep 2026. Sessions by counsellor and room. Click a session to open notes.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><div class="segmented nav nav-pills" role="group" aria-label="Counsellor"><button class="nav-link active" aria-pressed="true">All</button><button class="nav-link" aria-pressed="false" data-demo-toast="Filtered to Neha S. (demo)." data-tone="info">Neha S.</button><button class="nav-link" aria-pressed="false" data-demo-toast="Filtered to Rahul T. (demo)." data-tone="info">Rahul T.</button></div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal"><i class="bi bi-calendar-plus me-1" aria-hidden="true"></i>Book session</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar2-week" aria-hidden="true"></i>Sessions this week</div>
+      <div class="kpi-value">9</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-check2-circle" aria-hidden="true"></i>Counselled → applied</div>
+      <div class="kpi-value">58%</div>
+      <div class="kpi-foot">last 30 days</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-person-video3" aria-hidden="true"></i>Online sessions</div>
+      <div class="kpi-value">1</div>
+      <div class="kpi-foot">Google Meet link sent</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-x-circle" aria-hidden="true"></i>No-shows</div>
+      <div class="kpi-value">1</div>
+      <div class="kpi-foot">auto-reminder 1 h before</div>
+    </div>
+  </div>
+  <div class="table-wrap mb-3"><div class="week-grid" style="--days:6"><div class="wg-head"></div><div class="wg-head">Mon 22</div><div class="wg-head">Tue 23</div><div class="wg-head">Wed 24</div><div class="wg-head">Thu 25</div><div class="wg-head">Fri 26</div><div class="wg-head">Sat 27</div><div class="wg-time">10:00 AM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">11:00 AM</div><div><a class="slot" href="counselling-session.html"><b>Riya Bajpai</b>Neha · Cabin 1</a></div><div></div><div></div><div><a class="slot" href="counselling-session.html"><b>Mohd. Faizan</b>Rahul · Cabin 2</a></div><div><a class="slot" href="counselling-session.html"><b>Simran Kaur</b>Rahul · Cabin 2</a></div><div></div><div class="wg-time">12:00 PM</div><div></div><div></div><div><a class="slot" href="counselling-session.html"><b>Nikhil Arora</b>Neha · Cabin 1</a></div><div></div><div></div><div><a class="slot" href="counselling-session.html"><b>School camp · 18 students</b>Both · Hall</a></div><div class="wg-time">1:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">2:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">3:00 PM</div><div></div><div><a class="slot" href="counselling-session.html"><b>Shreya Dixit</b>Rahul · Cabin 2</a></div><div></div><div><a class="slot" href="counselling-session.html"><b>Ananya Gupta</b>Neha · Cabin 1</a></div><div></div><div></div><div class="wg-time">4:00 PM</div><div></div><div></div><div></div><div></div><div><a class="slot" href="counselling-session.html"><b>Kunal Srivastava</b>Neha · Cabin 1</a></div><div></div><div class="wg-time">5:00 PM</div><div></div><div></div><div></div><div><a class="slot is-online" href="counselling-session.html"><b>Deepak Maurya + parent</b>Neha · Online</a></div><div></div><div></div><div class="wg-time">6:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+  <p class="caption">Blue = in office · light blue = online. On a phone, scroll sideways.</p>
+<div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Session booked. The lead gets an SMS/WhatsApp confirmation and a reminder 1 hour before.">
+    <div class="modal-header"><h2 class="modal-title" id="bookModalT">Book counselling</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-12"><label class="form-label" for="bl">Lead</label><select class="form-select" id="bl" ><option selected>Ananya Gupta</option><option>Sana Rizvi</option><option>Vivek Chauhan</option><option>Isha Tiwari</option></select></div><div class="col-md-6"><label class="form-label" for="bd">Date & time</label><input class="form-control" id="bd" type="datetime-local" value="2026-09-26T15:30" placeholder="" required ><div class="invalid-feedback">Please fill in date & time.</div></div><div class="col-md-6"><label class="form-label" for="bc">Counsellor</label><select class="form-select" id="bc" ><option selected>Neha S.</option><option>Rahul T.</option></select></div><div class="col-md-6"><label class="form-label" for="br">Room / mode</label><select class="form-select" id="br" ><option selected>Cabin 1</option><option>Cabin 2</option><option>Online (Google Meet)</option></select></div><div class="col-md-6"><label class="form-label" for="bp">Parent joining?</label><select class="form-select" id="bp" ><option selected>No</option><option>Yes</option></select></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Book and notify</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

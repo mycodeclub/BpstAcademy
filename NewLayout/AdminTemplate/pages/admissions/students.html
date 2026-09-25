@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Students · BPST Edu Admin</title>
+  <meta name="description" content="Students in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="admissions.students" data-roles="admin counsellor hr" data-title="Students">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Students</h1>
+      <p>Everyone who has enrolled. Onboarding students have not finished document verification yet.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="parallel-course.html" ><i class="bi bi-plus-square me-1" aria-hidden="true"></i>Add parallel course</a><a class="btn btn-primary" href="enrol.html" ><i class="bi bi-person-plus me-1" aria-hidden="true"></i>Enrol student</a></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-people" aria-hidden="true"></i>Active students</div>
+      <div class="kpi-value">246</div>
+      <div class="kpi-foot">in 11 batches</div>
+    </div>
+<a class="kpi" href="../verification/queue.html">
+      <div class="kpi-label"><i class="bi bi-hourglass" aria-hidden="true"></i>Onboarding</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-foot">documents / verification pending</div>
+    </a>
+<a class="kpi is-alert" href="../attendance/reports.html">
+      <div class="kpi-label"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i>Below 75% attendance</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-foot">nudges sent</div>
+    </a>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-mortarboard" aria-hidden="true"></i>Completed (FY)</div>
+      <div class="kpi-value">118</div>
+      
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">All students</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search name, ID, phone or course" data-table-search="stuRows" aria-label="Search name, ID, phone or course"></div>
+        <select class="form-select form-select-sm" data-table-filter="stuRows" aria-label="Course"><option value="all">All courses</option><option value="c-cloudcomputingde">Cloud Computing &amp; DevOps</option><option value="c-cybersecurityeth">Cyber Security &amp; Ethical Hacking</option><option value="c-dataanalystpro">Data Analyst Pro</option><option value="c-fullstackdevelop">Full Stack Development</option><option value="c-generativeaiagen">Generative AI &amp; Agentic AI</option><option value="c-javaprogramming">Java Programming</option><option value="c-pythonprogrammin">Python Programming</option><option value="c-roboticscodingai">Robotics, Coding &amp; AI for Kids</option><option value="c-softwaretestingm">Software Testing Masters</option></select>
+        <div class="d-flex flex-wrap gap-2" data-filter-group="stuRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>16</span></button><button class="filter-chip" data-filter="active" aria-pressed="false">Active <span class=count>10</span></button><button class="filter-chip" data-filter="onboarding" aria-pressed="false">Onboarding <span class=count>3</span></button><button class="filter-chip" data-filter="completed" aria-pressed="false">Completed <span class=count>1</span></button><button class="filter-chip" data-filter="frozen" aria-pressed="false">Frozen <span class=count>1</span></button><button class="filter-chip" data-filter="dropped" aria-pressed="false">Dropped <span class=count>1</span></button></div>
+        <div class="ms-auto d-flex gap-2"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: CSV export of the filtered students." data-tone="success"><i class="bi bi-download me-1" aria-hidden="true"></i>Export CSV</button></div>
+      </div><div class="toolbar" data-bulk-for="stuRows" hidden style="background:var(--c-accent-soft)"><b><span data-bulk-count>0</span> selected</b><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: announcement sent to the selected students." data-tone="success">Send announcement</button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: fee reminders sent by SMS and email." data-tone="success">Send fee reminder</button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: selected students exported." data-tone="success">Export</button></div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col"><input class="form-check-input" type="checkbox" data-check-all="stuRows" aria-label="Select all"></th><th data-sort tabindex="0" scope="col">Student</th><th class="d-none d-md-table-cell" scope="col">Course</th><th class="d-none d-lg-table-cell" scope="col">Batch</th><th class="num text-end d-none d-md-table-cell" data-sort tabindex="0" scope="col">Attendance</th><th class="num text-end" data-sort tabindex="0" scope="col">Fee due</th><th scope="col">Status</th></tr></thead>
+          <tbody id="stuRows">
+            <tr data-filter-value="active c-fullstackdevelop" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Harsh Kumar"></td><td><div class="cell-person"><span class="avatar">HK</span><div><div><a href="student.html" class="name text-reset">Harsh Kumar</a></div><div class=meta>BPST26S0042 · 98XXXXXX42</div></div></div></td><td class="d-none d-md-table-cell">Full Stack Development</td><td class="d-none d-lg-table-cell"><a href="batch.html">FS-M2</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="71"><span class="text-danger fw-semibold">71%</span></td><td class="money text-end" data-sort-value="12500">₹12,500</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="active c-dataanalystpro" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Nidhi Awasthi"></td><td><div class="cell-person"><span class="avatar">NA</span><div><div><a href="student.html" class="name text-reset">Nidhi Awasthi</a></div><div class=meta>BPST26S0051 · 97XXXXXX51</div></div></div></td><td class="d-none d-md-table-cell">Data Analyst Pro</td><td class="d-none d-lg-table-cell"><a href="batch.html">DA-A1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="88"><span class="">88%</span></td><td class="money text-end" data-sort-value="8000">₹8,000</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="active c-pythonprogrammin" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Farah Naqvi"></td><td><div class="cell-person"><span class="avatar">FN</span><div><div><a href="student.html" class="name text-reset">Farah Naqvi</a></div><div class=meta>BPST26S0063 · 90XXXXXX63</div></div></div></td><td class="d-none d-md-table-cell">Python Programming</td><td class="d-none d-lg-table-cell"><a href="batch.html">PY-M1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="94"><span class="">94%</span></td><td class="money text-end" data-sort-value="0"><span class="text-muted">Paid</span></td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="active c-pythonprogrammin" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Aman Khan"></td><td><div class="cell-person"><span class="avatar">AK</span><div><div><a href="student.html" class="name text-reset">Aman Khan</a></div><div class=meta>BPST26S0067 · 99XXXXXX67</div></div></div></td><td class="d-none d-md-table-cell">Python Programming</td><td class="d-none d-lg-table-cell"><a href="batch.html">PY-M1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="79"><span class="">79%</span></td><td class="money text-end" data-sort-value="5000">₹5,000</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="active c-softwaretestingm" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Riya Bajpai"></td><td><div class="cell-person"><span class="avatar">RB</span><div><div><a href="student.html" class="name text-reset">Riya Bajpai</a></div><div class=meta>BPST26S0071 · 88XXXXXX71</div></div></div></td><td class="d-none d-md-table-cell">Software Testing Masters</td><td class="d-none d-lg-table-cell"><a href="batch.html">ST-M1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="91"><span class="">91%</span></td><td class="money text-end" data-sort-value="7500">₹7,500</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="active c-cloudcomputingde" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Sahil Verma"></td><td><div class="cell-person"><span class="avatar">SV</span><div><div><a href="student.html" class="name text-reset">Sahil Verma</a></div><div class=meta>BPST26S0074 · 93XXXXXX74</div></div></div></td><td class="d-none d-md-table-cell">Cloud Computing &amp; DevOps</td><td class="d-none d-lg-table-cell"><a href="batch.html">DO-O1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="83"><span class="">83%</span></td><td class="money text-end" data-sort-value="15000">₹15,000</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="onboarding c-fullstackdevelop" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Aditi Verma"></td><td><div class="cell-person"><span class="avatar">AV</span><div><div><a href="student.html" class="name text-reset">Aditi Verma</a></div><div class=meta>BPST26S0078 · 96XXXXXX78</div></div></div></td><td class="d-none d-md-table-cell">Full Stack Development</td><td class="d-none d-lg-table-cell"><a href="batch.html">FS-M2</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="0"><span class="">—</span></td><td class="money text-end" data-sort-value="35000">₹35,000</td><td><span class="chip chip--warning">Onboarding</span></td></tr>
+            <tr data-filter-value="onboarding c-roboticscodingai" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Meera Singh"></td><td><div class="cell-person"><span class="avatar">MS</span><div><div><a href="student.html" class="name text-reset">Meera Singh</a></div><div class=meta>BPST26S0080 · 91XXXXXX80</div></div></div></td><td class="d-none d-md-table-cell">Robotics, Coding &amp; AI for Kids</td><td class="d-none d-lg-table-cell"><a href="batch.html">SC-E1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="0"><span class="">—</span></td><td class="money text-end" data-sort-value="6000">₹6,000</td><td><span class="chip chip--warning">Onboarding</span></td></tr>
+            <tr data-filter-value="active c-roboticscodingai" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Kabir Singh"></td><td><div class="cell-person"><span class="avatar">KS</span><div><div><a href="student.html" class="name text-reset">Kabir Singh</a></div><div class=meta>BPST26S0081 · 91XXXXXX81</div></div></div></td><td class="d-none d-md-table-cell">Robotics, Coding &amp; AI for Kids</td><td class="d-none d-lg-table-cell"><a href="batch.html">SC-E1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="96"><span class="">96%</span></td><td class="money text-end" data-sort-value="0"><span class="text-muted">Paid</span></td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="onboarding c-dataanalystpro" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Nikhil Arora"></td><td><div class="cell-person"><span class="avatar">NA</span><div><div><a href="student.html" class="name text-reset">Nikhil Arora</a></div><div class=meta>BPST26S0083 · 82XXXXXX83</div></div></div></td><td class="d-none d-md-table-cell">Data Analyst Pro</td><td class="d-none d-lg-table-cell"><a href="batch.html">DA-A1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="0"><span class="">—</span></td><td class="money text-end" data-sort-value="24951">₹24,951</td><td><span class="chip chip--warning">Onboarding</span></td></tr>
+            <tr data-filter-value="active c-generativeaiagen" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Tanvi Shukla"></td><td><div class="cell-person"><span class="avatar">TS</span><div><div><a href="student.html" class="name text-reset">Tanvi Shukla</a></div><div class=meta>BPST26S0085 · 70XXXXXX85</div></div></div></td><td class="d-none d-md-table-cell">Generative AI &amp; Agentic AI</td><td class="d-none d-lg-table-cell"><a href="batch.html">AI-O1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="92"><span class="">92%</span></td><td class="money text-end" data-sort-value="0"><span class="text-muted">Paid</span></td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="active c-cybersecurityeth" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Yash Tripathi"></td><td><div class="cell-person"><span class="avatar">YT</span><div><div><a href="student.html" class="name text-reset">Yash Tripathi</a></div><div class=meta>BPST26S0088 · 95XXXXXX88</div></div></div></td><td class="d-none d-md-table-cell">Cyber Security &amp; Ethical Hacking</td><td class="d-none d-lg-table-cell"><a href="batch.html">CS-E1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="64"><span class="text-danger fw-semibold">64%</span></td><td class="money text-end" data-sort-value="14000">₹14,000</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="active c-javaprogramming" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Ishita Jaiswal"></td><td><div class="cell-person"><span class="avatar">IJ</span><div><div><a href="student.html" class="name text-reset">Ishita Jaiswal</a></div><div class=meta>BPST26S0090 · 94XXXXXX90</div></div></div></td><td class="d-none d-md-table-cell">Java Programming</td><td class="d-none d-lg-table-cell"><a href="batch.html">JV-E1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="89"><span class="">89%</span></td><td class="money text-end" data-sort-value="0"><span class="text-muted">Paid</span></td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr data-filter-value="completed c-dataanalystpro" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Devansh Rastogi"></td><td><div class="cell-person"><span class="avatar">DR</span><div><div><a href="student.html" class="name text-reset">Devansh Rastogi</a></div><div class=meta>BPST26S0019 · 98XXXXXX19</div></div></div></td><td class="d-none d-md-table-cell">Data Analyst Pro</td><td class="d-none d-lg-table-cell"><a href="batch.html">DA-A1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="90"><span class="">90%</span></td><td class="money text-end" data-sort-value="0"><span class="text-muted">Paid</span></td><td><span class="chip chip--neutral">Completed</span></td></tr>
+            <tr data-filter-value="frozen c-pythonprogrammin" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Pallavi Mishra"></td><td><div class="cell-person"><span class="avatar">PM</span><div><div><a href="student.html" class="name text-reset">Pallavi Mishra</a></div><div class=meta>BPST26S0023 · 97XXXXXX23</div></div></div></td><td class="d-none d-md-table-cell">Python Programming</td><td class="d-none d-lg-table-cell"><a href="batch.html">PY-M1</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="58"><span class="text-danger fw-semibold">58%</span></td><td class="money text-end" data-sort-value="9000">₹9,000</td><td><span class="chip chip--info">Frozen</span></td></tr>
+            <tr data-filter-value="dropped c-fullstackdevelop" data-href="student.html"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select Rohit Yadav"></td><td><div class="cell-person"><span class="avatar">RY</span><div><div><a href="student.html" class="name text-reset">Rohit Yadav</a></div><div class=meta>BPST26S0031 · 90XXXXXX31</div></div></div></td><td class="d-none d-md-table-cell">Full Stack Development</td><td class="d-none d-lg-table-cell"><a href="batch.html">FS-M2</a></td><td class="num text-end d-none d-md-table-cell" data-sort-value="32"><span class="text-danger fw-semibold">32%</span></td><td class="money text-end" data-sort-value="30000">₹30,000</td><td><span class="chip chip--danger">Dropped</span></td></tr>
+          </tbody>
+        </table>
+      </div><div class="empty" data-empty-for="stuRows" hidden><i class="bi bi-search"></i><div class="empty-title">Nothing matches</div>No students match.</div><div class="pager"><span>Showing <span data-shown-for="stuRows">16</span> of 364 students</span>
+        <nav aria-label="Pages"><ul class="pagination pagination-sm mb-0">
+          <li class="page-item disabled"><span class="page-link">Previous</span></li>
+          <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+          <li class="page-item"><a class="page-link" href="#" data-demo-toast="Demo: page 2 loads from the database in the backend phase." data-tone="info">2</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-demo-toast="Demo: next page loads from the database in the backend phase." data-tone="info">Next</a></li>
+        </ul></nav></div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

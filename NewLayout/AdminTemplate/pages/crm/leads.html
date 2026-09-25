@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lead inbox · BPST Edu Admin</title>
+  <meta name="description" content="Lead inbox in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="crm.leads" data-roles="admin counsellor" data-title="Lead inbox">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Lead inbox</h1>
+      <p>Every new lead must be contacted within 1 hour. Breached leads first, then least time left.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="pipeline.html" ><i class="bi bi-kanban me-1" aria-hidden="true"></i>Pipeline</a><a class="btn btn-primary" href="add-lead.html" ><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>Add lead</a></div>
+  </div>
+  <div class="sla-bar" id="slaBar" role="status" aria-live="polite">
+    <i class="bi bi-alarm-fill" aria-hidden="true"></i><span id="slaBarText" class="flex-grow-1">Checking leads…</span>
+    <button class="btn btn-sm" data-filter-jump="breach">Show breached</button>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-inbox" aria-hidden="true"></i>Open leads</div>
+      <div class="kpi-value"><span id="kOpen">–</span></div>
+      <div class="kpi-foot">not yet contacted</div>
+    </div>
+<div class="kpi is-alert">
+      <div class="kpi-label"><i class="bi bi-exclamation-octagon" aria-hidden="true"></i>SLA breached</div>
+      <div class="kpi-value"><span id="kBreach">–</span></div>
+      <div class="kpi-foot">manager alerted</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-hourglass-split" aria-hidden="true"></i>Breaching in &lt; 15 min</div>
+      <div class="kpi-value"><span id="kHot">–</span></div>
+      <div class="kpi-foot">act now</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-person-exclamation" aria-hidden="true"></i>Unassigned</div>
+      <div class="kpi-value"><span id="kUn">–</span></div>
+      <div class="kpi-foot">auto-assign on</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-stopwatch" aria-hidden="true"></i>Avg first contact</div>
+      <div class="kpi-value">19 min</div>
+      <div class="kpi-foot"><span class="delta up"><i class="bi bi-arrow-down-short"></i>4 min</span> vs last week</div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Leads</h2><p class="card-sub">Live timers · this list refreshes every second</p></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search name, phone, course or ID" data-table-search="inboxRows" aria-label="Search name, phone, course or ID"></div>
+        <select class="form-select form-select-sm" data-table-filter="inboxRows" aria-label="Counsellor"><option value="all">All counsellors</option><option value="nehas">Neha S.</option><option value="rahult">Rahul T.</option><option value="unassigned">Unassigned</option></select>
+        <div class="d-flex flex-wrap gap-2" data-filter-group="inboxRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All</button><button class="filter-chip" data-filter="breach" aria-pressed="false">High risk</button><button class="filter-chip" data-filter="hot" aria-pressed="false">Under 15 min</button><button class="filter-chip" data-filter="unassigned" aria-pressed="false">Unassigned</button><button class="filter-chip" data-filter="prebook" aria-pressed="false">₹49 pre-book</button></div>
+        <div class="ms-auto d-flex gap-2"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: CSV export of the filtered leads." data-tone="success"><i class="bi bi-download me-1" aria-hidden="true"></i>Export CSV</button></div>
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Lead</th><th class="d-none d-lg-table-cell" scope="col">Course</th><th class="d-none d-md-table-cell" scope="col">Source</th><th scope="col">Counsellor</th><th scope="col">Time to contact</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody id="inboxRows">
+
+          </tbody>
+        </table>
+      </div><div class="empty" data-empty-for="inboxRows" hidden><i class="bi bi-search"></i><div class="empty-title">Nothing matches</div>No leads match. Clear the search or pick another filter.</div>
+      <div class="card-footer caption">Timers turn amber at 30 min and red at 45 min. At 60 min the lead is marked <b>HIGH RISK</b>, the manager is alerted and it stays in the SLA breach report even after contact.</div>
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+var B = window.BPST, D = window.DEMO;
+  function leadOrder(a, b) {
+    if (!!a.contactedAt !== !!b.contactedAt) return a.contactedAt ? 1 : -1;
+    return B.slaInfo(b.createdAt, b.contactedAt).elapsed - B.slaInfo(a.createdAt, a.contactedAt).elapsed;
+  }
+  function leadRow(l, compact) {
+    var st = B.slaInfo(l.createdAt, l.contactedAt).state, un = l.owner === 'Unassigned';
+    var tags = st + (un ? ' unassigned' : '') + (l.paid ? ' prebook' : '') + ' ' + (l.owner || '').replace(/[^a-z]/gi, '').toLowerCase();
+    return '<tr data-filter-value="' + tags + '" data-href="lead.html?id=' + l.id + '">' +
+      '<td><div class="cell-person"><span class="avatar">' + B.initials(l.name) + '</span><div><a class="name text-reset" href="lead.html?id=' + l.id + '">' + B.esc(l.name) + '</a><div class="meta">' + l.id + ' · ' + l.phone + '</div></div></div></td>' +
+      '<td class="d-none d-lg-table-cell">' + B.esc(l.course) + '</td>' +
+      '<td class="d-none d-md-table-cell">' + B.esc(l.source) + (l.paid ? ' <span class="chip chip--success chip--nodot ms-1" title="₹49 pre-booking paid">₹49 paid</span>' : '') + '</td>' +
+      '<td>' + (un ? '<span class="chip chip--warning">Unassigned</span>' : B.esc(l.owner)) + '</td>' +
+      '<td><span data-sla data-created-at="' + l.createdAt + '"' + (l.contactedAt ? ' data-contacted-at="' + l.contactedAt + '"' : '') + '></span></td>' +
+      '<td><div class="row-actions">' + (l.contactedAt ? '<span class="caption">Contact logged</span>' :
+        '<a class="btn btn-ghost btn-icon btn-sm" href="tel:+910000000000" data-demo-toast="Demo: this would dial ' + l.phone + '." data-tone="info" aria-label="Call ' + B.esc(l.name) + '"><i class="bi bi-telephone"></i></a>' +
+        '<a class="btn btn-ghost btn-icon btn-sm d-none d-sm-inline-flex" href="#" data-demo-toast="Demo: WhatsApp chat with ' + B.esc(l.name) + ' would open (click-to-chat, no API needed)." data-tone="info" aria-label="WhatsApp ' + B.esc(l.name) + '"><i class="bi bi-whatsapp"></i></a>' +
+        (un ? '<button class="btn btn-outline-secondary btn-sm" data-assign="' + l.id + '">Assign</button>' : '') +
+        '<button class="btn btn-primary btn-sm" data-log="' + l.id + '">Log contact</button>') + '</div></td></tr>';
+  }
+  function logContact(id) {
+    var l = D.leads.filter(function (x) { return x.id === id; })[0];
+    l.contactedAt = new Date().toISOString();
+    var info = B.slaInfo(l.createdAt, l.contactedAt);
+    B.toast('Contact logged for <b>' + B.esc(l.name) + '</b>. Timer stopped' + (info.breached ? ' (late; it stays in the SLA breach report).' : ' within the hour.'), info.breached ? 'warning' : 'success');
+  }
+  function assign(id) {
+    var l = D.leads.filter(function (x) { return x.id === id; })[0];
+    l.owner = 'Neha S.';
+    B.toast('<b>' + B.esc(l.name) + '</b> assigned to Neha S. (round-robin: next counsellor on duty). She gets a notification.', 'success');
+  }
+
+  var $ = function (id) { return document.getElementById(id); };
+  function render() {
+    $('inboxRows').innerHTML = D.leads.slice().sort(leadOrder).map(function (l) { return leadRow(l); }).join('');
+    B.tickSla();
+    var act = document.querySelector('[data-filter-group="inboxRows"] .active');
+    if (act && act.getAttribute('data-filter') !== 'all') act.click();
+  }
+  render();
+  $('inboxRows').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-log]'), a = e.target.closest('[data-assign]');
+    if (b) { logContact(b.getAttribute('data-log')); render(); }
+    if (a) { assign(a.getAttribute('data-assign')); render(); }
+  });
+  document.querySelector('[data-filter-jump]').addEventListener('click', function () { document.querySelector('[data-filter-group="inboxRows"] [data-filter="breach"]').click(); });
+  var last = '';
+  document.addEventListener('bpst:sla', function (e) {
+    var c = e.detail, risk = c.breach + c.hot;
+    $('kOpen').textContent = D.leads.filter(function (l) { return !l.contactedAt; }).length;
+    $('kBreach').textContent = c.breach; $('kHot').textContent = c.hot;
+    $('kUn').textContent = D.leads.filter(function (l) { return l.owner === 'Unassigned' && !l.contactedAt; }).length;
+    $('slaBar').classList.toggle('is-clear', !risk);
+    var txt = risk ? '<b>' + c.breach + ' lead' + (c.breach === 1 ? '' : 's') + ' breached the 1-hour SLA</b>' + (c.hot ? ' · ' + c.hot + ' more in under 15 minutes' : '') + '. The manager has been alerted.' : 'All new leads have been contacted on time.';
+    if (txt !== last) { $('slaBarText').innerHTML = txt; last = txt; }
+    document.querySelectorAll('#inboxRows tr').forEach(function (tr) {
+      var s = tr.querySelector('[data-sla]'); if (!s) return;
+      tr.setAttribute('data-filter-value', tr.getAttribute('data-filter-value').replace(/^(ok|warn|hot|breach|done)/, s.getAttribute('data-state')));
+    });
+  });
+  B.tickSla();
+</script>
+</body>
+</html>

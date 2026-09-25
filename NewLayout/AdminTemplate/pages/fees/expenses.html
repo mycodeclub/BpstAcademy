@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Expenses · BPST Edu Admin</title>
+  <meta name="description" content="Expenses in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="fees.expenses" data-roles="admin hr" data-title="Expenses">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Expenses</h1>
+      <p>Money out. Marketing spend is tagged by channel so reports can show cost per admission.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="profit-loss.html" ><i class="bi bi-graph-up-arrow me-1" aria-hidden="true"></i>Profit & loss</a><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#expModal"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>Add expense</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-wallet" aria-hidden="true"></i>Spent this month</div>
+      <div class="kpi-value">₹5,01,520</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-megaphone" aria-hidden="true"></i>Marketing (Sep)</div>
+      <div class="kpi-value">₹41,600</div>
+      <div class="kpi-foot">cost per admission ₹1,040</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-house" aria-hidden="true"></i>Rent + utilities</div>
+      <div class="kpi-value">₹69,200</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-people" aria-hidden="true"></i>Salaries (Aug)</div>
+      <div class="kpi-value">₹3,86,000</div>
+      
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">September 2026</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search expenses" data-table-search="expRows" aria-label="Search expenses"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="expRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>9</span></button><button class="filter-chip" data-filter="rent" aria-pressed="false">Rent <span class=count>1</span></button><button class="filter-chip" data-filter="salaries" aria-pressed="false">Salaries <span class=count>1</span></button><button class="filter-chip" data-filter="marketing" aria-pressed="false">Marketing <span class=count>4</span></button><button class="filter-chip" data-filter="utilities" aria-pressed="false">Utilities <span class=count>2</span></button><button class="filter-chip" data-filter="software" aria-pressed="false">Software <span class=count>1</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Date</th><th scope="col">Expense</th><th class="d-none d-md-table-cell" scope="col">Mode</th><th class="d-none d-md-table-cell" scope="col">Bill</th><th class="num text-end" data-sort tabindex="0" scope="col">Amount</th></tr></thead>
+          <tbody id="expRows">
+            <tr data-filter-value="rent"><td>24 Sep</td><td>Rent · September<div class="caption">Rent</div></td><td class="d-none d-md-table-cell">Bank transfer</td><td class="d-none d-md-table-cell"><i class="bi bi-paperclip"></i> bill</td><td class="money text-end" data-sort-value="55000">₹55,000</td></tr>
+            <tr data-filter-value="marketing"><td>22 Sep</td><td>Google Ads · Diwali pre-book<div class="caption">Marketing · Google</div></td><td class="d-none d-md-table-cell">Card</td><td class="d-none d-md-table-cell"><i class="bi bi-paperclip"></i> bill</td><td class="money text-end" data-sort-value="18500">₹18,500</td></tr>
+            <tr data-filter-value="marketing"><td>20 Sep</td><td>Meta ads · Instagram reels<div class="caption">Marketing · Meta</div></td><td class="d-none d-md-table-cell">Card</td><td class="d-none d-md-table-cell"><i class="bi bi-paperclip"></i> bill</td><td class="money text-end" data-sort-value="9200">₹9,200</td></tr>
+            <tr data-filter-value="marketing"><td>18 Sep</td><td>JustDial listing (quarterly)<div class="caption">Marketing · JustDial</div></td><td class="d-none d-md-table-cell">UPI</td><td class="d-none d-md-table-cell"><i class="bi bi-paperclip"></i> bill</td><td class="money text-end" data-sort-value="7500">₹7,500</td></tr>
+            <tr data-filter-value="utilities"><td>15 Sep</td><td>Electricity bill<div class="caption">Utilities</div></td><td class="d-none d-md-table-cell">UPI</td><td class="d-none d-md-table-cell"><i class="bi bi-paperclip"></i> bill</td><td class="money text-end" data-sort-value="11840">₹11,840</td></tr>
+            <tr data-filter-value="utilities"><td>12 Sep</td><td>Internet · 300 Mbps<div class="caption">Utilities</div></td><td class="d-none d-md-table-cell">Auto-debit</td><td class="d-none d-md-table-cell"><i class="bi bi-paperclip"></i> bill</td><td class="money text-end" data-sort-value="2360">₹2,360</td></tr>
+            <tr data-filter-value="software"><td>10 Sep</td><td>Google Workspace + Zoom<div class="caption">Software</div></td><td class="d-none d-md-table-cell">Card</td><td class="d-none d-md-table-cell"><i class="bi bi-paperclip"></i> bill</td><td class="money text-end" data-sort-value="4720">₹4,720</td></tr>
+            <tr data-filter-value="marketing"><td>5 Sep</td><td>Printing: brochures, flyers<div class="caption">Marketing · Print</div></td><td class="d-none d-md-table-cell">Cash</td><td class="d-none d-md-table-cell"><span class="text-muted">—</span></td><td class="money text-end" data-sort-value="6400">₹6,400</td></tr>
+            <tr data-filter-value="salaries"><td>1 Sep</td><td>Salaries · August<div class="caption">Salaries</div></td><td class="d-none d-md-table-cell">Bank transfer</td><td class="d-none d-md-table-cell"><span class="text-muted">—</span></td><td class="money text-end" data-sort-value="386000">₹3,86,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+<div class="modal fade" id="expModal" tabindex="-1" aria-labelledby="expModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Expense saved.">
+    <div class="modal-header"><h2 class="modal-title" id="expModalT">Add expense</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-12"><label class="form-label" for="ex1">Description</label><input class="form-control" id="ex1" type="text" value="" placeholder="" required ><div class="invalid-feedback">Please fill in description.</div></div><div class="col-md-6"><label class="form-label" for="ex2">Category</label><select class="form-select" id="ex2" ><option>Rent</option><option>Salaries</option><option>Marketing · Google</option><option>Marketing · Meta</option><option>Marketing · JustDial</option><option>Marketing · Print</option><option>Utilities</option><option>Software</option><option>Other</option></select></div><div class="col-md-6"><label class="form-label" for="ex3">Amount</label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control" id="ex3" inputmode="numeric" value="" required ><div class="invalid-feedback">Please fill in amount.</div></div></div><div class="col-md-6"><label class="form-label" for="ex4">Paid by</label><select class="form-select" id="ex4" ><option>UPI</option><option>Bank transfer</option><option>Card</option><option>Cash</option></select></div><div class="col-md-6"><label class="form-label" for="ex5">Date</label><input class="form-control" id="ex5" type="date" value="2026-09-25" placeholder="" ></div><div class="col-md-6"><label class="form-label" for="ex6">GST input (if bill has GSTIN)</label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control" id="ex6" inputmode="numeric" value="0" ></div></div><div class="col-12"><div class="upload-box"><i class="bi bi-cloud-arrow-up"></i>Drop the bill here or tap to upload (demo)</div></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Save</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

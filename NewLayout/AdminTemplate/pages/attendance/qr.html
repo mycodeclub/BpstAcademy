@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>QR attendance · BPST Edu Admin</title>
+  <meta name="description" content="QR attendance in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="attendance.mark" data-roles="admin trainer" data-title="QR attendance">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="mark.html">Mark attendance</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">QR</span></nav>
+      <h1>Class QR attendance</h1>
+      <p>Show this on the classroom screen. Students scan it from their portal; the code changes every 30 seconds.</p>
+    </div>
+    
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">FS-M2 · Thu 25 Sep, 11:00 AM</h2></div>
+        
+      </div>
+      <div class="card-body text-center"><div class="qr mx-auto" style="width:min(70vw,280px);height:min(70vw,280px)" role="img" aria-label="Demo QR code"></div><div class="mt-3 fw-semibold">Code refreshes in <span id="qrT" class="num">30</span> s</div><p class="caption mb-0">Only students of this batch who are on the centre Wi-Fi can check in.</p></div>
+      
+    </div>
+    </div>
+    <div class="col-lg-6">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Checked in</h2><p class="card-sub">4 of 22 so far</p></div>
+        
+      </div>
+      <div class="list-row"><span class="avatar avatar-sm">HK</span><div class="grow"><div class="title">Harsh Kumar</div><div class=meta>11:04 AM · late</div></div><span class="chip chip--success">Present</span></div><div class="list-row"><span class="avatar avatar-sm">AK</span><div class="grow"><div class="title">Aditya Kesarwani</div><div class=meta>10:58 AM</div></div><span class="chip chip--success">Present</span></div><div class="list-row"><span class="avatar avatar-sm">SM</span><div class="grow"><div class="title">Sneha Maurya</div><div class=meta>10:57 AM</div></div><span class="chip chip--success">Present</span></div><div class="list-row"><span class="avatar avatar-sm">KS</span><div class="grow"><div class="title">Kritika Sinha</div><div class=meta>10:55 AM</div></div><span class="chip chip--success">Present</span></div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+var t=30;setInterval(function(){t=t>1?t-1:30;document.getElementById('qrT').textContent=t;},1000);
+</script>
+</body>
+</html>

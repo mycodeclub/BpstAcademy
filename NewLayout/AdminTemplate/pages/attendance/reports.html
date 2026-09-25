@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Student attendance · BPST Edu Admin</title>
+  <meta name="description" content="Student attendance in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="attendance.reports" data-roles="admin hr" data-title="Student attendance">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Student attendance</h1>
+      <p>By batch and by student. Below 75% for the month blocks the certificate and triggers a nudge.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-outline-secondary" data-demo-toast="Demo: attendance export." data-tone="success"><i class="bi bi-download me-1" aria-hidden="true"></i>Export CSV</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-check" aria-hidden="true"></i>Today</div>
+      <div class="kpi-value">86%</div>
+      <div class="kpi-foot">212 of 246</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-graph-up" aria-hidden="true"></i>This month</div>
+      <div class="kpi-value">84%</div>
+      
+    </div>
+<div class="kpi is-alert">
+      <div class="kpi-label"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i>Below 75%</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-foot">nudged</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-person-x" aria-hidden="true"></i>Absent 3+ days in a row</div>
+      <div class="kpi-value">2</div>
+      <div class="kpi-foot">counsellor to call</div>
+    </div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-7">
+    <div class="card h-100" id="attChartCard">
+      <div class="card-header">
+        <div><h2 class="card-title">Attendance by week</h2><p class="card-sub">All batches, last 8 weeks</p></div>
+        
+      </div>
+      <div class="card-body"><div class="chart-box"><canvas id="attChart" role="img" aria-label="Line chart of weekly attendance percent"></canvas></div></div>
+      
+    </div>
+    </div>
+    <div class="col-xl-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">By batch</h2><p class="card-sub">Percent present</p></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Batch</th><th class="num text-end" scope="col">Students</th><th class="num text-end" scope="col">This week</th><th class="num text-end" scope="col">This month</th></tr></thead>
+          <tbody>
+            <tr><td>PY-M1</td><td class="num text-end">18</td><td class="num text-end">91%</td><td class="num text-end">89%</td></tr>
+            <tr><td>FS-M2</td><td class="num text-end">22</td><td class="num text-end">86%</td><td class="num text-end">84%</td></tr>
+            <tr><td>DA-A1</td><td class="num text-end">16</td><td class="num text-end">88%</td><td class="num text-end">86%</td></tr>
+            <tr><td>SC-E1</td><td class="num text-end">12</td><td class="num text-end">95%</td><td class="num text-end">93%</td></tr>
+            <tr><td>CS-E1</td><td class="num text-end">14</td><td class="num text-end">72%</td><td class="num text-end">76%</td></tr>
+            <tr><td>AI-O1</td><td class="num text-end">31</td><td class="num text-end">81%</td><td class="num text-end">83%</td></tr>
+            <tr><td>PY-E2</td><td class="num text-end">9</td><td class="num text-end">0%</td><td class="num text-end">0%</td></tr>
+            <tr><td>ST-M1</td><td class="num text-end">20</td><td class="num text-end">90%</td><td class="num text-end">88%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Low attendance</h2><p class="card-sub">Students under 80% this month</p></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Student</th><th class="d-none d-md-table-cell" scope="col">Course</th><th class="d-none d-md-table-cell" scope="col">Batch</th><th class="num text-end" scope="col">Month</th><th scope="col">Risk</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td><div class="cell-person"><span class="avatar">RY</span><div><div><a href="../admissions/student.html" class="name text-reset">Rohit Yadav</a></div><div class=meta>BPST26S0031</div></div></div></td><td class="d-none d-md-table-cell">Full Stack Development</td><td class="d-none d-md-table-cell">FS-M2</td><td class="num text-end" data-sort-value="32">32%</td><td><span class="chip chip--danger">High risk</span></td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: attendance nudge sent to the student and parent." data-tone="success">Nudge</button></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">PM</span><div><div><a href="../admissions/student.html" class="name text-reset">Pallavi Mishra</a></div><div class=meta>BPST26S0023</div></div></div></td><td class="d-none d-md-table-cell">Python Programming</td><td class="d-none d-md-table-cell">PY-M1</td><td class="num text-end" data-sort-value="58">58%</td><td><span class="chip chip--danger">High risk</span></td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: attendance nudge sent to the student and parent." data-tone="success">Nudge</button></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">YT</span><div><div><a href="../admissions/student.html" class="name text-reset">Yash Tripathi</a></div><div class=meta>BPST26S0088</div></div></div></td><td class="d-none d-md-table-cell">Cyber Security &amp; Ethical Hacking</td><td class="d-none d-md-table-cell">CS-E1</td><td class="num text-end" data-sort-value="64">64%</td><td><span class="chip chip--danger">High risk</span></td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: attendance nudge sent to the student and parent." data-tone="success">Nudge</button></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">HK</span><div><div><a href="../admissions/student.html" class="name text-reset">Harsh Kumar</a></div><div class=meta>BPST26S0042</div></div></div></td><td class="d-none d-md-table-cell">Full Stack Development</td><td class="d-none d-md-table-cell">FS-M2</td><td class="num text-end" data-sort-value="71">71%</td><td><span class="chip chip--warning">Pending</span></td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: attendance nudge sent to the student and parent." data-tone="success">Nudge</button></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">AK</span><div><div><a href="../admissions/student.html" class="name text-reset">Aman Khan</a></div><div class=meta>BPST26S0067</div></div></div></td><td class="d-none d-md-table-cell">Python Programming</td><td class="d-none d-md-table-cell">PY-M1</td><td class="num text-end" data-sort-value="79">79%</td><td><span class="chip chip--info">Watch</span></td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: attendance nudge sent to the student and parent." data-tone="success">Nudge</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/chartjs/chart.umd.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+window.BPST.chart('attChart', function (T, b) {
+    return { type: 'line', data: { labels: ['4 Aug', '11 Aug', '18 Aug', '25 Aug', '1 Sep', '8 Sep', '15 Sep', '22 Sep'],
+      datasets: [{ data: [88, 86, 87, 83, 85, 82, 84, 86], borderColor: T.accent, backgroundColor: T.accent + '1a', fill: true, borderWidth: 2, pointRadius: 0, pointHoverRadius: 5, cubicInterpolationMode: 'monotone' },
+                 { data: [75, 75, 75, 75, 75, 75, 75, 75], borderColor: T.danger, borderDash: [4, 4], borderWidth: 1, pointRadius: 0, label: '75% minimum' }] },
+      options: { interaction: { mode: 'index', intersect: false }, plugins: { legend: { display: false }, tooltip: b.tooltip }, scales: (function () { var s = b.scales(function (v) { return v + '%'; }); s.y.beginAtZero = false; s.y.min = 60; s.y.max = 100; return s; })() } };
+  });
+</script>
+</body>
+</html>

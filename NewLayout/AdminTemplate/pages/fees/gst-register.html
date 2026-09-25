@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GST register · BPST Edu Admin</title>
+  <meta name="description" content="GST register in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="fees.gst" data-roles="admin hr" data-title="GST register">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>GST register</h1>
+      <p>Every receipt and invoice with the tax split. Accounts uses this for monthly GST filing. SAC 999293 (commercial training), CGST + SGST within Uttar Pradesh.</p>
+    </div>
+    
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-receipt" aria-hidden="true"></i>Taxable value (Sep)</div>
+      <div class="kpi-value">₹6,29,068</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-percent" aria-hidden="true"></i>CGST 9%</div>
+      <div class="kpi-value">₹56,616</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-percent" aria-hidden="true"></i>SGST 9%</div>
+      <div class="kpi-value">₹56,616</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-geo" aria-hidden="true"></i>IGST (out of state)</div>
+      <div class="kpi-value">₹0</div>
+      <div class="kpi-foot">online learners outside UP: ask the CA</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-file-earmark-check" aria-hidden="true"></i>Documents</div>
+      <div class="kpi-value">412 + 19</div>
+      <div class="kpi-foot">receipts + invoices</div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">September 2026</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search number or name" data-table-search="gstRows" aria-label="Search number or name"></div>
+        <select class="form-select form-select-sm" aria-label="Month"><option>September 2026</option><option>August 2026</option><option>July 2026</option></select>
+        <div class="d-flex flex-wrap gap-2" data-filter-group="gstRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>11</span></button><button class="filter-chip" data-filter="b2c" aria-pressed="false">Receipts (B2C) <span class=count>10</span></button><button class="filter-chip" data-filter="b2b" aria-pressed="false">Tax invoices (B2B) <span class=count>1</span></button></div>
+        <div class="ms-auto d-flex gap-2"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: GSTR-1 ready CSV exported for September." data-tone="success"><i class="bi bi-download me-1" aria-hidden="true"></i>Export CSV for filing</button></div>
+      </div><div class="table-wrap is-scroll">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Date</th><th scope="col">Number</th><th scope="col">Party</th><th class="d-none d-lg-table-cell" scope="col">SAC</th><th class="num text-end d-none d-md-table-cell" scope="col">Taxable</th><th class="num text-end d-none d-md-table-cell" scope="col">CGST 9%</th><th class="num text-end d-none d-md-table-cell" scope="col">SGST 9%</th><th class="num text-end" scope="col">Total</th></tr></thead>
+          <tbody id="gstRows">
+            <tr data-filter-value="b2c"><td>25 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0412</a></td><td>Farah Naqvi</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹6,356</td><td class="money text-end d-none d-md-table-cell">₹572</td><td class="money text-end d-none d-md-table-cell">₹572</td><td class="money text-end">₹7,500</td></tr>
+            <tr data-filter-value="b2c"><td>25 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0411</a></td><td>Aman Khan</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹5,085</td><td class="money text-end d-none d-md-table-cell">₹458</td><td class="money text-end d-none d-md-table-cell">₹458</td><td class="money text-end">₹6,000</td></tr>
+            <tr data-filter-value="b2c"><td>25 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0410</a></td><td>Tanvi Shukla</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹10,169</td><td class="money text-end d-none d-md-table-cell">₹915</td><td class="money text-end d-none d-md-table-cell">₹915</td><td class="money text-end">₹12,000</td></tr>
+            <tr data-filter-value="b2c"><td>24 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0409</a></td><td>Kabir Singh</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹13,559</td><td class="money text-end d-none d-md-table-cell">₹1,220</td><td class="money text-end d-none d-md-table-cell">₹1,220</td><td class="money text-end">₹16,000</td></tr>
+            <tr data-filter-value="b2c"><td>24 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0408</a></td><td>Ananya Gupta</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹4,237</td><td class="money text-end d-none d-md-table-cell">₹381</td><td class="money text-end d-none d-md-table-cell">₹381</td><td class="money text-end">₹5,000</td></tr>
+            <tr data-filter-value="b2c"><td>24 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0407</a></td><td>Ishita Jaiswal</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹42</td><td class="money text-end d-none d-md-table-cell">₹4</td><td class="money text-end d-none d-md-table-cell">₹4</td><td class="money text-end">₹49</td></tr>
+            <tr data-filter-value="b2c"><td>23 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0406</a></td><td>Nidhi Awasthi</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹13,559</td><td class="money text-end d-none d-md-table-cell">₹1,220</td><td class="money text-end d-none d-md-table-cell">₹1,220</td><td class="money text-end">₹16,000</td></tr>
+            <tr data-filter-value="b2c"><td>23 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0405</a></td><td>Harsh Kumar</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹7,203</td><td class="money text-end d-none d-md-table-cell">₹648</td><td class="money text-end d-none d-md-table-cell">₹648</td><td class="money text-end">₹8,500</td></tr>
+            <tr data-filter-value="b2c"><td>23 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0404</a></td><td>Riya Bajpai</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹6,356</td><td class="money text-end d-none d-md-table-cell">₹572</td><td class="money text-end d-none d-md-table-cell">₹572</td><td class="money text-end">₹7,500</td></tr>
+            <tr data-filter-value="b2c"><td>22 Sep</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0403</a></td><td>Sahil Verma</td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹6,356</td><td class="money text-end d-none d-md-table-cell">₹572</td><td class="money text-end d-none d-md-table-cell">₹572</td><td class="money text-end">₹7,500</td></tr>
+            <tr data-filter-value="b2b"><td>22 Sep</td><td><a class="num" href="../../print/gst-invoice.html">BPST/INV/2026-27/0019</a></td><td>Shri Ram Institute of Technology<div class="caption">GSTIN 09AAACS1234K1Z5 · B2B</div></td><td class="d-none d-lg-table-cell">999293</td><td class="money text-end d-none d-md-table-cell">₹1,86,000</td><td class="money text-end d-none d-md-table-cell">₹16,740</td><td class="money text-end d-none d-md-table-cell">₹16,740</td><td class="money text-end">₹2,19,480</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer caption">GSTIN on documents is a placeholder (09XXXXXXXXXXXZX) until the owner confirms it with the CA. Numbering resets every financial year.</div>
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

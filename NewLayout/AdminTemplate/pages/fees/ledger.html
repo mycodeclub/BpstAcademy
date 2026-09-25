@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Student ledger · BPST Edu Admin</title>
+  <meta name="description" content="Student ledger in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="fees.collections" data-roles="admin hr counsellor" data-title="Student ledger">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="collections.html">Collections</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Ledger</span></nav>
+      <h1>Harsh Kumar · fee ledger</h1>
+      <p>BPST26S0042 · Full Stack Development · FS-M2</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="../admissions/student.html" ><i class="bi bi-person me-1" aria-hidden="true"></i>Student 360</a></div>
+  </div>
+  <div class="detail-grid">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Ledger</h2><p class="card-sub">Charges, payments, fines, waivers and discounts, with running balance</p></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search ledger" data-table-search="ledRows" aria-label="Search ledger"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="ledRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>8</span></button><button class="filter-chip" data-filter="charge" aria-pressed="false">Charges <span class=count>2</span></button><button class="filter-chip" data-filter="payment" aria-pressed="false">Payments <span class=count>4</span></button><button class="filter-chip" data-filter="fine" aria-pressed="false">Fines <span class=count>1</span></button><button class="filter-chip" data-filter="waiver" aria-pressed="false">Waivers <span class=count>1</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Date</th><th scope="col">Item</th><th class="num text-end" scope="col">Charge</th><th class="num text-end" scope="col">Paid</th><th class="num text-end" scope="col">Balance</th></tr></thead>
+          <tbody id="ledRows">
+            <tr data-filter-value="charge"><td>1 Jul 2026</td><td>Course fee · Full Stack Development (6 months)</td><td class="money text-end">₹45,000</td><td class="money text-end"></td><td class="money text-end">₹45,000</td></tr>
+            <tr data-filter-value="payment"><td>1 Jul 2026</td><td>₹49 pre-booking adjusted (advance of 24 Jun)<div class="caption"><a href="../../print/receipt.html">BPST/RC/2026-27/0102</a></div></td><td class="money text-end"></td><td class="money text-end">₹49</td><td class="money text-end">₹44,951</td></tr>
+            <tr data-filter-value="payment"><td>1 Jul 2026</td><td>Instalment 1 · UPI · ref 4182…<div class="caption"><a href="../../print/receipt.html">BPST/RC/2026-27/0118</a></div></td><td class="money text-end"></td><td class="money text-end">₹14,951</td><td class="money text-end">₹30,000</td></tr>
+            <tr data-filter-value="payment"><td>1 Aug 2026</td><td>Instalment 2 · Cash<div class="caption"><a href="../../print/receipt.html">BPST/RC/2026-27/0244</a></div></td><td class="money text-end"></td><td class="money text-end">₹10,000</td><td class="money text-end">₹20,000</td></tr>
+            <tr data-filter-value="charge"><td>1 Sep 2026</td><td>Instalment 3 due</td><td class="money text-end"></td><td class="money text-end"></td><td class="money text-end">₹20,000</td></tr>
+            <tr data-filter-value="payment"><td>5 Sep 2026</td><td>Part payment · UPI<div class="caption"><a href="../../print/receipt.html">BPST/RC/2026-27/0361</a></div></td><td class="money text-end"></td><td class="money text-end">₹7,500</td><td class="money text-end">₹12,500</td></tr>
+            <tr data-filter-value="fine"><td>8 Sep 2026</td><td>Late fine · ₹50/day after 7 days&#x27; grace</td><td class="money text-end">₹1,000</td><td class="money text-end"></td><td class="money text-end">₹13,500</td></tr>
+            <tr data-filter-value="waiver"><td>12 Sep 2026</td><td>Fine waiver requested (₹500) · waiting for approval</td><td class="money text-end"></td><td class="money text-end"></td><td class="money text-end">₹13,500</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    <div class="d-grid gap-3 align-content-start"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Fee plan</h2></div>
+        
+      </div>
+      <div class="card-body"><dl class="dl-grid"><dt>Course fee</dt><dd>₹45,000</dd><dt>Plan</dt><dd>3 instalments</dd><dt>Next due</dt><dd>1 Oct · ₹15,000</dd><dt>Paid</dt><dd>₹32,500</dd><dt>Fine</dt><dd>₹1,000</dd><dt>Balance</dt><dd><b>₹13,500</b></dd></dl><div class="d-grid gap-2 mt-3"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#collectModal"><i class="bi bi-cash-coin me-1" aria-hidden="true"></i>Collect payment</button><button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#fineModal">Add fine</button><button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#waiverModal">Request waiver</button><a class="btn btn-outline-secondary" href="../../print/gst-invoice.html" ><i class="bi bi-file-earmark-text me-1" aria-hidden="true"></i>GST tax invoice</a></div></div>
+      
+    </div></div>
+  </div>
+<div class="modal fade" id="collectModal" tabindex="-1" aria-labelledby="collectModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Payment saved. Receipt BPST/RC/2026-27/0413 created with the GST breakup.">
+    <div class="modal-header"><h2 class="modal-title" id="collectModalT">Collect payment</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3">
+      <div class="col-12"><label class="form-label" for="cpS">Student</label><select class="form-select" id="cpS" ><option selected>Harsh Kumar · BPST26S0042</option><option>Nidhi Awasthi · BPST26S0051</option><option>Aman Khan · BPST26S0067</option><option>Sahil Verma · BPST26S0074</option></select></div>
+      <div class="col-12"><label class="form-label" for="cpA">Amount received (incl. GST)</label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control" id="cpA" inputmode="numeric" value="12500" required pattern="[0-9]+"></div>
+        <div class="form-text" id="cpSplit"></div><div class="invalid-feedback">Enter an amount in rupees.</div></div>
+      <div class="col-12"><span class="form-label d-block">Mode</span><div class="d-flex flex-wrap gap-3"><div class="form-check"><input class="form-check-input" type="radio" name="cpM" id="cpM0" checked><label class="form-check-label" for="cpM0">UPI</label></div><div class="form-check"><input class="form-check-input" type="radio" name="cpM" id="cpM1"><label class="form-check-label" for="cpM1">Cash</label></div><div class="form-check"><input class="form-check-input" type="radio" name="cpM" id="cpM2"><label class="form-check-label" for="cpM2">Card</label></div><div class="form-check"><input class="form-check-input" type="radio" name="cpM" id="cpM3"><label class="form-check-label" for="cpM3">Bank transfer</label></div></div></div>
+      <div class="col-md-6"><label class="form-label" for="cpR">Reference / UTR</label><input class="form-control" id="cpR" type="text" value="" placeholder="UPI ref, card slip or cheque no." ></div>
+      <div class="col-md-6"><label class="form-label" for="cpD">Date</label><input class="form-control" id="cpD" type="date" value="2026-09-25" placeholder="" ></div>
+      <div class="col-12"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="cpSend" checked><label class="form-check-label" for="cpSend">Send the GST receipt by SMS and email</label></div></div>
+    </div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Save &amp; create receipt</button></div>
+  </form></div>
+</div><div class="modal fade" id="fineModal" tabindex="-1" aria-labelledby="fineModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Fine added to the ledger.">
+    <div class="modal-header"><h2 class="modal-title" id="fineModalT">Add late fine</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-md-6"><label class="form-label" for="fn1">Amount</label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control" id="fn1" inputmode="numeric" value="350" required ><div class="invalid-feedback">Please fill in amount.</div></div><div class="form-text">Rule: ₹50 per day after 7 days' grace, capped at ₹1,000.</div></div><div class="col-md-6"><label class="form-label" for="fn2">Reason</label><input class="form-control" id="fn2" type="text" value="Instalment 3 overdue" placeholder="" ></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Add fine</button></div>
+  </form></div>
+</div><div class="modal fade" id="waiverModal" tabindex="-1" aria-labelledby="waiverModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Waiver request sent to the manager&#x27;s approvals inbox.">
+    <div class="modal-header"><h2 class="modal-title" id="waiverModalT">Request fine waiver</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-md-6"><label class="form-label" for="wv1">Waive</label><select class="form-select" id="wv1" ><option>Full</option><option selected>Partial</option></select></div><div class="col-md-6"><label class="form-label" for="wv2">Amount</label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control" id="wv2" inputmode="numeric" value="500" required ><div class="invalid-feedback">Please fill in amount.</div></div></div><div class="col-12"><label class="form-label" for="wv3">Reason (required)</label><textarea class="form-control" id="wv3" rows="3" required placeholder="" ></textarea><div class="invalid-feedback">Please fill in reason (required).</div></div><div class="col-12"><div class="alert alert-warning py-2 mb-0">Maker-checker: you cannot approve your own request. It goes to the manager.</div></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Send for approval</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+(function () {
+    var a = document.getElementById('cpA'), out = document.getElementById('cpSplit'), B = window.BPST;
+    function upd() {
+      var v = parseFloat(a.value) || 0, base = v / 1.18, tax = v - base;
+      out.innerHTML = 'Includes 18% GST (SAC 999293): taxable ' + B.fmtINR(base) + ' + CGST 9% ' + B.fmtINR(Math.round(tax / 2)) + ' + SGST 9% ' + B.fmtINR(Math.round(tax / 2)) + '.';
+    }
+    if (a) { a.addEventListener('input', upd); upd(); }
+  })();
+</script>
+</body>
+</html>

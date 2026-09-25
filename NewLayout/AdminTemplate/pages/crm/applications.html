@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Applications · BPST Edu Admin</title>
+  <meta name="description" content="Applications in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="crm.applications" data-roles="admin counsellor" data-title="Applications">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Applications</h1>
+      <p>Counsellors create an application from a lead. Approve to open the enrolment wizard.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="pipeline.html" ><i class="bi bi-kanban me-1" aria-hidden="true"></i>Pipeline</a></div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Applications</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search applications" data-table-search="appRows" aria-label="Search applications"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="appRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>7</span></button><button class="filter-chip" data-filter="new" aria-pressed="false">New <span class=count>2</span></button><button class="filter-chip" data-filter="inreview" aria-pressed="false">In review <span class=count>2</span></button><button class="filter-chip" data-filter="approved" aria-pressed="false">Approved <span class=count>2</span></button><button class="filter-chip" data-filter="rejected" aria-pressed="false">Rejected <span class=count>1</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">No.</th><th scope="col">Applicant</th><th class="d-none d-md-table-cell" scope="col">Batch</th><th class="d-none d-lg-table-cell" scope="col">Payment plan</th><th class="d-none d-lg-table-cell" scope="col">Counsellor</th><th class="d-none d-md-table-cell" scope="col">Date</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody id="appRows">
+            <tr data-filter-value="new"><td><span class="num">AP-209</span></td><td><div class="cell-person"><span class="avatar">AG</span><div><div><a href="lead.html" class="name text-reset">Ananya Gupta</a></div><div class=meta>AI &amp; Machine Learning</div></div></div></td><td class="d-none d-md-table-cell">AI-O1 (online)</td><td class="d-none d-lg-table-cell">Upfront (10% off)</td><td class="d-none d-lg-table-cell">Neha S.</td><td class="d-none d-md-table-cell">Today</td><td><span class="chip chip--info">New</span></td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Application rejected. The lead is notified and moved to Lost with a reason.">Reject</button><a class="btn btn-primary btn-sm" href="../admissions/enrol.html">Approve &amp; enrol</a></div></td></tr>
+            <tr data-filter-value="new"><td><span class="num">AP-208</span></td><td><div class="cell-person"><span class="avatar">AM</span><div><div><a href="lead.html" class="name text-reset">Aarav Mishra</a></div><div class=meta>Full Stack Development</div></div></div></td><td class="d-none d-md-table-cell">FS-M2</td><td class="d-none d-lg-table-cell">Instalments (3)</td><td class="d-none d-lg-table-cell">Neha S.</td><td class="d-none d-md-table-cell">Today</td><td><span class="chip chip--info">New</span></td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Application rejected. The lead is notified and moved to Lost with a reason.">Reject</button><a class="btn btn-primary btn-sm" href="../admissions/enrol.html">Approve &amp; enrol</a></div></td></tr>
+            <tr data-filter-value="inreview"><td><span class="num">AP-207</span></td><td><div class="cell-person"><span class="avatar">SD</span><div><div><a href="lead.html" class="name text-reset">Shreya Dixit</a></div><div class=meta>UI/UX Design (Figma + AI)</div></div></div></td><td class="d-none d-md-table-cell">UX-E1</td><td class="d-none d-lg-table-cell">Monthly</td><td class="d-none d-lg-table-cell">Rahul T.</td><td class="d-none d-md-table-cell">24 Sep</td><td><span class="chip chip--warning">In review</span></td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Application rejected. The lead is notified and moved to Lost with a reason.">Reject</button><a class="btn btn-primary btn-sm" href="../admissions/enrol.html">Approve &amp; enrol</a></div></td></tr>
+            <tr data-filter-value="inreview"><td><span class="num">AP-206</span></td><td><div class="cell-person"><span class="avatar">SK</span><div><div><a href="lead.html" class="name text-reset">Simran Kaur</a></div><div class=meta>Data Analyst Pro</div></div></div></td><td class="d-none d-md-table-cell">DA-A1</td><td class="d-none d-lg-table-cell">Instalments (4)</td><td class="d-none d-lg-table-cell">Rahul T.</td><td class="d-none d-md-table-cell">23 Sep</td><td><span class="chip chip--warning">In review</span></td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Application rejected. The lead is notified and moved to Lost with a reason.">Reject</button><a class="btn btn-primary btn-sm" href="../admissions/enrol.html">Approve &amp; enrol</a></div></td></tr>
+            <tr data-filter-value="approved"><td><span class="num">AP-205</span></td><td><div class="cell-person"><span class="avatar">AV</span><div><div><a href="lead.html" class="name text-reset">Aditi Verma</a></div><div class=meta>Full Stack Development</div></div></div></td><td class="d-none d-md-table-cell">FS-M2</td><td class="d-none d-lg-table-cell">Upfront (10% off)</td><td class="d-none d-lg-table-cell">Neha S.</td><td class="d-none d-md-table-cell">22 Sep</td><td><span class="chip chip--success">Approved</span></td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../admissions/student.html">Student 360</a></td></tr>
+            <tr data-filter-value="approved"><td><span class="num">AP-204</span></td><td><div class="cell-person"><span class="avatar">NA</span><div><div><a href="lead.html" class="name text-reset">Nikhil Arora</a></div><div class=meta>Data Analyst Pro</div></div></div></td><td class="d-none d-md-table-cell">DA-A1</td><td class="d-none d-lg-table-cell">Open part-payment</td><td class="d-none d-lg-table-cell">Neha S.</td><td class="d-none d-md-table-cell">19 Sep</td><td><span class="chip chip--success">Approved</span></td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../admissions/student.html">Student 360</a></td></tr>
+            <tr data-filter-value="rejected"><td><span class="num">AP-203</span></td><td><div class="cell-person"><span class="avatar">GS</span><div><div><a href="lead.html" class="name text-reset">Gaurav Singh</a></div><div class=meta>Python Programming</div></div></div></td><td class="d-none d-md-table-cell">PY-E2</td><td class="d-none d-lg-table-cell">—</td><td class="d-none d-lg-table-cell">Rahul T.</td><td class="d-none d-md-table-cell">17 Sep</td><td><span class="chip chip--danger">Rejected</span></td><td class="text-end"></td></tr>
+          </tbody>
+        </table>
+      </div><div class="empty" data-empty-for="appRows" hidden><i class="bi bi-search"></i><div class="empty-title">Nothing matches</div>No applications match.</div><div class="pager"><span>Showing <span data-shown-for="appRows">7</span> of 7 applications</span>
+        <nav aria-label="Pages"><ul class="pagination pagination-sm mb-0">
+          <li class="page-item disabled"><span class="page-link">Previous</span></li>
+          <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+          <li class="page-item"><a class="page-link" href="#" data-demo-toast="Demo: page 2 loads from the database in the backend phase." data-tone="info">2</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-demo-toast="Demo: next page loads from the database in the backend phase." data-tone="info">Next</a></li>
+        </ul></nav></div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Follow-ups today · BPST Edu Admin</title>
+  <meta name="description" content="Follow-ups today in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="crm.followups" data-roles="admin counsellor" data-title="Follow-ups today">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Follow-ups today</h1>
+      <p>Overdue first. Snooze moves it to tomorrow; Done logs it on the lead.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="leads.html" ><i class="bi bi-inbox me-1" aria-hidden="true"></i>Lead inbox</a></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi is-alert">
+      <div class="kpi-label"><i class="bi bi-exclamation-circle" aria-hidden="true"></i>Overdue</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-foot">from earlier today</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-clock" aria-hidden="true"></i>Due later today</div>
+      <div class="kpi-value">4</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-check2-circle" aria-hidden="true"></i>Done today</div>
+      <div class="kpi-value">2</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-week" aria-hidden="true"></i>Due tomorrow</div>
+      <div class="kpi-value">11</div>
+      
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Follow-ups</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search follow-ups" data-table-search="fuRows" aria-label="Search follow-ups"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="fuRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>9</span></button><button class="filter-chip" data-filter="overdue" aria-pressed="false">Overdue <span class=count>3</span></button><button class="filter-chip" data-filter="due" aria-pressed="false">Due later today <span class=count>4</span></button><button class="filter-chip" data-filter="done" aria-pressed="false">Done <span class=count>2</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Lead</th><th class="d-none d-md-table-cell" scope="col">Type</th><th scope="col">When</th><th scope="col">Status</th><th class="d-none d-lg-table-cell" scope="col">Note</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody id="fuRows">
+            <tr data-filter-value="overdue"><td><div class="cell-person"><span class="avatar">MF</span><div><div><a href="lead.html" class="name text-reset">Mohd. Faizan</a></div><div class=meta>Python Programming</div></div></div></td><td class="d-none d-md-table-cell">Call</td><td>Today 12:00 PM</td><td><span class="chip chip--danger">Overdue</span></td><td class="d-none d-lg-table-cell">Wants weekend batch</td><td class="text-end"><div class="row-actions" data-resolve-slot><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: dialling…" data-tone="info" aria-label="Call Mohd. Faizan" title="Call Mohd. Faizan"><i class="bi bi-telephone"></i></button><button class="btn btn-outline-secondary btn-sm" data-resolve="Rescheduled|warning|Follow-up moved to tomorrow 11:00 AM.">Snooze</button><button class="btn btn-primary btn-sm" data-resolve="Done|success|Follow-up marked done and logged on the lead timeline.">Done</button></div></td></tr>
+            <tr data-filter-value="overdue"><td><div class="cell-person"><span class="avatar">PY</span><div><div><a href="lead.html" class="name text-reset">Priya Yadav</a></div><div class=meta>Software Testing Masters</div></div></div></td><td class="d-none d-md-table-cell">WhatsApp</td><td>Today 1:00 PM</td><td><span class="chip chip--danger">Overdue</span></td><td class="d-none d-lg-table-cell">Send fee structure</td><td class="text-end"><div class="row-actions" data-resolve-slot><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: dialling…" data-tone="info" aria-label="Call Priya Yadav" title="Call Priya Yadav"><i class="bi bi-telephone"></i></button><button class="btn btn-outline-secondary btn-sm" data-resolve="Rescheduled|warning|Follow-up moved to tomorrow 11:00 AM.">Snooze</button><button class="btn btn-primary btn-sm" data-resolve="Done|success|Follow-up marked done and logged on the lead timeline.">Done</button></div></td></tr>
+            <tr data-filter-value="overdue"><td><div class="cell-person"><span class="avatar">DM</span><div><div><a href="lead.html" class="name text-reset">Deepak Maurya</a></div><div class=meta>Full Stack Development</div></div></div></td><td class="d-none d-md-table-cell">Call</td><td>Today 2:00 PM</td><td><span class="chip chip--danger">Overdue</span></td><td class="d-none d-lg-table-cell">Family decision</td><td class="text-end"><div class="row-actions" data-resolve-slot><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: dialling…" data-tone="info" aria-label="Call Deepak Maurya" title="Call Deepak Maurya"><i class="bi bi-telephone"></i></button><button class="btn btn-outline-secondary btn-sm" data-resolve="Rescheduled|warning|Follow-up moved to tomorrow 11:00 AM.">Snooze</button><button class="btn btn-primary btn-sm" data-resolve="Done|success|Follow-up marked done and logged on the lead timeline.">Done</button></div></td></tr>
+            <tr data-filter-value="due"><td><div class="cell-person"><span class="avatar">AG</span><div><div><a href="lead.html" class="name text-reset">Ananya Gupta</a></div><div class=meta>AI &amp; Machine Learning</div></div></div></td><td class="d-none d-md-table-cell">Meeting</td><td>Today 3:30 PM</td><td><span class="chip chip--warning">Due</span></td><td class="d-none d-lg-table-cell">Counselling in office</td><td class="text-end"><div class="row-actions" data-resolve-slot><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: dialling…" data-tone="info" aria-label="Call Ananya Gupta" title="Call Ananya Gupta"><i class="bi bi-telephone"></i></button><button class="btn btn-outline-secondary btn-sm" data-resolve="Rescheduled|warning|Follow-up moved to tomorrow 11:00 AM.">Snooze</button><button class="btn btn-primary btn-sm" data-resolve="Done|success|Follow-up marked done and logged on the lead timeline.">Done</button></div></td></tr>
+            <tr data-filter-value="due"><td><div class="cell-person"><span class="avatar">SR</span><div><div><a href="lead.html" class="name text-reset">Sana Rizvi</a></div><div class=meta>Cloud &amp; DevOps</div></div></div></td><td class="d-none d-md-table-cell">Call</td><td>Today 5:00 PM</td><td><span class="chip chip--warning">Due</span></td><td class="d-none d-lg-table-cell">Send brochure</td><td class="text-end"><div class="row-actions" data-resolve-slot><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: dialling…" data-tone="info" aria-label="Call Sana Rizvi" title="Call Sana Rizvi"><i class="bi bi-telephone"></i></button><button class="btn btn-outline-secondary btn-sm" data-resolve="Rescheduled|warning|Follow-up moved to tomorrow 11:00 AM.">Snooze</button><button class="btn btn-primary btn-sm" data-resolve="Done|success|Follow-up marked done and logged on the lead timeline.">Done</button></div></td></tr>
+            <tr data-filter-value="due"><td><div class="cell-person"><span class="avatar">VC</span><div><div><a href="lead.html" class="name text-reset">Vivek Chauhan</a></div><div class=meta>Java Programming</div></div></div></td><td class="d-none d-md-table-cell">Call</td><td>Today 6:15 PM</td><td><span class="chip chip--warning">Due</span></td><td class="d-none d-lg-table-cell">Call after college</td><td class="text-end"><div class="row-actions" data-resolve-slot><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: dialling…" data-tone="info" aria-label="Call Vivek Chauhan" title="Call Vivek Chauhan"><i class="bi bi-telephone"></i></button><button class="btn btn-outline-secondary btn-sm" data-resolve="Rescheduled|warning|Follow-up moved to tomorrow 11:00 AM.">Snooze</button><button class="btn btn-primary btn-sm" data-resolve="Done|success|Follow-up marked done and logged on the lead timeline.">Done</button></div></td></tr>
+            <tr data-filter-value="due"><td><div class="cell-person"><span class="avatar">RP</span><div><div><a href="lead.html" class="name text-reset">Rohan Pandey</a></div><div class=meta>Class 6–12 Coding</div></div></div></td><td class="d-none d-md-table-cell">Call</td><td>Today 7:00 PM</td><td><span class="chip chip--warning">Due</span></td><td class="d-none d-lg-table-cell">Parent (father) to call back</td><td class="text-end"><div class="row-actions" data-resolve-slot><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: dialling…" data-tone="info" aria-label="Call Rohan Pandey" title="Call Rohan Pandey"><i class="bi bi-telephone"></i></button><button class="btn btn-outline-secondary btn-sm" data-resolve="Rescheduled|warning|Follow-up moved to tomorrow 11:00 AM.">Snooze</button><button class="btn btn-primary btn-sm" data-resolve="Done|success|Follow-up marked done and logged on the lead timeline.">Done</button></div></td></tr>
+            <tr data-filter-value="done"><td><div class="cell-person"><span class="avatar">SK</span><div><div><a href="lead.html" class="name text-reset">Simran Kaur</a></div><div class=meta>Data Analyst Pro</div></div></div></td><td class="d-none d-md-table-cell">Call</td><td>Today 10:30 AM</td><td><span class="chip chip--neutral">Done</span></td><td class="d-none d-lg-table-cell">EMI plan explained</td><td class="text-end"><span class="caption">Done</span></td></tr>
+            <tr data-filter-value="done"><td><div class="cell-person"><span class="avatar">SD</span><div><div><a href="lead.html" class="name text-reset">Shreya Dixit</a></div><div class=meta>UI/UX Design</div></div></div></td><td class="d-none d-md-table-cell">WhatsApp</td><td>Today 9:45 AM</td><td><span class="chip chip--neutral">Done</span></td><td class="d-none d-lg-table-cell">Shared portfolio samples</td><td class="text-end"><span class="caption">Done</span></td></tr>
+          </tbody>
+        </table>
+      </div><div class="empty" data-empty-for="fuRows" hidden><i class="bi bi-search"></i><div class="empty-title">Nothing matches</div>No follow-ups here.</div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

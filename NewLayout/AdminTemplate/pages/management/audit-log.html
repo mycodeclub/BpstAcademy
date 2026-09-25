@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Audit log · BPST Edu Admin</title>
+  <meta name="description" content="Audit log in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="management.audit" data-roles="admin" data-title="Audit log">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Audit log</h1>
+      <p>Who changed what, and when: every money, status and settings change. Entries can't be edited or deleted.</p>
+    </div>
+    
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Activity</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search who, what or record" data-table-search="auditRows" aria-label="Search who, what or record"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="auditRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All</button><button class="filter-chip" data-filter="money" aria-pressed="false">Money</button><button class="filter-chip" data-filter="status" aria-pressed="false">Status</button><button class="filter-chip" data-filter="sla" aria-pressed="false">SLA</button><button class="filter-chip" data-filter="settings" aria-pressed="false">Settings</button></div>
+        <div class="ms-auto d-flex gap-2"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: audit log export (read-only)." data-tone="success"><i class="bi bi-download me-1" aria-hidden="true"></i>Export</button></div>
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">When</th><th scope="col">Who</th><th scope="col">Record</th><th scope="col">Change</th><th class="d-none d-md-table-cell" scope="col">Type</th></tr></thead>
+          <tbody id="auditRows">
+            <tr data-filter-value="status"><td data-sort-value="25 Sep, 11:42 AM">25 Sep, 11:42 AM</td><td><div class="cell-person"><span class="avatar avatar-sm">NS</span><div><div class="name">Neha S.</div></div></div></td><td>Lead L-2419</td><td>Status New → Contacted</td><td class="d-none d-md-table-cell"><span class="chip chip--accent">Status</span></td></tr>
+            <tr data-filter-value="money"><td data-sort-value="25 Sep, 11:20 AM">25 Sep, 11:20 AM</td><td><div class="cell-person"><span class="avatar avatar-sm">SP</span><div><div class="name">Sunita Pal</div></div></div></td><td>Receipt BPST/RC/2026-27/0412</td><td>Payment ₹12,000 UPI recorded</td><td class="d-none d-md-table-cell"><span class="chip chip--success">Money</span></td></tr>
+            <tr data-filter-value="money"><td data-sort-value="25 Sep, 10:05 AM">25 Sep, 10:05 AM</td><td><div class="cell-person"><span class="avatar avatar-sm">AS</span><div><div class="name">Ankit Sahay</div></div></div></td><td>Approval AP-310</td><td>Discount ₹1,000 approved (requested by Rahul T.)</td><td class="d-none d-md-table-cell"><span class="chip chip--success">Money</span></td></tr>
+            <tr data-filter-value="status"><td data-sort-value="25 Sep, 9:04 AM">25 Sep, 9:04 AM</td><td><div class="cell-person"><span class="avatar avatar-sm">S</span><div><div class="name">System</div></div></div></td><td>Lead L-2419</td><td>Auto-assigned to Neha S. (round-robin)</td><td class="d-none d-md-table-cell"><span class="chip chip--accent">Status</span></td></tr>
+            <tr data-filter-value="sla"><td data-sort-value="24 Sep, 6:30 PM">24 Sep, 6:30 PM</td><td><div class="cell-person"><span class="avatar avatar-sm">S</span><div><div class="name">System</div></div></div></td><td>Lead L-2402</td><td>SLA breached · manager alerted</td><td class="d-none d-md-table-cell"><span class="chip chip--danger">SLA</span></td></tr>
+            <tr data-filter-value="status"><td data-sort-value="24 Sep, 4:50 PM">24 Sep, 4:50 PM</td><td><div class="cell-person"><span class="avatar avatar-sm">SP</span><div><div class="name">Sunita Pal</div></div></div></td><td>Student BPST26S0071</td><td>Documents verified; portal unlocked</td><td class="d-none d-md-table-cell"><span class="chip chip--accent">Status</span></td></tr>
+            <tr data-filter-value="settings"><td data-sort-value="24 Sep, 1:15 PM">24 Sep, 1:15 PM</td><td><div class="cell-person"><span class="avatar avatar-sm">AS</span><div><div class="name">Ankit Sahay</div></div></div></td><td>Settings · Fee rules</td><td>Late fine cap ₹800 → ₹1,000</td><td class="d-none d-md-table-cell"><span class="chip chip--neutral">Settings</span></td></tr>
+            <tr data-filter-value="status"><td data-sort-value="23 Sep, 7:02 PM">23 Sep, 7:02 PM</td><td><div class="cell-person"><span class="avatar avatar-sm">AM</span><div><div class="name">Arjun Mehta</div></div></div></td><td>Batch FS-M2</td><td>Class 29 Sep cancelled; makeup 4 Oct</td><td class="d-none d-md-table-cell"><span class="chip chip--accent">Status</span></td></tr>
+            <tr data-filter-value="money"><td data-sort-value="23 Sep, 11:30 AM">23 Sep, 11:30 AM</td><td><div class="cell-person"><span class="avatar avatar-sm">SP</span><div><div class="name">Sunita Pal</div></div></div></td><td>Student BPST26S0042</td><td>Late fine ₹1,000 added</td><td class="d-none d-md-table-cell"><span class="chip chip--success">Money</span></td></tr>
+            <tr data-filter-value="settings"><td data-sort-value="22 Sep, 5:45 PM">22 Sep, 5:45 PM</td><td><div class="cell-person"><span class="avatar avatar-sm">AS</span><div><div class="name">Ankit Sahay</div></div></div></td><td>User Tushar Rawat</td><td>Created with role Front desk</td><td class="d-none d-md-table-cell"><span class="chip chip--neutral">Settings</span></td></tr>
+          </tbody>
+        </table>
+      </div><div class="pager"><span>Showing <span data-shown-for="auditRows">10</span> of 2318 entries</span>
+        <nav aria-label="Pages"><ul class="pagination pagination-sm mb-0">
+          <li class="page-item disabled"><span class="page-link">Previous</span></li>
+          <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+          <li class="page-item"><a class="page-link" href="#" data-demo-toast="Demo: page 2 loads from the database in the backend phase." data-tone="info">2</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-demo-toast="Demo: next page loads from the database in the backend phase." data-tone="info">Next</a></li>
+        </ul></nav></div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

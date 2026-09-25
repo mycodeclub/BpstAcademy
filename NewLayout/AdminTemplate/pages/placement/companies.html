@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Companies · BPST Edu Admin</title>
+  <meta name="description" content="Companies in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="placement.companies" data-roles="admin counsellor" data-title="Companies">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Companies</h1>
+      <p>Hiring partners and what they hire for.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-primary" data-demo-toast="Demo: company form." data-tone="info"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>Add company</button></div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Hiring partners</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search companies" data-table-search="compRows" aria-label="Search companies"></div>
+        
+        
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th data-sort tabindex="0" scope="col">Company</th><th class="d-none d-md-table-cell" scope="col">Roles</th><th class="num text-end" data-sort tabindex="0" scope="col">Drives</th><th class="num text-end" data-sort tabindex="0" scope="col">Hired</th><th class="d-none d-lg-table-cell" scope="col">Contact</th></tr></thead>
+          <tbody id="compRows">
+            <tr><td><b>TechNova Solutions</b><div class="caption">IT services · Lucknow</div></td><td class="d-none d-md-table-cell">.NET, React, QA</td><td class="num text-end">3</td><td class="num text-end">11</td><td class="d-none d-lg-table-cell">Ms. P. Arora (HR)</td></tr>
+            <tr><td><b>DataSpring Analytics</b><div class="caption">Analytics · Noida</div></td><td class="d-none d-md-table-cell">Data analyst, BI</td><td class="num text-end">1</td><td class="num text-end">4</td><td class="d-none d-lg-table-cell">Talent team</td></tr>
+            <tr><td><b>QualityFirst Labs</b><div class="caption">Testing · Lucknow</div></td><td class="d-none d-md-table-cell">QA, automation</td><td class="num text-end">2</td><td class="num text-end">7</td><td class="d-none d-lg-table-cell">Mr. V. Singh</td></tr>
+            <tr><td><b>CloudKart</b><div class="caption">E-commerce · Bengaluru (remote)</div></td><td class="d-none d-md-table-cell">Cloud support</td><td class="num text-end">1</td><td class="num text-end">3</td><td class="d-none d-lg-table-cell">Recruiter</td></tr>
+            <tr><td><b>Awadh Softech</b><div class="caption">Startup · Lucknow</div></td><td class="d-none d-md-table-cell">Interns: web, mobile</td><td class="num text-end">2</td><td class="num text-end">9</td><td class="d-none d-lg-table-cell">Founder</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

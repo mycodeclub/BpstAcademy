@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Payroll · BPST Edu Admin</title>
+  <meta name="description" content="Payroll in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="hr.payroll" data-roles="admin hr" data-title="Payroll">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Payroll · September 2026</h1>
+      <p>Payslips must be published by the last working day of the month (30 Sep).</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="salary-structure.html" ><i class="bi bi-sliders me-1" aria-hidden="true"></i>Salary structure</a><button type="button" class="btn btn-primary" data-demo-toast="Payroll approved. 10 payslips published to the employee portal and emailed. Bank file ready." data-tone="success"><i class="bi bi-send-check me-1" aria-hidden="true"></i>Approve &amp; publish</button></div>
+  </div>
+  <div class="card mb-3">
+      
+      <div class="card-body"><ol class="stepper"><li class="is-done">Attendance &amp; leave locked</li><li class="is-current">Calculate &amp; review</li><li>Approve</li><li>Publish payslips</li><li>Bank transfer</li></ol></div>
+      
+    </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-people" aria-hidden="true"></i>Employees</div>
+      <div class="kpi-value">10</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-currency-rupee" aria-hidden="true"></i>Net pay</div>
+      <div class="kpi-value">₹3,79,509</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-minus" aria-hidden="true"></i>Loss of pay days</div>
+      <div class="kpi-value">18</div>
+      <div class="kpi-foot">incl. 17 for new joiner</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-clock" aria-hidden="true"></i>Days to deadline</div>
+      <div class="kpi-value">5</div>
+      <div class="kpi-foot">30 Sep, Tue</div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Review</h2><p class="card-sub">Check every row before approving</p></div>
+        <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Recalculated from the locked attendance." data-tone="success">Recalculate</button></div>
+      </div>
+      <div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Employee</th><th class="num text-end" scope="col">Paid days</th><th class="num text-end d-none d-md-table-cell" scope="col">LOP</th><th class="num text-end d-none d-md-table-cell" scope="col">Gross</th><th class="num text-end d-none d-lg-table-cell" scope="col">Deductions</th><th class="num text-end" scope="col">Net</th></tr></thead>
+          <tbody>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">NS</span><div><div class="name">Neha Sharma</div><div class=meta>Senior counsellor</div></div></div></td><td class="num text-end">26/26</td><td class="num text-end d-none d-md-table-cell">–</td><td class="money text-end d-none d-md-table-cell">₹32,000</td><td class="money text-end d-none d-lg-table-cell">−₹1,920</td><td class="money text-end">₹30,080</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">RT</span><div><div class="name">Rahul Tiwari</div><div class=meta>Counsellor</div></div></div></td><td class="num text-end">25/26</td><td class="num text-end d-none d-md-table-cell">1</td><td class="money text-end d-none d-md-table-cell">₹23,077</td><td class="money text-end d-none d-lg-table-cell">−₹1,385</td><td class="money text-end">₹21,692</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">PN</span><div><div class="name">Pooja Nigam</div><div class=meta>Trainer · Python, School coding</div></div></div></td><td class="num text-end">26/26</td><td class="num text-end d-none d-md-table-cell">–</td><td class="money text-end d-none d-md-table-cell">₹45,000</td><td class="money text-end d-none d-lg-table-cell">−₹2,700</td><td class="money text-end">₹42,300</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">AM</span><div><div class="name">Arjun Mehta</div><div class=meta>Senior trainer · Full Stack, Java</div></div></div></td><td class="num text-end">26/26</td><td class="num text-end d-none d-md-table-cell">–</td><td class="money text-end d-none d-md-table-cell">₹65,000</td><td class="money text-end d-none d-lg-table-cell">−₹3,900</td><td class="money text-end">₹61,100</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">RS</span><div><div class="name">Ritu Saxena</div><div class=meta>Trainer · Data</div></div></div></td><td class="num text-end">26/26</td><td class="num text-end d-none d-md-table-cell">–</td><td class="money text-end d-none d-md-table-cell">₹52,000</td><td class="money text-end d-none d-lg-table-cell">−₹3,120</td><td class="money text-end">₹48,880</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">VD</span><div><div class="name">Vikas Dubey</div><div class=meta>Trainer · Cyber Security</div></div></div></td><td class="num text-end">26/26</td><td class="num text-end d-none d-md-table-cell">–</td><td class="money text-end d-none d-md-table-cell">₹55,000</td><td class="money text-end d-none d-lg-table-cell">−₹3,300</td><td class="money text-end">₹51,700</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">SR</span><div><div class="name">Sameer Rizvi</div><div class=meta>Trainer · Cloud, GenAI</div></div></div></td><td class="num text-end">62 hrs</td><td class="num text-end d-none d-md-table-cell">–</td><td class="money text-end d-none d-md-table-cell">₹55,800</td><td class="money text-end d-none d-lg-table-cell">−₹5,580</td><td class="money text-end">₹50,220</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">KT</span><div><div class="name">Kavya Tandon</div><div class=meta>Trainer · Testing, Python</div></div></div></td><td class="num text-end">26/26</td><td class="num text-end d-none d-md-table-cell">–</td><td class="money text-end d-none d-md-table-cell">₹42,000</td><td class="money text-end d-none d-lg-table-cell">−₹2,520</td><td class="money text-end">₹39,480</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">SP</span><div><div class="name">Sunita Pal</div><div class=meta>HR & Accounts executive</div></div></div></td><td class="num text-end">26/26</td><td class="num text-end d-none d-md-table-cell">–</td><td class="money text-end d-none d-md-table-cell">₹30,000</td><td class="money text-end d-none d-lg-table-cell">−₹1,800</td><td class="money text-end">₹28,200</td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">TR</span><div><div class="name">Tushar Rawat</div><div class=meta>Front desk executive</div></div></div></td><td class="num text-end">9/26</td><td class="num text-end d-none d-md-table-cell">17</td><td class="money text-end d-none d-md-table-cell">₹6,231</td><td class="money text-end d-none d-lg-table-cell">−₹374</td><td class="money text-end">₹5,857</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer caption">LOP = loss of pay (absent without leave). Visiting trainers are paid from logged class hours. Deductions: PF + PT + TDS (defaults).</div>
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

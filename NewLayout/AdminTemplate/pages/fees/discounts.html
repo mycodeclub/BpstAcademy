@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Discounts &amp; coupons · BPST Edu Admin</title>
+  <meta name="description" content="Discounts &amp; coupons in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="fees.discounts" data-roles="admin hr" data-title="Discounts &amp; coupons">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Discounts & coupons</h1>
+      <p>Every discount needs manager approval before it applies. The requester can never approve their own request.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#couponModal"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>New coupon</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<a class="kpi" href="../management/approvals.html">
+      <div class="kpi-label"><i class="bi bi-ticket-perforated" aria-hidden="true"></i>Waiting for approval</div>
+      <div class="kpi-value">4</div>
+      
+    </a>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-currency-rupee" aria-hidden="true"></i>Discounts given (Sep)</div>
+      <div class="kpi-value">₹48,200</div>
+      <div class="kpi-foot">6.5% of collections</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-lightning" aria-hidden="true"></i>Upfront payers</div>
+      <div class="kpi-value">64</div>
+      <div class="kpi-foot">26% of students</div>
+    </div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-6">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Requests</h2><p class="card-sub">Approve or reject</p></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Student</th><th class="num text-end" scope="col">Amount</th><th class="d-none d-md-table-cell" scope="col">By</th><th class="d-none d-md-table-cell" scope="col">When</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">AV</span><div><div class="name">Aditi Verma</div><div class=meta>UPFRONT10 on Full Stack</div></div></div></td><td class="money text-end">₹3,500</td><td class="d-none d-md-table-cell">Neha S.</td><td class="d-none d-md-table-cell">Today</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Discount rejected. The counsellor is told why.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Discount approved and applied to the fee plan.">Approve</button></div></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">M&</span><div><div class="name">Meera &amp; Kabir Singh</div><div class=meta>SIBLING2K · Class 6–12 Coding</div></div></div></td><td class="money text-end">₹2,000</td><td class="d-none d-md-table-cell">Rahul T.</td><td class="d-none d-md-table-cell">Today</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Discount rejected. The counsellor is told why.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Discount approved and applied to the fee plan.">Approve</button></div></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">NA</span><div><div class="name">Nikhil Arora</div><div class=meta>DIWALI49 on Data Analyst</div></div></div></td><td class="money text-end">₹1,500</td><td class="d-none d-md-table-cell">Neha S.</td><td class="d-none d-md-table-cell">Yesterday</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Discount rejected. The counsellor is told why.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Discount approved and applied to the fee plan.">Approve</button></div></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">IJ</span><div><div class="name">Ishita Jaiswal</div><div class=meta>EARLY5 on Java</div></div></div></td><td class="money text-end">₹750</td><td class="d-none d-md-table-cell">Rahul T.</td><td class="d-none d-md-table-cell">22 Sep</td><td class="text-end"><div class="row-actions" data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Discount rejected. The counsellor is told why.">Reject</button><button class="btn btn-primary btn-sm" data-resolve="Approved|success|Discount approved and applied to the fee plan.">Approve</button></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+    <div class="col-xl-6">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Coupons & rules</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Code</th><th scope="col">Rule</th><th scope="col">Value</th><th class="d-none d-md-table-cell" scope="col">Valid</th><th class="num text-end" scope="col">Uses</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td><code>DIWALI49</code></td><td>Pre-book adjustment</td><td>₹49 off</td><td class="d-none d-md-table-cell">Till 8 Nov 2026</td><td class="num text-end">212</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td><code>UPFRONT10</code></td><td>Full payment upfront</td><td>10% off</td><td class="d-none d-md-table-cell">Always</td><td class="num text-end">64</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td><code>SIBLING2K</code></td><td>Sibling in any course</td><td>₹2,000 off</td><td class="d-none d-md-table-cell">Always</td><td class="num text-end">9</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td><code>EARLY5</code></td><td>Early-bird (7+ days before start)</td><td>5% off</td><td class="d-none d-md-table-cell">Per batch</td><td class="num text-end">18</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td><code>REFER1K</code></td><td>Referral reward (to referrer)</td><td>₹1,000 credit</td><td class="d-none d-md-table-cell">Always</td><td class="num text-end">14</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td><code>SUMMER26</code></td><td>Summer training 2026</td><td>₹1,500 off</td><td class="d-none d-md-table-cell">Ended 30 Jun</td><td class="num text-end">41</td><td><span class="chip chip--neutral">Inactive</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+<div class="modal fade" id="couponModal" tabindex="-1" aria-labelledby="couponModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Coupon created.">
+    <div class="modal-header"><h2 class="modal-title" id="couponModalT">New coupon</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-md-6"><label class="form-label" for="cp1">Code</label><input class="form-control" id="cp1" type="text" value="NEWYEAR27" placeholder="" required ><div class="invalid-feedback">Please fill in code.</div></div><div class="col-md-6"><label class="form-label" for="cp2">Value</label><input class="form-control" id="cp2" type="text" value="₹1,000 off" placeholder="" ></div><div class="col-md-6"><label class="form-label" for="cp3">Applies to</label><select class="form-select" id="cp3" ><option>All courses</option><option>One category</option><option>One course</option></select></div><div class="col-md-6"><label class="form-label" for="cp4">Valid till</label><input class="form-control" id="cp4" type="date" value="2027-01-15" placeholder="" ></div><div class="col-md-6"><label class="form-label" for="cp5">Max uses</label><input class="form-control" id="cp5" type="number" value="50" placeholder="" ></div><div class="col-md-6"><label class="form-label" for="cp6">Needs approval</label><select class="form-select" id="cp6" ><option selected>Yes</option></select></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Create</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

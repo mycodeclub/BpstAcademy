@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fees &amp; receipts · BPST Edu Admin</title>
+  <meta name="description" content="Fees &amp; receipts in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="student.fees" data-roles="student student-pending" data-title="Fees &amp; receipts">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Fees & receipts</h1>
+      <p>Pay any amount any time. Every receipt shows the GST breakup.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#invModal"><i class="bi bi-file-earmark-text me-1" aria-hidden="true"></i>Request GST invoice</button><button type="button" class="btn btn-primary" data-demo-toast="Demo: the Razorpay / UPI payment page would open. Nothing is charged in the prototype." data-tone="info"><i class="bi bi-credit-card me-1" aria-hidden="true"></i>Pay now</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-cash-coin" aria-hidden="true"></i>Course fee</div>
+      <div class="kpi-value">₹45,000</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-check2-circle" aria-hidden="true"></i>Paid</div>
+      <div class="kpi-value">₹32,500</div>
+      <div class="kpi-foot">72%</div>
+    </div>
+<div class="kpi is-alert">
+      <div class="kpi-label"><i class="bi bi-hourglass-split" aria-hidden="true"></i>Balance</div>
+      <div class="kpi-value">₹13,500</div>
+      <div class="kpi-foot">incl. ₹1,000 late fine</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-event" aria-hidden="true"></i>Next due</div>
+      <div class="kpi-value">1 Oct</div>
+      <div class="kpi-foot">₹15,000</div>
+    </div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-8">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Receipts</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Date</th><th scope="col">Receipt</th><th class="d-none d-md-table-cell" scope="col">Mode</th><th class="num text-end" scope="col">Amount</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td>5 Sep 2026</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0361</a></td><td class="d-none d-md-table-cell">UPI</td><td class="money text-end">₹7,500</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/receipt.html" >Download</a></td></tr>
+            <tr><td>1 Aug 2026</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0244</a></td><td class="d-none d-md-table-cell">Cash</td><td class="money text-end">₹10,000</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/receipt.html" >Download</a></td></tr>
+            <tr><td>1 Jul 2026</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0118</a></td><td class="d-none d-md-table-cell">UPI</td><td class="money text-end">₹14,951</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/receipt.html" >Download</a></td></tr>
+            <tr><td>24 Jun 2026</td><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0102</a></td><td class="d-none d-md-table-cell">₹49 pre-booking</td><td class="money text-end">₹49</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/receipt.html" >Download</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+    <div class="col-xl-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Plan</h2></div>
+        
+      </div>
+      <div class="card-body"><dl class="dl-grid"><dt>Plan</dt><dd>3 instalments</dd><dt>Instalment 1</dt><dd>1 Jul · paid</dd><dt>Instalment 2</dt><dd>1 Aug · paid</dd><dt>Instalment 3</dt><dd>1 Sep · part-paid</dd><dt>Upfront discount</dt><dd>Not taken</dd></dl><p class="caption mt-3 mb-0">Questions? Call or WhatsApp 8299101616.</p></div>
+      
+    </div>
+    </div>
+  </div>
+<div class="modal fade" id="invModal" tabindex="-1" aria-labelledby="invModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Request sent to Accounts. The invoice appears here within 1 working day.">
+    <div class="modal-header"><h2 class="modal-title" id="invModalT">Request a GST tax invoice</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-12"><label class="form-label" for="gi1">Name on invoice</label><input class="form-control" id="gi1" type="text" value="Harsh Kumar" placeholder="" required ><div class="invalid-feedback">Please fill in name on invoice.</div></div><div class="col-md-6"><label class="form-label" for="gi2">GSTIN (if any)</label><input class="form-control" id="gi2" type="text" value="" placeholder="Leave blank for personal" ></div><div class="col-md-6"><label class="form-label" for="gi3">For receipts</label><select class="form-select" id="gi3" ><option selected>All (FY 2026-27)</option><option>Last receipt only</option></select></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Request</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 ## What this is
 A static, clickable **prototype** of the BPST Software Education business-management system. It covers CRM with a 1-hour lead SLA, admissions, batches, attendance, fees & GST, document verification, ID cards & certificates, HR & payroll, and trainer/student/employee portals.
 - **Read first:** `PLAN.md` (scope, pages, flows, milestones, open questions) and `BRAND.md` (tokens, components, rules).
-- The sibling folder `../EduTemplateFreezing` is the **public landing site**. It is a separate repo, so do not edit it from here. Copy assets out of it when needed.
+- The sibling folder `../Landing Page UI` is the **public website**. It links here through `portalUrl` in its `assets/js/config.js` (Login button, footer links). This portal is deployed at `/portal/` on the same domain.
 - The backend comes later. This template must be easy to convert (clean markup, one page per screen, `data-*` hooks).
 
 ## Stack rules
@@ -37,6 +37,7 @@ assets/img/                Logos (copied from ../EduTemplateFreezing/take2/asset
 - SLA timers: `<span class="sla" data-sla data-created-at="2026-09-25T10:15:00+05:30"></span>`. `admin.js` ticks every second. Demo data sets times relative to page load so every state shows.
 - Money: `₹` with Indian grouping via one helper `fmtINR()`. Dates via `fmtDate()` → `25 Sep 2026`.
 - Print pages use `@media print` and hide the app shell.
+- SEO: every portal page is `noindex, nofollow` except `pages/public/verify-certificate.html` (canonical, Open Graph, JSON-LD). Keep it that way.
 - Accessibility: label every input, keep focus rings visible, never convey status by colour alone, respect `prefers-reduced-motion`.
 
 ## Data rules
@@ -50,7 +51,7 @@ assets/img/                Logos (copied from ../EduTemplateFreezing/take2/asset
 - **Checks before saying a milestone is done:**
   - Every sidebar link opens a real page (no 404s).
   - No console errors.
-  - Layout checked at 375 / 768 / 1024 / 1440 px.
+  - Layout checked at 375 / 768 / 1024 / 1440 / 1920 / 2560 px (phone → ultra-wide): no sideways page scroll; wide tables scroll inside `.table-wrap`.
   - Print layouts previewed.
   - Light and dark mode both readable.
 - Owner is not deeply technical: explain results in plain language, and prefer a short conversation over long multiple-choice question forms.

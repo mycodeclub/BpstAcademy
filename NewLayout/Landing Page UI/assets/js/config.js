@@ -18,5 +18,9 @@ window.BPST_CONFIG = {
   amount: 49,
 
   whatsapp: '918299101616',
+
+  // --- Student / staff portal (the AdminTemplate folder, deployed at /portal/ on this domain) ---
+  // Header "Login" and footer "Verify a certificate" links use this. Opened from disk, ../AdminTemplate/ is used instead.
+  portalUrl: 'https://edu.bitprosofttech.com/portal/',
   // Offer deadline is also embedded in each page (data-offer-deadline) from src/data/site.mjs.
 };

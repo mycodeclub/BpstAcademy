@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Add parallel course · BPST Edu Admin</title>
+  <meta name="description" content="Add parallel course in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="admissions.students" data-roles="admin counsellor" data-title="Add parallel course">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="students.html">Students</a><i class="bi bi-chevron-right" aria-hidden="true"></i><a href="student.html">Harsh Kumar</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Parallel course</span></nav>
+      <h1>Add parallel course</h1>
+      <p>Harsh Kumar already studies Full Stack (Mon–Fri 11:00 AM – 1:00 PM). Batches that clash are shown disabled with the reason.</p>
+    </div>
+    
+  </div>
+  <div class="detail-grid">
+    <form class="card" novalidate data-demo-form="Parallel course added. Fee plan created and the timetable updated without any clash." data-then="student.html"><div class="card-header"><h2 class="card-title">Pick a batch</h2><span class="caption">8 available · 2 blocked</span></div><div class="card-body"><div class="pick-list"><label class="pick"><input class="form-check-input" type="radio" name="pb" value="PY-M1">
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Python Programming · PY-M1</b><span class="caption">18/20 seats</span></span>
+          <span class="d-block small">Mon, Wed, Fri · 9:00 AM – 10:30 AM · Classroom · Lab 1 · Pooja Nigam</span>
+          <span class="caption" style="color:var(--c-success-text)"><i class="bi bi-check2-circle me-1"></i>No clash (15-min buffer kept)</span></span></label><label class="pick"><input class="form-check-input" type="radio" name="pb" value="DA-A1">
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Data Analyst Pro · DA-A1</b><span class="caption">16/20 seats</span></span>
+          <span class="d-block small">Mon, Wed, Fri · 2:00 PM – 4:00 PM · Classroom · Lab 1 · Ritu Saxena</span>
+          <span class="caption" style="color:var(--c-success-text)"><i class="bi bi-check2-circle me-1"></i>No clash (15-min buffer kept)</span></span></label><label class="pick"><input class="form-check-input" type="radio" name="pb" value="SC-E1">
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Robotics, Coding &amp; AI for Kids · SC-E1</b><span class="caption">12/15 seats</span></span>
+          <span class="d-block small">Tue, Thu, Sat · 4:00 PM – 5:00 PM · Classroom · Room 3 · Pooja Nigam</span>
+          <span class="caption" style="color:var(--c-success-text)"><i class="bi bi-check2-circle me-1"></i>No clash (15-min buffer kept)</span></span></label><label class="pick"><input class="form-check-input" type="radio" name="pb" value="CS-E1">
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Cyber Security &amp; Ethical Hacking · CS-E1</b><span class="caption">14/18 seats</span></span>
+          <span class="d-block small">Mon, Wed, Fri · 6:00 PM – 7:30 PM · Hybrid · Lab 2 + online · Vikas Dubey</span>
+          <span class="caption" style="color:var(--c-success-text)"><i class="bi bi-check2-circle me-1"></i>No clash (15-min buffer kept)</span></span></label><label class="pick"><input class="form-check-input" type="radio" name="pb" value="AI-O1">
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Generative AI &amp; Agentic AI · AI-O1</b><span class="caption">31/40 seats</span></span>
+          <span class="d-block small">Tue, Thu · 7:30 PM – 9:00 PM · Online · Google Meet · Sameer Rizvi</span>
+          <span class="caption" style="color:var(--c-success-text)"><i class="bi bi-check2-circle me-1"></i>No clash (15-min buffer kept)</span></span></label><label class="pick"><input class="form-check-input" type="radio" name="pb" value="PY-E2">
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Python Programming · PY-E2</b><span class="caption">9/20 seats</span></span>
+          <span class="d-block small">Tue, Thu, Sat · 5:00 PM – 6:30 PM · Classroom · Room 3 · Kavya Tandon</span>
+          <span class="caption" style="color:var(--c-success-text)"><i class="bi bi-check2-circle me-1"></i>No clash (15-min buffer kept)</span></span></label><label class="pick is-clash"><input class="form-check-input" type="radio" name="pb" value="ST-M1" disabled>
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Software Testing Masters · ST-M1</b><span class="caption">20/20 seats</span></span>
+          <span class="d-block small">Mon, Wed, Fri · 11:00 AM – 12:30 PM · Classroom · Room 3 · Kavya Tandon</span>
+          <span class="clash-reason"><i class="bi bi-x-octagon me-1"></i>Clashes with Full Stack Mon, Tue, Wed, Thu, Fri 11:00 AM – 1:00 PM</span></span></label><label class="pick"><input class="form-check-input" type="radio" name="pb" value="DO-O1">
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Cloud Computing &amp; DevOps · DO-O1</b><span class="caption">22/40 seats</span></span>
+          <span class="d-block small">Mon, Wed, Fri · 7:30 PM – 9:00 PM · Online · Google Meet · Sameer Rizvi</span>
+          <span class="caption" style="color:var(--c-success-text)"><i class="bi bi-check2-circle me-1"></i>No clash (15-min buffer kept)</span></span></label><label class="pick"><input class="form-check-input" type="radio" name="pb" value="JV-E1">
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>Java Programming · JV-E1</b><span class="caption">15/20 seats</span></span>
+          <span class="d-block small">Tue, Thu, Sat · 6:00 PM – 7:30 PM · Classroom · Lab 1 · Arjun Mehta</span>
+          <span class="caption" style="color:var(--c-success-text)"><i class="bi bi-check2-circle me-1"></i>No clash (15-min buffer kept)</span></span></label><label class="pick is-clash"><input class="form-check-input" type="radio" name="pb" value="SW-45" disabled>
+          <span class="flex-grow-1"><span class="d-flex flex-wrap justify-content-between gap-2"><b>45-Day Summer / Winter Industrial Training · SW-45</b><span class="caption">28/30 seats</span></span>
+          <span class="d-block small">Mon, Tue, Wed, Thu, Fri · 10:00 AM – 1:00 PM · Classroom · Lab 3 · Ritu Saxena</span>
+          <span class="clash-reason"><i class="bi bi-x-octagon me-1"></i>Clashes with Full Stack Mon, Tue, Wed, Thu, Fri 11:00 AM – 1:00 PM</span></span></label></div></div><div class="card-footer d-flex justify-content-end gap-2"><a class="btn btn-outline-secondary" href="student.html">Cancel</a><button class="btn btn-primary" type="submit">Add course &amp; create fee plan</button></div></form>
+    <div class="d-grid gap-3 align-content-start"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Current timetable</h2><p class="card-sub">Existing classes</p></div>
+        
+      </div>
+      <div class="card-body"><div class="table-wrap"><div class="week-grid" style="--days:6"><div class="wg-head"></div><div class="wg-head">Mon</div><div class="wg-head">Tue</div><div class="wg-head">Wed</div><div class="wg-head">Thu</div><div class="wg-head">Fri</div><div class="wg-head">Sat</div><div class="wg-time">9:00 AM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">10:00 AM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">11:00 AM</div><div><a class="slot" href="batch.html"><b>FS-M2</b>Full · Lab 2</a></div><div><a class="slot" href="batch.html"><b>FS-M2</b>Full · Lab 2</a></div><div><a class="slot" href="batch.html"><b>FS-M2</b>Full · Lab 2</a></div><div><a class="slot" href="batch.html"><b>FS-M2</b>Full · Lab 2</a></div><div><a class="slot" href="batch.html"><b>FS-M2</b>Full · Lab 2</a></div><div></div><div class="wg-time">12:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">1:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">2:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">3:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">4:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">5:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">6:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">7:00 PM</div><div><a class="slot is-online" href="batch.html"><b>DO-O1</b>Cloud · Google Meet</a></div><div></div><div><a class="slot is-online" href="batch.html"><b>DO-O1</b>Cloud · Google Meet</a></div><div></div><div><a class="slot is-online" href="batch.html"><b>DO-O1</b>Cloud · Google Meet</a></div><div></div><div class="wg-time">8:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>
+      
+    </div><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Rules</h2></div>
+        
+      </div>
+      <div class="card-body"><ul class="small mb-0 ps-3"><li>Same day and overlapping time = clash.</li><li>15-minute travel buffer between classes (Settings).</li><li>The same check runs for trainers and rooms.</li></ul></div>
+      
+    </div></div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

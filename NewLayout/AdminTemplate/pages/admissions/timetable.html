@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Timetable · BPST Edu Admin</title>
+  <meta name="description" content="Timetable in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="admissions.timetable" data-roles="admin counsellor hr" data-title="Timetable">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Timetable</h1>
+      <p>Week view of every batch. Red = clash found (same trainer, room or student at the same time).</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><div class="segmented nav nav-pills" role="group" aria-label="View by"><button class="nav-link active" aria-pressed="true">All</button><button class="nav-link" aria-pressed="false" data-demo-toast="Showing by room (demo)." data-tone="info">Room</button><button class="nav-link" aria-pressed="false" data-demo-toast="Showing by trainer (demo)." data-tone="info">Trainer</button></div><button type="button" class="btn btn-outline-secondary" data-print><i class="bi bi-printer me-1" aria-hidden="true"></i>Print</button></div>
+  </div>
+  <div class="alert alert-danger d-flex gap-2 align-items-start"><i class="bi bi-exclamation-octagon-fill"></i><div><b>1 clash:</b> ST-M1 (Kavya Tandon, Room 3, Mon/Wed/Fri 11:00 AM) overlaps with FS-M2 for 2 shared students. <a href="batch-operations.html">Resolve</a></div></div>
+  <div class="table-wrap mb-2"><div class="week-grid" style="--days:6"><div class="wg-head"></div><div class="wg-head">Mon</div><div class="wg-head">Tue</div><div class="wg-head">Wed</div><div class="wg-head">Thu</div><div class="wg-head">Fri</div><div class="wg-head">Sat</div><div class="wg-time">9:00 AM</div><div><a class="slot" href="batch.html"><b>PY-M1</b>Pooja Nigam · Lab 1</a></div><div></div><div><a class="slot" href="batch.html"><b>PY-M1</b>Pooja Nigam · Lab 1</a></div><div></div><div><a class="slot" href="batch.html"><b>PY-M1</b>Pooja Nigam · Lab 1</a></div><div></div><div class="wg-time">10:00 AM</div><div><a class="slot" href="batch.html"><b>SW-45</b>Ritu Saxena · Lab 3</a></div><div><a class="slot" href="batch.html"><b>SW-45</b>Ritu Saxena · Lab 3</a></div><div><a class="slot" href="batch.html"><b>SW-45</b>Ritu Saxena · Lab 3</a></div><div><a class="slot" href="batch.html"><b>SW-45</b>Ritu Saxena · Lab 3</a></div><div><a class="slot" href="batch.html"><b>SW-45</b>Ritu Saxena · Lab 3</a></div><div></div><div class="wg-time">11:00 AM</div><div><a class="slot" href="batch.html"><b>FS-M2</b>Arjun Mehta · Lab 2</a><a class="slot is-clash" href="batch.html"><b>ST-M1</b>Kavya Tandon · Room 3</a></div><div><a class="slot" href="batch.html"><b>FS-M2</b>Arjun Mehta · Lab 2</a></div><div><a class="slot" href="batch.html"><b>FS-M2</b>Arjun Mehta · Lab 2</a><a class="slot is-clash" href="batch.html"><b>ST-M1</b>Kavya Tandon · Room 3</a></div><div><a class="slot" href="batch.html"><b>FS-M2</b>Arjun Mehta · Lab 2</a></div><div><a class="slot" href="batch.html"><b>FS-M2</b>Arjun Mehta · Lab 2</a><a class="slot is-clash" href="batch.html"><b>ST-M1</b>Kavya Tandon · Room 3</a></div><div></div><div class="wg-time">12:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">1:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">2:00 PM</div><div><a class="slot" href="batch.html"><b>DA-A1</b>Ritu Saxena · Lab 1</a></div><div></div><div><a class="slot" href="batch.html"><b>DA-A1</b>Ritu Saxena · Lab 1</a></div><div></div><div><a class="slot" href="batch.html"><b>DA-A1</b>Ritu Saxena · Lab 1</a></div><div></div><div class="wg-time">3:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div><div class="wg-time">4:00 PM</div><div></div><div><a class="slot" href="batch.html"><b>SC-E1</b>Pooja Nigam · Room 3</a></div><div></div><div><a class="slot" href="batch.html"><b>SC-E1</b>Pooja Nigam · Room 3</a></div><div></div><div><a class="slot" href="batch.html"><b>SC-E1</b>Pooja Nigam · Room 3</a></div><div class="wg-time">5:00 PM</div><div></div><div><a class="slot" href="batch.html"><b>PY-E2</b>Kavya Tandon · Room 3</a></div><div></div><div><a class="slot" href="batch.html"><b>PY-E2</b>Kavya Tandon · Room 3</a></div><div></div><div><a class="slot" href="batch.html"><b>PY-E2</b>Kavya Tandon · Room 3</a></div><div class="wg-time">6:00 PM</div><div><a class="slot" href="batch.html"><b>CS-E1</b>Vikas Dubey · Lab 2 + online</a></div><div><a class="slot" href="batch.html"><b>JV-E1</b>Arjun Mehta · Lab 1</a></div><div><a class="slot" href="batch.html"><b>CS-E1</b>Vikas Dubey · Lab 2 + online</a></div><div><a class="slot" href="batch.html"><b>JV-E1</b>Arjun Mehta · Lab 1</a></div><div><a class="slot" href="batch.html"><b>CS-E1</b>Vikas Dubey · Lab 2 + online</a></div><div><a class="slot" href="batch.html"><b>JV-E1</b>Arjun Mehta · Lab 1</a></div><div class="wg-time">7:00 PM</div><div><a class="slot is-online" href="batch.html"><b>DO-O1</b>Sameer Rizvi · Google Meet</a></div><div><a class="slot is-online" href="batch.html"><b>AI-O1</b>Sameer Rizvi · Google Meet</a></div><div><a class="slot is-online" href="batch.html"><b>DO-O1</b>Sameer Rizvi · Google Meet</a></div><div><a class="slot is-online" href="batch.html"><b>AI-O1</b>Sameer Rizvi · Google Meet</a></div><div><a class="slot is-online" href="batch.html"><b>DO-O1</b>Sameer Rizvi · Google Meet</a></div><div></div><div class="wg-time">8:00 PM</div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+  <p class="caption">Blue = classroom · light blue = online · red = clash. Scroll sideways on small screens.</p>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

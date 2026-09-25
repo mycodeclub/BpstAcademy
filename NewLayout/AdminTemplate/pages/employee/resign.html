@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Resignation · BPST Edu Admin</title>
+  <meta name="description" content="Resignation in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="employee.resign" data-roles="employee trainer" data-title="Resignation">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Resignation</h1>
+      <p>Submit → accepted → notice period → handover → full & final settlement → experience letter.</p>
+    </div>
+    
+  </div>
+  <form class="card" novalidate data-demo-form="Resignation submitted. HR will confirm your last working day and share the handover checklist."><div class="card-body"><div class="row g-3">
+      <div class="col-md-6"><label class="form-label" for="rs1">Reason</label><select class="form-select" id="rs1" required ><option value="">Choose…</option><option>Higher studies</option><option>Better opportunity</option><option>Relocation</option><option>Personal</option><option>Other</option></select><div class="invalid-feedback">Please fill in reason.</div></div><div class="col-md-6"><label class="form-label" for="rs2">Requested last day</label><input class="form-control" id="rs2" type="date" value="2026-10-25" placeholder="" ><div class="form-text">Notice period: 30 days.</div></div>
+      <div class="col-12"><label class="form-label" for="rs3">Details (optional)</label><textarea class="form-control" id="rs3" rows="3" placeholder="" ></textarea></div>
+      <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="rs4" required><label class="form-check-label" for="rs4">I understand the handover checklist must be completed before full &amp; final settlement.</label><div class="invalid-feedback">Please confirm.</div></div></div>
+    </div></div><div class="card-footer d-flex justify-content-end"><button class="btn btn-danger" type="submit">Submit resignation</button></div></form>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Staff attendance · BPST Edu Admin</title>
+  <meta name="description" content="Staff attendance in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="attendance.staff" data-roles="admin hr" data-title="Staff attendance">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Staff attendance</h1>
+      <p>Check-in and check-out from the staff portal. Office hours Mon–Sat 9:00 AM – 7:00 PM; trainers follow their batch timing.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-outline-secondary" data-demo-toast="Demo: monthly summary goes to payroll." data-tone="success"><i class="bi bi-file-earmark-spreadsheet me-1" aria-hidden="true"></i>Monthly summary</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-person-check" aria-hidden="true"></i>In today</div>
+      <div class="kpi-value">7 of 9</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-clock-history" aria-hidden="true"></i>Late marks (Sep)</div>
+      <div class="kpi-value">4</div>
+      <div class="kpi-foot">3 late = ½ day (Settings)</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-x" aria-hidden="true"></i>On leave</div>
+      <div class="kpi-value">1</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-hourglass-split" aria-hidden="true"></i>Missing check-out</div>
+      <div class="kpi-value">0</div>
+      
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Thu 25 Sep 2026</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search staff" data-table-search="staffRows" aria-label="Search staff"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="staffRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>9</span></button><button class="filter-chip" data-filter="present" aria-pressed="false">Present <span class=count>6</span></button><button class="filter-chip" data-filter="late" aria-pressed="false">Late <span class=count>1</span></button><button class="filter-chip" data-filter="onleave" aria-pressed="false">On leave <span class=count>1</span></button><button class="filter-chip" data-filter="absent" aria-pressed="false">Absent <span class=count>1</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Employee</th><th scope="col">Check-in</th><th class="d-none d-md-table-cell" scope="col">Check-out</th><th scope="col">Status</th><th class="num text-end d-none d-md-table-cell" scope="col">Days (Sep)</th><th class="num text-end d-none d-md-table-cell" scope="col">Late marks</th></tr></thead>
+          <tbody id="staffRows">
+            <tr data-filter-value="present"><td><div class="cell-person"><span class="avatar">NS</span><div><div class="name">Neha Sharma</div></div></div></td><td>9:02 AM</td><td class="d-none d-md-table-cell">7:05 PM</td><td><span class="chip chip--success">Present</span></td><td class="num text-end d-none d-md-table-cell">24</td><td class="num text-end d-none d-md-table-cell">0</td></tr>
+            <tr data-filter-value="late"><td><div class="cell-person"><span class="avatar">RT</span><div><div class="name">Rahul Tiwari</div></div></div></td><td>9:21 AM</td><td class="d-none d-md-table-cell">—</td><td><span class="chip chip--warning">Late</span></td><td class="num text-end d-none d-md-table-cell">22</td><td class="num text-end d-none d-md-table-cell">3</td></tr>
+            <tr data-filter-value="onleave"><td><div class="cell-person"><span class="avatar">PN</span><div><div class="name">Pooja Nigam</div></div></div></td><td>—</td><td class="d-none d-md-table-cell">—</td><td><span class="chip chip--warning">On leave</span></td><td class="num text-end d-none d-md-table-cell">21</td><td class="num text-end d-none d-md-table-cell">0</td></tr>
+            <tr data-filter-value="present"><td><div class="cell-person"><span class="avatar">AM</span><div><div class="name">Arjun Mehta</div></div></div></td><td>10:40 AM</td><td class="d-none d-md-table-cell">—</td><td><span class="chip chip--success">Present</span></td><td class="num text-end d-none d-md-table-cell">24</td><td class="num text-end d-none d-md-table-cell">0</td></tr>
+            <tr data-filter-value="present"><td><div class="cell-person"><span class="avatar">RS</span><div><div class="name">Ritu Saxena</div></div></div></td><td>1:45 PM</td><td class="d-none d-md-table-cell">—</td><td><span class="chip chip--success">Present</span></td><td class="num text-end d-none d-md-table-cell">23</td><td class="num text-end d-none d-md-table-cell">1</td></tr>
+            <tr data-filter-value="present"><td><div class="cell-person"><span class="avatar">VD</span><div><div class="name">Vikas Dubey</div></div></div></td><td>5:50 PM</td><td class="d-none d-md-table-cell">—</td><td><span class="chip chip--success">Present</span></td><td class="num text-end d-none d-md-table-cell">22</td><td class="num text-end d-none d-md-table-cell">0</td></tr>
+            <tr data-filter-value="present"><td><div class="cell-person"><span class="avatar">KT</span><div><div class="name">Kavya Tandon</div></div></div></td><td>10:52 AM</td><td class="d-none d-md-table-cell">—</td><td><span class="chip chip--success">Present</span></td><td class="num text-end d-none d-md-table-cell">24</td><td class="num text-end d-none d-md-table-cell">0</td></tr>
+            <tr data-filter-value="present"><td><div class="cell-person"><span class="avatar">SP</span><div><div class="name">Sunita Pal</div></div></div></td><td>8:58 AM</td><td class="d-none d-md-table-cell">—</td><td><span class="chip chip--success">Present</span></td><td class="num text-end d-none d-md-table-cell">24</td><td class="num text-end d-none d-md-table-cell">0</td></tr>
+            <tr data-filter-value="absent"><td><div class="cell-person"><span class="avatar">TR</span><div><div class="name">Tushar Rawat</div></div></div></td><td>—</td><td class="d-none d-md-table-cell">—</td><td><span class="chip chip--danger">Absent</span></td><td class="num text-end d-none d-md-table-cell">3</td><td class="num text-end d-none d-md-table-cell">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

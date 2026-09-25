@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Announcements · BPST Edu Admin</title>
+  <meta name="description" content="Announcements in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="management.announcements" data-roles="admin hr trainer" data-title="Announcements">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Announcements</h1>
+      <p>Notices for everyone, a course, a batch or staff. They show on dashboards until the expiry date.</p>
+    </div>
+    
+  </div>
+  <div class="detail-grid">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Announcements</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Title</th><th scope="col">Audience</th><th class="d-none d-md-table-cell" scope="col">By</th><th class="d-none d-lg-table-cell" scope="col">Posted</th><th class="d-none d-lg-table-cell" scope="col">Until</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td><b>Makeup class on Sat 4 Oct, 11 AM</b></td><td>Batch FS-M2</td><td class="d-none d-md-table-cell">Arjun Mehta</td><td class="d-none d-lg-table-cell">20 Sep</td><td class="d-none d-lg-table-cell">4 Oct</td><td><span class="chip chip--success">Published</span></td></tr>
+            <tr><td><b>Office closed on 2 Oct (Gandhi Jayanti)</b></td><td>Everyone</td><td class="d-none d-md-table-cell">Admin</td><td class="d-none d-lg-table-cell">18 Sep</td><td class="d-none d-lg-table-cell">3 Oct</td><td><span class="chip chip--success">Published</span></td></tr>
+            <tr><td><b>TechNova placement drive on 3 Oct</b></td><td>Full Stack, Java students</td><td class="d-none d-md-table-cell">Placement cell</td><td class="d-none d-lg-table-cell">22 Sep</td><td class="d-none d-lg-table-cell">3 Oct</td><td><span class="chip chip--success">Published</span></td></tr>
+            <tr><td><b>Diwali offer targets</b></td><td>Staff</td><td class="d-none d-md-table-cell">Admin</td><td class="d-none d-lg-table-cell">15 Sep</td><td class="d-none d-lg-table-cell">8 Nov</td><td><span class="chip chip--success">Published</span></td></tr>
+            <tr><td><b>Winter training brochure</b></td><td>Institutions</td><td class="d-none d-md-table-cell">Admin</td><td class="d-none d-lg-table-cell">—</td><td class="d-none d-lg-table-cell">—</td><td><span class="chip chip--neutral">Draft</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">New announcement</h2></div>
+        
+      </div>
+      <div class="card-body"><form class="row g-3" novalidate data-demo-form="Announcement published. It shows on dashboards and goes out by app notification.">
+      <div class="col-12"><label class="form-label" for="an1">Title</label><input class="form-control" id="an1" type="text" value="" placeholder="" required ><div class="invalid-feedback">Please fill in title.</div></div><div class="col-12"><label class="form-label" for="an2">Audience</label><select class="form-select" id="an2" ><option selected>Everyone</option><option>All students</option><option>One course</option><option>One batch</option><option>Staff only</option><option>Parents of minors</option></select></div>
+      <div class="col-12"><label class="form-label" for="an3">Message</label><textarea class="form-control" id="an3" rows="3" required placeholder="" ></textarea><div class="invalid-feedback">Please fill in message.</div></div><div class="col-md-6"><label class="form-label" for="an4">Show until</label><input class="form-control" id="an4" type="date" value="2026-10-05" placeholder="" ></div><div class="col-md-6"><label class="form-label" for="an5">Also send</label><select class="form-select" id="an5" ><option selected>App only</option><option>App + SMS</option><option>App + SMS + email</option></select></div>
+      <div class="col-12 d-grid"><button class="btn btn-primary" type="submit">Publish</button></div></form></div>
+      
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

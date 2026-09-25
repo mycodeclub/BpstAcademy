@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Profit &amp; loss · BPST Edu Admin</title>
+  <meta name="description" content="Profit &amp; loss in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="fees.pnl" data-roles="admin hr" data-title="Profit &amp; loss">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Profit & loss</h1>
+      <p>Fee income (excluding GST) against expenses, month by month. Figures are demo values.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-outline-secondary" data-demo-toast="Demo: P&amp;L exported for the CA." data-tone="success"><i class="bi bi-download me-1" aria-hidden="true"></i>Export</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-graph-up" aria-hidden="true"></i>Income (FY so far)</div>
+      <div class="kpi-value">₹45,90,300</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-wallet" aria-hidden="true"></i>Expenses (FY so far)</div>
+      <div class="kpi-value">₹28,42,520</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-piggy-bank" aria-hidden="true"></i>Profit (FY so far)</div>
+      <div class="kpi-value">₹17,47,780</div>
+      <div class="kpi-foot">38% margin</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-bullseye" aria-hidden="true"></i>Source ROI leader</div>
+      <div class="kpi-value">Referral</div>
+      <div class="kpi-foot">₹0 spend · 22 leads</div>
+    </div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-8">
+    <div class="card h-100" id="plChartCard">
+      <div class="card-header">
+        <div><h2 class="card-title">Income vs expenses</h2><p class="card-sub">April–September 2026</p></div>
+        <div class="d-flex flex-wrap gap-2 align-items-center"><div class="segmented nav nav-pills" data-view-toggle="plChartCard" role="group" aria-label="Show as"><button class="nav-link active" data-view="chart" aria-pressed="true">Chart</button><button class="nav-link" data-view="table" aria-pressed="false">Table</button></div></div>
+      </div>
+      <div class="card-body"><div data-view-pane="chart"><div class="chart-box"><canvas id="plChart" role="img" aria-label="Grouped bar chart of income and expenses per month"></canvas></div></div><div data-view-pane="table" hidden><div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Month</th><th class="num text-end" scope="col">Income</th><th class="num text-end" scope="col">Expenses</th><th class="num text-end" scope="col">Profit</th><th class="num text-end d-none d-md-table-cell" scope="col">Margin</th></tr></thead>
+          <tbody>
+            <tr><td>Apr 2026</td><td class="money text-end">₹6,12,000</td><td class="money text-end">₹4,38,000</td><td class="money text-end"><span class="text-success fw-semibold">₹1,74,000</span></td><td class="num text-end d-none d-md-table-cell">28%</td></tr>
+            <tr><td>May 2026</td><td class="money text-end">₹6,98,000</td><td class="money text-end">₹4,52,000</td><td class="money text-end"><span class="text-success fw-semibold">₹2,46,000</span></td><td class="num text-end d-none d-md-table-cell">35%</td></tr>
+            <tr><td>Jun 2026</td><td class="money text-end">₹8,45,000</td><td class="money text-end">₹4,71,000</td><td class="money text-end"><span class="text-success fw-semibold">₹3,74,000</span></td><td class="num text-end d-none d-md-table-cell">44%</td></tr>
+            <tr><td>Jul 2026</td><td class="money text-end">₹9,12,000</td><td class="money text-end">₹4,88,000</td><td class="money text-end"><span class="text-success fw-semibold">₹4,24,000</span></td><td class="num text-end d-none d-md-table-cell">46%</td></tr>
+            <tr><td>Aug 2026</td><td class="money text-end">₹7,81,000</td><td class="money text-end">₹4,92,000</td><td class="money text-end"><span class="text-success fw-semibold">₹2,89,000</span></td><td class="num text-end d-none d-md-table-cell">37%</td></tr>
+            <tr><td>Sep 2026</td><td class="money text-end">₹7,42,300</td><td class="money text-end">₹5,01,520</td><td class="money text-end"><span class="text-success fw-semibold">₹2,40,780</span></td><td class="num text-end d-none d-md-table-cell">32%</td></tr>
+          </tbody>
+        </table>
+      </div></div></div>
+      
+    </div>
+    </div>
+    <div class="col-xl-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Where the money goes</h2><p class="card-sub">September</p></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Category</th><th class="num text-end" scope="col">Sep</th><th class="num text-end" scope="col">Share</th></tr></thead>
+          <tbody>
+            <tr><td>Salaries</td><td class="money text-end">₹3,86,000</td><td class="num text-end">77%</td></tr>
+            <tr><td>Rent</td><td class="money text-end">₹55,000</td><td class="num text-end">11%</td></tr>
+            <tr><td>Marketing</td><td class="money text-end">₹41,600</td><td class="num text-end">8%</td></tr>
+            <tr><td>Utilities</td><td class="money text-end">₹14,200</td><td class="num text-end">3%</td></tr>
+            <tr><td>Software</td><td class="money text-end">₹4,720</td><td class="num text-end">1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/chartjs/chart.umd.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+window.BPST.chart('plChart', function (T, b) {
+    return { type: 'bar', data: { labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'], datasets: [
+      { label: 'Income', data: [612000, 698000, 845000, 912000, 781000, 742300], backgroundColor: T.accent, borderRadius: 3, maxBarThickness: 26 },
+      { label: 'Expenses', data: [438000, 452000, 471000, 488000, 492000, 501520], backgroundColor: T.muted, borderRadius: 3, maxBarThickness: 26 }] },
+      options: { plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, usePointStyle: true } }, tooltip: Object.assign({}, b.tooltip, { callbacks: { label: function (i) { return i.dataset.label + ': ' + window.BPST.fmtINR(i.raw); } } }) }, scales: b.scales(b.shortINR) } };
+  });
+</script>
+</body>
+</html>

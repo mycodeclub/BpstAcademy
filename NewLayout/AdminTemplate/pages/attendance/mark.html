@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mark attendance · BPST Edu Admin</title>
+  <meta name="description" content="Mark attendance in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="attendance.mark" data-roles="admin trainer" data-title="Mark attendance">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Mark attendance</h1>
+      <p>Pick the batch and date, then tap P / L / A. Everyone starts as present.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="qr.html" ><i class="bi bi-qr-code me-1" aria-hidden="true"></i>Show class QR</a></div>
+  </div>
+  <div class="card mb-3"><div class="card-body row g-3 align-items-end">
+      <div class="col-sm-6 col-lg-4"><label class="form-label" for="ab">Batch</label><select class="form-select" id="ab"><option>PY-M1 · Python Programming</option><option selected>FS-M2 · Full Stack Development</option><option>DA-A1 · Data Analyst Pro</option><option>SC-E1 · Robotics, Coding &amp; AI for Kids</option><option>CS-E1 · Cyber Security &amp; Ethical Hacking</option><option>AI-O1 · Generative AI &amp; Agentic AI</option><option>PY-E2 · Python Programming</option><option>ST-M1 · Software Testing Masters</option><option>DO-O1 · Cloud Computing &amp; DevOps</option><option>JV-E1 · Java Programming</option><option>SW-45 · 45-Day Summer / Winter Industrial Training</option></select></div>
+      <div class="col-sm-6 col-lg-3"><label class="form-label" for="ad">Date</label><input class="form-control" id="ad" type="date" value="2026-09-25"></div>
+      <div class="col-lg-5 d-flex flex-wrap gap-2 justify-content-lg-end"><span class="chip chip--success" id="cP">– present</span><span class="chip chip--warning" id="cL">– late</span><span class="chip chip--danger" id="cA">– absent</span></div>
+    </div></div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Roster · FS-M2 · Thu 25 Sep, 11:00 AM</h2><p class="card-sub">Session S44 · Routing</p></div>
+        <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-outline-secondary btn-sm" data-mark-all="roster">Mark all present</button></div>
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Student</th><th scope="col">Mark</th><th class="d-none d-md-table-cell" scope="col">Note</th></tr></thead>
+          <tbody id="roster">
+            <tr><td><div class="cell-person"><span class="avatar">HK</span><div><div class="name">Harsh Kumar</div><div class=meta>BPST26S0042</div></div></div></td><td><div class="att-toggle" role="group" aria-label="Attendance for Harsh Kumar"><button type="button" data-att="P" aria-pressed="false" aria-label="Present">P</button><button type="button" data-att="L" aria-pressed="true" aria-label="Late">L</button><button type="button" data-att="A" aria-pressed="false" aria-label="Absent">A</button></div></td><td class="d-none d-md-table-cell"><input class="form-control form-control-sm" placeholder="Note" aria-label="Note"></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">AV</span><div><div class="name">Aditi Verma</div><div class=meta>BPST26S0078</div></div></div></td><td><div class="att-toggle" role="group" aria-label="Attendance for Aditi Verma"><button type="button" data-att="P" aria-pressed="true" aria-label="Present">P</button><button type="button" data-att="L" aria-pressed="false" aria-label="Late">L</button><button type="button" data-att="A" aria-pressed="false" aria-label="Absent">A</button></div></td><td class="d-none d-md-table-cell"><input class="form-control form-control-sm" placeholder="Note" aria-label="Note"></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">RY</span><div><div class="name">Rohit Yadav</div><div class=meta>BPST26S0031</div></div></div></td><td><div class="att-toggle" role="group" aria-label="Attendance for Rohit Yadav"><button type="button" data-att="P" aria-pressed="true" aria-label="Present">P</button><button type="button" data-att="L" aria-pressed="false" aria-label="Late">L</button><button type="button" data-att="A" aria-pressed="false" aria-label="Absent">A</button></div></td><td class="d-none d-md-table-cell"><input class="form-control form-control-sm" placeholder="Note" aria-label="Note"></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">AK</span><div><div class="name">Aditya Kesarwani</div><div class=meta>BPST26S0044</div></div></div></td><td><div class="att-toggle" role="group" aria-label="Attendance for Aditya Kesarwani"><button type="button" data-att="P" aria-pressed="true" aria-label="Present">P</button><button type="button" data-att="L" aria-pressed="false" aria-label="Late">L</button><button type="button" data-att="A" aria-pressed="false" aria-label="Absent">A</button></div></td><td class="d-none d-md-table-cell"><input class="form-control form-control-sm" placeholder="Note" aria-label="Note"></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">SM</span><div><div class="name">Sneha Maurya</div><div class=meta>BPST26S0046</div></div></div></td><td><div class="att-toggle" role="group" aria-label="Attendance for Sneha Maurya"><button type="button" data-att="P" aria-pressed="true" aria-label="Present">P</button><button type="button" data-att="L" aria-pressed="false" aria-label="Late">L</button><button type="button" data-att="A" aria-pressed="false" aria-label="Absent">A</button></div></td><td class="d-none d-md-table-cell"><input class="form-control form-control-sm" placeholder="Note" aria-label="Note"></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">MA</span><div><div class="name">Mohit Agarwal</div><div class=meta>BPST26S0049</div></div></div></td><td><div class="att-toggle" role="group" aria-label="Attendance for Mohit Agarwal"><button type="button" data-att="P" aria-pressed="false" aria-label="Present">P</button><button type="button" data-att="L" aria-pressed="false" aria-label="Late">L</button><button type="button" data-att="A" aria-pressed="true" aria-label="Absent">A</button></div></td><td class="d-none d-md-table-cell"><input class="form-control form-control-sm" placeholder="Note" aria-label="Note"></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">KS</span><div><div class="name">Kritika Sinha</div><div class=meta>BPST26S0052</div></div></div></td><td><div class="att-toggle" role="group" aria-label="Attendance for Kritika Sinha"><button type="button" data-att="P" aria-pressed="true" aria-label="Present">P</button><button type="button" data-att="L" aria-pressed="false" aria-label="Late">L</button><button type="button" data-att="A" aria-pressed="false" aria-label="Absent">A</button></div></td><td class="d-none d-md-table-cell"><input class="form-control form-control-sm" placeholder="Note" aria-label="Note"></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">AD</span><div><div class="name">Arpit Dwivedi</div><div class=meta>BPST26S0057</div></div></div></td><td><div class="att-toggle" role="group" aria-label="Attendance for Arpit Dwivedi"><button type="button" data-att="P" aria-pressed="true" aria-label="Present">P</button><button type="button" data-att="L" aria-pressed="false" aria-label="Late">L</button><button type="button" data-att="A" aria-pressed="false" aria-label="Absent">A</button></div></td><td class="d-none d-md-table-cell"><input class="form-control form-control-sm" placeholder="Note" aria-label="Note"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer caption">Absent students and their parents get an SMS after you save. Below 75% monthly attendance triggers a nudge.</div>
+    </div>
+  <div class="d-flex justify-content-end gap-2 mt-3"><button type="button" class="btn btn-primary" data-demo-toast="Attendance saved for FS-M2 (25 Sep). Absence SMS sent." data-tone="success"><i class="bi bi-check2 me-1" aria-hidden="true"></i>Save attendance</button></div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+function count() {
+    ['P', 'L', 'A'].forEach(function (k) {
+      var n = document.querySelectorAll('#roster [data-att="' + k + '"][aria-pressed="true"]').length;
+      document.getElementById('c' + k).textContent = n + ' ' + { P: 'present', L: 'late', A: 'absent' }[k];
+    });
+  }
+  document.addEventListener('bpst:att', count); count();
+</script>
+</body>
+</html>

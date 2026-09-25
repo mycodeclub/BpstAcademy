@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Student 360 · BPST Edu Admin</title>
+  <meta name="description" content="Student 360 in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="admissions.students" data-roles="admin counsellor hr" data-title="Student 360">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="students.html">Students</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Harsh Kumar</span></nav>
+      <h1>Harsh Kumar <span class="chip chip--success">Active</span></h1>
+      <p>BPST26S0042 · Full Stack Development · batch FS-M2</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-outline-secondary" data-demo-toast="Demo: message window would open." data-tone="info"><i class="bi bi-chat-left-text me-1" aria-hidden="true"></i>Message</button><a class="btn btn-outline-secondary" href="batch-operations.html" ><i class="bi bi-arrow-left-right me-1" aria-hidden="true"></i>Batch change</a><a class="btn btn-primary" href="parallel-course.html" ><i class="bi bi-plus-square me-1" aria-hidden="true"></i>Add parallel course</a></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi is-alert">
+      <div class="kpi-label"><i class="bi bi-calendar-check" aria-hidden="true"></i>Attendance (Sep)</div>
+      <div class="kpi-value">71%</div>
+      <div class="kpi-foot">below 75%</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-cash-coin" aria-hidden="true"></i>Balance due</div>
+      <div class="kpi-value">₹13,500</div>
+      <div class="kpi-foot">incl. ₹1,000 fine</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-clipboard2-check" aria-hidden="true"></i>Avg marks</div>
+      <div class="kpi-value">73%</div>
+      <div class="kpi-foot">3 of 4 graded</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-journal-code" aria-hidden="true"></i>Courses</div>
+      <div class="kpi-value">2</div>
+      <div class="kpi-foot">no timing clash</div>
+    </div>
+  </div>
+  <div class="detail-grid">
+    <div><ul class="nav nav-tabs mb-3 flex-nowrap overflow-auto" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="s360-courses-tab" data-bs-toggle="tab" data-bs-target="#s360-courses" type="button" role="tab" aria-controls="s360-courses" aria-selected="true">Courses</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="s360-fees-tab" data-bs-toggle="tab" data-bs-target="#s360-fees" type="button" role="tab" aria-controls="s360-fees" aria-selected="false">Fee ledger</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="s360-att-tab" data-bs-toggle="tab" data-bs-target="#s360-att" type="button" role="tab" aria-controls="s360-att" aria-selected="false">Attendance</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="s360-marks-tab" data-bs-toggle="tab" data-bs-target="#s360-marks" type="button" role="tab" aria-controls="s360-marks" aria-selected="false">Assessments</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="s360-docs-tab" data-bs-toggle="tab" data-bs-target="#s360-docs" type="button" role="tab" aria-controls="s360-docs" aria-selected="false">Documents</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="s360-certs-tab" data-bs-toggle="tab" data-bs-target="#s360-certs" type="button" role="tab" aria-controls="s360-certs" aria-selected="false">ID & certificates</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="s360-notes-tab" data-bs-toggle="tab" data-bs-target="#s360-notes" type="button" role="tab" aria-controls="s360-notes" aria-selected="false">Notes</button></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="s360-courses" role="tabpanel" aria-labelledby="s360-courses-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Course</th><th scope="col">Batch</th><th scope="col">Timing</th><th scope="col">Progress</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td>Full Stack Development</td><td><a href="batch.html">FS-M2</a></td><td>Mon Tue Wed Thu Fri · 11:00 AM – 1:00 PM</td><td><div class="progress" role="progressbar" aria-label="Course progress" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:52%"></div></div><span class="caption">Module 4 of 8</span></td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td>DSA & Placement Preparation</td><td><a href="batch.html">DSA-W1</a></td><td>Sat · 10:00 AM – 1:00 PM</td><td><div class="progress" role="progressbar" aria-label="Course progress" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:20%"></div></div><span class="caption">Week 3 of 12</span></td><td><span class="chip chip--success">Active</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="s360-fees" role="tabpanel" aria-labelledby="s360-fees-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Date</th><th scope="col">Item</th><th class="num text-end" scope="col">Charge</th><th class="num text-end" scope="col">Paid</th><th class="num text-end" scope="col">Balance</th></tr></thead>
+          <tbody>
+            <tr><td>1 Jul 2026</td><td>Course fee · Full Stack Development (6 months)</td><td class="money text-end">₹45,000</td><td class="money text-end"></td><td class="money text-end">₹45,000</td></tr>
+            <tr><td>1 Jul 2026</td><td>₹49 pre-booking adjusted<div class="caption"><a href="../../print/receipt.html">BPST/RC/2026-27/0102</a></div></td><td class="money text-end"></td><td class="money text-end">₹49</td><td class="money text-end">₹44,951</td></tr>
+            <tr><td>1 Jul 2026</td><td>Instalment 1 · UPI<div class="caption"><a href="../../print/receipt.html">BPST/RC/2026-27/0118</a></div></td><td class="money text-end"></td><td class="money text-end">₹14,951</td><td class="money text-end">₹30,000</td></tr>
+            <tr><td>1 Aug 2026</td><td>Instalment 2 · Cash<div class="caption"><a href="../../print/receipt.html">BPST/RC/2026-27/0244</a></div></td><td class="money text-end"></td><td class="money text-end">₹10,000</td><td class="money text-end">₹20,000</td></tr>
+            <tr><td>5 Sep 2026</td><td>Part payment · UPI<div class="caption"><a href="../../print/receipt.html">BPST/RC/2026-27/0361</a></div></td><td class="money text-end"></td><td class="money text-end">₹7,500</td><td class="money text-end">₹12,500</td></tr>
+            <tr><td>8 Sep 2026</td><td>Late fine · instalment 3 overdue</td><td class="money text-end">₹1,000</td><td class="money text-end"></td><td class="money text-end">₹13,500</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer caption">Balance ₹13,500 includes a late fine of ₹1,000 (waiver can be requested).</div>
+    </div></div><div class="tab-pane fade" id="s360-att" role="tabpanel" aria-labelledby="s360-att-tab" tabindex="0"><div class="card">
+      
+      <div class="card-body"><div class="cal-month mb-2"><div class="dow">M</div><div class="dow">T</div><div class="dow">W</div><div class="dow">T</div><div class="dow">F</div><div class="dow">S</div><div class="dow">S</div><div class="cal-day empty"></div><div class="cal-day p">1<small>P</small></div><div class="cal-day p">2<small>P</small></div><div class="cal-day p">3<small>P</small></div><div class="cal-day p">4<small>P</small></div><div class="cal-day p">5<small>P</small></div><div class="cal-day h">6<small></small></div><div class="cal-day h">7</div><div class="cal-day p">8<small>P</small></div><div class="cal-day p">9<small>P</small></div><div class="cal-day a">10<small>A</small></div><div class="cal-day p">11<small>P</small></div><div class="cal-day p">12<small>P</small></div><div class="cal-day h">13<small></small></div><div class="cal-day h">14</div><div class="cal-day p">15<small>P</small></div><div class="cal-day p">16<small>P</small></div><div class="cal-day p">17<small>P</small></div><div class="cal-day l">18<small>L</small></div><div class="cal-day p">19<small>P</small></div><div class="cal-day h">20<small></small></div><div class="cal-day h">21</div><div class="cal-day p">22<small>P</small></div><div class="cal-day a">23<small>A</small></div><div class="cal-day p">24<small>P</small></div><div class="cal-day p">25<small>P</small></div><div class="cal-day p">26<small>P</small></div><div class="cal-day h">27<small></small></div><div class="cal-day h">28</div><div class="cal-day p">29<small>P</small></div><div class="cal-day p">30<small>P</small></div><div class="cal-day p">31<small>P</small></div></div><p class="caption mb-0">P present · L late · A absent · dashed = Sunday / holiday. Monthly attendance 71% (below 75%: nudge sent to student and parent).</p></div>
+      
+    </div></div><div class="tab-pane fade" id="s360-marks" role="tabpanel" aria-labelledby="s360-marks-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Assessment</th><th class="num text-end" scope="col">Marks</th><th scope="col">Result</th></tr></thead>
+          <tbody>
+            <tr><td>Module 1 test · HTML/CSS</td><td class="num text-end">42 / 50</td><td><span class="chip chip--success">Graded</span></td></tr>
+            <tr><td>Module 2 test · JavaScript</td><td class="num text-end">35 / 50</td><td><span class="chip chip--success">Graded</span></td></tr>
+            <tr><td>Mini project · Portfolio site</td><td class="num text-end">78 / 100</td><td><span class="chip chip--success">Graded</span></td></tr>
+            <tr><td>Module 3 test · React</td><td class="num text-end">—</td><td><span class="chip chip--danger">Missing</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="s360-docs" role="tabpanel" aria-labelledby="s360-docs-tab" tabindex="0"><div class="card">
+      
+      <div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="grow flex-grow-1"><div class="fw-medium">Aadhaar</div><div class="caption">XXXX XXXX 4821</div></div><span class="chip chip--success">Original seen</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="grow flex-grow-1"><div class="fw-medium">12th marksheet</div><div class="caption">UP Board 2023</div></div><span class="chip chip--success">Original seen</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="grow flex-grow-1"><div class="fw-medium">B.Tech ID card</div><div class="caption">AKTU · 3rd year</div></div><span class="chip chip--success">Original seen</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="grow flex-grow-1"><div class="fw-medium">Photo</div><div class="caption">Passport size</div></div><span class="chip chip--success">Original seen</span></div>
+      
+    </div></div><div class="tab-pane fade" id="s360-certs" role="tabpanel" aria-labelledby="s360-certs-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Type</th><th scope="col">Number</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td>ID card</td><td>BPST26S0042</td><td><span class="chip chip--success">Issued</span> <a class="ms-2" href="../../print/id-card.html">View</a></td></tr>
+            <tr><td>Course certificate</td><td>—</td><td><span class="chip chip--neutral">After course end · needs 75% attendance, fees cleared, final test passed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="s360-notes" role="tabpanel" aria-labelledby="s360-notes-tab" tabindex="0"><div class="card">
+      
+      <div class="card-body"><ul class="timeline"><li><span class="t-dot is-accent"></span><div>Fee reminder sent (SMS + email) for instalment 3.</div><div class="t-time">20 Sep 2026 · Accounts</div></li><li><span class="t-dot"></span><div>Parent meeting: attendance concerns; agreed to join evening doubt sessions.</div><div class="t-time">12 Sep 2026 · Neha S.</div></li><li><span class="t-dot is-success"></span><div>Verified by HR. ID card issued.</div><div class="t-time">4 Jul 2026 · Sunita Pal</div></li></ul></div>
+      
+    </div></div></div></div>
+    <div class="d-grid gap-3 align-content-start"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Profile</h2></div>
+        
+      </div>
+      <div class="card-body"><dl class="dl-grid"><dt>Student ID</dt><dd>BPST26S0042</dd><dt>Mobile</dt><dd>98XXXXXX42</dd><dt>Email</dt><dd>harsh.k@example.com</dd><dt>City</dt><dd>Lucknow</dd><dt>Parent</dt><dd>Rajesh Kumar · 94XXXXXX20</dd><dt>Aadhaar</dt><dd>XXXX XXXX 4821</dd><dt>Joined</dt><dd>1 Jul 2026</dd><dt>Counsellor</dt><dd>Neha S.</dd><dt>Source</dt><dd>Walk-in</dd></dl></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Fees</h2></div>
+        
+      </div>
+      <div class="card-body"><div class="d-flex justify-content-between"><span class="caption">Paid ₹32,500 of ₹45,000</span><b>72%</b></div><div class="progress" role="progressbar" aria-label="Fee paid" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:72%"></div></div><div class="mt-3 d-grid gap-2"><a class="btn btn-primary" href="../fees/ledger.html">Collect payment</a><button type="button" class="btn btn-outline-secondary" data-demo-toast="Demo: fee reminder sent to Harsh and his parent." data-tone="success">Send reminder</button></div></div>
+      
+    </div></div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

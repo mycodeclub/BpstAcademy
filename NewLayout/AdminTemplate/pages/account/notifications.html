@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Notifications · BPST Edu Admin</title>
+  <meta name="description" content="Notifications in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="account.notifications" data-roles="admin counsellor hr trainer student employee student-pending employee-onboarding" data-title="Notifications">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Notifications</h1>
+      <p>Everything that needs your attention, newest first.</p>
+    </div>
+    
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">All notifications</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search notifications" data-table-search="noteRows" aria-label="Search notifications"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="noteRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>7</span></button><button class="filter-chip" data-filter="sla" aria-pressed="false">SLA <span class=count>1</span></button><button class="filter-chip" data-filter="money" aria-pressed="false">Money <span class=count>1</span></button><button class="filter-chip" data-filter="approval" aria-pressed="false">Approvals <span class=count>2</span></button><button class="filter-chip" data-filter="verify" aria-pressed="false">Verification <span class=count>1</span></button><button class="filter-chip" data-filter="admission" aria-pressed="false">Admissions <span class=count>2</span></button></div>
+        <div class="ms-auto d-flex gap-2"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="All notifications marked as read." data-tone="success">Mark all read</button></div>
+      </div><div id="noteRows"><div class="list-row" data-filter-value="sla"><span class="avatar" style="background:var(--c-danger-soft);color:var(--c-danger-text)"><i class="bi bi-alarm" aria-hidden="true"></i></span><div class="grow"><div><b>Aarav Mishra</b> breached the 1-hour SLA. Manager alerted.</div><div class="meta">37 min ago</div></div></div><div class="list-row" data-filter-value="money"><span class="avatar" style="background:var(--c-success-soft);color:var(--c-success-text)"><i class="bi bi-cash-coin" aria-hidden="true"></i></span><div class="grow"><div>Payment ₹12,000 received from <b>Farah Naqvi</b> (UPI).</div><div class="meta">52 min ago</div></div></div><div class="list-row" data-filter-value="approval"><span class="avatar" style="background:var(--c-warning-soft);color:var(--c-warning-text)"><i class="bi bi-ticket-perforated" aria-hidden="true"></i></span><div class="grow"><div>Discount approval requested for <b>Aditi Verma</b>.</div><div class="meta">1 h ago</div></div></div><div class="list-row" data-filter-value="approval"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-calendar-x" aria-hidden="true"></i></span><div class="grow"><div><b>Pooja Nigam</b> applied for casual leave.</div><div class="meta">3 h ago</div></div></div><div class="list-row" data-filter-value="verify"><span class="avatar" style="background:var(--c-info-soft);color:var(--c-info-text)"><i class="bi bi-shield-check" aria-hidden="true"></i></span><div class="grow"><div><b>Tushar Rawat</b> submitted documents for verification.</div><div class="meta">2 d ago</div></div></div><div class="list-row" data-filter-value="admission"><span class="avatar" style="background:var(--c-accent-soft);color:var(--c-accent)"><i class="bi bi-person-plus" aria-hidden="true"></i></span><div class="grow"><div><b>Aditi Verma</b> enrolled in Full Stack (FS-M2).</div><div class="meta">2 d ago</div></div></div><div class="list-row" data-filter-value="admission"><span class="avatar" style="background:var(--c-success-soft);color:var(--c-success-text)"><i class="bi bi-briefcase" aria-hidden="true"></i></span><div class="grow"><div><b>Ishita Jaiswal</b> got an offer from TechNova.</div><div class="meta">3 d ago</div></div></div></div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

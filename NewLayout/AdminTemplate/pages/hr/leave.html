@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Leave requests · BPST Edu Admin</title>
+  <meta name="description" content="Leave requests in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="hr.leave" data-roles="admin hr" data-title="Leave requests">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Leave requests</h1>
+      <p>Approve or reject. The leave balance updates at once. Trainer leave also flags the affected batches.</p>
+    </div>
+    
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-8">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Requests</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search" data-table-search="lvRows" aria-label="Search"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="lvRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>5</span></button><button class="filter-chip" data-filter="pending" aria-pressed="false">Pending <span class=count>2</span></button><button class="filter-chip" data-filter="approved" aria-pressed="false">Approved <span class=count>2</span></button><button class="filter-chip" data-filter="rejected" aria-pressed="false">Rejected <span class=count>1</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Employee</th><th scope="col">Dates</th><th class="num text-end" scope="col">Days</th><th class="d-none d-md-table-cell" scope="col">Reason</th><th class="d-none d-lg-table-cell" scope="col">Balance</th><th scope="col">Status</th></tr></thead>
+          <tbody id="lvRows">
+            <tr data-filter-value="pending"><td><div class="cell-person"><span class="avatar avatar-sm">PN</span><div><div class="name">Pooja Nigam</div><div class=meta>Casual leave</div></div></div></td><td>29–30 Sep</td><td class="num text-end">2</td><td class="d-none d-md-table-cell">Family function</td><td class="d-none d-lg-table-cell">7 left</td><td><span data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Leave rejected. The employee is notified.">Reject</button> <button class="btn btn-primary btn-sm" data-resolve="Approved|success|Leave approved. Balance updated and affected batches flagged.">Approve</button></span></td></tr>
+            <tr data-filter-value="pending"><td><div class="cell-person"><span class="avatar avatar-sm">RT</span><div><div class="name">Rahul Tiwari</div><div class=meta>Sick leave</div></div></div></td><td>26 Sep</td><td class="num text-end">1</td><td class="d-none d-md-table-cell">Fever</td><td class="d-none d-lg-table-cell">5 left</td><td><span data-resolve-slot><button class="btn btn-outline-secondary btn-sm" data-resolve="Rejected|danger|Leave rejected. The employee is notified.">Reject</button> <button class="btn btn-primary btn-sm" data-resolve="Approved|success|Leave approved. Balance updated and affected batches flagged.">Approve</button></span></td></tr>
+            <tr data-filter-value="approved"><td><div class="cell-person"><span class="avatar avatar-sm">KT</span><div><div class="name">Kavya Tandon</div><div class=meta>Casual leave</div></div></div></td><td>2 Oct</td><td class="num text-end">1</td><td class="d-none d-md-table-cell">Personal work</td><td class="d-none d-lg-table-cell">9 left</td><td><span data-resolve-slot><span class="chip chip--success">Approved</span></span></td></tr>
+            <tr data-filter-value="approved"><td><div class="cell-person"><span class="avatar avatar-sm">AM</span><div><div class="name">Arjun Mehta</div><div class=meta>Casual leave</div></div></div></td><td>15–16 Sep</td><td class="num text-end">2</td><td class="d-none d-md-table-cell">Travel</td><td class="d-none d-lg-table-cell">7 left</td><td><span data-resolve-slot><span class="chip chip--success">Approved</span></span></td></tr>
+            <tr data-filter-value="rejected"><td><div class="cell-person"><span class="avatar avatar-sm">SP</span><div><div class="name">Sunita Pal</div><div class=meta>Unpaid leave</div></div></div></td><td>8 Sep</td><td class="num text-end">1</td><td class="d-none d-md-table-cell">—</td><td class="d-none d-lg-table-cell">12 left</td><td><span data-resolve-slot><span class="chip chip--danger">Rejected</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer caption">Pooja Nigam's leave affects PY-M1 and SC-E1 on 29–30 Sep: assign a substitute or cancel with a makeup class.</div>
+    </div>
+    </div>
+    <div class="col-xl-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Holidays 2026</h2><p class="card-sub">Office closed</p></div>
+        
+      </div>
+      <div class="list-row"><span class="num fw-semibold" style="width:64px">2 Oct</span><div class="grow"><div class="title">Gandhi Jayanti</div></div></div><div class="list-row"><span class="num fw-semibold" style="width:64px">20 Oct</span><div class="grow"><div class="title">Dussehra</div></div></div><div class="list-row"><span class="num fw-semibold" style="width:64px">8 Nov</span><div class="grow"><div class="title">Diwali</div></div></div><div class="list-row"><span class="num fw-semibold" style="width:64px">9 Nov</span><div class="grow"><div class="title">Govardhan Puja</div></div></div><div class="list-row"><span class="num fw-semibold" style="width:64px">25 Dec</span><div class="grow"><div class="title">Christmas</div></div></div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

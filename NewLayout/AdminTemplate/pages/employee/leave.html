@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Leave · BPST Edu Admin</title>
+  <meta name="description" content="Leave in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="employee.leave" data-roles="employee trainer" data-title="Leave">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Leave</h1>
+      <p>Apply for leave and see your balance.</p>
+    </div>
+    
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-sun" aria-hidden="true"></i>Casual left</div>
+      <div class="kpi-value">7 / 12</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-thermometer-half" aria-hidden="true"></i>Sick left</div>
+      <div class="kpi-value">4 / 6</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-hourglass" aria-hidden="true"></i>Pending</div>
+      <div class="kpi-value">0</div>
+      
+    </div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-7">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Apply</h2></div>
+        
+      </div>
+      <div class="card-body"><form class="row g-3" novalidate data-demo-form="Leave request sent to HR. You will get a notification when it is approved.">
+      <div class="col-md-6"><label class="form-label" for="lv1">Type</label><select class="form-select" id="lv1" ><option>Casual (7 left)</option><option>Sick (4 left)</option><option>Unpaid</option></select></div><div class="col-md-6"><label class="form-label" for="lv2">Half day?</label><select class="form-select" id="lv2" ><option selected>No</option><option>First half</option><option>Second half</option></select></div>
+      <div class="col-md-6"><label class="form-label" for="lv3">From</label><input class="form-control" id="lv3" type="date" value="2026-10-06" placeholder="" required ><div class="invalid-feedback">Please fill in from.</div></div><div class="col-md-6"><label class="form-label" for="lv4">To</label><input class="form-control" id="lv4" type="date" value="2026-10-07" placeholder="" required ><div class="invalid-feedback">Please fill in to.</div></div><div class="col-12"><label class="form-label" for="lv5">Reason</label><textarea class="form-control" id="lv5" rows="3" required placeholder="" ></textarea><div class="invalid-feedback">Please fill in reason.</div></div>
+      <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary" type="submit">Apply</button></div></form></div>
+      
+    </div>
+    </div>
+    <div class="col-xl-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">History</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Dates</th><th scope="col">Type</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td>15–16 Sep</td><td>Casual</td><td><span class="chip chip--success">Approved</span></td></tr>
+            <tr><td>2 Aug</td><td>Sick</td><td><span class="chip chip--success">Approved</span></td></tr>
+            <tr><td>10 Jun</td><td>Unpaid</td><td><span class="chip chip--danger">Rejected</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

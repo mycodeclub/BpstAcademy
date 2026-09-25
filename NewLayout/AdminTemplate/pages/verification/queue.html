@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Verification queue · BPST Edu Admin</title>
+  <meta name="description" content="Verification queue in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="verify.queue" data-roles="admin hr" data-title="Verification queue">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Verification queue</h1>
+      <p>Oldest first. Originals are checked in person at the office, then HR verifies or rejects with remarks.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#slotModal"><i class="bi bi-calendar-plus me-1" aria-hidden="true"></i>Book a slot</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-hourglass" aria-hidden="true"></i>Waiting</div>
+      <div class="kpi-value">6</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-check" aria-hidden="true"></i>Sessions today</div>
+      <div class="kpi-value">2</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-arrow-repeat" aria-hidden="true"></i>Re-uploads asked</div>
+      <div class="kpi-value">1</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-shield-check" aria-hidden="true"></i>Verified this month</div>
+      <div class="kpi-value">23</div>
+      
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Queue</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search name" data-table-search="verRows" aria-label="Search name"></div>
+        <select class="form-select form-select-sm" data-table-filter="verRows" aria-label="Type"><option value="all">Students &amp; employees</option><option value="student">Students</option><option value="employee">Employees</option></select>
+        <div class="d-flex flex-wrap gap-2" data-filter-group="verRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>7</span></button><button class="filter-chip" data-filter="sessionbooked" aria-pressed="false">Session booked <span class=count>2</span></button><button class="filter-chip" data-filter="submitted" aria-pressed="false">Submitted <span class=count>2</span></button><button class="filter-chip" data-filter="documentspending" aria-pressed="false">Docs pending <span class=count>1</span></button><button class="filter-chip" data-filter="rejected" aria-pressed="false">Rejected <span class=count>1</span></button><button class="filter-chip" data-filter="verified" aria-pressed="false">Verified <span class=count>1</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Person</th><th class="d-none d-md-table-cell" scope="col">Documents</th><th scope="col">Status</th><th class="d-none d-md-table-cell" scope="col">When</th><th class="num text-end d-none d-lg-table-cell" scope="col">Age</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody id="verRows">
+            <tr data-filter-value="sessionbooked student"><td><div class="cell-person"><span class="avatar">AV</span><div><div class="name">Aditi Verma</div><div class=meta>Student</div></div></div></td><td class="d-none d-md-table-cell">Aadhaar, 12th marksheet, degree ID, photo</td><td><span class="chip chip--accent">Session booked</span></td><td class="d-none d-md-table-cell">Today 4:30 PM</td><td class="num text-end d-none d-lg-table-cell" data-sort-value="1">1 d</td><td class="text-end"><a class="btn btn-primary btn-sm" href="review.html" >Review</a></td></tr>
+            <tr data-filter-value="submitted employee"><td><div class="cell-person"><span class="avatar">TR</span><div><div class="name">Tushar Rawat</div><div class=meta>Employee</div></div></div></td><td class="d-none d-md-table-cell">PAN, Aadhaar, degree, experience letter</td><td><span class="chip chip--accent">Submitted</span></td><td class="d-none d-md-table-cell">Waiting 2 days</td><td class="num text-end d-none d-lg-table-cell" data-sort-value="2">2 d</td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#slotModal">Book session</button></td></tr>
+            <tr data-filter-value="submitted student"><td><div class="cell-person"><span class="avatar">MS</span><div><div class="name">Meera Singh</div><div class=meta>Student (minor)</div></div></div></td><td class="d-none d-md-table-cell">Aadhaar, school ID, parent ID</td><td><span class="chip chip--accent">Submitted</span></td><td class="d-none d-md-table-cell">Waiting 1 day</td><td class="num text-end d-none d-lg-table-cell" data-sort-value="1">1 d</td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#slotModal">Book session</button></td></tr>
+            <tr data-filter-value="documentspending student"><td><div class="cell-person"><span class="avatar">NA</span><div><div class="name">Nikhil Arora</div><div class=meta>Student</div></div></div></td><td class="d-none d-md-table-cell">2 of 4 uploaded</td><td><span class="chip chip--warning">Documents pending</span></td><td class="d-none d-md-table-cell">Reminder sent</td><td class="num text-end d-none d-lg-table-cell" data-sort-value="5">5 d</td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: document reminder sent." data-tone="success">Remind</button></td></tr>
+            <tr data-filter-value="sessionbooked student"><td><div class="cell-person"><span class="avatar">FN</span><div><div class="name">Farah Naqvi</div><div class=meta>Student</div></div></div></td><td class="d-none d-md-table-cell">Aadhaar, graduation marksheet, photo</td><td><span class="chip chip--accent">Session booked</span></td><td class="d-none d-md-table-cell">Tomorrow 11:00 AM</td><td class="num text-end d-none d-lg-table-cell" data-sort-value="3">3 d</td><td class="text-end"><a class="btn btn-primary btn-sm" href="review.html" >Review</a></td></tr>
+            <tr data-filter-value="rejected student"><td><div class="cell-person"><span class="avatar">KP</span><div><div class="name">Kiran Pal</div><div class=meta>Student</div></div></div></td><td class="d-none d-md-table-cell">Aadhaar, 12th marksheet, photo</td><td><span class="chip chip--danger">Rejected</span></td><td class="d-none d-md-table-cell">Blurred photo · re-upload asked</td><td class="num text-end d-none d-lg-table-cell" data-sort-value="4">4 d</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="review.html" >View</a></td></tr>
+            <tr data-filter-value="verified employee"><td><div class="cell-person"><span class="avatar">DR</span><div><div class="name">Deepika Rai</div><div class=meta>Employee</div></div></div></td><td class="d-none d-md-table-cell">PAN, Aadhaar, MCA degree</td><td><span class="chip chip--success">Verified</span></td><td class="d-none d-md-table-cell">Verified 23 Sep</td><td class="num text-end d-none d-lg-table-cell" data-sort-value="0">–</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="id-cards.html" >ID card</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+<div class="modal fade" id="slotModal" tabindex="-1" aria-labelledby="slotModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Verification session booked and the person notified.">
+    <div class="modal-header"><h2 class="modal-title" id="slotModalT">Book verification session</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-12"><label class="form-label" for="vs1">Person</label><select class="form-select" id="vs1" ><option>Tushar Rawat (employee)</option><option>Meera Singh (student, with parent)</option></select></div><div class="col-md-6"><label class="form-label" for="vs2">Date</label><input class="form-control" id="vs2" type="date" value="2026-09-26" placeholder="" required ><div class="invalid-feedback">Please fill in date.</div></div><div class="col-md-6"><span class="form-label d-block">Free slots</span><div class="d-flex flex-wrap gap-2"><input type="radio" class="btn-check" name="vslot" id="vs0"><label class="btn btn-outline-secondary btn-sm" for="vs0">10:00</label><input type="radio" class="btn-check" name="vslot" id="vs1" checked><label class="btn btn-outline-secondary btn-sm" for="vs1">10:30</label><input type="radio" class="btn-check" name="vslot" id="vs2"><label class="btn btn-outline-secondary btn-sm" for="vs2">11:30</label><input type="radio" class="btn-check" name="vslot" id="vs3"><label class="btn btn-outline-secondary btn-sm" for="vs3">12:00</label><input type="radio" class="btn-check" name="vslot" id="vs4"><label class="btn btn-outline-secondary btn-sm" for="vs4">3:00</label><input type="radio" class="btn-check" name="vslot" id="vs5"><label class="btn btn-outline-secondary btn-sm" for="vs5">4:30</label></div></div><div class="col-12"><div class="alert alert-info py-2 mb-0">The person gets the slot, the office address and a list of originals to bring (SMS + email).</div></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Book &amp; notify</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

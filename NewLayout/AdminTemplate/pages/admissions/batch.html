@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Batch detail · BPST Edu Admin</title>
+  <meta name="description" content="Batch detail in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="admissions.batches" data-roles="admin counsellor hr trainer" data-title="Batch detail">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="batches.html">Batches</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">FS-M2</span></nav>
+      <h1>FS-M2 · Full Stack Development</h1>
+      <p>Mon, Tue, Wed, Thu, Fri · 11:00 AM – 1:00 PM · Lab 2</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="../attendance/mark.html" ><i class="bi bi-check2-circle me-1" aria-hidden="true"></i>Mark attendance</a><a class="btn btn-outline-secondary" href="batch-operations.html" ><i class="bi bi-calendar-x me-1" aria-hidden="true"></i>Cancel / reschedule class</a><a class="btn btn-primary" href="../management/announcements.html" ><i class="bi bi-megaphone me-1" aria-hidden="true"></i>Post announcement</a></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-people" aria-hidden="true"></i>Students</div>
+      <div class="kpi-value">22 / 24</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-check" aria-hidden="true"></i>Avg attendance</div>
+      <div class="kpi-value">84%</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-journal-check" aria-hidden="true"></i>Assignment submission</div>
+      <div class="kpi-value">68%</div>
+      <div class="kpi-foot">7 pending</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-graph-up" aria-hidden="true"></i>Course progress</div>
+      <div class="kpi-value">52%</div>
+      <div class="kpi-foot">Module 4 of 8</div>
+    </div>
+  </div>
+  <div class="detail-grid">
+    <div><ul class="nav nav-tabs mb-3 flex-nowrap overflow-auto" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="bt-stu-tab" data-bs-toggle="tab" data-bs-target="#bt-stu" type="button" role="tab" aria-controls="bt-stu" aria-selected="true">Students (6)</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="bt-sch-tab" data-bs-toggle="tab" data-bs-target="#bt-sch" type="button" role="tab" aria-controls="bt-sch" aria-selected="false">Schedule</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="bt-asg-tab" data-bs-toggle="tab" data-bs-target="#bt-asg" type="button" role="tab" aria-controls="bt-asg" aria-selected="false">Assignments</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="bt-exam-tab" data-bs-toggle="tab" data-bs-target="#bt-exam" type="button" role="tab" aria-controls="bt-exam" aria-selected="false">Assessments</button></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="bt-stu" role="tabpanel" aria-labelledby="bt-stu-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Student</th><th class="num text-end" scope="col">Attendance</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td><div class="cell-person"><span class="avatar">HK</span><div><div><a href="student.html" class="name text-reset">Harsh Kumar</a></div><div class=meta>BPST26S0042</div></div></div></td><td class="num text-end">71%</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">AV</span><div><div><a href="student.html" class="name text-reset">Aditi Verma</a></div><div class=meta>BPST26S0078</div></div></div></td><td class="num text-end">—</td><td><span class="chip chip--warning">Onboarding</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">RY</span><div><div><a href="student.html" class="name text-reset">Rohit Yadav</a></div><div class=meta>BPST26S0031</div></div></div></td><td class="num text-end">32%</td><td><span class="chip chip--danger">Dropped</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">AK</span><div><div><a href="student.html" class="name text-reset">Aditya Kesarwani</a></div><div class=meta>BPST26S0044</div></div></div></td><td class="num text-end">92%</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">SM</span><div><div><a href="student.html" class="name text-reset">Sneha Maurya</a></div><div class=meta>BPST26S0046</div></div></div></td><td class="num text-end">88%</td><td><span class="chip chip--success">Active</span></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">MA</span><div><div><a href="student.html" class="name text-reset">Mohit Agarwal</a></div><div class=meta>BPST26S0049</div></div></div></td><td class="num text-end">81%</td><td><span class="chip chip--success">Active</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="bt-sch" role="tabpanel" aria-labelledby="bt-sch-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Session</th><th scope="col">Date</th><th scope="col">Topic</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td>S41</td><td>Mon 22 Sep</td><td>React hooks: useEffect</td><td><span class="chip chip--neutral">Done</span></td></tr>
+            <tr><td>S42</td><td>Tue 23 Sep</td><td>Forms and validation</td><td><span class="chip chip--neutral">Done</span></td></tr>
+            <tr><td>S43</td><td>Wed 24 Sep</td><td>Calling an API</td><td><span class="chip chip--neutral">Done</span></td></tr>
+            <tr><td>S44</td><td>Thu 25 Sep</td><td>Routing</td><td><span class="chip chip--success">Live</span></td></tr>
+            <tr><td>S45</td><td>Fri 26 Sep</td><td>Project sprint review</td><td><span class="chip chip--accent">Upcoming</span></td></tr>
+            <tr><td>S46</td><td>Mon 29 Sep</td><td>Class cancelled (Dussehra) → makeup Sat 4 Oct</td><td><span class="chip chip--warning">Rescheduled</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="bt-asg" role="tabpanel" aria-labelledby="bt-asg-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Assignment</th><th scope="col">Due</th><th class="num text-end" scope="col">Submitted</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td>Portfolio site</td><td>12 Sep</td><td class="num text-end">22/22</td><td><span class="chip chip--success">Graded</span></td></tr>
+            <tr><td>Todo app with API</td><td>26 Sep</td><td class="num text-end">15/22</td><td><span class="chip chip--info">Open</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="bt-exam" role="tabpanel" aria-labelledby="bt-exam-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Test</th><th scope="col">Date</th><th class="num text-end" scope="col">Avg</th></tr></thead>
+          <tbody>
+            <tr><td>Module 1 · HTML/CSS</td><td>14 Aug</td><td class="num text-end">78%</td></tr>
+            <tr><td>Module 2 · JavaScript</td><td>11 Sep</td><td class="num text-end">71%</td></tr>
+            <tr><td>Module 3 · React</td><td>3 Oct</td><td class="num text-end">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div></div></div>
+    <div class="d-grid gap-3 align-content-start"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Batch</h2></div>
+        
+      </div>
+      <div class="card-body"><dl class="dl-grid"><dt>Course</dt><dd>Full Stack Development</dd><dt>Trainer</dt><dd>Arjun Mehta</dd><dt>Days</dt><dd>Mon, Tue, Wed, Thu, Fri</dd><dt>Time</dt><dd>11:00 AM – 1:00 PM</dd><dt>Mode</dt><dd>Classroom</dd><dt>Room</dt><dd>Lab 2</dd><dt>Seats</dt><dd>22 of 24</dd><dt>Dates</dt><dd>1 Jul 2026 – 31 Dec 2026</dd></dl></div>
+      
+    </div></div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

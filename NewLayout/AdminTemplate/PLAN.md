@@ -1,8 +1,8 @@
 # BPST Edu Admin Panel: Plan
 
-**Status:** Planning (M0). No pages have been built yet. The owner reviews this document before M1 starts.
+**Status:** M1–M7 built (all screens, demo data). Waiting for owner review; M8 QA checks already pass at 375–3440 px.
 **Date:** 25 Sep 2026
-**Sibling project:** `../EduTemplateFreezing` (public landing site, live at mycodeclub.github.io/EduTemplateFreezing)
+**Sibling project:** `../Landing Page UI` (public website, edu.bitprosofttech.com). This portal is deployed at `/portal/` on the same domain.
 
 ---
 
@@ -32,6 +32,8 @@ This is one rich, interactive HTML + Bootstrap **clickable prototype** of the fu
 
 All roles live in **one template**. A demo **"View as" role switcher** in the top bar changes the sidebar and the dashboard. Real role separation comes with the backend.
 
+The switcher also offers two **gated demo states**, so the onboarding gates in §3.2/§3.3 can be shown: **Student (not yet verified)**, which sees only the onboarding checklist, profile and fees, and **Employee (onboarding)**, which sees only the onboarding checklist and profile.
+
 | Role group | Who | Main job |
 |---|---|---|
 | **Admin / Management** | Owner, center head | Full CRM, all reports, approvals, settings |
@@ -47,10 +49,16 @@ All roles live in **one template**. A demo **"View as" role switcher** in the to
 |---|---|---|---|---|---|---|
 | Owner dashboard & reports | ✓ | ◐ own funnel | ◐ fees/HR | | | |
 | Leads, counselling, applications | ✓ | ✓ | | | | |
+| Institutions (B2B) | ✓ | ✓ | | | | |
+| Placement cell | ✓ | ✓ | | | ◐ own drives | |
 | Admissions & enrolment | ✓ | ✓ | ◐ | | | |
 | Batches & timetable | ✓ | ◐ view | ◐ view | ◐ own | ◐ own | |
 | Attendance | ✓ | | ◐ staff | ◐ own batches | ◐ own | ◐ own |
-| Fees & GST | ✓ | ◐ collect | ✓ | | ◐ own | |
+| Fees & GST | ✓ | ◐ collect, view dues | ✓ | | ◐ own | |
+| Expenses & P&L | ✓ | | ✓ | | | |
+| Assessments & marks | ✓ | | | ◐ own batches | ◐ own | |
+| Announcements | ✓ | | ◐ | ◐ own batches | ◐ read | ◐ read |
+| Feedback (NPS) | ✓ | | | ◐ own results | ◐ give | |
 | Discount / waiver approval | ✓ | request | request | | | |
 | Document verification | ✓ | | ✓ | | ◐ upload | ◐ upload |
 | ID cards & certificates | ✓ | | ✓ | | ◐ download | |
@@ -72,6 +80,36 @@ New ──▶ Contacted ──▶ Counselling booked ──▶ Counselled ──
 ```
 - Lead sources include **Website pre-book ₹49** from the landing site's `prebook.html` form, which shows its paid status. Other sources: website enquiry, walk-in, phone call, WhatsApp, referral, Google/Meta ads, JustDial, school/college camp.
 - The 1-hour SLA clock (§5) runs from **New** until the first logged contact.
+
+#### Website → lead mapping
+The landing site has two forms. Both post to `leadEndpoint` in the landing site's `assets/js/config.js`, which is empty for now, so the forms run in demo mode. There is **no separate website Apply form**. Applications are created by counsellors from a lead (§4.3).
+
+| Lead field | Pre-book form (`prebook.html`, `index.html`) | Enquiry form (`contact.html`) |
+|---|---|---|
+| Source | `Website pre-book ₹49` | `Website enquiry` |
+| Name, mobile | `name`, `mobile` | `name`, `mobile` |
+| Email | `email` | — |
+| City / district | `city` | — |
+| Qualification | `qualification` | — |
+| Course interest | `course` (course slug) | `course` (also pre-filled from `?course=` on the URL) |
+| Mode (classroom / online) | `mode` | — |
+| Preferred duration | `duration` | — |
+| Message | `message` | `message` |
+| Consent (DPDP) | `consent` | `consent` |
+| Payment | ₹49 paid / failed + gateway reference | — |
+| Campaign | `utm_source`, `utm_medium`, `utm_campaign` and page URL, captured by the landing script (to add) | same |
+| Honeypot | `website` (spam trap; dropped, never stored) | same |
+
+- Duplicate check by mobile (§8.3) runs on every incoming lead.
+- A paid pre-book shows a **"₹49 paid"** chip in the inbox and on the Lead 360 page.
+
+### 3.1a Institution (B2B) lead → MoU → bulk batch
+```
+Enquiry (college / school / company) ─▶ Proposal sent ─▶ MoU / PO signed ─▶ Bulk batch created ─▶ Completed
+                                                │
+                                                └──▶ Lost (reason required)
+```
+Used for college tracks, industrial / summer-winter training and school coding programmes. Students added to a bulk batch go through the normal onboarding (§3.2). Billing can go to the institution (one GST invoice) or to each student.
 
 ### 3.2 Student onboarding (the verification gate)
 ```
@@ -105,7 +143,7 @@ Section 6 covers the rules.
 
 ---
 
-## 4. Page inventory (~60 pages)
+## 4. Page inventory (~75 pages)
 
 The sidebar is grouped by the sections below. `(P)` = print layout.
 
@@ -140,7 +178,9 @@ The sidebar is grouped by the sections below. `(P)` = print layout.
 | Follow-ups today | Due, overdue, done |
 | Counselling calendar | Week view of sessions by counsellor and room |
 | Counselling session | Notes, recommended course/batch, fee quoted, outcome |
-| Applications | Review queue from the website Apply form and counsellors: approve → enrol |
+| Applications | Review queue of applications created by counsellors from a lead: approve → enrol |
+| Counsellor dashboard | My leads today, my SLA risk, my follow-ups, my conversions this month |
+| Institutions | B2B list and detail page: contact person, programme, proposal, MoU / PO upload, bulk batches, invoices (§3.1a) |
 
 ### 4.4 Admissions & Academics
 | Page | Notes |
@@ -149,9 +189,11 @@ The sidebar is grouped by the sections below. `(P)` = print layout.
 | Students | List with status filters (onboarding / active / completed / dropped) |
 | Student 360 | Profile, courses, batches, attendance, fee ledger, documents, ID card, certificates, notes |
 | **Add parallel course** | Pick course → available batches shown with conflicts against the student's current timetable greyed out ("Clashes with Python Mon–Wed 5–6 PM") |
-| Batches | List: course, trainer, timing, room, seats filled/total, start/end |
-| Batch detail | Students, schedule, attendance summary, assignments |
-| Timetable | Weekly grid by room / trainer / batch, with clash highlighting |
+| Batches | List: course, trainer, timing, **mode (classroom / online / hybrid)**, room *or* meeting link, seats filled/total, start/end |
+| Batch detail | Students, schedule, attendance summary, assignments, assessments |
+| Batch operations | Transfer a student to another batch, **freeze / pause** a course (with resume date), mark dropout (reason required), cancel or reschedule a class, add a makeup class. Each change notifies the students and is written to the audit log |
+| Assessments | Per batch: module tests, final test, project. Marks entry by the trainer, grade bands, result sheet. Feeds the certificate rule (§4.8) |
+| Timetable | Weekly grid by room / trainer / batch, with clash highlighting. Online batches have no room but are still checked for trainer and student clashes |
 | Courses | Catalogue with durations and fee plans (mirrors the landing site's 58 courses) |
 
 ### 4.5 Attendance
@@ -165,6 +207,7 @@ The sidebar is grouped by the sections below. `(P)` = print layout.
 ### 4.6 Fees & Accounts
 | Page | Notes |
 |---|---|
+| HR + Accounts dashboard | Collections today, dues, pending verifications, leave requests, payroll status |
 | **Collections dashboard** | Today, month, dues, overdue, fines, waivers, and GST collected |
 | Student ledger | All charges, payments, fines, waivers, discounts, running balance |
 | Collect payment | Modal: amount (any amount), mode (cash/UPI/card/bank), reference. The GST split is calculated automatically |
@@ -174,6 +217,8 @@ The sidebar is grouped by the sections below. `(P)` = print layout.
 | Discounts & coupons | Coupon codes, sibling, early-bird, upfront. Every use goes to approval |
 | GST register | Monthly register of receipts/invoices, CGST/SGST/IGST totals, CSV export for filing |
 | Refunds | Request → approval → processed (follows the landing site's refund policy) |
+| Expenses | Record rent, salaries paid, marketing spend (by channel), software, utilities. Category, amount, mode, bill upload, GST input (if any) |
+| Profit & loss | Monthly income vs expenses, by category. Marketing spend by channel feeds the source-ROI report |
 
 ### 4.7 Verification & Documents
 | Page | Notes |
@@ -186,8 +231,8 @@ The sidebar is grouped by the sections below. `(P)` = print layout.
 | Page | Notes |
 |---|---|
 | ID cards | Issue for verified students/employees, print sheet (P) with CR80-size cards: photo, name, ID, course/role, validity, QR |
-| Certificates | Generate on course completion (attendance + fees cleared rule), A4 landscape (P), unique number + QR |
-| Verify certificate | Public page: enter the number or scan the QR to see a valid/invalid result |
+| Certificates | Generate on course completion (attendance + fees cleared + assessment passed), A4 landscape (P), unique number + QR. **Types:** course completion, industrial / summer-winter training certificate, internship / project completion letter, experience letter (employees) |
+| Verify certificate | Public page: enter the number or scan the QR to see a valid/invalid result. Linked from the landing site footer |
 
 ### 4.9 HR & Payroll
 | Page | Notes |
@@ -203,13 +248,13 @@ The sidebar is grouped by the sections below. `(P)` = print layout.
 | Resignations & exit | Notice tracking, handover checklist, F&F settlement, experience letter |
 
 ### 4.10 Trainer portal
-Dashboard (today's classes), my batches, timetable, mark attendance, assignments (create, collect, grade), student messages, plus the employee pages (salary, leave).
+Dashboard (today's classes), my batches, timetable, mark attendance, assignments (create, collect, grade), assessments (marks entry), batch announcements, feedback results, student messages, plus the employee pages (salary, leave).
 
 ### 4.11 Student portal
 | Page | Notes |
 |---|---|
 | Onboarding checklist | Gate: change password → upload documents → book verification. Progress bar |
-| Dashboard | Next class, attendance %, fee due, pending assignments, announcements |
+| Dashboard | Next class (with meeting link for online batches), attendance %, fee due, pending assignments, announcements |
 | My courses & timetable | |
 | Fees | Ledger, receipts, "Pay now" (demo), **Request GST invoice** |
 | Assignments | Submit and view grades |
@@ -218,11 +263,28 @@ Dashboard (today's classes), my batches, timetable, mark attendance, assignments
 | Certificates | Download, share verification link |
 | Messages | To trainer / to management |
 | Apply for another course | Shows only batches that don't clash |
+| Results | Test and project marks per course |
+| Feedback | Short module-end survey (trainer rating 1–5, NPS 0–10, comment) |
+| Placement | Eligible drives, apply, upload resume, interview status |
 
 ### 4.12 Employee portal
 Onboarding checklist, dashboard, offer letter download, salary breakdown, payslips, attendance, apply for leave, leave balance, resign.
 
-### 4.13 Email / message previews
+### 4.13 Placement cell
+| Page | Notes |
+|---|---|
+| Companies | Hiring partners: contact, roles hired for, past drives |
+| Drives | Company, role, eligibility (course, attendance %, marks), date. Shortlist eligible students automatically |
+| Drive detail | Applicants → shortlisted → interviewed → **offered / placed** (CTC) |
+| Placement report | Placed count and % by course and batch, average CTC. Supports the claims on the landing site's `career-placement.html` |
+
+### 4.14 Announcements & feedback
+| Page | Notes |
+|---|---|
+| Announcements | Create a notice for everyone / a course / a batch / staff, with an optional expiry date. Shown on dashboards |
+| Feedback results | Trainer rating and NPS by batch, course and trainer, with comments. Low scores are flagged |
+
+### 4.15 Email / message previews
 These are HTML email designs shown as pages:
 - Welcome + default ID and password
 - Document reminder
@@ -232,6 +294,9 @@ These are HTML email designs shown as pages:
 - Fee due / overdue reminder
 - Lead assigned to counsellor
 - **SLA breach alert to manager**
+- Pre-book ₹49 confirmation
+- Batch change / class cancelled / makeup class
+- Placement drive invite
 - Payslip ready
 - Leave approved/rejected
 
@@ -267,6 +332,8 @@ Every new lead must be contacted within **1 hour**. The clock starts at `created
    *To confirm with the CA:* GSTIN, legal name, whether fees are shown GST-inclusive or exclusive.
 5. **Discounts.** Coupon, sibling, early-bird and upfront discounts all need **manager approval** before they apply.
 6. **Numbering:** separate series for receipts (`BPST/RC/2026-27/0001`) and invoices (`BPST/INV/2026-27/0001`), reset each financial year.
+7. **₹49 pre-booking (from the landing site's refund policy).** The ₹49 is **adjusted in the course fee** at enrolment. It appears in the ledger as an advance credit carried over from the lead. It is refunded in full only if BPST cancels or cannot start the batch.
+   *To confirm with the CA:* whether the ₹49 gets its own GST receipt at payment time (default: yes, as an advance receipt).
 
 ---
 
@@ -306,12 +373,12 @@ Each milestone ends with an **owner review on GitHub Pages**. The next one start
 |---|---|
 | **M0** | PLAN.md, BRAND.md, CLAUDE.md (this) |
 | M1 | Repo + Pages deploy, app shell (sidebar, top bar, role switcher, dark mode), **UI kit**, login pages, owner dashboard |
-| M2 | CRM: lead inbox with SLA timers, pipeline, lead 360, follow-ups, counselling, applications |
-| M3 | Admissions: enrolment wizard, students, student 360, parallel course, batches, timetable, courses, attendance |
-| M4 | Fees & GST: collections, ledger, collect payment, receipt, GST invoice, dues, discounts, GST register, refunds |
-| M5 | Verification queue and review, ID cards, certificates, certificate verify |
+| M2 | CRM: counsellor dashboard, lead inbox with SLA timers, pipeline, lead 360, follow-ups, counselling, applications, institutions (B2B) |
+| M3 | Admissions: enrolment wizard, students, student 360, parallel course, batches (incl. online mode), batch operations, timetable, courses, attendance, assessments |
+| M4 | Fees & GST: HR + Accounts dashboard, collections, ledger, collect payment, receipt, GST invoice, dues, discounts, GST register, refunds, expenses, P&L |
+| M5 | Verification queue and review, ID cards, certificates (all types), certificate verify |
 | M6 | HR & payroll: employees, onboarding, offer letter, salary, payroll run, payslip, leave, resignation |
-| M7 | Trainer, student and employee portals, email previews, approvals inbox, reports, settings, audit log |
+| M7 | Trainer, student and employee portals (incl. gated demo states), placement cell, announcements, feedback, email previews, approvals inbox, reports, settings, audit log |
 | M8 | QA: every link works, 375/768/1024/1440 widths, keyboard/contrast check, print layouts, final deploy |
 
 ---
@@ -330,3 +397,9 @@ Each milestone ends with an **owner review on GitHub Pages**. The next one start
 | 8 | Upfront discount % | 10% |
 | 9 | Minimum attendance for a certificate | 75% + all fees cleared |
 | 10 | Leave types and yearly quota | Casual 12, Sick 6, Unpaid |
+| 11 | Branches: one Lucknow classroom + online, or more centres planned? | One classroom (near IIM Tiraha) + live online. No branch field |
+| 12 | Expense categories to track | Rent, salaries, marketing (by channel), software, utilities, other |
+| 13 | Final assessment needed for a certificate? Pass mark? | Yes: final test or project, pass mark 50% |
+| 14 | Feedback survey timing | At the end of each module and at course end |
+| 15 | B2B billing: one invoice to the institution, or each student pays? | Configurable per institution; default one invoice to the institution |
+| 16 | Does the ₹49 pre-booking get its own GST receipt? | Yes, as an advance receipt (§6.7) |

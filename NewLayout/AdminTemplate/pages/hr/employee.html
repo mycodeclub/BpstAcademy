@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Employee 360 · BPST Edu Admin</title>
+  <meta name="description" content="Employee 360 in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="hr.employees" data-roles="admin hr" data-title="Employee 360">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="employees.html">Employees</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Arjun Mehta</span></nav>
+      <h1>Arjun Mehta <span class="chip chip--success">Active</span></h1>
+      <p>BPST26E005 · Senior trainer · Full Stack, Java</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="../../print/offer-letter.html" ><i class="bi bi-file-earmark-text me-1" aria-hidden="true"></i>Offer letter</a><a class="btn btn-primary" href="salary-structure.html" ><i class="bi bi-sliders me-1" aria-hidden="true"></i>Salary structure</a></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-check" aria-hidden="true"></i>Attendance (Sep)</div>
+      <div class="kpi-value">24 / 24</div>
+      
+    </div>
+<a class="kpi" href="../management/feedback.html">
+      <div class="kpi-label"><i class="bi bi-star-half" aria-hidden="true"></i>Student rating</div>
+      <div class="kpi-value">4.6 / 5</div>
+      <div class="kpi-foot">NPS 52</div>
+    </a>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-collection" aria-hidden="true"></i>Batches</div>
+      <div class="kpi-value">2</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-x" aria-hidden="true"></i>Leave left</div>
+      <div class="kpi-value">12 days</div>
+      
+    </div>
+  </div>
+  <div class="detail-grid">
+    <div><ul class="nav nav-tabs mb-3 flex-nowrap overflow-auto" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="e360-sal-tab" data-bs-toggle="tab" data-bs-target="#e360-sal" type="button" role="tab" aria-controls="e360-sal" aria-selected="true">Salary</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="e360-slips-tab" data-bs-toggle="tab" data-bs-target="#e360-slips" type="button" role="tab" aria-controls="e360-slips" aria-selected="false">Payslips</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="e360-leave-tab" data-bs-toggle="tab" data-bs-target="#e360-leave" type="button" role="tab" aria-controls="e360-leave" aria-selected="false">Leave</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="e360-batches-tab" data-bs-toggle="tab" data-bs-target="#e360-batches" type="button" role="tab" aria-controls="e360-batches" aria-selected="false">Batches</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="e360-docs-tab" data-bs-toggle="tab" data-bs-target="#e360-docs" type="button" role="tab" aria-controls="e360-docs" aria-selected="false">Documents</button></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="e360-sal" role="tabpanel" aria-labelledby="e360-sal-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Component</th><th class="num text-end" scope="col">Monthly</th></tr></thead>
+          <tbody>
+            <tr><td>Basic</td><td class="money text-end">₹32,500</td></tr>
+            <tr><td>HRA</td><td class="money text-end">₹13,000</td></tr>
+            <tr><td>Special allowance</td><td class="money text-end">₹14,500</td></tr>
+            <tr><td>Conveyance</td><td class="money text-end">₹5,000</td></tr>
+            <tr><td><b>Gross</b></td><td class="money text-end"><b>₹65,000</b></td></tr>
+            <tr><td>PF (12% of basic)</td><td class="money text-end">−₹3,900</td></tr>
+            <tr><td>Professional tax</td><td class="money text-end">−₹200</td></tr>
+            <tr><td>TDS</td><td class="money text-end">−₹2,100</td></tr>
+            <tr><td><b>Net pay</b></td><td class="money text-end"><b>₹58,800</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="e360-slips" role="tabpanel" aria-labelledby="e360-slips-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Month</th><th class="num text-end" scope="col">Net</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td>August 2026</td><td class="money text-end">₹58,800</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/payslip.html" >Payslip</a></td></tr>
+            <tr><td>July 2026</td><td class="money text-end">₹58,800</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/payslip.html" >Payslip</a></td></tr>
+            <tr><td>June 2026</td><td class="money text-end">₹58,800</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/payslip.html" >Payslip</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="e360-leave" role="tabpanel" aria-labelledby="e360-leave-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Type</th><th class="num text-end" scope="col">Quota</th><th class="num text-end" scope="col">Used</th><th class="num text-end" scope="col">Left</th></tr></thead>
+          <tbody>
+            <tr><td>Casual</td><td class="num text-end">12</td><td class="num text-end">5</td><td class="num text-end">7</td></tr>
+            <tr><td>Sick</td><td class="num text-end">6</td><td class="num text-end">1</td><td class="num text-end">5</td></tr>
+            <tr><td>Unpaid</td><td class="num text-end">—</td><td class="num text-end">0</td><td class="num text-end">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="e360-batches" role="tabpanel" aria-labelledby="e360-batches-tab" tabindex="0"><div class="card">
+      
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Batch</th><th scope="col">Timing</th><th class="num text-end" scope="col">Students</th></tr></thead>
+          <tbody>
+            <tr><td><a href="../admissions/batch.html">FS-M2</a> · Full Stack Development</td><td>Mon Tue Wed Thu Fri · 11:00 AM – 1:00 PM</td><td class="num text-end">22</td></tr>
+            <tr><td><a href="../admissions/batch.html">JV-E1</a> · Java Programming</td><td>Tue Thu Sat · 6:00 PM – 7:30 PM</td><td class="num text-end">15</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div><div class="tab-pane fade" id="e360-docs" role="tabpanel" aria-labelledby="e360-docs-tab" tabindex="0"><div class="card">
+      
+      <div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="flex-grow-1">PAN</div><span class="chip chip--success">Verified</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="flex-grow-1">Aadhaar (XXXX XXXX 7710)</div><span class="chip chip--success">Verified</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="flex-grow-1">MCA degree</div><span class="chip chip--success">Verified</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="flex-grow-1">Experience letter</div><span class="chip chip--success">Verified</span></div><div class="check-row"><span class="check-ico ok"><i class="bi bi-check2"></i></span><div class="flex-grow-1">Offer letter (signed)</div><span class="chip chip--success">Verified</span></div>
+      
+    </div></div></div></div>
+    <div class="d-grid gap-3 align-content-start"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Profile</h2></div>
+        
+      </div>
+      <div class="card-body"><dl class="dl-grid"><dt>Employee ID</dt><dd>BPST26E005</dd><dt>Role</dt><dd>Senior trainer · Full Stack, Java</dd><dt>Department</dt><dd>Academics</dd><dt>Joined</dt><dd>1 Feb 2021</dd><dt>Type</dt><dd>Full-time</dd><dt>Mobile</dt><dd>98XXXXXX05</dd><dt>Email</dt><dd>arjun.m@example.com</dd><dt>Bank</dt><dd>XXXX XXXX 3345 · SBI</dd><dt>PAN</dt><dd>XXXXX1234X</dd></dl></div>
+      
+    </div></div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

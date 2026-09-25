@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My attendance · BPST Edu Admin</title>
+  <meta name="description" content="My attendance in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="student.attendance" data-roles="student" data-title="My attendance">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>My attendance</h1>
+      <p>You need 75% in every course for the certificate and for placement drives.</p>
+    </div>
+    
+  </div>
+  <div class="alert alert-warning d-flex gap-2"><i class="bi bi-exclamation-triangle-fill"></i><div>Full Stack attendance is <b>74%</b> this month. Attend the makeup class on Sat 4 Oct to get back above 75%.</div></div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-7">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">September 2026</h2></div>
+        
+      </div>
+      <div class="card-body"><div class="cal-month"><div class="dow">Mon</div><div class="dow">Tue</div><div class="dow">Wed</div><div class="dow">Thu</div><div class="dow">Fri</div><div class="dow">Sat</div><div class="dow">Sun</div><div class="cal-day empty"></div><div class="cal-day p" title="1 Sep: Present">1<small>P</small></div><div class="cal-day p" title="2 Sep: Present">2<small>P</small></div><div class="cal-day p" title="3 Sep: Present">3<small>P</small></div><div class="cal-day p" title="4 Sep: Present">4<small>P</small></div><div class="cal-day p" title="5 Sep: Present">5<small>P</small></div><div class="cal-day h" title="6 Sep: No class">6<small></small></div><div class="cal-day h" title="7 Sep: No class">7<small></small></div><div class="cal-day p" title="8 Sep: Present">8<small>P</small></div><div class="cal-day p" title="9 Sep: Present">9<small>P</small></div><div class="cal-day a" title="10 Sep: Absent">10<small>A</small></div><div class="cal-day p" title="11 Sep: Present">11<small>P</small></div><div class="cal-day p" title="12 Sep: Present">12<small>P</small></div><div class="cal-day h" title="13 Sep: No class">13<small></small></div><div class="cal-day h" title="14 Sep: No class">14<small></small></div><div class="cal-day p" title="15 Sep: Present">15<small>P</small></div><div class="cal-day p" title="16 Sep: Present">16<small>P</small></div><div class="cal-day p" title="17 Sep: Present">17<small>P</small></div><div class="cal-day l" title="18 Sep: Late">18<small>L</small></div><div class="cal-day p" title="19 Sep: Present">19<small>P</small></div><div class="cal-day h" title="20 Sep: No class">20<small></small></div><div class="cal-day h" title="21 Sep: No class">21<small></small></div><div class="cal-day p" title="22 Sep: Present">22<small>P</small></div><div class="cal-day a" title="23 Sep: Absent">23<small>A</small></div><div class="cal-day p" title="24 Sep: Present">24<small>P</small></div><div class="cal-day p" title="25 Sep: Present">25<small>P</small></div><div class="cal-day p" title="26 Sep: Present">26<small>P</small></div></div><p class="caption mt-2 mb-0">P present · L late · A absent · dashed = no class</p></div>
+      
+    </div>
+    </div>
+    <div class="col-xl-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">By course</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Course</th><th class="num text-end" scope="col">Classes</th><th class="num text-end" scope="col">Present</th><th class="num text-end" scope="col">%</th></tr></thead>
+          <tbody>
+            <tr><td>Full Stack · FS-M2</td><td class="num text-end">19</td><td class="num text-end">14</td><td class="num text-end"><span class="text-danger fw-semibold">74%</span></td></tr>
+            <tr><td>DSA · DSA-W1</td><td class="num text-end">4</td><td class="num text-end">4</td><td class="num text-end">100%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

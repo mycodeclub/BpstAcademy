@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Assignments · BPST Edu Admin</title>
+  <meta name="description" content="Assignments in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="trainer.assignments" data-roles="trainer" data-title="Assignments">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Assignments</h1>
+      <p>Create, collect and grade.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newAsg"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>New assignment</button></div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-4">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Assignments</h2></div>
+        
+      </div>
+      <div class="list-row"><span class="avatar" style="background:var(--c-accent-soft);color:var(--c-accent)"><i class="bi bi-journal-check" aria-hidden="true"></i></span><div class="grow"><div class="title">Todo app with API</div><div class=meta>FS-M2 · due 26 Sep · 15/22</div></div><span class="chip chip--info">Open</span></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-journal-check" aria-hidden="true"></i></span><div class="grow"><div class="title">Portfolio site</div><div class=meta>FS-M2 · 22/22</div></div><span class="chip chip--success">Graded</span></div><div class="list-row"><span class="avatar" style="background:var(--c-accent-soft);color:var(--c-accent)"><i class="bi bi-journal-check" aria-hidden="true"></i></span><div class="grow"><div class="title">Java OOP lab</div><div class=meta>JV-E1 · due 30 Sep · 4/15</div></div><span class="chip chip--info">Open</span></div>
+      
+    </div>
+    </div>
+    <div class="col-xl-8">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Todo app with API · submissions</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Student</th><th class="d-none d-md-table-cell" scope="col">Submitted</th><th scope="col">Marks /100</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">HK</span><div><div class="name">Harsh Kumar</div></div></div></td><td class="d-none d-md-table-cell">Late · 26 Sep 1:10 AM</td><td><input class="form-control form-control-sm text-end" style="max-width:90px" value="" aria-label="Marks for Harsh Kumar" inputmode="numeric"></td><td><span class="chip chip--warning">Late</span></td><td class="text-end"><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo: submission link opens (GitHub)." data-tone="info">Open</button></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">AK</span><div><div class="name">Aditya Kesarwani</div></div></div></td><td class="d-none d-md-table-cell">25 Sep 9:40 PM</td><td><input class="form-control form-control-sm text-end" style="max-width:90px" value="" aria-label="Marks for Aditya Kesarwani" inputmode="numeric"></td><td><span class="chip chip--accent">Submitted</span></td><td class="text-end"><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo: submission link opens (GitHub)." data-tone="info">Open</button></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">SM</span><div><div class="name">Sneha Maurya</div></div></div></td><td class="d-none d-md-table-cell">25 Sep 6:02 PM</td><td><input class="form-control form-control-sm text-end" style="max-width:90px" value="88" aria-label="Marks for Sneha Maurya" inputmode="numeric"></td><td><span class="chip chip--success">Graded</span></td><td class="text-end"><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo: submission link opens (GitHub)." data-tone="info">Open</button></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar avatar-sm">MA</span><div><div class="name">Mohit Agarwal</div></div></div></td><td class="d-none d-md-table-cell">—</td><td><input class="form-control form-control-sm text-end" style="max-width:90px" value="" aria-label="Marks for Mohit Agarwal" inputmode="numeric"></td><td><span class="chip chip--danger">Missing</span></td><td class="text-end"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Reminder sent." data-tone="success">Remind</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer caption"><button type="button" class="btn btn-primary btn-sm" data-demo-toast="Grades published to students." data-tone="success">Save & publish grades</button></div>
+    </div>
+    </div>
+  </div>
+<div class="modal fade" id="newAsg" tabindex="-1" aria-labelledby="newAsgT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Assignment published to the batch.">
+    <div class="modal-header"><h2 class="modal-title" id="newAsgT">New assignment</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-md-6"><label class="form-label" for="na1">Batch</label><select class="form-select" id="na1" ><option>FS-M2</option><option>JV-E1</option></select></div><div class="col-md-6"><label class="form-label" for="na2">Due</label><input class="form-control" id="na2" type="datetime-local" value="2026-10-03T23:59" placeholder="" ></div><div class="col-12"><label class="form-label" for="na3">Title</label><input class="form-control" id="na3" type="text" value="" placeholder="" required ><div class="invalid-feedback">Please fill in title.</div></div><div class="col-12"><label class="form-label" for="na4">Instructions</label><textarea class="form-control" id="na4" rows="3" placeholder="" ></textarea></div><div class="col-md-6"><label class="form-label" for="na5">Max marks</label><input class="form-control" id="na5" type="number" value="100" placeholder="" ></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Publish</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

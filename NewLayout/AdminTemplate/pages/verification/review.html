@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Document review · BPST Edu Admin</title>
+  <meta name="description" content="Document review in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="verify.queue" data-roles="admin hr" data-title="Document review">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="queue.html">Verification</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Aditi Verma</span></nav>
+      <h1>Aditi Verma · document review</h1>
+      <p>Student · Full Stack Development · session today 4:30 PM</p>
+    </div>
+    
+  </div>
+  <div class="detail-grid">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Checklist</h2><p class="card-sub">Tick each document after you see the original</p></div>
+        
+      </div>
+      <div class="check-row"><span class="doc-thumb"><i class="bi bi-person-vcard"></i></span><div class="flex-grow-1"><div class="fw-medium">Aadhaar card</div><div class="caption">XXXX XXXX 1234 · name and DOB match</div></div>
+        <div class="form-check form-switch mb-0"><input class="form-check-input" type="checkbox" role="switch" id="og0"><label class="form-check-label small" for="og0">Original seen</label></div></div><div class="check-row"><span class="doc-thumb"><i class="bi bi-file-earmark-text"></i></span><div class="flex-grow-1"><div class="fw-medium">12th marksheet</div><div class="caption">CBSE 2022 · roll no. matches</div></div>
+        <div class="form-check form-switch mb-0"><input class="form-check-input" type="checkbox" role="switch" id="og1"><label class="form-check-label small" for="og1">Original seen</label></div></div><div class="check-row"><span class="doc-thumb"><i class="bi bi-card-heading"></i></span><div class="flex-grow-1"><div class="fw-medium">B.Tech ID card</div><div class="caption">AKTU · 2nd year</div></div>
+        <div class="form-check form-switch mb-0"><input class="form-check-input" type="checkbox" role="switch" id="og2"><label class="form-check-label small" for="og2">Original seen</label></div></div><div class="check-row"><span class="doc-thumb"><i class="bi bi-image"></i></span><div class="flex-grow-1"><div class="fw-medium">Photo</div><div class="caption">Passport size, plain background</div></div>
+        <div class="form-check form-switch mb-0"><input class="form-check-input" type="checkbox" role="switch" id="og3"><label class="form-check-label small" for="og3">Original seen</label></div></div><div class="card-body border-top"><label class="form-label" for="vrem">Remarks</label><textarea class="form-control" id="vrem" rows="2" placeholder="Required when rejecting"></textarea></div>
+      <div class="card-footer caption"><div class="d-flex flex-wrap gap-2 justify-content-end"><button class="btn btn-outline-secondary" id="vReject">Reject &amp; ask re-upload</button><button class="btn btn-primary" id="vVerify">Verify &amp; unlock portal</button></div></div>
+    </div>
+    <div class="d-grid gap-3 align-content-start"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Person</h2></div>
+        
+      </div>
+      <div class="card-body"><dl class="dl-grid"><dt>Name</dt><dd>Aditi Verma</dd><dt>Student ID</dt><dd>BPST26S0078</dd><dt>DOB</dt><dd>14 Mar 2004</dd><dt>Mobile</dt><dd>96XXXXXX78</dd><dt>Course</dt><dd>Full Stack Development</dd><dt>Enrolled</dt><dd>23 Sep 2026</dd></dl></div>
+      
+    </div><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Privacy</h2></div>
+        
+      </div>
+      <div class="card-body"><p class="small mb-0">Only HR and Admin can see documents. Aadhaar is always masked. Files are deleted 90 days after the course ends unless the law needs them longer (DPDP Act 2023).</p></div>
+      
+    </div></div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+var B = window.BPST;
+  document.getElementById('vVerify').addEventListener('click', function () {
+    var n = document.querySelectorAll('.check-row input:checked').length, all = document.querySelectorAll('.check-row input').length;
+    if (n < all) { B.toast('Tick “Original seen” for all ' + all + ' documents first (' + n + ' done).', 'warning'); return; }
+    B.toast('<b>Aditi Verma</b> verified. Full student portal unlocked and ID card queued for printing.', 'success');
+    setTimeout(function () { location.href = 'id-cards.html'; }, 1200);
+  });
+  document.getElementById('vReject').addEventListener('click', function () {
+    var r = document.getElementById('vrem');
+    if (!r.value.trim()) { r.classList.add('is-invalid'); r.focus(); B.toast('Add a remark so the student knows what to fix.', 'warning'); return; }
+    r.classList.remove('is-invalid');
+    B.toast('Rejected with remarks. The student is asked to re-upload.', 'warning');
+  });
+</script>
+</body>
+</html>

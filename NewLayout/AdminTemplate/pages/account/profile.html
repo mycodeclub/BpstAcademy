@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My profile · BPST Edu Admin</title>
+  <meta name="description" content="My profile in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="account.profile" data-roles="admin counsellor hr trainer student employee student-pending employee-onboarding" data-title="My profile">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>My profile</h1>
+      <p>Your details, notifications and password.</p>
+    </div>
+    
+  </div>
+  <div class="detail-grid">
+    <form class="card" novalidate data-demo-form="Profile saved."><div class="card-body"><div class="profile-head mb-4"><span class="avatar avatar-xl">DA</span><div><div class="fw-semibold">Demo Admin</div><div class="caption">admin@example.com · Admin / Management</div><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: photo upload." data-tone="info">Change photo</button></div></div>
+      <div class="row g-3"><div class="col-md-6"><label class="form-label" for="p1">Full name</label><input class="form-control" id="p1" type="text" value="Demo Admin" placeholder="" required ><div class="invalid-feedback">Please fill in full name.</div></div><div class="col-md-6"><label class="form-label" for="p2">Email</label><input class="form-control" id="p2" type="email" value="admin@example.com" placeholder="" required ><div class="invalid-feedback">Please fill in email.</div></div><div class="col-md-6"><label class="form-label" for="p3">Mobile</label><input class="form-control" id="p3" type="tel" value="98XXXXXX01" placeholder="" ></div>
+      <div class="col-md-6"><label class="form-label" for="p4">Notify me by</label><select class="form-select" id="p4" ><option>App only</option><option selected>App + email</option><option>App + email + SMS</option></select></div><div class="col-md-6"><label class="form-label" for="p5">Daily digest</label><select class="form-select" id="p5" ><option selected>8:00 PM email</option><option>Off</option></select></div><div class="col-md-6"><label class="form-label" for="p6">Theme</label><select class="form-select" id="p6" ><option selected>Follow system</option><option>Light</option><option>Dark</option></select></div></div></div>
+      <div class="card-footer d-flex flex-wrap justify-content-between gap-2"><a class="btn btn-outline-secondary" href="../auth/set-password.html"><i class="bi bi-key me-1"></i>Change password</a><button class="btn btn-primary" type="submit">Save</button></div></form>
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Sessions</h2></div>
+        
+      </div>
+      <div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-laptop" aria-hidden="true"></i></span><div class="grow"><div class="title">Chrome on macOS</div><div class=meta>This device · Lucknow</div></div></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-phone" aria-hidden="true"></i></span><div class="grow"><div class="title">Safari on iPhone</div><div class=meta>Yesterday 9:12 PM</div></div></div>
+      <div class="card-footer caption"><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Other sessions signed out." data-tone="success">Sign out other devices</button></div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

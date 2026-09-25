@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Certificates · BPST Edu Admin</title>
+  <meta name="description" content="Certificates in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="verify.certificates" data-roles="admin hr" data-title="Certificates">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Certificates</h1>
+      <p>Rule: 75% attendance + all fees cleared + final assessment passed. Each certificate gets a unique number and a QR code anyone can check.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="../public/verify-certificate.html" ><i class="bi bi-patch-check me-1" aria-hidden="true"></i>Public verify page</a><a class="btn btn-primary" href="../../print/certificate.html" ><i class="bi bi-award me-1" aria-hidden="true"></i>Template preview</a></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-award" aria-hidden="true"></i>Issued (FY)</div>
+      <div class="kpi-value">187</div>
+      
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-check2-circle" aria-hidden="true"></i>Eligible now</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-foot">incl. 34 from SRIT</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-x-circle" aria-hidden="true"></i>Blocked</div>
+      <div class="kpi-value">1</div>
+      <div class="kpi-foot">fees or attendance</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-qr-code-scan" aria-hidden="true"></i>Verification checks (Sep)</div>
+      <div class="kpi-value">41</div>
+      <div class="kpi-foot">by employers</div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Certificates</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search name or number" data-table-search="certRows" aria-label="Search name or number"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="certRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>6</span></button><button class="filter-chip" data-filter="eligible" aria-pressed="false">Eligible <span class=count>3</span></button><button class="filter-chip" data-filter="noteligible" aria-pressed="false">Not eligible <span class=count>1</span></button><button class="filter-chip" data-filter="issued" aria-pressed="false">Issued <span class=count>2</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Person</th><th class="d-none d-md-table-cell" scope="col">Type</th><th class="num text-end d-none d-lg-table-cell" scope="col">Attendance</th><th class="d-none d-lg-table-cell" scope="col">Fees</th><th class="d-none d-lg-table-cell" scope="col">Final</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody id="certRows">
+            <tr data-filter-value="issued"><td><div class="cell-person"><span class="avatar">DR</span><div><div class="name">Devansh Rastogi</div><div class=meta>Data Analyst Pro</div></div></div></td><td class="d-none d-md-table-cell">Course completion</td><td class="num text-end d-none d-lg-table-cell">90%</td><td class="d-none d-lg-table-cell">Cleared</td><td class="d-none d-lg-table-cell">82%</td><td><span class="chip chip--success">Issued</span><div class="caption num">BPST-C-2026-0187</div></td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/certificate.html" >View</a></td></tr>
+            <tr data-filter-value="eligible"><td><div class="cell-person"><span class="avatar">FN</span><div><div class="name">Farah Naqvi</div><div class=meta>Python Programming</div></div></div></td><td class="d-none d-md-table-cell">Course completion</td><td class="num text-end d-none d-lg-table-cell">94%</td><td class="d-none d-lg-table-cell">Cleared</td><td class="d-none d-lg-table-cell">88%</td><td><span class="chip chip--success">Eligible</span></td><td class="text-end"><button type="button" class="btn btn-primary btn-sm" data-demo-toast="Certificate generated for Farah Naqvi with a unique number and QR." data-tone="success">Generate</button></td></tr>
+            <tr data-filter-value="noteligible"><td><div class="cell-person"><span class="avatar">AK</span><div><div class="name">Aman Khan</div><div class=meta>Python Programming</div></div></div></td><td class="d-none d-md-table-cell">Course completion</td><td class="num text-end d-none d-lg-table-cell">79%</td><td class="d-none d-lg-table-cell">₹5,000 due</td><td class="d-none d-lg-table-cell">71%</td><td><span class="chip chip--neutral">Not eligible</span></td><td class="text-end"><span class="caption">Clear fees / attendance first</span></td></tr>
+            <tr data-filter-value="eligible"><td><div class="cell-person"><span class="avatar">SB</span><div><div class="name">SRIT batch (34)</div><div class=meta>45-day industrial training</div></div></div></td><td class="d-none d-md-table-cell">Industrial training</td><td class="num text-end d-none d-lg-table-cell">91% avg</td><td class="d-none d-lg-table-cell">Institution paid</td><td class="d-none d-lg-table-cell">Project</td><td><span class="chip chip--success">Eligible</span></td><td class="text-end"><button type="button" class="btn btn-primary btn-sm" data-demo-toast="Certificate generated for SRIT batch (34) with a unique number and QR." data-tone="success">Generate</button></td></tr>
+            <tr data-filter-value="eligible"><td><div class="cell-person"><span class="avatar">TS</span><div><div class="name">Tanvi Shukla</div><div class=meta>Generative AI &amp; Agentic AI</div></div></div></td><td class="d-none d-md-table-cell">Internship / project letter</td><td class="num text-end d-none d-lg-table-cell">92%</td><td class="d-none d-lg-table-cell">Cleared</td><td class="d-none d-lg-table-cell">Capstone A</td><td><span class="chip chip--success">Eligible</span></td><td class="text-end"><button type="button" class="btn btn-primary btn-sm" data-demo-toast="Certificate generated for Tanvi Shukla with a unique number and QR." data-tone="success">Generate</button></td></tr>
+            <tr data-filter-value="issued"><td><div class="cell-person"><span class="avatar">AM</span><div><div class="name">Arjun Mehta</div><div class=meta>—</div></div></div></td><td class="d-none d-md-table-cell">Experience letter</td><td class="num text-end d-none d-lg-table-cell">—</td><td class="d-none d-lg-table-cell">—</td><td class="d-none d-lg-table-cell">—</td><td><span class="chip chip--success">Issued</span><div class="caption num">BPST-E-2026-0004</div></td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/certificate.html" >View</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

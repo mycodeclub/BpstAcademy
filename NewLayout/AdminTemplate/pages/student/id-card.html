@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ID card &amp; certificates · BPST Edu Admin</title>
+  <meta name="description" content="ID card &amp; certificates in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="student.idcard" data-roles="student" data-title="ID card &amp; certificates">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>ID card & certificates</h1>
+      <p>Show your ID card at the front desk. Certificates can be checked by anyone with the number or QR code.</p>
+    </div>
+    
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">ID card</h2></div>
+        
+      </div>
+      <div class="card-body overflow-auto"><div class="idcard mx-auto"><div class="ic-top"><img src="../../assets/img/bpst-logo.svg" alt="BPST Edu"><b style="color:#0062ff;font-size:7pt">STUDENT</b></div><div class="ic-photo">HK</div>
+      <div><div class="ic-name">Harsh Kumar</div><div>BPST26S0042</div><div>Full Stack · FS-M2</div><div style="margin-top:1mm">Valid till Dec 2026</div></div><div class="ic-foot"><span>Near IIM Tiraha, Lucknow · 8299101616</span></div><div class="qr ic-qr" aria-hidden="true"></div></div><div class="d-flex justify-content-center gap-2 mt-3"><a class="btn btn-outline-secondary btn-sm" href="../../print/id-card.html" >Download PDF</a></div></div>
+      
+    </div>
+    </div>
+    <div class="col-xl-7">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Certificates</h2></div>
+        
+      </div>
+      <div class="list-row"><span class="avatar" style="background:var(--c-success-soft);color:var(--c-success-text)"><i class="bi bi-award" aria-hidden="true"></i></span><div class="grow"><div class="title">Python Programming · completion</div><div class=meta>BPST-C-2026-0112 · issued 12 May 2026</div></div><a class="btn btn-outline-secondary btn-sm" href="../../print/certificate.html" >Download</a> <a class="btn btn-ghost btn-sm" href="../public/verify-certificate.html?no=BPST-C-2026-0112" >Share</a></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-hourglass" aria-hidden="true"></i></span><div class="grow"><div class="title">Full Stack Development</div><div class=meta>After course end (31 Dec) · needs 75% attendance, fees cleared, final test passed</div></div></div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Institution · BPST Edu Admin</title>
+  <meta name="description" content="Institution in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="crm.institutions" data-roles="admin counsellor" data-title="Institution">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="institutions.html">Institutions</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">SRIT</span></nav>
+      <h1>Shri Ram Institute of Technology</h1>
+      <p>College · B.Tech CSE 3rd year · industrial training</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="../../print/gst-invoice.html" ><i class="bi bi-receipt me-1" aria-hidden="true"></i>Create GST invoice</a><a class="btn btn-primary" href="../admissions/batches.html" ><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>Add bulk batch</a></div>
+  </div>
+  <div class="card mb-3">
+      
+      <div class="card-body"><ol class="stepper mb-2"><li class="is-done">Enquiry</li><li class="is-done">Proposal sent</li><li class="is-done">MoU signed</li><li class="is-current">Bulk batch running</li><li>Completed</li></ol></div>
+      
+    </div>
+  <div class="detail-grid">
+    <div class="d-grid gap-3"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Bulk batches</h2><p class="card-sub">Students go through normal onboarding</p></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Batch</th><th scope="col">Students</th><th scope="col">Dates</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td><a href="../admissions/batch.html">SRIT-IT-45</a> · Full Stack</td><td>34</td><td>1 Dec 2026 – 14 Jan 2027</td><td><span class="chip chip--accent">Starting soon</span></td></tr>
+            <tr><td><a href="../admissions/batch.html">SRIT-DA-45</a> · Data Analytics</td><td>28</td><td>1 Dec 2026 – 14 Jan 2027</td><td><span class="chip chip--accent">Starting soon</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Invoices</h2><p class="card-sub">Billing: one GST invoice to the institution</p></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Invoice</th><th class="num text-end" scope="col">Amount</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td><a href="../../print/gst-invoice.html">BPST/INV/2026-27/0014</a></td><td class="money text-end">₹1,86,000</td><td><span class="chip chip--success">Paid</span></td></tr>
+            <tr><td><a href="../../print/gst-invoice.html">BPST/INV/2026-27/0019</a></td><td class="money text-end">₹1,86,000</td><td><span class="chip chip--warning">Due</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div></div>
+    <div class="d-grid gap-3 align-content-start"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Details</h2></div>
+        
+      </div>
+      <div class="card-body"><dl class="dl-grid"><dt>Contact</dt><dd>Dr. A. Kapoor, TPO</dd><dt>Phone</dt><dd>94XXXXXX10</dd><dt>Email</dt><dd>tpo@example.com</dd><dt>Programme</dt><dd>45-day industrial training</dd><dt>Students</dt><dd>62</dd><dt>Rate</dt><dd>₹6,000 per student + GST</dd><dt>Owner</dt><dd>Neha S.</dd></dl></div>
+      
+    </div><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Documents</h2></div>
+        
+      </div>
+      <div class="list-row"><span class="doc-thumb"><i class="bi bi-file-earmark-pdf"></i></span><div class="grow"><div class="title">Proposal v2.pdf</div><div class=meta>Sent 2 Aug 2026</div></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo: the PDF would open." data-tone="info">View</button></div><div class="list-row"><span class="doc-thumb"><i class="bi bi-file-earmark-pdf"></i></span><div class="grow"><div class="title">MoU signed.pdf</div><div class=meta>Signed 21 Aug 2026 · valid 2 years</div></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo: the PDF would open." data-tone="info">View</button></div><div class="list-row"><span class="doc-thumb"><i class="bi bi-file-earmark-pdf"></i></span><div class="grow"><div class="title">Student list.xlsx</div><div class=meta>62 students · stored securely, not in the template</div></div><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Demo: the PDF would open." data-tone="info">View</button></div>
+      
+    </div></div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Email previews · BPST Edu Admin</title>
+  <meta name="description" content="Email previews in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="system.emails" data-roles="admin" data-title="Email previews">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Email previews</h1>
+      <p>14 email designs. They work in Gmail, Outlook and phone mail apps (table layout, inline styles). Sending is wired up in the backend phase.</p>
+    </div>
+    
+  </div>
+  <div class="row g-3"><div class="col-lg-4"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Emails</h2></div>
+        
+      </div>
+      <div class=email-list><div class="list-row active" data-email="welcome" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Welcome to BPST Edu, Aditi. Your login details</div><div class="meta">emails/welcome.html</div></div></div><div class="list-row" data-email="document-reminder" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Reminder: upload your documents</div><div class="meta">emails/document-reminder.html</div></div></div><div class="list-row" data-email="verification-booked" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Verification booked: Thu 25 Sep, 4:30 PM</div><div class="meta">emails/verification-booked.html</div></div></div><div class="list-row" data-email="verified" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">You&#x27;re verified: your portal is unlocked</div><div class="meta">emails/verified.html</div></div></div><div class="list-row" data-email="rejected" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Action needed: please re-upload a document</div><div class="meta">emails/rejected.html</div></div></div><div class="list-row" data-email="fee-receipt" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Receipt BPST/RC/2026-27/0413 · ₹12,500</div><div class="meta">emails/fee-receipt.html</div></div></div><div class="list-row" data-email="fee-due" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Fee reminder: ₹13,500 due</div><div class="meta">emails/fee-due.html</div></div></div><div class="list-row" data-email="lead-assigned" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">New lead assigned: Aarav Mishra (₹49 paid)</div><div class="meta">emails/lead-assigned.html</div></div></div><div class="list-row" data-email="sla-breach" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">⛔ SLA breached: Aarav Mishra not contacted in 1 hour</div><div class="meta">emails/sla-breach.html</div></div></div><div class="list-row" data-email="prebook-confirmation" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Seat reserved: your ₹49 pre-booking is confirmed</div><div class="meta">emails/prebook-confirmation.html</div></div></div><div class="list-row" data-email="batch-change" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Class cancelled Mon 29 Sep: makeup on Sat 4 Oct</div><div class="meta">emails/batch-change.html</div></div></div><div class="list-row" data-email="payslip-ready" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Your payslip for August 2026 is ready</div><div class="meta">emails/payslip-ready.html</div></div></div><div class="list-row" data-email="leave-decision" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Leave approved: 29–30 Sep</div><div class="meta">emails/leave-decision.html</div></div></div><div class="list-row" data-email="placement-invite" tabindex="0" role="button"><span class="avatar avatar-sm"><i class="bi bi-envelope"></i></span><div class="grow"><div class="title text-truncate">Placement drive: TechNova Solutions on 3 Oct</div><div class="meta">emails/placement-invite.html</div></div></div></div>
+      
+    </div></div><div class="col-lg-8"><iframe class="email-frame" id="emailFrame" src="../../emails/welcome.html" title="Email preview"></iframe></div></div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+document.querySelectorAll('[data-email]').forEach(function (r) {
+    function go() { document.querySelectorAll('[data-email]').forEach(function (x) { x.classList.remove('active'); }); r.classList.add('active'); document.getElementById('emailFrame').src = '../../emails/' + r.getAttribute('data-email') + '.html'; }
+    r.addEventListener('click', go); r.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+</script>
+</body>
+</html>

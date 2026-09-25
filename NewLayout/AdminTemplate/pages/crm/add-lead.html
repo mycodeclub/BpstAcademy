@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Add lead · BPST Edu Admin</title>
+  <meta name="description" content="Add lead in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="crm.leads" data-roles="admin counsellor" data-title="Add lead">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="leads.html">Leads</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Add lead</span></nav>
+      <h1>Add lead</h1>
+      <p>Quick form for walk-ins and phone calls. Website leads arrive automatically.</p>
+    </div>
+    
+  </div>
+  <div class="detail-grid">
+    <form class="card" novalidate data-demo-form="Lead L-2432 created and auto-assigned to Neha S. The 1-hour SLA clock has started." data-then="leads.html">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label" for="ln">Full name</label><input class="form-control" id="ln" type="text" value="" placeholder="" required ><div class="invalid-feedback">Please fill in full name.</div></div>
+          <div class="col-md-6"><label class="form-label" for="lp">Mobile</label><input class="form-control" id="lp" type="tel" value="" placeholder="10-digit mobile" required inputmode="tel" pattern="[6-9][0-9]{9}"><div class="form-text">We check this number for duplicates.</div><div class="invalid-feedback">Please fill in mobile.</div></div>
+          <div class="col-md-6"><label class="form-label" for="le">Email</label><input class="form-control" id="le" type="email" value="" placeholder="name@example.com" ></div>
+          <div class="col-md-6"><label class="form-label" for="lc">City / district</label><input class="form-control" id="lc" type="text" value="Lucknow" placeholder="" ></div>
+          <div class="col-md-6"><label class="form-label" for="lq">Qualification</label><select class="form-select" id="lq" ><option>Class 3–8</option><option>Class 9–10</option><option>Class 11–12</option><option>Polytechnic / Diploma</option><option>B.Tech / BE</option><option>BCA / B.Sc</option><option>MCA / M.Tech</option><option>Graduate (other)</option><option>Working professional</option></select></div>
+          <div class="col-md-6"><label class="form-label" for="lcourse">Course interest</label><select class="form-select" id="lcourse" required ><option value="">Choose…</option><option>Advanced UI Development (Angular &amp; React)</option><option>Agentic AI Engineering</option><option>AI Product Management</option><option>Artificial Intelligence &amp; Machine Learning</option><option>Artificial Intelligence (AI + Generative AI)</option><option>Automation Testing (Selenium + Playwright)</option><option>BCA Career Track</option><option>B.Tech Career Track</option><option>Business Analyst (with Agile)</option><option>C Programming Course (Basic &amp; Advanced)</option><option>Computer Science with Python (CBSE)</option><option>CCNA + Network Security</option><option>Cloud Certification Bootcamp (AZ-900, AZ-104, AWS CCP, AWS SAA)</option><option>Cloud Computing &amp; DevOps</option><option>Cloud Security (AWS &amp; Azure)</option><option>C++ Programming Course (Basic &amp; Advanced)</option><option>Cyber Security &amp; Ethical Hacking</option><option>Data Analyst Pro (Excel + SQL + Power BI + Tableau + Python)</option><option>Data Analytics &amp; Data Science</option><option>Data Engineering (Spark, Databricks, Snowflake, Azure/AWS)</option><option>DevOps + SRE + Terraform</option><option>Digital Marketing + AI (SEO, GEO, Ads)</option><option>DSA &amp; Placement Preparation</option><option>Engineering Head-start: C, C++ &amp; Problem Solving</option><option>Ethical Hacking &amp; VAPT (CEH Preparation)</option><option>Software Development &amp; Full Stack (.NET + React)</option><option>Game Development (Unity + C#)</option><option>Generative AI &amp; Agentic AI</option><option>Generative AI for Everyone (Prompt Engineering)</option><option>Golang Microservices</option><option>Google Cloud (GCP) Cloud Engineer</option><option>Computer Applications &amp; Science with Java</option><option>Java Full Stack (Spring Boot + React)</option><option>Java Programming Course (Basic &amp; Advanced)</option><option>Job-Readiness Program (Communication, Resume, Mock Interviews)</option><option>Machine Learning</option><option>Manual Software Testing</option><option>MCA Industry Track</option><option>MERN Full Stack + Generative AI</option><option>MLOps &amp; LLMOps</option><option>Mobile App Development (Android &amp; iOS)</option><option>Oracle SQL + PL/SQL</option><option>Polytechnic Diploma Track</option><option>Coding Foundations with Python</option><option>Python Full Stack (Django + React)</option><option>Python Programming Course (Basic &amp; Advanced)</option><option>Robotics, Coding &amp; AI for Kids (Grades 3–12)</option><option>RPA with UiPath + Agentic Automation</option><option>Salesforce Admin + Developer (with Agentforce)</option><option>SAP ABAP on S/4HANA (RAP, CDS)</option><option>SAP MM &amp; SD (Materials Management + Sales &amp; Distribution)</option><option>SAP S/4HANA FICO</option><option>ServiceNow Admin + Developer</option><option>SOC Analyst (Blue Team)</option><option>Software Testing Masters (Manual + Selenium + Playwright + API)</option><option>45-Day Summer / Winter Industrial Training</option><option>Tally Prime + GST + Advanced Excel</option><option>UI/UX Design (Figma + AI)</option></select><div class="invalid-feedback">Please fill in course interest.</div></div>
+          <div class="col-md-6"><label class="form-label" for="lmode">Mode</label><select class="form-select" id="lmode" ><option selected>Classroom</option><option>Live online</option><option>Hybrid</option></select></div>
+          <div class="col-md-6"><label class="form-label" for="ldur">Preferred duration</label><select class="form-select" id="ldur" ><option>45 days</option><option selected>3 months</option><option>6 months</option><option>Not sure</option></select></div>
+          <div class="col-md-6"><label class="form-label" for="lsrc">Source</label><select class="form-select" id="lsrc" required ><option selected>Walk-in</option><option>Phone call</option><option>WhatsApp</option><option>Referral</option><option>Google Ads</option><option>Meta / Instagram ads</option><option>JustDial</option><option>School / college camp</option><option>Website enquiry</option><option>Website pre-book ₹49</option></select><div class="invalid-feedback">Please fill in source.</div></div>
+          <div class="col-md-6"><label class="form-label" for="lown">Assign to</label><select class="form-select" id="lown" ><option selected>Auto (round-robin)</option><option>Neha S.</option><option>Rahul T.</option><option>Front desk</option></select></div>
+          <div class="col-md-6"><label class="form-label" for="lref">Referred by (student ID)</label><input class="form-control" id="lref" type="text" value="" placeholder="e.g. BPST26S0042" ><div class="form-text">Referral reward needs manager approval.</div></div>
+          <div class="col-md-6"><label class="form-label" for="lpar">Parent / guardian mobile</label><input class="form-control" id="lpar" type="tel" value="" placeholder="For students under 18" inputmode="tel"></div>
+          <div class="col-12"><label class="form-label" for="lnote">Notes</label><textarea class="form-control" id="lnote" rows="3" placeholder="What are they looking for?" ></textarea></div>
+          <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="lcons" required><label class="form-check-label" for="lcons">The person agreed to be contacted by phone, WhatsApp and email about courses (DPDP Act 2023).</label><div class="invalid-feedback">Consent is required.</div></div></div>
+        </div>
+      </div>
+      <div class="card-footer d-flex flex-wrap gap-2 justify-content-end"><a class="btn btn-outline-secondary" href="leads.html">Cancel</a><button class="btn btn-primary" type="submit">Save lead</button></div>
+    </form>
+    <div class="d-grid gap-3 align-content-start"><div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">How website leads arrive</h2></div>
+        
+      </div>
+      <div class="card-body"><ul class="small mb-0 ps-3"><li><b>₹49 pre-book</b> form: name, mobile, email, city, qualification, course, mode, duration, message, consent, payment reference.</li><li><b>Enquiry</b> form: name, mobile, course, message, consent.</li><li>Campaign (UTM) and page URL are saved with both.</li><li>Duplicates are matched by mobile number.</li></ul></div>
+      
+    </div></div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

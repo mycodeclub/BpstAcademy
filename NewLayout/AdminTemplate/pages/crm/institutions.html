@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Institutions · BPST Edu Admin</title>
+  <meta name="description" content="Institutions in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="crm.institutions" data-roles="admin counsellor" data-title="Institutions">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Institutions (B2B)</h1>
+      <p>Colleges, schools and companies: enquiry → proposal → MoU / PO → bulk batch.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instModal"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>Add institution</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-bank" aria-hidden="true"></i>Active partners</div>
+      <div class="kpi-value">2</div>
+      <div class="kpi-foot">MoU signed</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-send" aria-hidden="true"></i>Proposals out</div>
+      <div class="kpi-value">2</div>
+      <div class="kpi-foot">follow up this week</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-people" aria-hidden="true"></i>Students via B2B</div>
+      <div class="kpi-value">102</div>
+      <div class="kpi-foot">this session</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-currency-rupee" aria-hidden="true"></i>B2B billing (FY)</div>
+      <div class="kpi-value">₹4,86,000</div>
+      <div class="kpi-foot">2 GST invoices</div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Institutions</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search institutions" data-table-search="instRows" aria-label="Search institutions"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="instRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>6</span></button><button class="filter-chip" data-filter="college" aria-pressed="false">Colleges <span class=count>2</span></button><button class="filter-chip" data-filter="school" aria-pressed="false">Schools <span class=count>2</span></button><button class="filter-chip" data-filter="polytechnic" aria-pressed="false">Polytechnic <span class=count>1</span></button><button class="filter-chip" data-filter="company" aria-pressed="false">Companies <span class=count>1</span></button></div>
+        
+      </div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th data-sort tabindex="0" scope="col">Institution</th><th class="d-none d-md-table-cell" scope="col">Group</th><th class="d-none d-lg-table-cell" scope="col">Programme</th><th class="num text-end" data-sort tabindex="0" scope="col">Students</th><th scope="col">Stage</th></tr></thead>
+          <tbody id="instRows">
+            <tr data-filter-value="college signed" data-href="institution.html"><td><a class="fw-medium text-reset" href="institution.html">Shri Ram Institute of Technology</a><div class="caption">College · Dr. A. Kapoor (TPO)</div></td><td class="d-none d-md-table-cell">B.Tech CSE · 3rd year</td><td class="d-none d-lg-table-cell">Industrial training · 45 days</td><td class="num text-end">62</td><td><span class="chip chip--success">Signed</span></td></tr>
+            <tr data-filter-value="school signed" data-href="institution.html"><td><a class="fw-medium text-reset" href="institution.html">Lucknow Public School, Gomti Nagar</a><div class="caption">School · Mrs. R. Bhatia (Principal)</div></td><td class="d-none d-md-table-cell">Class 6–8</td><td class="d-none d-lg-table-cell">Robotics &amp; coding club · weekly</td><td class="num text-end">40</td><td><span class="chip chip--success">Signed</span></td></tr>
+            <tr data-filter-value="polytechnic proposalsent" data-href="institution.html"><td><a class="fw-medium text-reset" href="institution.html">Awadh Polytechnic</a><div class="caption">Polytechnic · Mr. S. Verma (HoD)</div></td><td class="d-none d-md-table-cell">Diploma CS · final year</td><td class="d-none d-lg-table-cell">Summer training 2027</td><td class="num text-end">35</td><td><span class="chip chip--accent">Proposal sent</span></td></tr>
+            <tr data-filter-value="college enquiry" data-href="institution.html"><td><a class="fw-medium text-reset" href="institution.html">Indira Nagar Degree College</a><div class="caption">College · Placement cell</div></td><td class="d-none d-md-table-cell">BCA 2nd year</td><td class="d-none d-lg-table-cell">Python + DSA workshop</td><td class="num text-end">50</td><td><span class="chip chip--info">Enquiry</span></td></tr>
+            <tr data-filter-value="company proposalsent" data-href="institution.html"><td><a class="fw-medium text-reset" href="institution.html">TechNova Solutions Pvt Ltd</a><div class="caption">Company · HR manager</div></td><td class="d-none d-md-table-cell">New hires</td><td class="d-none d-lg-table-cell">Corporate: Testing bootcamp</td><td class="num text-end">12</td><td><span class="chip chip--accent">Proposal sent</span></td></tr>
+            <tr data-filter-value="school lost" data-href="institution.html"><td><a class="fw-medium text-reset" href="institution.html">City Montessori Branch 9</a><div class="caption">School · IT coordinator</div></td><td class="d-none d-md-table-cell">Class 9–10</td><td class="d-none d-lg-table-cell">Python coding camp</td><td class="num text-end">—</td><td><span class="chip chip--danger">Lost</span></td></tr>
+          </tbody>
+        </table>
+      </div><div class="empty" data-empty-for="instRows" hidden><i class="bi bi-search"></i><div class="empty-title">Nothing matches</div>No institutions match.</div>
+      
+    </div>
+<div class="modal fade" id="instModal" tabindex="-1" aria-labelledby="instModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Institution added at stage Enquiry.">
+    <div class="modal-header"><h2 class="modal-title" id="instModalT">Add institution</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-12"><label class="form-label" for="in1">Name</label><input class="form-control" id="in1" type="text" value="" placeholder="" required ><div class="invalid-feedback">Please fill in name.</div></div><div class="col-md-6"><label class="form-label" for="in2">Type</label><select class="form-select" id="in2" ><option selected>College</option><option>School</option><option>Polytechnic</option><option>Company</option></select></div><div class="col-md-6"><label class="form-label" for="in3">City</label><input class="form-control" id="in3" type="text" value="Lucknow" placeholder="" ></div><div class="col-md-6"><label class="form-label" for="in4">Contact person</label><input class="form-control" id="in4" type="text" value="" placeholder="" required ><div class="invalid-feedback">Please fill in contact person.</div></div><div class="col-md-6"><label class="form-label" for="in5">Mobile</label><input class="form-control" id="in5" type="tel" value="" placeholder="" ></div><div class="col-12"><label class="form-label" for="in6">Programme interest</label><select class="form-select" id="in6" ><option>Industrial training (45 days)</option><option>Summer / winter training</option><option>Workshop</option><option>Coding club (school)</option><option>Corporate training</option></select></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Save</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

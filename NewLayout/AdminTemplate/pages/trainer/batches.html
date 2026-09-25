@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My batches · BPST Edu Admin</title>
+  <meta name="description" content="My batches in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="trainer.batches" data-roles="trainer" data-title="My batches">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>My batches</h1>
+      <p>Batches you teach.</p>
+    </div>
+    
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Batches</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">Batch</th><th scope="col">Course</th><th class="d-none d-md-table-cell" scope="col">Timing</th><th class="d-none d-lg-table-cell" scope="col">Room</th><th class="num text-end" scope="col">Students</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr data-href="../admissions/batch.html"><td><a class="fw-semibold" href="../admissions/batch.html">FS-M2</a></td><td>Full Stack Development</td><td class="d-none d-md-table-cell">Mon Tue Wed Thu Fri · 11:00 AM – 1:00 PM</td><td class="d-none d-lg-table-cell">Lab 2</td><td class="num text-end">22</td><td><span class="chip chip--success">Running</span></td></tr>
+            <tr data-href="../admissions/batch.html"><td><a class="fw-semibold" href="../admissions/batch.html">JV-E1</a></td><td>Java Programming</td><td class="d-none d-md-table-cell">Tue Thu Sat · 6:00 PM – 7:30 PM</td><td class="d-none d-lg-table-cell">Lab 1</td><td class="num text-end">15</td><td><span class="chip chip--success">Running</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Payslips &amp; salary · BPST Edu Admin</title>
+  <meta name="description" content="Payslips &amp; salary in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="employee.payslips" data-roles="employee trainer" data-title="Payslips &amp; salary">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Payslips & salary</h1>
+      <p>Payslips are published by the last working day of each month.</p>
+    </div>
+    
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-6">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Payslips</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Month</th><th class="num text-end" scope="col">Net</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td>August 2026</td><td class="money text-end">₹30,100</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/payslip.html" >View</a></td></tr>
+            <tr><td>July 2026</td><td class="money text-end">₹30,100</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/payslip.html" >View</a></td></tr>
+            <tr><td>June 2026</td><td class="money text-end">₹29,050</td><td class="text-end"><a class="btn btn-ghost btn-sm" href="../../print/payslip.html" >View</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+    <div class="col-xl-6">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Salary breakdown</h2><p class="card-sub">From 1 Apr 2026</p></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Component</th><th class="num text-end" scope="col">Monthly</th></tr></thead>
+          <tbody>
+            <tr><td>Basic</td><td class="money text-end">₹16,000</td></tr>
+            <tr><td>HRA</td><td class="money text-end">₹6,400</td></tr>
+            <tr><td>Special allowance</td><td class="money text-end">₹9,600</td></tr>
+            <tr><td>PF (12% of basic)</td><td class="money text-end">−₹1,920</td></tr>
+            <tr><td>Professional tax</td><td class="money text-end">−₹200</td></tr>
+            <tr><td><b>Net pay</b></td><td class="money text-end"><b>₹29,880</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

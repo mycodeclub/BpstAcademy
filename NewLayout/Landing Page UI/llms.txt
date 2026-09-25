@@ -125,6 +125,11 @@ BPST Edu summer training runs May to July and winter training runs December to J
 - Category page: https://edu.bitprosofttech.com/summer-winter-training.html
 - [45-Day Summer / Winter Industrial Training](https://edu.bitprosofttech.com/courses/summer-winter-training-45-days.html): 45 Days; Beginner friendly. Summer: May – July · Winter: December – January.
 
+## Certificates & student portal
+- Every BPST Edu certificate (course completion, industrial / summer-winter training, internship or project letter, staff experience letter) has a unique number such as BPST-C-2026-0187 and a QR code.
+- Anyone can check a certificate: https://edu.bitprosofttech.com/portal/pages/public/verify-certificate.html (short link: https://edu.bitprosofttech.com/verify.html?no=CERTIFICATE-NUMBER)
+- Enrolled students, trainers and staff sign in at https://edu.bitprosofttech.com/portal/ (classes, attendance, fees and GST receipts, ID card, certificates, payslips).
+
 ## Optional
 - [All courses](https://edu.bitprosofttech.com/courses.html)
 - [Live online classes](https://edu.bitprosofttech.com/online-courses.html)

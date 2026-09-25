@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>My dashboard · BPST Edu Admin</title>
+  <meta name="description" content="My dashboard in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="employee.dashboard" data-roles="employee" data-title="My dashboard">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Hi Neha</h1>
+      <p>Your salary, attendance and leave in one place.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><button type="button" class="btn btn-primary" data-demo-toast="Checked in at 9:02 AM." data-tone="success"><i class="bi bi-box-arrow-in-right me-1" aria-hidden="true"></i>Check in</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<a class="kpi" href="payslips.html">
+      <div class="kpi-label"><i class="bi bi-wallet2" aria-hidden="true"></i>Last net pay</div>
+      <div class="kpi-value">₹30,100</div>
+      <div class="kpi-foot">August 2026</div>
+    </a>
+<a class="kpi" href="attendance.html">
+      <div class="kpi-label"><i class="bi bi-calendar-check" aria-hidden="true"></i>Attendance (Sep)</div>
+      <div class="kpi-value">22 / 22</div>
+      
+    </a>
+<a class="kpi" href="leave.html">
+      <div class="kpi-label"><i class="bi bi-calendar-x" aria-hidden="true"></i>Leave left</div>
+      <div class="kpi-value">11 days</div>
+      
+    </a>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-calendar-event" aria-hidden="true"></i>Next holiday</div>
+      <div class="kpi-value">2 Oct</div>
+      <div class="kpi-foot">Gandhi Jayanti</div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Announcements</h2></div>
+        
+      </div>
+      <div class="list-row"><span class="avatar" style="background:var(--c-success-soft);color:var(--c-success-text)"><i class="bi bi-wallet2" aria-hidden="true"></i></span><div class="grow"><div class="title">September payslips on 30 Sep</div><div class=meta>Payroll team</div></div></div><div class="list-row"><span class="avatar" style="background:var(--c-accent-soft);color:var(--c-accent)"><i class="bi bi-megaphone" aria-hidden="true"></i></span><div class="grow"><div class="title">Diwali offer: pre-book targets</div><div class=meta>Sales team · 200 pre-bookings by 8 Nov</div></div></div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

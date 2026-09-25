@@ -1,7 +1,7 @@
 /* Sidebar config — the single source of truth for navigation.
    href is relative to the template root. ms = milestone that builds the page (PLAN.md §9);
    items with ms > BPST_BUILT_MS render as "coming soon". count = live badge key. */
-window.BPST_BUILT_MS = 1;
+window.BPST_BUILT_MS = 8;
 
 window.BPST_ROLES = [
   { id: 'admin', label: 'Admin / Management', short: 'Admin', icon: 'bi-building', home: 'pages/management/dashboard.html', desc: 'Full CRM, reports, approvals, settings' },
@@ -9,7 +9,10 @@ window.BPST_ROLES = [
   { id: 'hr', label: 'HR + Accounts', short: 'HR + Accounts', icon: 'bi-briefcase', home: 'pages/fees/collections.html', desc: 'Verification, payroll, fees, GST' },
   { id: 'trainer', label: 'Trainer', short: 'Trainer', icon: 'bi-easel', home: 'pages/trainer/dashboard.html', desc: 'Batches, attendance, assignments' },
   { id: 'student', label: 'Student', short: 'Student', icon: 'bi-mortarboard', home: 'pages/student/dashboard.html', desc: 'Classes, fees, attendance, ID card' },
-  { id: 'employee', label: 'Employee', short: 'Employee', icon: 'bi-person-badge', home: 'pages/employee/dashboard.html', desc: 'Offer letter, payslips, leave' }
+  { id: 'employee', label: 'Employee', short: 'Employee', icon: 'bi-person-badge', home: 'pages/employee/dashboard.html', desc: 'Offer letter, payslips, leave' },
+  /* gated demo states (PLAN.md §2, §3.2, §3.3): portal locked until verification */
+  { id: 'student-pending', label: 'Student (not yet verified)', short: 'Student · pending', icon: 'bi-hourglass', home: 'pages/student/onboarding.html', desc: 'Onboarding checklist, profile, fees only' },
+  { id: 'employee-onboarding', label: 'Employee (onboarding)', short: 'Employee · onboarding', icon: 'bi-hourglass', home: 'pages/employee/onboarding.html', desc: 'Onboarding checklist and profile only' }
 ];
 
 window.BPST_NAV = [
@@ -21,9 +24,13 @@ window.BPST_NAV = [
       { id: 'hr.dashboard', label: 'Dashboard', icon: 'bi-grid-1x2', href: 'pages/hr/dashboard.html', roles: ['hr'], ms: 4 },
       { id: 'trainer.dashboard', label: 'Dashboard', icon: 'bi-grid-1x2', href: 'pages/trainer/dashboard.html', roles: ['trainer'], ms: 7 },
       { id: 'student.dashboard', label: 'Dashboard', icon: 'bi-grid-1x2', href: 'pages/student/dashboard.html', roles: ['student'], ms: 7 },
+      { id: 'student.onboarding', label: 'Onboarding checklist', icon: 'bi-list-check', href: 'pages/student/onboarding.html', roles: ['student-pending'], ms: 7 },
+      { id: 'employee.onboarding', label: 'Onboarding checklist', icon: 'bi-list-check', href: 'pages/employee/onboarding.html', roles: ['employee-onboarding'], ms: 7 },
       { id: 'employee.dashboard', label: 'Dashboard', icon: 'bi-grid-1x2', href: 'pages/employee/dashboard.html', roles: ['employee'], ms: 7 },
       { id: 'management.approvals', label: 'Approvals', icon: 'bi-check2-square', href: 'pages/management/approvals.html', roles: ['admin'], ms: 7, count: 'approvals' },
-      { id: 'management.reports', label: 'Reports', icon: 'bi-bar-chart', href: 'pages/management/reports.html', roles: ['admin'], ms: 7 }
+      { id: 'management.reports', label: 'Reports', icon: 'bi-bar-chart', href: 'pages/management/reports.html', roles: ['admin'], ms: 7 },
+      { id: 'management.announcements', label: 'Announcements', icon: 'bi-megaphone', href: 'pages/management/announcements.html', roles: ['admin', 'hr', 'trainer'], ms: 7 },
+      { id: 'management.feedback', label: 'Feedback', icon: 'bi-star-half', href: 'pages/management/feedback.html', roles: ['admin', 'trainer'], ms: 7 }
     ]
   },
   {
@@ -33,7 +40,8 @@ window.BPST_NAV = [
       { id: 'crm.pipeline', label: 'Pipeline', icon: 'bi-kanban', href: 'pages/crm/pipeline.html', roles: ['admin', 'counsellor'], ms: 2 },
       { id: 'crm.followups', label: 'Follow-ups today', icon: 'bi-telephone-outbound', href: 'pages/crm/follow-ups.html', roles: ['admin', 'counsellor'], ms: 2 },
       { id: 'crm.counselling', label: 'Counselling', icon: 'bi-calendar2-week', href: 'pages/crm/counselling.html', roles: ['admin', 'counsellor'], ms: 2 },
-      { id: 'crm.applications', label: 'Applications', icon: 'bi-file-earmark-text', href: 'pages/crm/applications.html', roles: ['admin', 'counsellor'], ms: 2 }
+      { id: 'crm.applications', label: 'Applications', icon: 'bi-file-earmark-text', href: 'pages/crm/applications.html', roles: ['admin', 'counsellor'], ms: 2 },
+      { id: 'crm.institutions', label: 'Institutions (B2B)', icon: 'bi-bank', href: 'pages/crm/institutions.html', roles: ['admin', 'counsellor'], ms: 2 }
     ]
   },
   {
@@ -42,8 +50,10 @@ window.BPST_NAV = [
       { id: 'admissions.enrol', label: 'Enrol student', icon: 'bi-person-plus', href: 'pages/admissions/enrol.html', roles: ['admin', 'counsellor'], ms: 3 },
       { id: 'admissions.students', label: 'Students', icon: 'bi-people', href: 'pages/admissions/students.html', roles: ['admin', 'counsellor', 'hr'], ms: 3 },
       { id: 'admissions.batches', label: 'Batches', icon: 'bi-collection', href: 'pages/admissions/batches.html', roles: ['admin', 'counsellor', 'hr'], ms: 3 },
+      { id: 'admissions.batchops', label: 'Batch changes', icon: 'bi-arrow-left-right', href: 'pages/admissions/batch-operations.html', roles: ['admin', 'counsellor'], ms: 3 },
       { id: 'admissions.timetable', label: 'Timetable', icon: 'bi-calendar3', href: 'pages/admissions/timetable.html', roles: ['admin', 'counsellor', 'hr'], ms: 3 },
-      { id: 'admissions.courses', label: 'Courses', icon: 'bi-journal-code', href: 'pages/admissions/courses.html', roles: ['admin', 'counsellor'], ms: 3 }
+      { id: 'admissions.courses', label: 'Courses', icon: 'bi-journal-code', href: 'pages/admissions/courses.html', roles: ['admin', 'counsellor'], ms: 3 },
+      { id: 'admissions.assessments', label: 'Assessments', icon: 'bi-clipboard2-check', href: 'pages/admissions/assessments.html', roles: ['admin', 'trainer'], ms: 3 }
     ]
   },
   {
@@ -61,7 +71,9 @@ window.BPST_NAV = [
       { id: 'fees.dues', label: 'Dues & overdue', icon: 'bi-hourglass-split', href: 'pages/fees/dues.html', roles: ['admin', 'hr', 'counsellor'], ms: 4 },
       { id: 'fees.discounts', label: 'Discounts & coupons', icon: 'bi-ticket-perforated', href: 'pages/fees/discounts.html', roles: ['admin', 'hr'], ms: 4 },
       { id: 'fees.gst', label: 'GST register', icon: 'bi-receipt', href: 'pages/fees/gst-register.html', roles: ['admin', 'hr'], ms: 4 },
-      { id: 'fees.refunds', label: 'Refunds', icon: 'bi-arrow-counterclockwise', href: 'pages/fees/refunds.html', roles: ['admin', 'hr'], ms: 4 }
+      { id: 'fees.refunds', label: 'Refunds', icon: 'bi-arrow-counterclockwise', href: 'pages/fees/refunds.html', roles: ['admin', 'hr'], ms: 4 },
+      { id: 'fees.expenses', label: 'Expenses', icon: 'bi-wallet', href: 'pages/fees/expenses.html', roles: ['admin', 'hr'], ms: 4 },
+      { id: 'fees.pnl', label: 'Profit & loss', icon: 'bi-graph-up-arrow', href: 'pages/fees/profit-loss.html', roles: ['admin', 'hr'], ms: 4 }
     ]
   },
   {
@@ -70,6 +82,13 @@ window.BPST_NAV = [
       { id: 'verify.queue', label: 'Verification queue', icon: 'bi-shield-check', href: 'pages/verification/queue.html', roles: ['admin', 'hr'], ms: 5, count: 'verifications' },
       { id: 'verify.idcards', label: 'ID cards', icon: 'bi-person-vcard', href: 'pages/verification/id-cards.html', roles: ['admin', 'hr'], ms: 5 },
       { id: 'verify.certificates', label: 'Certificates', icon: 'bi-award', href: 'pages/verification/certificates.html', roles: ['admin', 'hr'], ms: 5 }
+    ]
+  },
+  {
+    title: 'Placement',
+    items: [
+      { id: 'placement.drives', label: 'Placement drives', icon: 'bi-briefcase-fill', href: 'pages/placement/drives.html', roles: ['admin', 'counsellor'], ms: 7 },
+      { id: 'placement.companies', label: 'Companies', icon: 'bi-buildings', href: 'pages/placement/companies.html', roles: ['admin', 'counsellor'], ms: 7 }
     ]
   },
   {
@@ -85,6 +104,7 @@ window.BPST_NAV = [
     title: 'Teaching',
     items: [
       { id: 'trainer.batches', label: 'My batches', icon: 'bi-collection', href: 'pages/trainer/batches.html', roles: ['trainer'], ms: 7 },
+      { id: 'trainer.timetable', label: 'My timetable', icon: 'bi-calendar3', href: 'pages/trainer/timetable.html', roles: ['trainer'], ms: 7 },
       { id: 'trainer.assignments', label: 'Assignments', icon: 'bi-journal-check', href: 'pages/trainer/assignments.html', roles: ['trainer'], ms: 7 },
       { id: 'trainer.messages', label: 'Student messages', icon: 'bi-chat-left-text', href: 'pages/trainer/messages.html', roles: ['trainer'], ms: 7 }
     ]
@@ -93,11 +113,14 @@ window.BPST_NAV = [
     title: 'My learning',
     items: [
       { id: 'student.courses', label: 'My courses', icon: 'bi-journal-code', href: 'pages/student/courses.html', roles: ['student'], ms: 7 },
-      { id: 'student.fees', label: 'Fees & receipts', icon: 'bi-cash-coin', href: 'pages/student/fees.html', roles: ['student'], ms: 7 },
+      { id: 'student.fees', label: 'Fees & receipts', icon: 'bi-cash-coin', href: 'pages/student/fees.html', roles: ['student', 'student-pending'], ms: 7 },
       { id: 'student.assignments', label: 'Assignments', icon: 'bi-journal-check', href: 'pages/student/assignments.html', roles: ['student'], ms: 7 },
       { id: 'student.attendance', label: 'Attendance', icon: 'bi-calendar-check', href: 'pages/student/attendance.html', roles: ['student'], ms: 7 },
       { id: 'student.idcard', label: 'ID card & certificates', icon: 'bi-person-vcard', href: 'pages/student/id-card.html', roles: ['student'], ms: 7 },
       { id: 'student.messages', label: 'Messages', icon: 'bi-chat-left-text', href: 'pages/student/messages.html', roles: ['student'], ms: 7 },
+      { id: 'student.results', label: 'Results', icon: 'bi-clipboard2-check', href: 'pages/student/results.html', roles: ['student'], ms: 7 },
+      { id: 'student.feedback', label: 'Feedback', icon: 'bi-star-half', href: 'pages/student/feedback.html', roles: ['student'], ms: 7 },
+      { id: 'student.placement', label: 'Placement', icon: 'bi-briefcase', href: 'pages/student/placement.html', roles: ['student'], ms: 7 },
       { id: 'student.apply', label: 'Apply for a course', icon: 'bi-plus-circle', href: 'pages/student/apply.html', roles: ['student'], ms: 7 }
     ]
   },

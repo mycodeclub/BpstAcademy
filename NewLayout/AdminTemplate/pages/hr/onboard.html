@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Onboard employee · BPST Edu Admin</title>
+  <meta name="description" content="Onboard employee in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="hr.employees" data-roles="admin hr" data-title="Onboard employee">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div><nav class="crumbs" aria-label="Breadcrumb"><a href="employees.html">Employees</a><i class="bi bi-chevron-right" aria-hidden="true"></i><span aria-current="page">Onboard</span></nav>
+      <h1>Onboard employee</h1>
+      <p>Details → documents → in-person verification → offer letter → accepted → active.</p>
+    </div>
+    
+  </div>
+  <div class="card mb-3">
+      
+      <div class="card-body"><ol class="stepper mb-3"><li class="is-done">Details</li><li class="is-current">Documents</li><li>Verification</li><li>Offer letter</li><li>Accepted</li></ol></div>
+      
+    </div>
+  <form class="card" novalidate data-demo-form="Saved. Tushar can now upload documents in the employee portal; HR books the verification session." data-then="employees.html"><div class="card-body"><div class="row g-3">
+      <div class="col-md-6"><label class="form-label" for="o1">Full name</label><input class="form-control" id="o1" type="text" value="Tushar Rawat" placeholder="" required ><div class="invalid-feedback">Please fill in full name.</div></div><div class="col-md-6"><label class="form-label" for="o2">Personal email</label><input class="form-control" id="o2" type="email" value="tushar.r@example.com" placeholder="" required ><div class="form-text">The temporary password goes here.</div><div class="invalid-feedback">Please fill in personal email.</div></div>
+      <div class="col-md-6"><label class="form-label" for="o3">Mobile</label><input class="form-control" id="o3" type="tel" value="88XXXXXX11" placeholder="" required ><div class="invalid-feedback">Please fill in mobile.</div></div><div class="col-md-6"><label class="form-label" for="o4">Role</label><select class="form-select" id="o4" ><option>Trainer</option><option>Counsellor</option><option selected>Front desk executive</option><option>HR &amp; Accounts executive</option></select></div>
+      <div class="col-md-6"><label class="form-label" for="o5">Department</label><select class="form-select" id="o5" ><option>Academics</option><option selected>Sales</option><option>HR + Accounts</option><option>Management</option></select></div><div class="col-md-6"><label class="form-label" for="o6">Joining date</label><input class="form-control" id="o6" type="date" value="2026-09-22" placeholder="" ></div>
+      <div class="col-md-6"><label class="form-label" for="o7">Pay type</label><select class="form-select" id="o7" ><option selected>Monthly salary</option><option>Per hour (visiting trainer)</option></select></div><div class="col-md-6"><label class="form-label" for="o8">Monthly CTC</label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control" id="o8" inputmode="numeric" value="18000" ></div></div>
+      <div class="col-12"><span class="form-label d-block">Documents to collect</span><div class="d-flex flex-wrap gap-3"><div class="form-check"><input class="form-check-input" type="checkbox" id="od0" checked><label class="form-check-label" for="od0">PAN</label></div><div class="form-check"><input class="form-check-input" type="checkbox" id="od1" checked><label class="form-check-label" for="od1">Aadhaar</label></div><div class="form-check"><input class="form-check-input" type="checkbox" id="od2" checked><label class="form-check-label" for="od2">Highest degree</label></div><div class="form-check"><input class="form-check-input" type="checkbox" id="od3" checked><label class="form-check-label" for="od3">Experience / relieving letter</label></div><div class="form-check"><input class="form-check-input" type="checkbox" id="od4" checked><label class="form-check-label" for="od4">Bank details</label></div><div class="form-check"><input class="form-check-input" type="checkbox" id="od5" checked><label class="form-check-label" for="od5">Photo</label></div></div></div>
+    </div></div><div class="card-footer d-flex justify-content-end gap-2"><a class="btn btn-outline-secondary" href="employees.html">Cancel</a><button class="btn btn-primary" type="submit">Save &amp; send portal login</button></div></form>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

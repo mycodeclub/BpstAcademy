@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Collections · BPST Edu Admin</title>
+  <meta name="description" content="Collections in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="fees.collections" data-roles="admin hr" data-title="Collections">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Collections</h1>
+      <p>Money in: today, this month, dues and GST. Every receipt carries the GSTIN and tax breakup.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="dues.html" ><i class="bi bi-hourglass-split me-1" aria-hidden="true"></i>Dues & overdue</a><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#collectModal"><i class="bi bi-cash-coin me-1" aria-hidden="true"></i>Collect payment</button></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-cash-coin" aria-hidden="true"></i>Collected today</div>
+      <div class="kpi-value">₹48,500</div>
+      <div class="kpi-foot"><span class="delta up"><i class="bi bi-arrow-up-short"></i>₹12,300</span> vs yesterday</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-graph-up" aria-hidden="true"></i>This month</div>
+      <div class="kpi-value">₹7,42,300</div>
+      <div class="kpi-foot">82% of ₹9,00,000 target</div>
+    </div>
+<a class="kpi" href="dues.html">
+      <div class="kpi-label"><i class="bi bi-hourglass-split" aria-hidden="true"></i>Dues outstanding</div>
+      <div class="kpi-value">₹3,45,600</div>
+      <div class="kpi-foot">58 students</div>
+    </a>
+<a class="kpi is-alert" href="dues.html">
+      <div class="kpi-label"><i class="bi bi-exclamation-octagon" aria-hidden="true"></i>Overdue</div>
+      <div class="kpi-value">₹92,400</div>
+      <div class="kpi-foot">11 students · fines ₹4,850</div>
+    </a>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-slash-circle" aria-hidden="true"></i>Waivers (Sep)</div>
+      <div class="kpi-value">₹2,150</div>
+      <div class="kpi-foot">3 approved</div>
+    </div>
+<a class="kpi" href="gst-register.html">
+      <div class="kpi-label"><i class="bi bi-receipt" aria-hidden="true"></i>GST collected (Sep)</div>
+      <div class="kpi-value">₹1,13,232</div>
+      <div class="kpi-foot">CGST + SGST</div>
+    </a>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-8">
+    <div class="card h-100" id="collChartCard">
+      <div class="card-header">
+        <div><h2 class="card-title">Fees collected per day</h2><p class="card-sub">Last 4 weeks, including GST</p></div>
+        
+      </div>
+      <div class="card-body"><div class="chart-box"><canvas id="collChart" role="img" aria-label="Bar chart of fees collected per day"></canvas></div></div>
+      
+    </div>
+    </div>
+    <div class="col-xl-4">
+    <div class="card h-100" id="modeChartCard">
+      <div class="card-header">
+        <div><h2 class="card-title">By payment mode</h2><p class="card-sub">This month</p></div>
+        
+      </div>
+      <div class="card-body"><div class="chart-box"><canvas id="modeChart" role="img" aria-label="Doughnut chart of collections by payment mode"></canvas></div></div>
+      
+    </div>
+    </div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-7">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Recent receipts</h2><p class="card-sub">Today</p></div>
+        <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-ghost btn-sm" href="gst-register.html" >GST register</a></div>
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Receipt</th><th scope="col">Student</th><th class="d-none d-md-table-cell" scope="col">Mode</th><th class="num text-end" scope="col">Amount</th><th class="d-none d-md-table-cell" scope="col">Time</th></tr></thead>
+          <tbody>
+            <tr><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0412</a></td><td><div class="cell-person"><span class="avatar avatar-sm">FN</span><div><div class="name">Farah Naqvi</div></div></div></td><td class="d-none d-md-table-cell">UPI</td><td class="money text-end">₹12,000</td><td class="d-none d-md-table-cell">11:20 AM</td></tr>
+            <tr><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0411</a></td><td><div class="cell-person"><span class="avatar avatar-sm">AK</span><div><div class="name">Aman Khan</div></div></div></td><td class="d-none d-md-table-cell">Cash</td><td class="money text-end">₹8,500</td><td class="d-none d-md-table-cell">10:45 AM</td></tr>
+            <tr><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0410</a></td><td><div class="cell-person"><span class="avatar avatar-sm">TS</span><div><div class="name">Tanvi Shukla</div></div></div></td><td class="d-none d-md-table-cell">UPI</td><td class="money text-end">₹16,000</td><td class="d-none d-md-table-cell">10:02 AM</td></tr>
+            <tr><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0409</a></td><td><div class="cell-person"><span class="avatar avatar-sm">KS</span><div><div class="name">Kabir Singh</div></div></div></td><td class="d-none d-md-table-cell">Card</td><td class="money text-end">₹6,000</td><td class="d-none d-md-table-cell">9:40 AM</td></tr>
+            <tr><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0408</a></td><td><div class="cell-person"><span class="avatar avatar-sm">AG</span><div><div class="name">Ananya Gupta</div></div></div></td><td class="d-none d-md-table-cell">Razorpay (₹49 pre-book)</td><td class="money text-end">₹49</td><td class="d-none d-md-table-cell">9:12 AM</td></tr>
+            <tr><td><a class="num" href="../../print/receipt.html">BPST/RC/2026-27/0407</a></td><td><div class="cell-person"><span class="avatar avatar-sm">IJ</span><div><div class="name">Ishita Jaiswal</div></div></div></td><td class="d-none d-md-table-cell">Bank transfer</td><td class="money text-end">₹5,951</td><td class="d-none d-md-table-cell">9:05 AM</td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+    <div class="col-xl-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Plans in use</h2><p class="card-sub">Active students by fee plan</p></div>
+        
+      </div>
+      <div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-lightning" aria-hidden="true"></i></span><div class="grow"><div class="title">Upfront (10% off)</div><div class=meta>Paid in full at admission</div></div><b class="num">64</b></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-calendar3" aria-hidden="true"></i></span><div class="grow"><div class="title">Fixed instalments</div><div class=meta>2–4 dated instalments</div></div><b class="num">112</b></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></span><div class="grow"><div class="title">Monthly</div><div class=meta>Due on the 5th</div></div><b class="num">41</b></div><div class="list-row"><span class="avatar" style="background:var(--c-neutral-soft);color:var(--c-muted)"><i class="bi bi-puzzle" aria-hidden="true"></i></span><div class="grow"><div class="title">Open part-payment</div><div class=meta>Any amount, any time</div></div><b class="num">29</b></div>
+      
+    </div>
+    </div>
+  </div>
+<div class="modal fade" id="collectModal" tabindex="-1" aria-labelledby="collectModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Payment saved. Receipt BPST/RC/2026-27/0413 created with the GST breakup.">
+    <div class="modal-header"><h2 class="modal-title" id="collectModalT">Collect payment</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3">
+      <div class="col-12"><label class="form-label" for="cpS">Student</label><select class="form-select" id="cpS" ><option selected>Harsh Kumar · BPST26S0042</option><option>Nidhi Awasthi · BPST26S0051</option><option>Aman Khan · BPST26S0067</option><option>Sahil Verma · BPST26S0074</option></select></div>
+      <div class="col-12"><label class="form-label" for="cpA">Amount received (incl. GST)</label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control" id="cpA" inputmode="numeric" value="12500" required pattern="[0-9]+"></div>
+        <div class="form-text" id="cpSplit"></div><div class="invalid-feedback">Enter an amount in rupees.</div></div>
+      <div class="col-12"><span class="form-label d-block">Mode</span><div class="d-flex flex-wrap gap-3"><div class="form-check"><input class="form-check-input" type="radio" name="cpM" id="cpM0" checked><label class="form-check-label" for="cpM0">UPI</label></div><div class="form-check"><input class="form-check-input" type="radio" name="cpM" id="cpM1"><label class="form-check-label" for="cpM1">Cash</label></div><div class="form-check"><input class="form-check-input" type="radio" name="cpM" id="cpM2"><label class="form-check-label" for="cpM2">Card</label></div><div class="form-check"><input class="form-check-input" type="radio" name="cpM" id="cpM3"><label class="form-check-label" for="cpM3">Bank transfer</label></div></div></div>
+      <div class="col-md-6"><label class="form-label" for="cpR">Reference / UTR</label><input class="form-control" id="cpR" type="text" value="" placeholder="UPI ref, card slip or cheque no." ></div>
+      <div class="col-md-6"><label class="form-label" for="cpD">Date</label><input class="form-control" id="cpD" type="date" value="2026-09-25" placeholder="" ></div>
+      <div class="col-12"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="cpSend" checked><label class="form-check-label" for="cpSend">Send the GST receipt by SMS and email</label></div></div>
+    </div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Save &amp; create receipt</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/chartjs/chart.umd.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+(function () {
+    var a = document.getElementById('cpA'), out = document.getElementById('cpSplit'), B = window.BPST;
+    function upd() {
+      var v = parseFloat(a.value) || 0, base = v / 1.18, tax = v - base;
+      out.innerHTML = 'Includes 18% GST (SAC 999293): taxable ' + B.fmtINR(base) + ' + CGST 9% ' + B.fmtINR(Math.round(tax / 2)) + ' + SGST 9% ' + B.fmtINR(Math.round(tax / 2)) + '.';
+    }
+    if (a) { a.addEventListener('input', upd); upd(); }
+  })();
+
+  var D = window.DEMO;
+  var days = D.collections.map(function (_, i) { var d = new Date(); d.setDate(d.getDate() - (D.collections.length - 1 - i)); return d; });
+  window.BPST.chart('collChart', function (T, b) {
+    return { type: 'bar', data: { labels: days.map(function (d) { return d.getDate() + '/' + (d.getMonth() + 1); }), datasets: [{ data: D.collections, backgroundColor: T.accent, borderRadius: 3, maxBarThickness: 18 }] },
+      options: { plugins: { legend: { display: false }, tooltip: Object.assign({}, b.tooltip, { callbacks: { label: function (i) { return window.BPST.fmtINR(i.raw); } } }) }, scales: b.scales(b.shortINR) } };
+  });
+  window.BPST.chart('modeChart', function (T, b) {
+    return { type: 'doughnut', data: { labels: ['UPI', 'Cash', 'Card', 'Bank transfer', 'Razorpay'], datasets: [{ data: [412000, 158000, 64000, 92000, 16300], backgroundColor: [T.accent, T.success, T.warning, T.info, T.muted], borderColor: T.surface, borderWidth: 2 }] },
+      options: { cutout: '62%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, usePointStyle: true } }, tooltip: Object.assign({}, b.tooltip, { callbacks: { label: function (i) { return i.label + ': ' + window.BPST.fmtINR(i.raw); } } }) } } };
+  });
+</script>
+</body>
+</html>

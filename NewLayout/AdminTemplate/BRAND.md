@@ -68,7 +68,9 @@ The chip style is a small pill, 12px medium text, soft background and strong tex
 - **Content:** max width 1440px, 24px padding (16px on phones).
 - **Spacing:** 8px grid (4, 8, 12, 16, 24, 32, 48).
 - **Cards:** 12px radius, 1px `--c-border`, **no shadow** (or `0 1px 2px rgba(0,0,0,.04)` at most). Card header 16px/600.
-- **Breakpoints to check:** 375, 768, 1024, 1440.
+- **Breakpoints to check:** 375, 768, 1024, 1440, 1920, 2560, 3440.
+- **Wide screens:** content grows to 1560px (≥1600), 1760px centred (≥1920), 2200px with 18px base text (≥2560) and 2800px with 20px text (≥3440). KPI rows and card lists use `.grid-auto`, so they add columns on their own.
+- **Touch screens:** larger tap targets for nav items, filter chips and attendance buttons (`pointer: coarse`).
 
 ## 6. Components (all shown on the UI kit page)
 - KPI tile: label, big number, delta vs last period, optional sparkline

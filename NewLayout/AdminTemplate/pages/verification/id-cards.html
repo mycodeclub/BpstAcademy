@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ID cards · BPST Edu Admin</title>
+  <meta name="description" content="ID cards in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="verify.idcards" data-roles="admin hr" data-title="ID cards">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>ID cards</h1>
+      <p>Issued only after verification. CR80 size (85.6 × 54 mm) with photo, ID, course or role, validity and a QR code.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-primary" href="../../print/id-card.html" ><i class="bi bi-printer me-1" aria-hidden="true"></i>Print sheet</a></div>
+  </div>
+  <div class="row g-3 mb-4">
+    <div class="col-xl-7">
+    <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Cards</h2><p class="card-sub">2 waiting to be issued</p></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Person</th><th class="d-none d-md-table-cell" scope="col">Course / role</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td><div class="cell-person"><span class="avatar">AV</span><div><div class="name">Aditi Verma</div><div class=meta>BPST26S0078</div></div></div></td><td class="d-none d-md-table-cell">Full Stack · FS-M2</td><td><span class="chip chip--neutral">Not issued</span></td><td class="text-end"><div class="row-actions"><a class="btn btn-ghost btn-sm" href="../../print/id-card.html" >Preview</a><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="ID card issued and added to the print sheet." data-tone="success">Issue</button></div></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">FN</span><div><div class="name">Farah Naqvi</div><div class=meta>BPST26S0063</div></div></div></td><td class="d-none d-md-table-cell">Python · PY-M1</td><td><span class="chip chip--success">Issued</span></td><td class="text-end"><div class="row-actions"><a class="btn btn-ghost btn-sm" href="../../print/id-card.html" >Preview</a></div></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">TS</span><div><div class="name">Tanvi Shukla</div><div class=meta>BPST26S0085</div></div></div></td><td class="d-none d-md-table-cell">GenAI · AI-O1</td><td><span class="chip chip--success">Issued</span></td><td class="text-end"><div class="row-actions"><a class="btn btn-ghost btn-sm" href="../../print/id-card.html" >Preview</a></div></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">DR</span><div><div class="name">Deepika Rai</div><div class=meta>BPST26E012</div></div></div></td><td class="d-none d-md-table-cell">Trainer</td><td><span class="chip chip--neutral">Not issued</span></td><td class="text-end"><div class="row-actions"><a class="btn btn-ghost btn-sm" href="../../print/id-card.html" >Preview</a><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="ID card issued and added to the print sheet." data-tone="success">Issue</button></div></td></tr>
+            <tr><td><div class="cell-person"><span class="avatar">KS</span><div><div class="name">Kabir Singh</div><div class=meta>BPST26S0081</div></div></div></td><td class="d-none d-md-table-cell">School coding · SC-E1</td><td><span class="chip chip--success">Issued</span></td><td class="text-end"><div class="row-actions"><a class="btn btn-ghost btn-sm" href="../../print/id-card.html" >Preview</a></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    </div>
+    <div class="col-xl-5">
+    <div class="card h-100">
+      <div class="card-header">
+        <div><h2 class="card-title">Preview</h2></div>
+        
+      </div>
+      <div class="card-body d-flex justify-content-center overflow-auto"><div class="idcard" aria-label="ID card for Aditi Verma"><div class="ic-top"><img src="../../assets/img/bpst-logo.svg" alt="BPST Edu"><b style="color:#0062ff;font-size:7pt">STUDENT</b></div>
+          <div class="ic-photo">AV</div><div><div class="ic-name">Aditi Verma</div><div>BPST26S0078</div><div>Full Stack Development</div><div style="margin-top:1mm">Valid till Dec 2026</div></div>
+          <div class="ic-foot"><span>Near IIM Tiraha, Lucknow · 8299101616</span></div><div class="qr ic-qr" aria-hidden="true"></div></div></div>
+      
+    </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

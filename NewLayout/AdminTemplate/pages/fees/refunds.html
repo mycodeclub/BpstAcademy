@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Refunds · BPST Edu Admin</title>
+  <meta name="description" content="Refunds in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="fees.refunds" data-roles="admin hr" data-title="Refunds">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Refunds</h1>
+      <p>Request → approval → processed, following the website refund policy. The ₹49 pre-booking is refunded only if BPST cancels or cannot start the batch.</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="https://edu.bitprosofttech.com/refund-policy.html" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-1" aria-hidden="true"></i>Refund policy</a><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#refModal"><i class="bi bi-plus-lg me-1" aria-hidden="true"></i>New request</button></div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Refund requests</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col">No.</th><th scope="col">Student</th><th class="num text-end" scope="col">Amount</th><th class="d-none d-md-table-cell" scope="col">Reason</th><th class="d-none d-lg-table-cell" scope="col">Method</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td><span class="num">RF-018</span></td><td><div class="cell-person"><span class="avatar avatar-sm">GS</span><div><div class="name">Gaurav Singh</div><div class=meta>₹49 pre-booking</div></div></div></td><td class="money text-end">₹49</td><td class="d-none d-md-table-cell">Batch PY-E2 start moved by BPST</td><td class="d-none d-lg-table-cell">Razorpay refund, 3–5 days</td><td><span data-resolve-slot><span class="chip chip--success">Processed</span></span></td></tr>
+            <tr><td><span class="num">RF-019</span></td><td><div class="cell-person"><span class="avatar avatar-sm">PG</span><div><div class="name">Pooja Gautam</div><div class=meta>Course fee (within 7 days)</div></div></div></td><td class="money text-end">₹12,000</td><td class="d-none d-md-table-cell">Relocated to Delhi</td><td class="d-none d-lg-table-cell">Bank transfer</td><td><span data-resolve-slot><span class="chip chip--success">Approved</span></span></td></tr>
+            <tr><td><span class="num">RF-020</span></td><td><div class="cell-person"><span class="avatar avatar-sm">RY</span><div><div class="name">Rohit Yadav</div><div class=meta>Unused instalment</div></div></div></td><td class="money text-end">₹0</td><td class="d-none d-md-table-cell">Dropped out · not eligible per policy</td><td class="d-none d-lg-table-cell">—</td><td><span data-resolve-slot><span class="chip chip--danger">Rejected</span></span></td></tr>
+            <tr><td><span class="num">RF-021</span></td><td><div class="cell-person"><span class="avatar avatar-sm">AV</span><div><div class="name">Akash Verma</div><div class=meta>Double payment</div></div></div></td><td class="money text-end">₹8,500</td><td class="d-none d-md-table-cell">Paid twice by UPI</td><td class="d-none d-lg-table-cell">UPI</td><td><span data-resolve-slot><span class="chip chip--warning">Requested</span> <button type="button" class="btn btn-primary btn-sm" data-resolve="Approved|success|Refund approved. Accounts processes it and a credit note is created.">Approve</button></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+<div class="modal fade" id="refModal" tabindex="-1" aria-labelledby="refModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Refund request sent to the manager.">
+    <div class="modal-header"><h2 class="modal-title" id="refModalT">New refund request</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-12"><label class="form-label" for="rf1">Student</label><select class="form-select" id="rf1" ><option>Akash Verma</option><option>Harsh Kumar</option><option>Aman Khan</option></select></div><div class="col-md-6"><label class="form-label" for="rf2">Amount</label><div class="input-group"><span class="input-group-text">₹</span><input class="form-control" id="rf2" inputmode="numeric" value="" required ><div class="invalid-feedback">Please fill in amount.</div></div></div><div class="col-md-6"><label class="form-label" for="rf3">Against receipt</label><input class="form-control" id="rf3" type="text" value="BPST/RC/2026-27/0399" placeholder="" ></div><div class="col-12"><label class="form-label" for="rf4">Reason</label><textarea class="form-control" id="rf4" rows="3" required placeholder="" ></textarea><div class="invalid-feedback">Please fill in reason.</div></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Send for approval</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

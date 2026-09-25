@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Student messages · BPST Edu Admin</title>
+  <meta name="description" content="Student messages in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="trainer.messages" data-roles="trainer" data-title="Student messages">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Student messages</h1>
+      <p>Questions from your batches.</p>
+    </div>
+    
+  </div>
+  <div class="card"><div class="chat-layout"><div class="chat-list" data-search-box><div class="list-row active" tabindex="0"><span class="avatar">HK</span><div class="grow"><div class="title d-flex justify-content-between gap-2"><span>Harsh Kumar · FS-M2</span><span class="caption">9:48 AM</span></div><div class="meta text-truncate">Sir, my todo app shows a CORS error…</div></div><span class=nav-count>1</span></div><div class="list-row" tabindex="0"><span class="avatar">SM</span><div class="grow"><div class="title d-flex justify-content-between gap-2"><span>Sneha Maurya · FS-M2</span><span class="caption">Yesterday</span></div><div class="meta text-truncate">Can I use Tailwind for the project?</div></div><span class=nav-count>1</span></div><div class="list-row" tabindex="0"><span class="avatar">IJ</span><div class="grow"><div class="title d-flex justify-content-between gap-2"><span>Ishita Jaiswal · JV-E1</span><span class="caption">23 Sep</span></div><div class="meta text-truncate">Thanks for the notes!</div></div></div><div class="list-row" tabindex="0"><span class="avatar">M</span><div class="grow"><div class="title d-flex justify-content-between gap-2"><span>Management</span><span class="caption">20 Sep</span></div><div class="meta text-truncate">Makeup class approved for 4 Oct.</div></div><span class=nav-count>1</span></div></div>
+      <div class="chat-thread"><div class="card-header"><div><h2 class="card-title">Harsh Kumar · FS-M2</h2><p class="card-sub">Student · FS-M2</p></div></div>
+      <div class="chat-msgs" id="msgs" aria-live="polite"><div class="msg">Sir, my todo app shows a CORS error when calling the API.<span class="caption">9:48 AM</span></div><div class="msg me">Use the dev proxy we set up in class, or call the API from the server side. Check the fetch() error handling part too.<span class="caption">10:12 AM</span></div><div class="msg">Got it, thank you!<span class="caption">10:15 AM</span></div></div>
+      <form class="chat-compose" id="compose"><label class="visually-hidden" for="msgIn">Message</label><input class="form-control" id="msgIn" placeholder="Write a message…" autocomplete="off"><button class="btn btn-primary" type="submit" aria-label="Send"><i class="bi bi-send"></i></button></form></div></div></div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+<script>
+document.getElementById('compose').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var i = document.getElementById('msgIn'), v = i.value.trim(); if (!v) return;
+    var box = document.getElementById('msgs'), d = document.createElement('div');
+    d.className = 'msg me'; d.innerHTML = window.BPST.esc(v) + '<span class="caption">now</span>';
+    box.appendChild(d); box.scrollTop = box.scrollHeight; i.value = '';
+  });
+  document.querySelectorAll('.chat-list .list-row').forEach(function (r) {
+    r.addEventListener('click', function () { document.querySelectorAll('.chat-list .list-row').forEach(function (x) { x.classList.remove('active'); }); r.classList.add('active'); });
+  });
+</script>
+</body>
+</html>

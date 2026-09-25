@@ -2,6 +2,16 @@
    Lead times are minutes before page load, so every SLA state is always visible. */
 window.DEMO = {
   user: { name: 'Demo Admin', initials: 'DA', email: 'admin@example.com' },
+  /* the signed-in person for each demo role (top-bar avatar) */
+  users: {
+    counsellor: { name: 'Neha Sharma', initials: 'NS', email: 'neha.s@example.com' },
+    hr: { name: 'Sunita Pal', initials: 'SP', email: 'sunita.p@example.com' },
+    trainer: { name: 'Arjun Mehta', initials: 'AM', email: 'arjun.m@example.com' },
+    student: { name: 'Harsh Kumar', initials: 'HK', email: 'harsh.k@example.com' },
+    employee: { name: 'Neha Sharma', initials: 'NS', email: 'neha.s@example.com' },
+    'student-pending': { name: 'Aditi Verma', initials: 'AV', email: 'aditi.v@example.com' },
+    'employee-onboarding': { name: 'Tushar Rawat', initials: 'TR', email: 'tushar.r@example.com' }
+  },
 
   leads: [
     { id: 'L-2419', name: 'Aarav Mishra', phone: '98XXXXXX14', course: 'Full Stack Development', source: 'Website pre-book ₹49', paid: true, owner: 'Neha S.', minutesAgo: 97 },
@@ -98,17 +108,25 @@ window.DEMO = {
 
   /* global search index (Ctrl+K) */
   search: [
-    { group: 'Leads', label: 'Aarav Mishra', meta: 'L-2419 · Full Stack · 98XXXXXX14', icon: 'bi-inbox', ms: 2 },
-    { group: 'Leads', label: 'Simran Kaur', meta: 'L-2421 · Data Analyst · 97XXXXXX32', icon: 'bi-inbox', ms: 2 },
-    { group: 'Leads', label: 'Isha Tiwari', meta: 'L-2431 · Data Analyst · 70XXXXXX88', icon: 'bi-inbox', ms: 2 },
-    { group: 'Students', label: 'Harsh Kumar', meta: 'BPST26S0042 · Full Stack · FS-M2', icon: 'bi-mortarboard', ms: 3 },
-    { group: 'Students', label: 'Nidhi Awasthi', meta: 'BPST26S0051 · Data Analyst · DA-A1', icon: 'bi-mortarboard', ms: 3 },
-    { group: 'Students', label: 'Farah Naqvi', meta: 'BPST26S0063 · Python · PY-M1', icon: 'bi-mortarboard', ms: 3 },
-    { group: 'Receipts', label: 'BPST/RC/2026-27/0412', meta: '₹12,000 · Farah Naqvi · 25 Sep 2026', icon: 'bi-receipt', ms: 4 },
-    { group: 'Receipts', label: 'BPST/RC/2026-27/0411', meta: '₹8,500 · Aman Khan · 24 Sep 2026', icon: 'bi-receipt', ms: 4 },
-    { group: 'Employees', label: 'Pooja Nigam', meta: 'BPST26E004 · Trainer · Python, School coding', icon: 'bi-person-badge', ms: 6 },
-    { group: 'Employees', label: 'Neha Sharma', meta: 'BPST26E002 · Senior counsellor', icon: 'bi-person-badge', ms: 6 },
+    { group: 'Leads', label: 'Aarav Mishra', meta: 'L-2419 · Full Stack · 98XXXXXX14', icon: 'bi-inbox', href: 'pages/crm/lead.html' },
+    { group: 'Leads', label: 'Simran Kaur', meta: 'L-2421 · Data Analyst · 97XXXXXX32', icon: 'bi-inbox', href: 'pages/crm/lead.html' },
+    { group: 'Leads', label: 'Isha Tiwari', meta: 'L-2431 · Data Analyst · 70XXXXXX88', icon: 'bi-inbox', href: 'pages/crm/lead.html' },
+    { group: 'Students', label: 'Harsh Kumar', meta: 'BPST26S0042 · Full Stack · FS-M2', icon: 'bi-mortarboard', href: 'pages/admissions/student.html' },
+    { group: 'Students', label: 'Nidhi Awasthi', meta: 'BPST26S0051 · Data Analyst · DA-A1', icon: 'bi-mortarboard', href: 'pages/admissions/student.html' },
+    { group: 'Students', label: 'Farah Naqvi', meta: 'BPST26S0063 · Python · PY-M1', icon: 'bi-mortarboard', href: 'pages/admissions/student.html' },
+    { group: 'Receipts', label: 'BPST/RC/2026-27/0412', meta: '₹12,000 · Farah Naqvi · 25 Sep 2026', icon: 'bi-receipt', href: 'print/receipt.html' },
+    { group: 'Receipts', label: 'BPST/RC/2026-27/0411', meta: '₹8,500 · Aman Khan · 24 Sep 2026', icon: 'bi-receipt', href: 'print/receipt.html' },
+    { group: 'Employees', label: 'Pooja Nigam', meta: 'BPST26E004 · Trainer · Python, School coding', icon: 'bi-person-badge', href: 'pages/hr/employee.html' },
+    { group: 'Employees', label: 'Neha Sharma', meta: 'BPST26E002 · Senior counsellor', icon: 'bi-person-badge', href: 'pages/hr/employee.html' },
+    { group: 'Batches', label: 'FS-M2 · Full Stack', meta: 'Mon–Fri 11:00 AM · Lab 2 · Arjun Mehta', icon: 'bi-collection', href: 'pages/admissions/batch.html' },
     { group: 'Pages', label: 'Owner dashboard', meta: 'Overview', icon: 'bi-grid-1x2', href: 'pages/management/dashboard.html' },
+    { group: 'Pages', label: 'Lead inbox', meta: 'Leads & CRM', icon: 'bi-inbox', href: 'pages/crm/leads.html' },
+    { group: 'Pages', label: 'Enrol student', meta: 'Admissions', icon: 'bi-person-plus', href: 'pages/admissions/enrol.html' },
+    { group: 'Pages', label: 'Collections', meta: 'Fees & Accounts', icon: 'bi-cash-stack', href: 'pages/fees/collections.html' },
+    { group: 'Pages', label: 'Verification queue', meta: 'Verification', icon: 'bi-shield-check', href: 'pages/verification/queue.html' },
+    { group: 'Pages', label: 'Payroll', meta: 'HR & Payroll', icon: 'bi-wallet2', href: 'pages/hr/payroll.html' },
+    { group: 'Pages', label: 'Reports', meta: 'Overview', icon: 'bi-bar-chart', href: 'pages/management/reports.html' },
+    { group: 'Pages', label: 'Settings', meta: 'System', icon: 'bi-gear', href: 'pages/management/settings.html' },
     { group: 'Pages', label: 'UI kit', meta: 'Design reference', icon: 'bi-palette', href: 'pages/system/ui-kit.html' }
   ]
 };

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Assignments · BPST Edu Admin</title>
+  <meta name="description" content="Assignments in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="student.assignments" data-roles="student" data-title="Assignments">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Assignments</h1>
+      <p>Submit work and see grades and trainer feedback.</p>
+    </div>
+    
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">All assignments</h2></div>
+        
+      </div>
+      <div class="table-wrap">
+        <table class="table ">
+          <thead><tr><th scope="col">Assignment</th><th class="d-none d-md-table-cell" scope="col">Due</th><th scope="col">Status</th><th class="num text-end" scope="col">Marks</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody>
+            <tr><td><b>Todo app with API</b><div class="caption">FS-M2</div></td><td class="d-none d-md-table-cell">Tomorrow 11:59 PM</td><td><span class="chip chip--info">Open</span></td><td class="num text-end">—</td><td class="text-end"><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#subModal">Submit</button></td></tr>
+            <tr><td><b>Portfolio site</b><div class="caption">FS-M2</div></td><td class="d-none d-md-table-cell">12 Sep</td><td><span class="chip chip--success">Graded</span></td><td class="num text-end">78 / 100</td><td class="text-end"><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Trainer feedback: good structure; add error handling for the API call." data-tone="info">Feedback</button></td></tr>
+            <tr><td><b>Array problems set 2</b><div class="caption">DSA-W1</div></td><td class="d-none d-md-table-cell">20 Sep</td><td><span class="chip chip--success">Graded</span></td><td class="num text-end">9 / 10</td><td class="text-end"><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Trainer feedback: good structure; add error handling for the API call." data-tone="info">Feedback</button></td></tr>
+            <tr><td><b>JavaScript DOM quiz</b><div class="caption">FS-M2</div></td><td class="d-none d-md-table-cell">5 Sep</td><td><span class="chip chip--warning">Late</span></td><td class="num text-end">6 / 10</td><td class="text-end"><button type="button" class="btn btn-ghost btn-sm" data-demo-toast="Trainer feedback: good structure; add error handling for the API call." data-tone="info">Feedback</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+<div class="modal fade" id="subModal" tabindex="-1" aria-labelledby="subModalT" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down "><form class="modal-content" novalidate data-demo-form="Submitted. Your trainer is notified.">
+    <div class="modal-header"><h2 class="modal-title" id="subModalT">Submit · Todo app with API</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body"><div class="row g-3"><div class="col-12"><label class="form-label" for="sb1">GitHub / live link</label><input class="form-control" id="sb1" type="url" value="" placeholder="https://" ></div><div class="col-12"><div class="upload-box"><i class="bi bi-cloud-arrow-up"></i>Or upload a ZIP (max 20 MB)</div></div><div class="col-12"><label class="form-label" for="sb2">Note to trainer</label><textarea class="form-control" id="sb2" rows="3" placeholder="" ></textarea></div></div></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="submit">Submit</button></div>
+  </form></div>
+</div>
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

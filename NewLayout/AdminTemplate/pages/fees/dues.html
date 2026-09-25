@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dues &amp; overdue · BPST Edu Admin</title>
+  <meta name="description" content="Dues &amp; overdue in the BPST Software Education admin panel prototype (demo data only).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0062ff">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/icon-192.png">
+  <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body data-root="../../" data-page="fees.dues" data-roles="admin hr counsellor" data-title="Dues &amp; overdue">
+
+<main id="main" class="content">
+  <div class="page-head">
+    <div>
+      <h1>Dues & overdue</h1>
+      <p>Ageing buckets. A late fine is added after 7 days' grace (₹50 per day, capped at ₹1,000).</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2 align-items-center"><a class="btn btn-outline-secondary" href="collections.html" ><i class="bi bi-cash-stack me-1" aria-hidden="true"></i>Collections</a></div>
+  </div>
+  <div class="grid-auto grid-kpi mb-4">
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-hourglass-split" aria-hidden="true"></i>Total due</div>
+      <div class="kpi-value">₹3,45,600</div>
+      <div class="kpi-foot">58 students</div>
+    </div>
+<div class="kpi is-alert">
+      <div class="kpi-label"><i class="bi bi-exclamation-octagon" aria-hidden="true"></i>30+ days</div>
+      <div class="kpi-value">₹42,500</div>
+      <div class="kpi-foot">2 students</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i>8–30 days</div>
+      <div class="kpi-value">₹29,500</div>
+      <div class="kpi-foot">3 students</div>
+    </div>
+<div class="kpi">
+      <div class="kpi-label"><i class="bi bi-bell" aria-hidden="true"></i>Reminders sent (Sep)</div>
+      <div class="kpi-value">126</div>
+      <div class="kpi-foot">SMS + email</div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header">
+        <div><h2 class="card-title">Dues</h2></div>
+        
+      </div>
+      <div class="toolbar">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" class="form-control form-control-sm" placeholder="Search student" data-table-search="dueRows" aria-label="Search student"></div>
+        
+        <div class="d-flex flex-wrap gap-2" data-filter-group="dueRows" role="group" aria-label="Filter"><button class="filter-chip active" data-filter="all" aria-pressed="true">All <span class=count>9</span></button><button class="filter-chip" data-filter="over30" aria-pressed="false">30+ days <span class=count>2</span></button><button class="filter-chip" data-filter="over7" aria-pressed="false">8–30 days <span class=count>3</span></button><button class="filter-chip" data-filter="grace" aria-pressed="false">In grace <span class=count>2</span></button><button class="filter-chip" data-filter="upcoming" aria-pressed="false">Upcoming <span class=count>1</span></button></div>
+        
+      </div><div class="toolbar" data-bulk-for="dueRows" hidden style="background:var(--c-accent-soft)"><b><span data-bulk-count>0</span> selected</b><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminders sent to the selected students and parents." data-tone="success">Send reminders</button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: fines added per the rule." data-tone="success">Add fines</button></div><div class="table-wrap">
+        <table class="table table-hover">
+          <thead><tr><th scope="col"><input class="form-check-input" type="checkbox" data-check-all="dueRows" aria-label="Select all"></th><th data-sort tabindex="0" scope="col">Student</th><th class="num text-end" data-sort tabindex="0" scope="col">Due</th><th class="num text-end d-none d-md-table-cell" scope="col">Fine</th><th data-sort tabindex="0" scope="col">Age</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+          <tbody id="dueRows">
+            <tr data-filter-value="over30"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">HK</span><div><div><a href="ledger.html" class="name text-reset">Harsh Kumar</a></div><div class=meta>Full Stack</div></div></div></td><td class="money text-end" data-sort-value="12500">₹12,500</td><td class="money text-end d-none d-md-table-cell" data-sort-value="1000">₹1,000</td><td data-sort-value="34"><span class="chip chip--danger">30+ days · 34 d</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Harsh Kumar" title="WhatsApp Harsh Kumar"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Harsh Kumar by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+            <tr data-filter-value="over30"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">RY</span><div><div><a href="ledger.html" class="name text-reset">Rohit Yadav</a></div><div class=meta>Full Stack</div></div></div></td><td class="money text-end" data-sort-value="30000">₹30,000</td><td class="money text-end d-none d-md-table-cell" data-sort-value="1000">₹1,000</td><td data-sort-value="38"><span class="chip chip--danger">30+ days · 38 d</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Rohit Yadav" title="WhatsApp Rohit Yadav"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Rohit Yadav by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+            <tr data-filter-value="over7"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">NA</span><div><div><a href="ledger.html" class="name text-reset">Nidhi Awasthi</a></div><div class=meta>Data Analyst Pro</div></div></div></td><td class="money text-end" data-sort-value="8000">₹8,000</td><td class="money text-end d-none d-md-table-cell" data-sort-value="700">₹700</td><td data-sort-value="21"><span class="chip chip--warning">8–30 days · 21 d</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Nidhi Awasthi" title="WhatsApp Nidhi Awasthi"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Nidhi Awasthi by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+            <tr data-filter-value="over7"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">YT</span><div><div><a href="ledger.html" class="name text-reset">Yash Tripathi</a></div><div class=meta>Cyber Security</div></div></div></td><td class="money text-end" data-sort-value="14000">₹14,000</td><td class="money text-end d-none d-md-table-cell" data-sort-value="400">₹400</td><td data-sort-value="15"><span class="chip chip--warning">8–30 days · 15 d</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Yash Tripathi" title="WhatsApp Yash Tripathi"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Yash Tripathi by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+            <tr data-filter-value="over7"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">AK</span><div><div><a href="ledger.html" class="name text-reset">Aman Khan</a></div><div class=meta>Python</div></div></div></td><td class="money text-end" data-sort-value="5000">₹5,000</td><td class="money text-end d-none d-md-table-cell" data-sort-value="250">₹250</td><td data-sort-value="12"><span class="chip chip--warning">8–30 days · 12 d</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Aman Khan" title="WhatsApp Aman Khan"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Aman Khan by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+            <tr data-filter-value="over7"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">RB</span><div><div><a href="ledger.html" class="name text-reset">Riya Bajpai</a></div><div class=meta>Software Testing</div></div></div></td><td class="money text-end" data-sort-value="7500">₹7,500</td><td class="money text-end d-none d-md-table-cell" data-sort-value="100">₹100</td><td data-sort-value="9"><span class="chip chip--warning">8–30 days · 9 d</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Riya Bajpai" title="WhatsApp Riya Bajpai"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Riya Bajpai by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+            <tr data-filter-value="grace"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">SV</span><div><div><a href="ledger.html" class="name text-reset">Sahil Verma</a></div><div class=meta>Cloud &amp; DevOps</div></div></div></td><td class="money text-end" data-sort-value="15000">₹15,000</td><td class="money text-end d-none d-md-table-cell" data-sort-value="0">–</td><td data-sort-value="3"><span class="chip chip--info">In grace · 3 d</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Sahil Verma" title="WhatsApp Sahil Verma"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Sahil Verma by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+            <tr data-filter-value="upcoming"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">PM</span><div><div><a href="ledger.html" class="name text-reset">Pallavi Mishra</a></div><div class=meta>Python (frozen)</div></div></div></td><td class="money text-end" data-sort-value="9000">₹9,000</td><td class="money text-end d-none d-md-table-cell" data-sort-value="0">–</td><td data-sort-value="0"><span class="chip chip--neutral">Not due yet</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Pallavi Mishra" title="WhatsApp Pallavi Mishra"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Pallavi Mishra by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+            <tr data-filter-value="upcoming"><td><input class="form-check-input row-check" type="checkbox" aria-label="Select"></td><td><div class="cell-person"><span class="avatar">AV</span><div><div><a href="ledger.html" class="name text-reset">Aditi Verma</a></div><div class=meta>Full Stack</div></div></div></td><td class="money text-end" data-sort-value="15000">₹15,000</td><td class="money text-end d-none d-md-table-cell" data-sort-value="0">–</td><td data-sort-value="-6"><span class="chip chip--neutral">Not due yet</span></td><td class="text-end"><div class="row-actions"><button type="button" class="btn btn-ghost btn-icon btn-sm" data-demo-toast="Demo: WhatsApp reminder opened." data-tone="info" aria-label="WhatsApp Aditi Verma" title="WhatsApp Aditi Verma"><i class="bi bi-whatsapp"></i></button><button type="button" class="btn btn-outline-secondary btn-sm" data-demo-toast="Demo: reminder sent to Aditi Verma by SMS and email." data-tone="success">Remind</button><a class="btn btn-ghost btn-sm d-none d-md-inline-block" href="ledger.html">Ledger</a></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+
+</main>
+
+<script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/demo-data.js"></script>
+<script src="../../assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -35,3 +35,11 @@ sitemap.xml, robots.txt, llms.txt, site.webmanifest   SEO / AI-search files
 - **Receiving bookings:** set `leadEndpoint` in `assets/js/config.js`. Until then the forms run in demo mode and only log to the browser console.
 - **Offer deadline:** it is stored in the `data-offer-deadline` attribute on each page's `<body>`, currently `2026-11-08T23:59:59+05:30`. Replace it in all files to change it.
 - **Header, footer and mega menu:** they are repeated in every page, the same as in BpstEduLikeCourseListing/Template. Use "Replace in files" to change them everywhere.
+
+## Links to the student & staff portal (`../AdminTemplate`)
+- **Login** button in the header and **Verify a Certificate** / **Student & Staff Login** in the footer of every page (`data-portal-link`). The address comes from `portalUrl` in `assets/js/config.js` (default `https://edu.bitprosofttech.com/portal/`). Opened from disk, they go to the sibling `AdminTemplate` folder.
+- `verify.html` is the short address printed on certificates; it forwards to the portal's certificate check (keeps `?no=`).
+- `robots.txt` blocks `/portal/` for every crawler except the public certificate page, which is also in `sitemap.xml` and `llms.txt`.
+- **Campaign tracking:** UTM tags and ad click IDs from the first page of a visit are kept for the whole visit and sent with every pre-book and enquiry, together with the page URL.
+- The form field names (`name`, `mobile`, `email`, `city`, `qualification`, `course`, `mode`, `duration`, `message`, `consent`) are the lead fields in `../AdminTemplate/PLAN.md` §3.1. Keep them the same if you change the forms.
+- There is no separate Apply form on purpose. Counsellors create applications from leads.
