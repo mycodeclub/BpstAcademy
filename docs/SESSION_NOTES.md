@@ -44,6 +44,13 @@ This file summarises the work and decisions from the Claude Code sessions so far
    - Only the homepage and 404 are ported so far; other landing links use the future clean URLs (`/prebook`, `/courses/{slug}`) and 404 until B2. `sitemap.xml` is not served yet (generate it from the DB in B2); `llms.txt` still lists the old `.html` URLs.
    - Portal routes: `/portal/{area}/{controller}/{action}`, all require sign-in. Cookie auth is wired; **real sign-in comes with Identity in B1**. Until then a **Development-only "Sign in as demo user"** button exists (the endpoint returns 404 in any other environment). Remove it in B1.
    - Razor: literal `@` in copied HTML (JSON-LD `@context`, emails) must be written `@@`.
+8. **B0 skeleton (26 Sep, branch `feature/b0-skeleton`).** Projects `src/BpstEdu.Domain|Application|Infrastructure|Web`, `tests/BpstEdu.UnitTests|IntegrationTests`; `Directory.Build.props` (net10, nullable, warnings as errors), `Directory.Packages.props` (central versions), `global.json` (Microsoft.Testing.Platform runner for xunit v3).
+   - Persistence: `AppDbContext` with snake_case names, `numeric(12,2)` money, soft-delete query filter, `xmin` concurrency on `AuditableEntity`; `AuditingInterceptor` stamps created/updated/deleted by+at, turns deletes into soft deletes and writes `audit_log` rows. First migration `InitialCreate` (the `audit_log` table). Ids are GUID v7.
+   - Connection string only from `ConnectionStrings:Default` (user secrets locally, env var on the server). Development applies migrations at startup; production never does. `/health` checks the database.
+   - `docker-compose.yml`: Postgres 17, Adminer (:8081), Mailpit (:8025 / SMTP :1025), all bound to 127.0.0.1. `.env.example` → `.env`.
+   - CI `.github/workflows/ci.yml`: build, check migrations match the model, tests (Testcontainers Postgres).
+   - 11 tests pass (homepage SEO head, 404, portal redirects, login noindex, health, audit/soft delete, concurrency).
+   - **This PC: Windows Smart App Control blocks `BpstEdu.Domain.dll`** (the other DLLs load), so the app/tests/EF can't run natively here. Owner chose to use the .NET SDK Docker container for now (commands in §6). The owner decides about Smart App Control; don't change Windows security settings.
 
 ## 3. Photos: important honesty rules
 
@@ -63,13 +70,20 @@ This file summarises the work and decisions from the Claude Code sessions so far
 ## 5. Next steps
 
 1. Owner: get the SharkASP answers; decide the host.
-2. **Continue B0:** `src/BpstEdu.Web` exists with layouts; add `src/BpstEdu.Domain|Application|Infrastructure`, `tests/`, `docker-compose.yml` (Postgres, Adminer, Mailpit), `.env.example`, central package management, CI (build + test), first EF migration.
+2. Owner: decide how to run locally given Smart App Control (see §2 item 8); merge `feature/b0-skeleton` after review.
 3. B1: Identity, permissions/roles/scopes, NavRegistry sidebar, login, onboarding gate, per-page permission test.
 4. Then B2–B8 as in `docs/BACKEND_PLAN.md` §5.
 
 ## 6. Working notes for Claude sessions
 
-- Run the app: `dotnet run --project src/BpstEdu.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, use the demo sign-in button).
+- First-time setup: copy `.env.example` to `.env` and set a password; `docker compose up -d`; then
+  `dotnet user-secrets set "ConnectionStrings:Default" "Host=localhost;Port=5432;Database=bpstedu;Username=bpst;Password=<.env password>" --project src/BpstEdu.Web`.
+- Run the app: `dotnet run --project src/BpstEdu.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, use the demo sign-in button). Migrations apply on start in Development.
+- New migration: `dotnet ef migrations add <Name> --project src/BpstEdu.Infrastructure --startup-project src/BpstEdu.Web --output-dir Persistence/Migrations`.
+- Tests: `dotnet test --solution BpstEdu.slnx` (Docker must be running for integration tests).
+- Where Smart App Control blocks local DLLs, run the same commands in the SDK container (copy the repo without `bin/obj` so Windows build output isn't reused):
+  `MSYS_NO_PATHCONV=1 docker run --rm -v "<repo>:/repo:ro" -v bpstedu-nuget:/root/.nuget/packages -v /var/run/docker.sock:/var/run/docker.sock -e TESTCONTAINERS_HOST_OVERRIDE=host.docker.internal --add-host host.docker.internal:host-gateway mcr.microsoft.com/dotnet/sdk:10.0 bash -c 'mkdir /work && cd /repo && tar --exclude=bin --exclude=obj --exclude=NewLayout --exclude=.git -cf - . | tar -xf - -C /work && cd /work && dotnet test --solution BpstEdu.slnx'`
+  (for `ef migrations add`, mount the repo read-write and copy `Persistence/Migrations` back).
 - Preview the landing prototype locally: `cd "NewLayout/Landing Page UI" && python3 -m http.server 8765`, then open http://localhost:8765.
 - Chrome caches images and CSS aggressively during previews; fetch with `{cache: 'reload'}` or bump the `?v=` query when checking changes.
 - The header, footer and mega menu are repeated in every landing page; change them with a replace across all `.html` files.

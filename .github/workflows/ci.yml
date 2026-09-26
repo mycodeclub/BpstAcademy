@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Restore
+        run: dotnet restore BpstEdu.slnx
+      - name: Build
+        run: dotnet build BpstEdu.slnx --no-restore -c Release
+      - name: Check migrations match the model
+        run: |
+          dotnet tool install --global dotnet-ef --version 10.0.*
+          dotnet ef migrations has-pending-model-changes --project src/BpstEdu.Infrastructure --startup-project src/BpstEdu.Web --no-build --configuration Release
+      - name: Test (integration tests use Docker via Testcontainers)
+        run: dotnet test --solution BpstEdu.slnx --no-build --configuration Release

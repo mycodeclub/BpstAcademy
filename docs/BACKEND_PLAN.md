@@ -93,7 +93,7 @@ BpstEdu/
 
 | # | Deliverable |
 |---|---|
-| B0 | Solution skeleton, Docker Compose, CI (build + test), Postgres + first migration |
+| B0 | Solution skeleton, Docker Compose, CI (build + test), Postgres + first migration (**done 26 Sep**, branch `feature/b0-skeleton`) |
 | B1 | Identity, permissions/roles/scopes, NavRegistry, login, onboarding gate, per-page permission test |
 | B2 | Landing site on MVC: courses from DB, lead and pre-book forms saved, Razorpay ₹49 |
 | B3 | CRM: lead inbox, SLA job, pipeline, follow-ups, counselling, applications |

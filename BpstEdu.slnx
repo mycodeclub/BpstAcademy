@@ -1,5 +1,19 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="docker-compose.yml" />
+    <File Path=".env.example" />
+  </Folder>
   <Folder Name="/src/">
+    <Project Path="src/BpstEdu.Domain/BpstEdu.Domain.csproj" />
+    <Project Path="src/BpstEdu.Application/BpstEdu.Application.csproj" />
+    <Project Path="src/BpstEdu.Infrastructure/BpstEdu.Infrastructure.csproj" />
     <Project Path="src/BpstEdu.Web/BpstEdu.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BpstEdu.UnitTests/BpstEdu.UnitTests.csproj" />
+    <Project Path="tests/BpstEdu.IntegrationTests/BpstEdu.IntegrationTests.csproj" />
   </Folder>
 </Solution>
