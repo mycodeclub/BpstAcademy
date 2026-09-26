@@ -77,6 +77,7 @@ BpstEdu/
    └─ BpstEdu.IntegrationTests/     # Testcontainers Postgres
 ```
 
+- Layouts: `_Layout` (public site, SEO/GEO head from `SeoMeta`), `_AdminLayout` (portal shell, `noindex`, set by each area's `_ViewStart`), `_AuthLayout` (sign-in pages). Static files: `wwwroot/lib` (shared vendor), `wwwroot/site` (public), `wwwroot/portal` (portal).
 - `Me` replaces separate Student/Trainer/Employee areas; its dashboard shows widgets by permission.
 - The portal stays at `/portal/`, so the landing site's Login and Verify links keep working.
 - Current landing `.html` URLs get 301 redirects to clean MVC URLs; course and category pages come from the database.
@@ -92,7 +93,7 @@ BpstEdu/
 
 | # | Deliverable |
 |---|---|
-| B0 | Solution skeleton, Docker Compose, CI (build + test), Postgres + first migration |
+| B0 | Solution skeleton, Docker Compose, CI (build + test), Postgres + first migration (**done 26 Sep**, branch `feature/b0-skeleton`) |
 | B1 | Identity, permissions/roles/scopes, NavRegistry, login, onboarding gate, per-page permission test |
 | B2 | Landing site on MVC: courses from DB, lead and pre-book forms saved, Razorpay ₹49 |
 | B3 | CRM: lead inbox, SLA job, pipeline, follow-ups, counselling, applications |

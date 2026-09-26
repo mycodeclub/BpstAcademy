@@ -1,0 +1,41 @@
+# Local development services. Start: docker compose up -d   Stop: docker compose down
+# Values come from .env (copy .env.example to .env; .env is git-ignored).
+name: bpstedu
+
+services:
+  postgres:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-bpstedu}
+      POSTGRES_USER: ${POSTGRES_USER:-bpst}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  adminer:
+    # Database browser: http://localhost:8081 (System: PostgreSQL, Server: postgres)
+    image: adminer:latest
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:8080"
+    depends_on:
+      - postgres
+
+  mailpit:
+    # Catches every email the app sends: inbox at http://localhost:8025, SMTP on localhost:1025
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8025:8025"
+      - "127.0.0.1:1025:1025"
+
+volumes:
+  pgdata:

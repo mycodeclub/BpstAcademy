@@ -1,0 +1,26 @@
+@* Temporary static menu. In B1 it is built from NavRegistry, showing only the items the user has permission for. *@
+@{
+    var area = ViewContext.RouteData.Values["area"] as string;
+    var controller = ViewContext.RouteData.Values["controller"] as string;
+    string Active(string a, string c) =>
+        string.Equals(area, a, StringComparison.OrdinalIgnoreCase) && string.Equals(controller, c, StringComparison.OrdinalIgnoreCase)
+            ? "nav-item-link active" : "nav-item-link";
+}
+<aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <div class="sidebar-brand">
+        <a asp-area="Me" asp-controller="Dashboard" asp-action="Index" class="d-flex align-items-center gap-2 text-reset text-decoration-none">
+            <img src="~/portal/img/bpst-logo.svg" alt="BPST Software Education" class="logo-full logo-on-light">
+            <img src="~/portal/img/bpst-logo-white.svg" alt="BPST Software Education" class="logo-full logo-on-dark">
+            <img src="~/portal/img/favicon.svg" alt="BPST" class="logo-mark"><span class="brand-text nav-tag">Portal</span>
+        </a>
+    </div>
+    <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-section">
+            <div class="nav-section-title eyebrow">Overview</div>
+            <a asp-area="Me" asp-controller="Dashboard" asp-action="Index" class="@Active("Me", "Dashboard")" title="Dashboard">
+                <i class="bi bi-grid-1x2" aria-hidden="true"></i><span class="nav-label">Dashboard</span>
+            </a>
+        </div>
+    </nav>
+    <div class="sidebar-foot">BPST Software Education</div>
+</aside>
