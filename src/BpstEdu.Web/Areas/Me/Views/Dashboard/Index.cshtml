@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="page-head">
+    <div>
+        <h1>Welcome, @User.Identity?.Name</h1>
+        <p>Your dashboard fills in as each module is built (CRM, academics, fees, HR).</p>
+    </div>
+</div>
+
+<div class="row g-3 mb-3">
+    <div class="col-6 col-xl-3">
+        <div class="kpi">
+            <div class="kpi-label"><i class="bi bi-inbox"></i>New leads today</div>
+            <div class="kpi-value">–</div>
+            <div class="kpi-foot">CRM (B3)</div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="kpi">
+            <div class="kpi-label"><i class="bi bi-people"></i>Active students</div>
+            <div class="kpi-value">–</div>
+            <div class="kpi-foot">Academics (B4)</div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="kpi">
+            <div class="kpi-label"><i class="bi bi-cash-coin"></i>Collected today</div>
+            <div class="kpi-value">–</div>
+            <div class="kpi-foot">Finance (B5)</div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="kpi">
+            <div class="kpi-label"><i class="bi bi-person-badge"></i>Employees</div>
+            <div class="kpi-value">–</div>
+            <div class="kpi-foot">HR (B7)</div>
+        </div>
+    </div>
+</div>

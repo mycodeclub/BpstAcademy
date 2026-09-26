@@ -36,6 +36,14 @@ This file summarises the work and decisions from the Claude Code sessions so far
    - Technology logos in full colour, single border.
    - `bpst.css` / `bpst.js` links carry `?v=20260925` on all 83 pages for cache busting. Bump it when those files change.
 6. **"Course Course" fixed** in titles, meta descriptions, headings and FAQs of the C, C++, Java and Python course pages.
+7. **MVC boilerplate replaced (26 Sep).** The `dotnet new mvc` project moved from `Project/BpstEdu` to `src/BpstEdu.Web` (solution `BpstEdu.slnx` at repo root). Template pages, jQuery/validation and default Bootstrap removed. Three layouts:
+   - `_Layout` (default, public site): landing header/mega menu/footer as partials in `Views/Shared/Site/`; SEO from `SeoMeta` (`ViewData["Seo"]`), canonical/OG built from `Site:BaseUrl`; geo meta + organization JSON-LD site-wide; page JSON-LD in `@section Head`.
+   - `_AdminLayout` (portal, after login): server-rendered sidebar/top bar in `Views/Shared/Portal/`; `portal.js` = prototype `admin.js` minus role switcher and demo data. Sidebar is a static list until `NavRegistry` (B1).
+   - `_AuthLayout`: login / password pages.
+   - `wwwroot/`: `lib/` (Bootstrap 5.3.3, icons, Chart.js), `site/` (landing assets), `portal/` (portal assets).
+   - Only the homepage and 404 are ported so far; other landing links use the future clean URLs (`/prebook`, `/courses/{slug}`) and 404 until B2. `sitemap.xml` is not served yet (generate it from the DB in B2); `llms.txt` still lists the old `.html` URLs.
+   - Portal routes: `/portal/{area}/{controller}/{action}`, all require sign-in. Cookie auth is wired; **real sign-in comes with Identity in B1**. Until then a **Development-only "Sign in as demo user"** button exists (the endpoint returns 404 in any other environment). Remove it in B1.
+   - Razor: literal `@` in copied HTML (JSON-LD `@context`, emails) must be written `@@`.
 
 ## 3. Photos: important honesty rules
 
@@ -55,13 +63,14 @@ This file summarises the work and decisions from the Claude Code sessions so far
 ## 5. Next steps
 
 1. Owner: get the SharkASP answers; decide the host.
-2. **Start B0:** solution skeleton (`src/BpstEdu.Domain|Application|Infrastructure|Web`, `tests/`), `docker-compose.yml` (Postgres, Adminer, Mailpit), `.env.example`, central package management, CI (build + test), first EF migration.
+2. **Continue B0:** `src/BpstEdu.Web` exists with layouts; add `src/BpstEdu.Domain|Application|Infrastructure`, `tests/`, `docker-compose.yml` (Postgres, Adminer, Mailpit), `.env.example`, central package management, CI (build + test), first EF migration.
 3. B1: Identity, permissions/roles/scopes, NavRegistry sidebar, login, onboarding gate, per-page permission test.
 4. Then B2–B8 as in `docs/BACKEND_PLAN.md` §5.
 
 ## 6. Working notes for Claude sessions
 
-- Preview the landing site locally: `cd "NewLayout/Landing Page UI" && python3 -m http.server 8765`, then open http://localhost:8765.
+- Run the app: `dotnet run --project src/BpstEdu.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, use the demo sign-in button).
+- Preview the landing prototype locally: `cd "NewLayout/Landing Page UI" && python3 -m http.server 8765`, then open http://localhost:8765.
 - Chrome caches images and CSS aggressively during previews; fetch with `{cache: 'reload'}` or bump the `?v=` query when checking changes.
 - The header, footer and mega menu are repeated in every landing page; change them with a replace across all `.html` files.
 - Never commit real secrets (production DB passwords, live Razorpay keys). Local Docker uses throwaway passwords in a git-ignored `.env`.
