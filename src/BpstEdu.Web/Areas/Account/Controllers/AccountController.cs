@@ -1,52 +1,49 @@
-using System.Security.Claims;
+using BpstEdu.Infrastructure.Identity;
 using BpstEdu.Web.Areas.Account.Models;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BpstEdu.Web.Areas.Account.Controllers;
 
-/// <summary>
-/// Sign in / sign out for the portal. Real sign-in (ASP.NET Core Identity, BPST IDs, permissions) arrives in B1;
-/// until then only the Development-only demo sign-in works.
-/// </summary>
+/// <summary>Sign in / sign out for the portal. Users sign in with their email or BPST ID (the Identity user name).</summary>
 [Area("Account")]
 [AllowAnonymous]
-public class AccountController(IWebHostEnvironment env) : Controller
+public class AccountController(SignInManager<AppUser> signIn, UserManager<AppUser> users) : Controller
 {
     [HttpGet]
     public IActionResult Login(string? returnUrl = null) => View(new LoginInput { ReturnUrl = returnUrl });
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Login(LoginInput input)
+    public async Task<IActionResult> Login(LoginInput input)
     {
         if (ModelState.IsValid)
-            ModelState.AddModelError(string.Empty, "Sign-in is not available yet. It opens once user accounts are set up.");
+        {
+            var loginId = input.LoginId.Trim();
+            var user = loginId.Contains('@') ? await users.FindByEmailAsync(loginId) : await users.FindByNameAsync(loginId);
+            if (user is not null)
+            {
+                var result = await signIn.PasswordSignInAsync(user, input.Password, input.RememberMe, lockoutOnFailure: true);
+                if (result.Succeeded) return LocalRedirectOrHome(input.ReturnUrl);
+                if (result.IsLockedOut)
+                {
+                    ModelState.AddModelError(string.Empty, "Too many failed attempts. Try again in a few minutes.");
+                    input.Password = "";
+                    return View(input);
+                }
+            }
+            ModelState.AddModelError(string.Empty, "Email/ID or password is incorrect.");
+        }
         input.Password = "";
         return View(input);
-    }
-
-    /// <summary>Signs in a demo user with no roles or permissions so the portal layout can be seen. Development only.</summary>
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> DemoSignIn(string? returnUrl = null)
-    {
-        if (!env.IsDevelopment()) return NotFound();
-
-        var identity = new ClaimsIdentity(
-            [new Claim(ClaimTypes.NameIdentifier, "demo"), new Claim(ClaimTypes.Name, "Demo User")],
-            CookieAuthenticationDefaults.AuthenticationScheme);
-        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
-        return LocalRedirectOrHome(returnUrl);
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Logout()
     {
-        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        await signIn.SignOutAsync();
         return RedirectToAction(nameof(Login));
     }
 

@@ -42,7 +42,7 @@ This file summarises the work and decisions from the Claude Code sessions so far
    - `_AuthLayout`: login / password pages.
    - `wwwroot/`: `lib/` (Bootstrap 5.3.3, icons, Chart.js), `site/` (landing assets), `portal/` (portal assets).
    - Only the homepage and 404 are ported so far; other landing links use the future clean URLs (`/prebook`, `/courses/{slug}`) and 404 until B2. `sitemap.xml` is not served yet (generate it from the DB in B2); `llms.txt` still lists the old `.html` URLs.
-   - Portal routes: `/portal/{area}/{controller}/{action}`, all require sign-in. Cookie auth is wired; **real sign-in comes with Identity in B1**. Until then a **Development-only "Sign in as demo user"** button exists (the endpoint returns 404 in any other environment). Remove it in B1.
+   - Portal routes: `/portal/{area}/{controller}/{action}`, all require sign-in. Real sign-in with ASP.NET Core Identity since 26 Sep (see item 9); the demo sign-in button was removed.
    - Razor: literal `@` in copied HTML (JSON-LD `@context`, emails) must be written `@@`.
 8. **B0 skeleton (26 Sep, branch `feature/b0-skeleton`).** Projects `src/BpstEdu.Domain|Application|Infrastructure|Web`, `tests/BpstEdu.UnitTests|IntegrationTests`; `Directory.Build.props` (net10, nullable, warnings as errors), `Directory.Packages.props` (central versions), `global.json` (Microsoft.Testing.Platform runner for xunit v3).
    - Persistence: `AppDbContext` with snake_case names, `numeric(12,2)` money, soft-delete query filter, `xmin` concurrency on `AuditableEntity`; `AuditingInterceptor` stamps created/updated/deleted by+at, turns deletes into soft deletes and writes `audit_log` rows. First migration `InitialCreate` (the `audit_log` table). Ids are GUID v7.
@@ -51,6 +51,10 @@ This file summarises the work and decisions from the Claude Code sessions so far
    - CI `.github/workflows/ci.yml`: build, check migrations match the model, tests (Testcontainers Postgres).
    - 11 tests pass (homepage SEO head, 404, portal redirects, login noindex, health, audit/soft delete, concurrency).
    - **This PC: Windows Smart App Control blocks `BpstEdu.Domain.dll`** (the other DLLs load), so the app/tests/EF can't run natively here. Owner chose to use the .NET SDK Docker container for now (commands in §6). The owner decides about Smart App Control; don't change Windows security settings.
+9. **B1 start: Identity + admin seed (26 Sep, on `main`).** `AppUser`/`AppRole` (`IdentityUser<Guid>`, GUID v7) in `Infrastructure/Identity`; `AppDbContext` is an `IdentityDbContext`; tables `users`, `roles`, `user_roles`, `user_claims`, `user_logins`, `user_tokens`, `role_claims` (migration `AddIdentity`). `Application/Security/Permissions` (claim type `permission`; `users.manage`, `roles.manage` so far) and `DefaultRoles.Admin`. Login accepts email or user name (BPST ID), lockout after 5 failures.
+   - Seed: `dotnet run --project src/BpstEdu.Web -- seed` runs `IdentitySeeder` (Admin role with every permission + one admin user) and exits. Idempotent; creates no sample data. Admin email/password come from `Seed:AdminEmail` / `Seed:AdminPassword` in user secrets. Re-run it after adding permissions so Admin gets them.
+   - Live DB seeded 26 Sep with only that one admin (credentials in the owner's user secrets); nothing else. **Owner to do:** set a strong admin password once a change-password page exists, and rotate the DB password (it was pushed in commit `d68a00a`).
+   - Still to do in B1: `[HasPermission]` + policy provider, scopes, NavRegistry sidebar, onboarding gate, change-password / first-login flow, per-page permission test.
 
 ## 3. Photos: important honesty rules
 
@@ -70,20 +74,20 @@ This file summarises the work and decisions from the Claude Code sessions so far
 ## 5. Next steps
 
 1. Owner: get the SharkASP answers; decide the host.
-2. Owner: decide how to run locally given Smart App Control (see §2 item 8); merge `feature/b0-skeleton` after review.
-3. B1: Identity, permissions/roles/scopes, NavRegistry sidebar, login, onboarding gate, per-page permission test.
+2. Owner: change the admin password and rotate the live DB password (see §2 item 9).
+3. Rest of B1 (see §2 item 9).
 4. Then B2–B8 as in `docs/BACKEND_PLAN.md` §5.
 
 ## 6. Working notes for Claude sessions
 
-- Local development currently points at the live site4now database (owner's decision, 26 Sep): `ConnectionStrings:Default` is in the owner's user secrets, never in `appsettings*.json`. The old app's 26 tables were dropped that day; a full backup is at `C:\AllData\Backups\BpstEdu\live-before-cleanup-20260926-213317.dump` (outside the repo).
+- Local development currently points at the live site4now database (owner's decision, 26 Sep): `ConnectionStrings:Default` is in the owner's user secrets. Published (Production) builds read it from `src/BpstEdu.Web/appsettings.Production.json`, which is git-ignored and exists only on the owner's PC (or set env var `ConnectionStrings__Default` on the server). Never put it in `appsettings.json`. The old app's 26 tables were dropped that day; a full backup is at `C:\AllData\Backups\BpstEdu\live-before-cleanup-20260926-213317.dump` (outside the repo).
 - Apply migrations to that database deliberately, never by starting the app:
   `dotnet ef database update --project src/BpstEdu.Infrastructure --startup-project src/BpstEdu.Web --connection "<connection string from user secrets>"`
   (`dotnet ef` uses `DesignTimeDbContextFactory`, which ignores user secrets, so `--connection` is required). Run it after reviewing a new migration, before running the app.
 - Alternative: private Docker database. Copy `.env.example` to `.env` and set a password; `docker compose up -d`; then
   `dotnet user-secrets set "ConnectionStrings:Default" "Host=localhost;Port=5432;Database=bpstedu;Username=bpst;Password=<.env password>" --project src/BpstEdu.Web`
   and, for that private database only, `dotnet user-secrets set "Database:MigrateOnStartup" "true" --project src/BpstEdu.Web`.
-- Run the app: `dotnet run --project src/BpstEdu.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, use the demo sign-in button). Migrations apply on start only when `Database:MigrateOnStartup` is true (Development only).
+- Run the app: `dotnet run --project src/BpstEdu.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, sign in with the seeded admin). Migrations apply on start only when `Database:MigrateOnStartup` is true (Development only).
 - New migration: `dotnet ef migrations add <Name> --project src/BpstEdu.Infrastructure --startup-project src/BpstEdu.Web --output-dir Persistence/Migrations`.
 - Tests: `dotnet test --solution BpstEdu.slnx` (Docker must be running for integration tests).
 - Where Smart App Control blocks local DLLs, run the same commands in the SDK container (copy the repo without `bin/obj` so Windows build output isn't reused):

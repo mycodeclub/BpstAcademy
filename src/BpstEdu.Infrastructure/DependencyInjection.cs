@@ -1,7 +1,10 @@
 using BpstEdu.Application.Abstractions;
 using BpstEdu.Infrastructure.Common;
+using BpstEdu.Infrastructure.Identity;
 using BpstEdu.Infrastructure.Persistence;
 using BpstEdu.Infrastructure.Persistence.Interceptors;
+using BpstEdu.Infrastructure.Persistence.Seed;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +33,16 @@ public static class DependencyInjection
             ConfigureNpgsql(options, connectionString);
             options.AddInterceptors(sp.GetRequiredService<AuditingInterceptor>());
         });
+
+        // Users and roles; the sign-in cookie is configured by the web app.
+        services.AddIdentity<AppUser, AppRole>(o =>
+            {
+                o.User.RequireUniqueEmail = true;
+                o.Lockout.MaxFailedAccessAttempts = 5;
+            })
+            .AddEntityFrameworkStores<AppDbContext>()
+            .AddDefaultTokenProviders();
+        services.AddScoped<IdentitySeeder>();
 
         services.AddHealthChecks().AddDbContextCheck<AppDbContext>("database");
         return services;

@@ -45,7 +45,6 @@ public class SiteAndPortalTests(AppFactory factory)
         var html = await Client().GetStringAsync("/portal/account/login", TestContext.Current.CancellationToken);
 
         Assert.Contains("noindex, nofollow", html);
-        Assert.DoesNotContain("Sign in as demo user", html); // Development only
     }
 
     [Fact]

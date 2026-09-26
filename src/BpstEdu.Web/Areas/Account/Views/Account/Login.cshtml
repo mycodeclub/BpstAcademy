@@ -1,5 +1,4 @@
 @model LoginInput
-@inject IWebHostEnvironment Env
 @{
     ViewData["Title"] = "Sign in";
 }
@@ -34,16 +33,6 @@
             <button class="btn btn-primary w-100" type="submit">Sign in</button>
             <p class="caption mt-2 mb-0">New students and employees get a temporary password by email and set their own at first sign-in.</p>
         </form>
-
-        @if (Env.IsDevelopment())
-        {
-            <hr class="my-4">
-            <div class="eyebrow mb-2">Development only</div>
-            <form asp-action="DemoSignIn" method="post">
-                <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
-                <button class="btn btn-outline-secondary w-100" type="submit"><i class="bi bi-person-badge me-1"></i>Sign in as demo user</button>
-            </form>
-        }
 
         <nav class="d-flex flex-wrap gap-3 justify-content-center small mt-4" aria-label="More">
             <a href="/"><i class="bi bi-arrow-left me-1"></i>BPST Edu website</a>
