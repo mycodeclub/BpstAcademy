@@ -46,7 +46,7 @@ This file summarises the work and decisions from the Claude Code sessions so far
    - Razor: literal `@` in copied HTML (JSON-LD `@context`, emails) must be written `@@`.
 8. **B0 skeleton (26 Sep, branch `feature/b0-skeleton`).** Projects `src/BpstEdu.Domain|Application|Infrastructure|Web`, `tests/BpstEdu.UnitTests|IntegrationTests`; `Directory.Build.props` (net10, nullable, warnings as errors), `Directory.Packages.props` (central versions), `global.json` (Microsoft.Testing.Platform runner for xunit v3).
    - Persistence: `AppDbContext` with snake_case names, `numeric(12,2)` money, soft-delete query filter, `xmin` concurrency on `AuditableEntity`; `AuditingInterceptor` stamps created/updated/deleted by+at, turns deletes into soft deletes and writes `audit_log` rows. First migration `InitialCreate` (the `audit_log` table). Ids are GUID v7.
-   - Connection string only from `ConnectionStrings:Default` (user secrets locally, env var on the server). Development applies migrations at startup; production never does. `/health` checks the database.
+   - Connection string only from `ConnectionStrings:Default` (user secrets locally, env var on the server). Development applies migrations at startup only when `Database:MigrateOnStartup` is true (opt-in, for a private Docker database); production never does. `/health` checks the database.
    - `docker-compose.yml`: Postgres 17, Adminer (:8081), Mailpit (:8025 / SMTP :1025), all bound to 127.0.0.1. `.env.example` → `.env`.
    - CI `.github/workflows/ci.yml`: build, check migrations match the model, tests (Testcontainers Postgres).
    - 11 tests pass (homepage SEO head, 404, portal redirects, login noindex, health, audit/soft delete, concurrency).
@@ -76,9 +76,14 @@ This file summarises the work and decisions from the Claude Code sessions so far
 
 ## 6. Working notes for Claude sessions
 
-- First-time setup: copy `.env.example` to `.env` and set a password; `docker compose up -d`; then
-  `dotnet user-secrets set "ConnectionStrings:Default" "Host=localhost;Port=5432;Database=bpstedu;Username=bpst;Password=<.env password>" --project src/BpstEdu.Web`.
-- Run the app: `dotnet run --project src/BpstEdu.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, use the demo sign-in button). Migrations apply on start in Development.
+- Local development currently points at the live site4now database (owner's decision, 26 Sep): `ConnectionStrings:Default` is in the owner's user secrets, never in `appsettings*.json`. The old app's 26 tables were dropped that day; a full backup is at `C:\AllData\Backups\BpstEdu\live-before-cleanup-20260926-213317.dump` (outside the repo).
+- Apply migrations to that database deliberately, never by starting the app:
+  `dotnet ef database update --project src/BpstEdu.Infrastructure --startup-project src/BpstEdu.Web --connection "<connection string from user secrets>"`
+  (`dotnet ef` uses `DesignTimeDbContextFactory`, which ignores user secrets, so `--connection` is required). Run it after reviewing a new migration, before running the app.
+- Alternative: private Docker database. Copy `.env.example` to `.env` and set a password; `docker compose up -d`; then
+  `dotnet user-secrets set "ConnectionStrings:Default" "Host=localhost;Port=5432;Database=bpstedu;Username=bpst;Password=<.env password>" --project src/BpstEdu.Web`
+  and, for that private database only, `dotnet user-secrets set "Database:MigrateOnStartup" "true" --project src/BpstEdu.Web`.
+- Run the app: `dotnet run --project src/BpstEdu.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, use the demo sign-in button). Migrations apply on start only when `Database:MigrateOnStartup` is true (Development only).
 - New migration: `dotnet ef migrations add <Name> --project src/BpstEdu.Infrastructure --startup-project src/BpstEdu.Web --output-dir Persistence/Migrations`.
 - Tests: `dotnet test --solution BpstEdu.slnx` (Docker must be running for integration tests).
 - Where Smart App Control blocks local DLLs, run the same commands in the SDK container (copy the repo without `bin/obj` so Windows build output isn't reused):

@@ -37,9 +37,10 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Local convenience only: bring the Docker database up to date on start.
-// Production runs migrations as a separate deploy step (EF migration bundle), never at startup.
-if (app.Environment.IsDevelopment())
+// Opt-in local convenience for a private database (Docker): set Database:MigrateOnStartup=true in user secrets.
+// Off by default so a machine pointed at a shared or live database never changes its schema by starting up;
+// those get migrations as a deliberate step (dotnet ef database update / EF migration bundle).
+if (app.Environment.IsDevelopment() && app.Configuration.GetValue<bool>("Database:MigrateOnStartup"))
 {
     using var scope = app.Services.CreateScope();
     await scope.ServiceProvider.GetRequiredService<AppDbContext>().Database.MigrateAsync();
