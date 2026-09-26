@@ -7,10 +7,10 @@
     <File Path=".env.example" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="src/BpstEdu.Web/BpstEdu.Web.csproj" />
     <Project Path="src/BpstEdu.Domain/BpstEdu.Domain.csproj" />
     <Project Path="src/BpstEdu.Application/BpstEdu.Application.csproj" />
     <Project Path="src/BpstEdu.Infrastructure/BpstEdu.Infrastructure.csproj" />
-    <Project Path="src/BpstEdu.Web/BpstEdu.Web.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/BpstEdu.UnitTests/BpstEdu.UnitTests.csproj" />
