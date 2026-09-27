@@ -21,4 +21,9 @@
     <InternalsVisibleTo Include="BpstAcademy.IntegrationTests" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- Local settings hold secrets; never ship them. -->
+    <Content Update="appsettings.*.local.json" CopyToOutputDirectory="Never" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+
 </Project>

@@ -11,6 +11,11 @@ using Microsoft.Extensions.WebEncoders;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Git-ignored local settings in the project folder (connection strings, seed admin). User secrets live in each
+// machine's profile, so a folder shared between machines (Mac + Windows VM) needs this file to carry them.
+if (builder.Environment.IsDevelopment())
+    builder.Configuration.AddJsonFile("appsettings.Development.local.json", optional: true, reloadOnChange: true);
+
 builder.Services.Configure<SiteOptions>(builder.Configuration.GetSection(SiteOptions.SectionName));
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddHttpContextAccessor();
