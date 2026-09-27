@@ -1,7 +1,7 @@
 # Session Notes (for resuming on another machine)
 
-**Last updated:** 26 Sep 2026
-**Repo:** https://github.com/mycodeclub/BpstEdu (public, branch `main`)
+**Last updated:** 27 Sep 2026
+**Repo:** https://github.com/mycodeclub/BpstAcademy (public, branch `main`). The old repo `mycodeclub/BpstEdu` is superseded; the owner may delete it later.
 
 This file summarises the work and decisions from the Claude Code sessions so far, so work can resume from any machine. Read it together with `docs/BACKEND_PLAN.md`.
 
@@ -36,7 +36,7 @@ This file summarises the work and decisions from the Claude Code sessions so far
    - Technology logos in full colour, single border.
    - `bpst.css` / `bpst.js` links carry `?v=20260925` on all 83 pages for cache busting. Bump it when those files change.
 6. **"Course Course" fixed** in titles, meta descriptions, headings and FAQs of the C, C++, Java and Python course pages.
-7. **MVC boilerplate replaced (26 Sep).** The `dotnet new mvc` project moved from `Project/BpstEdu` to `src/BpstEdu.Web` (solution `BpstEdu.slnx` at repo root). Template pages, jQuery/validation and default Bootstrap removed. Three layouts:
+7. **MVC boilerplate replaced (26 Sep).** The `dotnet new mvc` project moved from `Project/BpstEdu` to `src/BpstAcademy.Web` (solution `BpstAcademy.slnx` at repo root). Template pages, jQuery/validation and default Bootstrap removed. Three layouts:
    - `_Layout` (default, public site): landing header/mega menu/footer as partials in `Views/Shared/Site/`; SEO from `SeoMeta` (`ViewData["Seo"]`), canonical/OG built from `Site:BaseUrl`; geo meta + organization JSON-LD site-wide; page JSON-LD in `@section Head`.
    - `_AdminLayout` (portal, after login): server-rendered sidebar/top bar in `Views/Shared/Portal/`; `portal.js` = prototype `admin.js` minus role switcher and demo data. Sidebar is a static list until `NavRegistry` (B1).
    - `_AuthLayout`: login / password pages.
@@ -44,17 +44,18 @@ This file summarises the work and decisions from the Claude Code sessions so far
    - Only the homepage and 404 are ported so far; other landing links use the future clean URLs (`/prebook`, `/courses/{slug}`) and 404 until B2. `sitemap.xml` is not served yet (generate it from the DB in B2); `llms.txt` still lists the old `.html` URLs.
    - Portal routes: `/portal/{area}/{controller}/{action}`, all require sign-in. Real sign-in with ASP.NET Core Identity since 26 Sep (see item 9); the demo sign-in button was removed.
    - Razor: literal `@` in copied HTML (JSON-LD `@context`, emails) must be written `@@`.
-8. **B0 skeleton (26 Sep, branch `feature/b0-skeleton`).** Projects `src/BpstEdu.Domain|Application|Infrastructure|Web`, `tests/BpstEdu.UnitTests|IntegrationTests`; `Directory.Build.props` (net10, nullable, warnings as errors), `Directory.Packages.props` (central versions), `global.json` (Microsoft.Testing.Platform runner for xunit v3).
+8. **B0 skeleton (26 Sep, branch `feature/b0-skeleton`).** Projects `src/BpstAcademy.Domain|Application|Infrastructure|Web`, `tests/BpstAcademy.UnitTests|IntegrationTests`; `Directory.Build.props` (net10, nullable, warnings as errors), `Directory.Packages.props` (central versions), `global.json` (Microsoft.Testing.Platform runner for xunit v3).
    - Persistence: `AppDbContext` with snake_case names, `numeric(12,2)` money, soft-delete query filter, `xmin` concurrency on `AuditableEntity`; `AuditingInterceptor` stamps created/updated/deleted by+at, turns deletes into soft deletes and writes `audit_log` rows. First migration `InitialCreate` (the `audit_log` table). Ids are GUID v7.
    - Connection string only from `ConnectionStrings:Default` (user secrets locally, env var on the server). Development applies migrations at startup only when `Database:MigrateOnStartup` is true (opt-in, for a private Docker database); production never does. `/health` checks the database.
    - `docker-compose.yml`: Postgres 17, Adminer (:8081), Mailpit (:8025 / SMTP :1025), all bound to 127.0.0.1. `.env.example` → `.env`.
    - CI `.github/workflows/ci.yml`: build, check migrations match the model, tests (Testcontainers Postgres).
    - 11 tests pass (homepage SEO head, 404, portal redirects, login noindex, health, audit/soft delete, concurrency).
-   - **This PC: Windows Smart App Control blocks `BpstEdu.Domain.dll`** (the other DLLs load), so the app/tests/EF can't run natively here. Owner chose to use the .NET SDK Docker container for now (commands in §6). The owner decides about Smart App Control; don't change Windows security settings.
+   - **This PC: Windows Smart App Control blocks `BpstAcademy.Domain.dll`** (the other DLLs load), so the app/tests/EF can't run natively here. Owner chose to use the .NET SDK Docker container for now (commands in §6). The owner decides about Smart App Control; don't change Windows security settings.
 9. **B1 start: Identity + admin seed (26 Sep, on `main`).** `AppUser`/`AppRole` (`IdentityUser<Guid>`, GUID v7) in `Infrastructure/Identity`; `AppDbContext` is an `IdentityDbContext`; tables `users`, `roles`, `user_roles`, `user_claims`, `user_logins`, `user_tokens`, `role_claims` (migration `AddIdentity`). `Application/Security/Permissions` (claim type `permission`; `users.manage`, `roles.manage` so far) and `DefaultRoles.Admin`. Login accepts email or user name (BPST ID), lockout after 5 failures.
-   - Seed: `dotnet run --project src/BpstEdu.Web -- seed` runs `IdentitySeeder` (Admin role with every permission + one admin user) and exits. Idempotent; creates no sample data. Admin email/password come from `Seed:AdminEmail` / `Seed:AdminPassword` in user secrets. Re-run it after adding permissions so Admin gets them.
+   - Seed: `dotnet run --project src/BpstAcademy.Web -- seed` runs `IdentitySeeder` (Admin role with every permission + one admin user) and exits. Idempotent; creates no sample data. Admin email/password come from `Seed:AdminEmail` / `Seed:AdminPassword` in user secrets. Re-run it after adding permissions so Admin gets them.
    - Live DB seeded 26 Sep with only that one admin (credentials in the owner's user secrets); nothing else. **Owner to do:** set a strong admin password once a change-password page exists, and rotate the DB password (it was pushed in commit `d68a00a`).
    - Still to do in B1: `[HasPermission]` + policy provider, scopes, NavRegistry sidebar, onboarding gate, change-password / first-login flow, per-page permission test.
+10. **Renamed BpstEdu to BpstAcademy (27 Sep).** Solution, projects, namespaces, CI and docs are now `BpstAcademy.*`, and the public brand text "BPST Edu" is now "BPST Academy". Kept on purpose: `UserSecretsId` `bpstedu-web` (the owner's secrets hold the live connection string), the Postgres/Compose/volume names `bpstedu`, and the public file names `BPST_Edu_*.pdf` and `og-bpst-edu.png`. **Still to do:** regenerate the brochure PDFs, print collateral and OG image, which still show "BPST Edu" inside. Code pushed to the new repo `mycodeclub/BpstAcademy`.
 
 ## 3. Photos: important honesty rules
 
@@ -80,18 +81,18 @@ This file summarises the work and decisions from the Claude Code sessions so far
 
 ## 6. Working notes for Claude sessions
 
-- Local development currently points at the live site4now database (owner's decision, 26 Sep): `ConnectionStrings:Default` is in the owner's user secrets. Published (Production) builds read it from `src/BpstEdu.Web/appsettings.Production.json`, which is git-ignored and exists only on the owner's PC (or set env var `ConnectionStrings__Default` on the server). Never put it in `appsettings.json`. The old app's 26 tables were dropped that day; a full backup is at `C:\AllData\Backups\BpstEdu\live-before-cleanup-20260926-213317.dump` (outside the repo).
+- Local development currently points at the live site4now database (owner's decision, 26 Sep): `ConnectionStrings:Default` is in the owner's user secrets. Published (Production) builds read it from `src/BpstAcademy.Web/appsettings.Production.json`, which is git-ignored and exists only on the owner's PC (or set env var `ConnectionStrings__Default` on the server). Never put it in `appsettings.json`. The old app's 26 tables were dropped that day; a full backup is at `C:\AllData\Backups\BpstAcademy\live-before-cleanup-20260926-213317.dump` (outside the repo).
 - Apply migrations to that database deliberately, never by starting the app:
-  `dotnet ef database update --project src/BpstEdu.Infrastructure --startup-project src/BpstEdu.Web --connection "<connection string from user secrets>"`
+  `dotnet ef database update --project src/BpstAcademy.Infrastructure --startup-project src/BpstAcademy.Web --connection "<connection string from user secrets>"`
   (`dotnet ef` uses `DesignTimeDbContextFactory`, which ignores user secrets, so `--connection` is required). Run it after reviewing a new migration, before running the app.
 - Alternative: private Docker database. Copy `.env.example` to `.env` and set a password; `docker compose up -d`; then
-  `dotnet user-secrets set "ConnectionStrings:Default" "Host=localhost;Port=5432;Database=bpstedu;Username=bpst;Password=<.env password>" --project src/BpstEdu.Web`
-  and, for that private database only, `dotnet user-secrets set "Database:MigrateOnStartup" "true" --project src/BpstEdu.Web`.
-- Run the app: `dotnet run --project src/BpstEdu.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, sign in with the seeded admin). Migrations apply on start only when `Database:MigrateOnStartup` is true (Development only).
-- New migration: `dotnet ef migrations add <Name> --project src/BpstEdu.Infrastructure --startup-project src/BpstEdu.Web --output-dir Persistence/Migrations`.
-- Tests: `dotnet test --solution BpstEdu.slnx` (Docker must be running for integration tests).
+  `dotnet user-secrets set "ConnectionStrings:Default" "Host=localhost;Port=5432;Database=bpstedu;Username=bpst;Password=<.env password>" --project src/BpstAcademy.Web`
+  and, for that private database only, `dotnet user-secrets set "Database:MigrateOnStartup" "true" --project src/BpstAcademy.Web`.
+- Run the app: `dotnet run --project src/BpstAcademy.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, sign in with the seeded admin). Migrations apply on start only when `Database:MigrateOnStartup` is true (Development only).
+- New migration: `dotnet ef migrations add <Name> --project src/BpstAcademy.Infrastructure --startup-project src/BpstAcademy.Web --output-dir Persistence/Migrations`.
+- Tests: `dotnet test --solution BpstAcademy.slnx` (Docker must be running for integration tests).
 - Where Smart App Control blocks local DLLs, run the same commands in the SDK container (copy the repo without `bin/obj` so Windows build output isn't reused):
-  `MSYS_NO_PATHCONV=1 docker run --rm -v "<repo>:/repo:ro" -v bpstedu-nuget:/root/.nuget/packages -v /var/run/docker.sock:/var/run/docker.sock -e TESTCONTAINERS_HOST_OVERRIDE=host.docker.internal --add-host host.docker.internal:host-gateway mcr.microsoft.com/dotnet/sdk:10.0 bash -c 'mkdir /work && cd /repo && tar --exclude=bin --exclude=obj --exclude=NewLayout --exclude=.git -cf - . | tar -xf - -C /work && cd /work && dotnet test --solution BpstEdu.slnx'`
+  `MSYS_NO_PATHCONV=1 docker run --rm -v "<repo>:/repo:ro" -v bpstedu-nuget:/root/.nuget/packages -v /var/run/docker.sock:/var/run/docker.sock -e TESTCONTAINERS_HOST_OVERRIDE=host.docker.internal --add-host host.docker.internal:host-gateway mcr.microsoft.com/dotnet/sdk:10.0 bash -c 'mkdir /work && cd /repo && tar --exclude=bin --exclude=obj --exclude=NewLayout --exclude=.git -cf - . | tar -xf - -C /work && cd /work && dotnet test --solution BpstAcademy.slnx'`
   (for `ef migrations add`, mount the repo read-write and copy `Persistence/Migrations` back).
 - Preview the landing prototype locally: `cd "NewLayout/Landing Page UI" && python3 -m http.server 8765`, then open http://localhost:8765.
 - Chrome caches images and CSS aggressively during previews; fetch with `{cache: 'reload'}` or bump the `?v=` query when checking changes.

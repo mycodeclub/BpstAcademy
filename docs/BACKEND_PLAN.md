@@ -1,4 +1,4 @@
-# BPST Edu Backend: Plan
+# BPST Academy Backend: Plan
 
 **Status:** agreed direction, development starting. Production host not chosen yet (see §6).
 **Date:** 26 Sep 2026
@@ -45,25 +45,25 @@ Identity details: students and employees sign in with their ID (`BPST26S0001`, `
 ## 3. Solution structure
 
 ```
-BpstEdu/
-├─ BpstEdu.slnx
+BpstAcademy/
+├─ BpstAcademy.slnx
 ├─ docker-compose.yml               # postgres, adminer, mailpit
 ├─ .env.example                     # connection strings and keys (real values never committed)
 ├─ Directory.Build.props            # nullable, warnings as errors, target framework
 ├─ Directory.Packages.props         # central NuGet versions
 ├─ src/
-│  ├─ BpstEdu.Domain/               # entities + status rules, no dependencies
+│  ├─ BpstAcademy.Domain/               # entities + status rules, no dependencies
 │  │  ├─ Common/  Crm/  Academics/  Finance/  People/  Hr/  Verification/
-│  ├─ BpstEdu.Application/          # services, DTOs, validators
+│  ├─ BpstAcademy.Application/          # services, DTOs, validators
 │  │  ├─ Security/                  # Permissions, DefaultRoles, DataScope, ICurrentUser
 │  │  ├─ Crm/  Academics/  Finance/  Hr/  Verification/  Placement/
 │  │  └─ Abstractions/              # IEmailSender, IPaymentGateway, IPdfRenderer, IFileStore, IClock
-│  ├─ BpstEdu.Infrastructure/
+│  ├─ BpstAcademy.Infrastructure/
 │  │  ├─ Persistence/               # AppDbContext, Configurations, Migrations, Interceptors, Seed
 │  │  ├─ Identity/                  # AppUser, AppRole, PermissionClaimsFactory
 │  │  ├─ Payments/Razorpay/  Email/  Pdf/  Storage/  Jobs/
 │  │  └─ DependencyInjection.cs
-│  └─ BpstEdu.Web/
+│  └─ BpstAcademy.Web/
 │     ├─ Controllers/               # public site: Home, Courses, Categories, Prebook, Contact, Verify
 │     ├─ Views/
 │     ├─ Areas/                     # routed under /portal/{area}/{controller}/{action}
@@ -73,8 +73,8 @@ BpstEdu/
 │     ├─ Navigation/                # NavRegistry
 │     └─ wwwroot/                   # landing + portal assets
 └─ tests/
-   ├─ BpstEdu.UnitTests/
-   └─ BpstEdu.IntegrationTests/     # Testcontainers Postgres
+   ├─ BpstAcademy.UnitTests/
+   └─ BpstAcademy.IntegrationTests/     # Testcontainers Postgres
 ```
 
 - Layouts: `_Layout` (public site, SEO/GEO head from `SeoMeta`), `_AdminLayout` (portal shell, `noindex`, set by each area's `_ViewStart`), `_AuthLayout` (sign-in pages). Static files: `wwwroot/lib` (shared vendor), `wwwroot/site` (public), `wwwroot/portal` (portal).

@@ -1,4 +1,4 @@
-# BPST Edu: HTML + Bootstrap 5 Template
+# BPST Academy: HTML + Bootstrap 5 Template
 
 This is a plain HTML/CSS/JS template. It needs no build step and no Node.js: edit the `.html` files directly and upload the folder to any web host.
 

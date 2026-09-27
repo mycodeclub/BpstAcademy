@@ -1,4 +1,4 @@
-# CLAUDE.md: BPST Edu Admin Panel (HTML + Bootstrap template)
+# CLAUDE.md: BPST Academy Admin Panel (HTML + Bootstrap template)
 
 ## What this is
 A static, clickable **prototype** of the BPST Software Education business-management system. It covers CRM with a 1-hour lead SLA, admissions, batches, attendance, fees & GST, document verification, ID cards & certificates, HR & payroll, and trainer/student/employee portals.

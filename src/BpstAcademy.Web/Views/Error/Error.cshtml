@@ -1,0 +1,22 @@
+@model int
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Something went wrong | BPST Academy",
+        Description = "Something went wrong on our side. Please try again, or call us on +91 82991 01616.",
+        Robots = SeoMeta.NoIndexRobots,
+    };
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <h1>Something went wrong</h1>
+    <p class="lead mb-0">Sorry, we could not load this page (error @Model). Please try again in a moment.</p>
+  </div>
+</section>
+<section class="py-5 bpst-section-light">
+  <div class="container d-flex flex-wrap gap-2">
+    <a class="btn btn-bpst-gold fw-bold" href="/">Go to the homepage</a>
+    <a class="btn btn-outline-secondary" href="tel:+918299101616"><i class="bi bi-telephone-fill"></i> +91 82991 01616</a>
+  </div>
+</section>

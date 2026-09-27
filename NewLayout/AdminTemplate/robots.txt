@@ -1,4 +1,4 @@
-# BPST Edu portal (student, staff and admin). Private pages are not for search engines or AI crawlers.
+# BPST Academy portal (student, staff and admin). Private pages are not for search engines or AI crawlers.
 # Only the public certificate check may be indexed.
 User-agent: *
 Allow: /pages/public/

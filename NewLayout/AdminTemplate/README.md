@@ -1,4 +1,4 @@
-# BPST Edu Admin Panel: HTML + Bootstrap prototype
+# BPST Academy Admin Panel: HTML + Bootstrap prototype
 
 A clickable prototype of the BPST Software Education admin panel: CRM with a 1-hour lead SLA, admissions, fees & GST, verification, HR & payroll, and trainer, student and employee portals. It uses **demo data only**. There is no backend yet.
 

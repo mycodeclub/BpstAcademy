@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="docker-compose.yml" />
+    <File Path=".env.example" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/BpstAcademy.Web/BpstAcademy.Web.csproj" />
+    <Project Path="src/BpstAcademy.Domain/BpstAcademy.Domain.csproj" />
+    <Project Path="src/BpstAcademy.Application/BpstAcademy.Application.csproj" />
+    <Project Path="src/BpstAcademy.Infrastructure/BpstAcademy.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BpstAcademy.UnitTests/BpstAcademy.UnitTests.csproj" />
+    <Project Path="tests/BpstAcademy.IntegrationTests/BpstAcademy.IntegrationTests.csproj" />
+  </Folder>
+</Solution>

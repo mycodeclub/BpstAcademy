@@ -1,4 +1,4 @@
-# BPST Edu — search engines and AI assistants are welcome
+# BPST Academy — search engines and AI assistants are welcome
 # /portal/ is the private student & staff portal; only its public certificate check is crawlable
 User-agent: *
 Allow: /

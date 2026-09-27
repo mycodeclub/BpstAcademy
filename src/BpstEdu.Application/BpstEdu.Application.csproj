@@ -1,6 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <!-- Services, DTOs, validators and the abstractions Infrastructure implements. -->
-  <ItemGroup>
-    <ProjectReference Include="..\BpstEdu.Domain\BpstEdu.Domain.csproj" />
-  </ItemGroup>
-</Project>

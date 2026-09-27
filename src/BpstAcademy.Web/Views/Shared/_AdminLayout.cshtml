@@ -1,0 +1,39 @@
+@* Portal layout (from NewLayout/AdminTemplate) for every page after login: CRM, academics, finance, HR and the "Me" pages.
+   Never indexed. Views set ViewData["Title"]; the sidebar and top bar are server-rendered partials. *@
+@{
+    var title = ViewData["Title"] as string ?? "Portal";
+}
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>@title · BPST Academy</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0062ff" />
+    <link rel="icon" href="~/portal/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="~/portal/img/icon-192.png" />
+    <script>try{var t=localStorage.getItem('bpst.theme');if(t)document.documentElement.setAttribute('data-bs-theme',t)}catch(e){}</script>
+    <link rel="stylesheet" href="~/lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/portal/css/admin.css" asp-append-version="true" />
+    @await RenderSectionAsync("Head", required: false)
+</head>
+<body>
+    <div class="app">
+        <a class="visually-hidden-focusable" href="#main">Skip to content</a>
+        <partial name="Portal/_Sidebar" />
+        <div class="sidebar-backdrop" data-sidebar-close></div>
+        <div class="main">
+            <partial name="Portal/_Topbar" model="title" />
+            <main id="main" class="content" tabindex="-1">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="~/portal/js/portal.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,4 +1,4 @@
-# BPST Edu Admin Panel: Brand & UI Rules
+# BPST Academy Admin Panel: Brand & UI Rules
 
 The admin panel is a **work tool**, not a marketing page: plain white, Apple-like and calm. The only things carried over from the landing site are the **logo** and **one accent colour** (BPST blue `#0062ff`). Gradients, glows, the Outfit/Plus Jakarta display fonts and the heavy shadows of the landing site are **not** used here.
 

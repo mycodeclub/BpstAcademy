@@ -1,0 +1,86 @@
+@* Public website layout (from NewLayout/Landing Page UI). Open to everyone; built for search engines and AI answers:
+   each page sets ViewData["Seo"] (SeoMeta) and may add page JSON-LD in @section Head. *@
+@inject IOptions<SiteOptions> SiteOptionsAccessor
+@{
+    var site = SiteOptionsAccessor.Value;
+    var seo = ViewData["Seo"] as SeoMeta ?? new SeoMeta
+    {
+        Title = "BPST Academy Lucknow: IT, AI & Software Courses",
+        Description = "Practical IT, AI and software courses in Lucknow and online, with live projects and job assistance.",
+        Robots = SeoMeta.NoIndexRobots,
+    };
+    var canonical = seo.CanonicalPath is null ? null : site.Absolute(seo.CanonicalPath);
+    var ogTitle = seo.OgTitle ?? seo.Title;
+    var ogDescription = seo.OgDescription ?? seo.Description;
+    var ogImage = site.Absolute(seo.OgImage);
+}
+<!doctype html>
+<html lang="en-IN" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@seo.Title</title>
+    <meta name="description" content="@seo.Description" />
+    <meta name="robots" content="@seo.Robots" />
+    @if (canonical is not null)
+    {
+        <link rel="canonical" href="@canonical" />
+        <link rel="alternate" hreflang="en-IN" href="@canonical" />
+        <link rel="alternate" hreflang="x-default" href="@canonical" />
+        <meta property="og:url" content="@canonical" />
+    }
+    <meta name="author" content="BPST Software Education" />
+    <meta name="theme-color" content="#081630" />
+    <meta name="geo.region" content="IN-UP" />
+    <meta name="geo.placename" content="Lucknow" />
+    <meta name="geo.position" content="26.9314862;80.9063644" />
+    <meta name="ICBM" content="26.9314862, 80.9063644" />
+    <meta property="og:type" content="@seo.OgType" />
+    <meta property="og:site_name" content="BPST Academy" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="@ogTitle" />
+    <meta property="og:description" content="@ogDescription" />
+    <meta property="og:image" content="@ogImage" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    @if (seo.OgImageAlt is not null)
+    {
+        <meta property="og:image:alt" content="@seo.OgImageAlt" />
+    }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@ogTitle" />
+    <meta name="twitter:description" content="@ogDescription" />
+    <meta name="twitter:image" content="@ogImage" />
+    <link rel="icon" href="~/site/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="~/site/img/apple-touch-icon.png" />
+    <link rel="manifest" href="~/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@@400;500;600;700&family=Outfit:wght@@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="~/lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/site/css/bpst-base.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/site/css/bpst.css" asp-append-version="true" />
+    <partial name="Site/_SiteJsonLd" />
+    @await RenderSectionAsync("Head", required: false)
+</head>
+<body class="bpst-body" id="top" data-root="/" data-offer-deadline="@site.OfferDeadline.ToString("yyyy-MM-dd'T'HH:mm:sszzz")">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <partial name="Site/_OfferStrip" />
+    <partial name="Site/_Topbar" />
+    <partial name="Site/_Header" />
+
+    <main id="main-content">
+        @RenderBody()
+    </main>
+
+    <partial name="Site/_Footer" />
+    <partial name="Site/_MobileActions" />
+
+    <script src="~/lib/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="~/site/js/config.js" asp-append-version="true" defer></script>
+    <script src="~/site/js/bpst.js" asp-append-version="true" defer></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BPST Edu — site behaviour (vanilla JS, Bootstrap 5 bundle)
+   BPST Academy — site behaviour (vanilla JS, Bootstrap 5 bundle)
    Offer countdown · navbar · tabs · hero/sandbox · matcher · filters ·
    YouTube facade · ₹49 pre-booking with Razorpay + UPI QR · enquiry form
    ========================================================================== */
@@ -310,7 +310,7 @@
 
     function done(method, id) {
       sendLead(Object.assign({ form_type: 'prebook_paid', payment_method: method, payment_id: id, amount: CFG.amount || 49 }, booking));
-      const msg = `Hello BPST Edu, I pre-booked "${booking.course_title}" for ₹49 (Diwali offer).\nBooking ref: ${booking.booking_ref}\nName: ${booking.name}\nPayment: ${method} ${id}`;
+      const msg = `Hello BPST Academy, I pre-booked "${booking.course_title}" for ₹49 (Diwali offer).\nBooking ref: ${booking.booking_ref}\nName: ${booking.name}\nPayment: ${method} ${id}`;
       $('[data-wa-confirm]', card).href = waLink(msg);
       go(3);
     }
@@ -323,7 +323,7 @@
         try {
           await loadScript('https://checkout.razorpay.com/v1/checkout.js');
           const rz = new window.Razorpay({
-            key: CFG.razorpayKeyId, amount: Math.round((CFG.amount || 49) * 100), currency: 'INR', name: 'BPST Edu',
+            key: CFG.razorpayKeyId, amount: Math.round((CFG.amount || 49) * 100), currency: 'INR', name: 'BPST Academy',
             description: 'Diwali pre-booking — ' + booking.course_title,
             prefill: { name: booking.name, email: booking.email, contact: booking.mobile },
             notes: { booking_ref: booking.booking_ref, course: booking.course },
@@ -338,7 +338,7 @@
         rzMsg.innerHTML = 'After paying in the new tab, switch to <b>Scan UPI QR</b> → enter your transaction ID, or share the receipt on WhatsApp.';
         rzMsg.classList.replace('text-danger', 'text-muted'); rzMsg.hidden = false;
       } else {
-        rzMsg.innerHTML = 'Online card payment is being set up. Please pay using the <b>Scan UPI QR</b> tab or <a href="' + waLink('Hi BPST Edu, I want to pay ₹49 for booking ' + booking.booking_ref) + '" target="_blank" rel="noopener">message us on WhatsApp</a>.';
+        rzMsg.innerHTML = 'Online card payment is being set up. Please pay using the <b>Scan UPI QR</b> tab or <a href="' + waLink('Hi BPST Academy, I want to pay ₹49 for booking ' + booking.booking_ref) + '" target="_blank" rel="noopener">message us on WhatsApp</a>.';
         rzMsg.hidden = false;
       }
     });
@@ -347,7 +347,7 @@
     async function setupUpi() {
       const box = $('[data-upi-qr]', card), idEl = $('[data-upi-id]', card), link = $('[data-upi-link]', card);
       if (!CFG.upiId) { idEl.textContent = 'shared on WhatsApp'; box.innerHTML = '<div class="small text-muted p-3" style="width:200px">UPI QR will appear here once the UPI ID is configured.</div>'; link?.classList.add('d-none'); return; }
-      const uri = `upi://pay?pa=${encodeURIComponent(CFG.upiId)}&pn=${encodeURIComponent(CFG.upiName || 'BPST Edu')}&am=${(CFG.amount || 49).toFixed(2)}&cu=INR&tn=${encodeURIComponent(booking.booking_ref)}`;
+      const uri = `upi://pay?pa=${encodeURIComponent(CFG.upiId)}&pn=${encodeURIComponent(CFG.upiName || 'BPST Academy')}&am=${(CFG.amount || 49).toFixed(2)}&cu=INR&tn=${encodeURIComponent(booking.booking_ref)}`;
       idEl.textContent = CFG.upiId; if (link) link.href = uri;
       try {
         await loadScript('https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js');

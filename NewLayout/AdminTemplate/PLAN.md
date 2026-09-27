@@ -1,4 +1,4 @@
-# BPST Edu Admin Panel: Plan
+# BPST Academy Admin Panel: Plan
 
 **Status:** M1–M7 built (all screens, demo data). Waiting for owner review; M8 QA checks already pass at 375–3440 px.
 **Date:** 25 Sep 2026

@@ -1,4 +1,4 @@
-/* BPST Edu Admin — shell, role switcher, SLA timers, search, toasts, theme.
+/* BPST Academy Admin — shell, role switcher, SLA timers, search, toasts, theme.
    Plain script (no modules) so pages work from file:// and GitHub Pages. */
 (function () {
   'use strict';

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BPST Edu — site configuration (edit here, no rebuild needed)
+   BPST Academy — site configuration (edit here, no rebuild needed)
    ========================================================================== */
 window.BPST_CONFIG = {
   // POST endpoint for leads/bookings (JSON). Empty = demo mode (logs to console, no network).
@@ -14,7 +14,7 @@ window.BPST_CONFIG = {
 
   // --- UPI QR fallback ---
   upiId: '',            // e.g. 'yourbusiness@okaxis' — the QR and deep link are generated from this
-  upiName: 'BPST Edu',
+  upiName: 'BPST Academy',
   amount: 49,
 
   whatsapp: '918299101616',
