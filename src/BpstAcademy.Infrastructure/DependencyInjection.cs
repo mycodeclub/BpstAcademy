@@ -13,20 +13,13 @@ namespace BpstAcademy.Infrastructure;
 
 public static class DependencyInjection
 {
-    public const string ConnectionStringName = "Default";
-
     /// <summary>
-    /// Registers the database and infrastructure services. The connection string comes from
-    /// <c>ConnectionStrings:Default</c> (user secrets locally, environment variable on the server); it is never committed.
+    /// Registers the database and infrastructure services. The connection string is chosen by
+    /// <see cref="DatabaseConnection.Resolve"/> (user secrets locally, server configuration in production); it is never committed.
     /// </summary>
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString(ConnectionStringName)
-            ?? throw new InvalidOperationException(
-                $"Connection string '{ConnectionStringName}' is missing. User secrets load only when " +
-                "ASPNETCORE_ENVIRONMENT=Development (use the http/https launch profile). If it is set, run: " +
-                "dotnet user-secrets set \"ConnectionStrings:Default\" \"<connection string>\" --project src/BpstAcademy.Web. " +
-                "On a server, set the environment variable ConnectionStrings__Default instead.");
+        var (_, connectionString) = DatabaseConnection.Resolve(configuration);
 
         services.AddSingleton<IClock, SystemClock>();
         services.AddScoped<AuditingInterceptor>();

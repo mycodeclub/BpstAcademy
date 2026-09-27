@@ -36,10 +36,14 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Opt-in local convenience for a private database (Docker): set Database:MigrateOnStartup=true in user secrets.
-// Off by default so a machine pointed at a shared or live database never changes its schema by starting up;
-// those get migrations as a deliberate step (dotnet ef database update / EF migration bundle).
-if (app.Environment.IsDevelopment() && app.Configuration.GetValue<bool>("Database:MigrateOnStartup"))
+var (database, connectionString) = DatabaseConnection.Resolve(app.Configuration);
+app.Logger.LogInformation("Database: {Name} ({Server})", database, DatabaseConnection.Describe(connectionString));
+
+// Local convenience for a private database: the "Docker DB" and "Local DB" launch profiles set Database:MigrateOnStartup.
+// Never for the live database, which gets migrations as a deliberate step (dotnet ef database update / EF migration bundle),
+// so starting the app never changes its schema.
+if (app.Environment.IsDevelopment() && database != DatabaseConnection.Live
+    && app.Configuration.GetValue<bool>("Database:MigrateOnStartup"))
 {
     using var scope = app.Services.CreateScope();
     await scope.ServiceProvider.GetRequiredService<AppDbContext>().Database.MigrateAsync();
