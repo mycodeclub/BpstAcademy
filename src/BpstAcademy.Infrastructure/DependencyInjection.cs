@@ -23,8 +23,10 @@ public static class DependencyInjection
     {
         var connectionString = configuration.GetConnectionString(ConnectionStringName)
             ?? throw new InvalidOperationException(
-                $"Connection string '{ConnectionStringName}' is missing. Locally run: " +
-                "dotnet user-secrets set \"ConnectionStrings:Default\" \"Host=localhost;Port=5432;Database=bpstedu;Username=bpst;Password=<from .env>\" --project src/BpstAcademy.Web");
+                $"Connection string '{ConnectionStringName}' is missing. User secrets load only when " +
+                "ASPNETCORE_ENVIRONMENT=Development (use the http/https launch profile). If it is set, run: " +
+                "dotnet user-secrets set \"ConnectionStrings:Default\" \"<connection string>\" --project src/BpstAcademy.Web. " +
+                "On a server, set the environment variable ConnectionStrings__Default instead.");
 
         services.AddSingleton<IClock, SystemClock>();
         services.AddScoped<AuditingInterceptor>();

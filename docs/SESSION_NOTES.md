@@ -81,13 +81,14 @@ This file summarises the work and decisions from the Claude Code sessions so far
 
 ## 6. Working notes for Claude sessions
 
-- Local development currently points at the live site4now database (owner's decision, 26 Sep): `ConnectionStrings:Default` is in the owner's user secrets. Published (Production) builds read it from `src/BpstAcademy.Web/appsettings.Production.json`, which is git-ignored and exists only on the owner's PC (or set env var `ConnectionStrings__Default` on the server). Never put it in `appsettings.json`. The old app's 26 tables were dropped that day; a full backup is at `C:\AllData\Backups\BpstAcademy\live-before-cleanup-20260926-213317.dump` (outside the repo).
+- Local development currently points at the live site4now database (a new database created by the owner 27 Sep; migrations applied and admin seeded that day). Owner's decision, 26 Sep: `ConnectionStrings:Default` is in the owner's user secrets. Published (Production) builds read it from `src/BpstAcademy.Web/appsettings.Production.json`, which is git-ignored and exists only on the owner's PC (or set env var `ConnectionStrings__Default` on the server). Never put it in `appsettings.json`. The old app's 26 tables were dropped that day; a full backup is at `C:\AllData\Backups\BpstAcademy\live-before-cleanup-20260926-213317.dump` (outside the repo).
 - Apply migrations to that database deliberately, never by starting the app:
   `dotnet ef database update --project src/BpstAcademy.Infrastructure --startup-project src/BpstAcademy.Web --connection "<connection string from user secrets>"`
   (`dotnet ef` uses `DesignTimeDbContextFactory`, which ignores user secrets, so `--connection` is required). Run it after reviewing a new migration, before running the app.
 - Alternative: private Docker database. Copy `.env.example` to `.env` and set a password; `docker compose up -d`; then
   `dotnet user-secrets set "ConnectionStrings:Default" "Host=localhost;Port=5432;Database=bpstedu;Username=bpst;Password=<.env password>" --project src/BpstAcademy.Web`
   and, for that private database only, `dotnet user-secrets set "Database:MigrateOnStartup" "true" --project src/BpstAcademy.Web`.
+- "Connection string 'Default' is missing" means the app started without `ASPNETCORE_ENVIRONMENT=Development` (for example, run without a launch profile), so user secrets were not loaded.
 - Run the app: `dotnet run --project src/BpstAcademy.Web --launch-profile https` → https://localhost:7089 (portal: `/portal`, sign in with the seeded admin). Migrations apply on start only when `Database:MigrateOnStartup` is true (Development only).
 - New migration: `dotnet ef migrations add <Name> --project src/BpstAcademy.Infrastructure --startup-project src/BpstAcademy.Web --output-dir Persistence/Migrations`.
 - Tests: `dotnet test --solution BpstAcademy.slnx` (Docker must be running for integration tests).
