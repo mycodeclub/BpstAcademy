@@ -1,9 +1,11 @@
 using System.Text.Encodings.Web;
+using System.Threading.RateLimiting;
 using System.Text.Unicode;
 using BpstAcademy.Application.Security;
 using BpstAcademy.Infrastructure;
 using BpstAcademy.Infrastructure.Persistence;
 using BpstAcademy.Infrastructure.Persistence.Seed;
+using BpstAcademy.Web.Controllers;
 using BpstAcademy.Web.Options;
 using BpstAcademy.Web.Security;
 using Microsoft.EntityFrameworkCore;
@@ -38,7 +40,21 @@ builder.Services.ConfigureApplicationCookie(o =>
         o.Cookie.SameSite = SameSiteMode.Lax;
         o.SlidingExpiration = true;
     });
-builder.Services.AddAuthorization();
+// One policy per permission: portal pages use [Authorize(Policy = Permissions.X)], never role names.
+builder.Services.AddAuthorization(o =>
+{
+    foreach (var permission in Permissions.All)
+        o.AddPolicy(permission, p => p.RequireClaim(Permissions.ClaimType, permission));
+});
+
+// Website forms: at most 10 posts a minute from one address (a real visitor sends 1–3).
+builder.Services.AddRateLimiter(o =>
+{
+    o.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+    o.AddPolicy(LeadsApiController.RateLimitPolicy, context => RateLimitPartition.GetFixedWindowLimiter(
+        context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+        _ => new FixedWindowRateLimiterOptions { PermitLimit = 10, Window = TimeSpan.FromMinutes(1) }));
+});
 
 var app = builder.Build();
 
@@ -95,6 +111,7 @@ if (canonicalHost.StartsWith("www.", StringComparison.OrdinalIgnoreCase))
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseRateLimiter();
 
 app.UseAuthentication();
 app.UseAuthorization();

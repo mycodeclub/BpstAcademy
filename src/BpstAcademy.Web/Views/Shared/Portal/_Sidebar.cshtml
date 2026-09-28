@@ -1,4 +1,7 @@
 @* Temporary static menu. In B1 it is built from NavRegistry, showing only the items the user has permission for. *@
+@using BpstAcademy.Application.Security
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService Authorization
 @{
     var area = ViewContext.RouteData.Values["area"] as string;
     var controller = ViewContext.RouteData.Values["controller"] as string;
@@ -21,6 +24,15 @@
                 <i class="bi bi-grid-1x2" aria-hidden="true"></i><span class="nav-label">Dashboard</span>
             </a>
         </div>
+        @if ((await Authorization.AuthorizeAsync(User, Permissions.LeadsView)).Succeeded)
+        {
+            <div class="nav-section">
+                <div class="nav-section-title eyebrow">CRM</div>
+                <a asp-area="Crm" asp-controller="Leads" asp-action="Index" class="@Active("Crm", "Leads")" title="Enquiries">
+                    <i class="bi bi-inbox" aria-hidden="true"></i><span class="nav-label">Enquiries</span>
+                </a>
+            </div>
+        }
     </nav>
     <div class="sidebar-foot">BPST Software Education</div>
 </aside>

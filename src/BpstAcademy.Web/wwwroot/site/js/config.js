@@ -2,9 +2,9 @@
    BPST Academy — site configuration (edit here, no rebuild needed)
    ========================================================================== */
 window.BPST_CONFIG = {
-  // POST endpoint for leads/bookings (JSON). Empty = demo mode (logs to console, no network).
+  // POST endpoint for leads/bookings (JSON), saved by LeadsApiController. Empty = demo mode (logs to console, nothing saved).
   // Payload contract matches BpstEduLikeCourseListing/Template/docs/FORMS-API.md plus booking fields.
-  leadEndpoint: '',
+  leadEndpoint: '/api/leads',
 
   // --- Razorpay (card / UPI / netbanking) — use ONE of these ---
   // 1) Standard Checkout: your public Key ID (rzp_live_... or rzp_test_...). Enable auto-capture in the dashboard.

@@ -11,5 +11,8 @@ public static class Permissions
     public const string UsersManage = "users.manage";
     public const string RolesManage = "roles.manage";
 
-    public static IReadOnlyList<string> All { get; } = [UsersManage, RolesManage];
+    /// <summary>See website enquiries and pre-bookings (CRM).</summary>
+    public const string LeadsView = "leads.view";
+
+    public static IReadOnlyList<string> All { get; } = [UsersManage, RolesManage, LeadsView];
 }

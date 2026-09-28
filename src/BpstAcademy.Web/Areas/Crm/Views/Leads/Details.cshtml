@@ -1,0 +1,88 @@
+@model Lead
+@{
+    ViewData["Title"] = Model.Name;
+    var ist = TimeSpan.FromMinutes(330); // India Standard Time, no daylight saving
+    var submissions = (IReadOnlyList<LeadSubmission>)ViewData["Submissions"]!;
+    string When(DateTimeOffset at) => at.ToOffset(ist).ToString("dd MMM yyyy, h:mm:ss tt") + " IST";
+    var whatsapp = "https://wa.me/" + Model.Mobile.TrimStart('+');
+}
+
+<div class="page-head">
+    <div>
+        <a asp-action="Index" class="caption text-decoration-none"><i class="bi bi-arrow-left" aria-hidden="true"></i> Enquiries</a>
+        <h1>@Model.Name</h1>
+        <p>@(Model.Kind == LeadKind.PreBooking ? "₹49 pre-booking" : "Enquiry") · received @When(Model.CreatedAt)</p>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-7">
+        <div class="card">
+            <div class="card-header"><div><h2 class="card-title">Details</h2></div></div>
+            <div class="card-body">
+                <dl class="dl-grid">
+                    <dt>Mobile</dt><dd><a href="tel:@Model.Mobile">@Model.Mobile</a> · <a href="@whatsapp" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></dd>
+                    <dt>Email</dt><dd>@(Model.Email ?? "–")</dd>
+                    <dt>City</dt><dd>@(Model.City ?? "–")</dd>
+                    <dt>Course</dt><dd>@(Model.CourseTitle ?? Model.CourseSlug ?? "–")</dd>
+                    <dt>Duration</dt><dd>@(Model.Duration ?? "–")</dd>
+                    <dt>Mode</dt><dd>@(Model.Mode ?? "–")</dd>
+                    <dt>Qualification</dt><dd>@(Model.Qualification ?? "–")</dd>
+                    <dt>Message</dt><dd style="white-space: pre-line">@(Model.Message ?? "–")</dd>
+                    <dt>Sent from</dt><dd>@(Model.SourcePage ?? "–")</dd>
+                    <dt>Campaign</dt><dd>@(Model.Utm ?? "–")</dd>
+                    <dt>Consent</dt><dd>@(Model.Consent ? "Yes" : "No")</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="card">
+            <div class="card-header"><div><h2 class="card-title">Booking &amp; payment</h2></div></div>
+            <div class="card-body">
+                <dl class="dl-grid">
+                    <dt>Booking ref</dt><dd>@(Model.BookingRef ?? "–")</dd>
+                    <dt>Amount</dt><dd>@(Model.Amount is { } a ? "₹" + a.ToString("0.##") : "–")</dd>
+                    <dt>Status</dt>
+                    <dd>
+                        @if (Model.Status == LeadStatus.PaymentReported)
+                        {
+                            <span class="chip chip--warning">Payment reported, not verified</span>
+                        }
+                        else
+                        {
+                            <span class="chip chip--info">New</span>
+                        }
+                    </dd>
+                    <dt>Paid by</dt><dd>@(Model.PaymentMethod ?? "–")</dd>
+                    <dt>Payment ref</dt><dd>@(Model.PaymentReference ?? "–")</dd>
+                    <dt>Reported at</dt><dd>@(Model.PaymentReportedAt is { } p ? When(p) : "–")</dd>
+                </dl>
+                @if (Model.Status == LeadStatus.PaymentReported)
+                {
+                    <p class="caption mt-3 mb-0">Check the payment reference against the UPI/bank statement or the Razorpay dashboard before confirming the seat.</p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header"><div><h2 class="card-title">Form submissions</h2><p class="card-sub">Exactly what the website sent, in order.</p></div></div>
+            <div class="table-wrap">
+                <table class="table">
+                    <thead><tr><th scope="col">Received</th><th scope="col">Form</th><th scope="col">Data</th></tr></thead>
+                    <tbody>
+                        @foreach (var s in submissions)
+                        {
+                            <tr>
+                                <td class="text-nowrap">@When(s.ReceivedAt)</td>
+                                <td class="text-nowrap">@s.FormType</td>
+                                <td><code class="small" style="white-space: pre-wrap; word-break: break-word">@s.Payload</code></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

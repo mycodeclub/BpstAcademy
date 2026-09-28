@@ -1,5 +1,6 @@
 using System.Linq.Expressions;
 using BpstAcademy.Domain.Common;
+using BpstAcademy.Domain.Crm;
 using BpstAcademy.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -15,6 +16,8 @@ public class AppDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     protected AppDbContext(DbContextOptions options) : base(options) { }
 
     public DbSet<AuditEntry> AuditEntries => Set<AuditEntry>();
+    public DbSet<Lead> Leads => Set<Lead>();
+    public DbSet<LeadSubmission> LeadSubmissions => Set<LeadSubmission>();
 
     protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
     {
