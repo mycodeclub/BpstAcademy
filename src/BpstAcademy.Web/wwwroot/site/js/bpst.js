@@ -253,6 +253,14 @@
   }
   const newRef = () => { const a = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let s = ''; const r = (window.crypto && crypto.getRandomValues) ? crypto.getRandomValues(new Uint8Array(6)) : Array.from({ length: 6 }, () => Math.random() * 255); for (const x of r) s += a[x % a.length]; return 'BPST-D26-' + s; };
   const waLink = (t) => `https://wa.me/${CFG.whatsapp || '918299101616'}?text=${encodeURIComponent(t)}`;
+  // Shown when a form could not be saved, so the visitor is never told "received" for data we do not have.
+  function saveError(form, show) {
+    let el = form.querySelector('[data-save-error]');
+    if (!show) { if (el) el.hidden = true; return; }
+    if (!el) { el = document.createElement('div'); el.className = 'text-danger small mt-2'; el.setAttribute('role', 'alert'); el.dataset.saveError = ''; form.appendChild(el); }
+    el.innerHTML = 'Sorry, we could not send your details. Please try again, or <a href="' + waLink('Hi BPST Academy, I want to enquire about your courses.') + '" target="_blank" rel="noopener">message us on WhatsApp</a>.';
+    el.hidden = false;
+  }
   const loadScript = (src) => new Promise((ok, fail) => { if ($(`script[src="${src}"]`)) return ok(); const s = document.createElement('script'); s.src = src; s.async = true; s.onload = ok; s.onerror = fail; document.head.appendChild(s); });
 
   /* ---------- ₹49 pre-booking flow ---------- */
@@ -287,14 +295,16 @@
       };
       const btns = $$('button[type=submit]', form); btns.forEach((b) => { b.disabled = true; });
       if (!offerOpen()) { // After Diwali the same form becomes a plain enquiry
-        await sendLead(Object.assign({ form_type: 'enquiry' }, booking));
+        const saved = await sendLead(Object.assign({ form_type: 'enquiry' }, booking));
         btns.forEach((b) => { b.disabled = false; });
+        saveError(form, !saved); if (!saved) return;
         $('[data-done-title]', card).textContent = 'Thank you — enquiry received!';
         $('[data-done-text]', card).innerHTML = 'Our admissions desk will contact you on WhatsApp/phone shortly.';
         return go(3);
       }
-      await sendLead(Object.assign({ form_type: 'prebook_started', amount: CFG.amount || 49 }, booking));
+      const saved = await sendLead(Object.assign({ form_type: 'prebook_started', amount: CFG.amount || 49 }, booking));
       btns.forEach((b) => { b.disabled = false; });
+      saveError(form, !saved); if (!saved) return;
       $$('[data-ref]', card).forEach((x) => { x.textContent = booking.booking_ref; });
       const cn = $('[data-course-name]', card); if (cn) cn.textContent = courseTitle;
       setupUpi();
@@ -308,8 +318,9 @@
       $$('[data-pay-pane]', card).forEach((p) => { p.hidden = p.dataset.payPane !== t.dataset.payTab; });
     }));
 
-    function done(method, id) {
-      sendLead(Object.assign({ form_type: 'prebook_paid', payment_method: method, payment_id: id, amount: CFG.amount || 49 }, booking));
+    async function done(method, id) {
+      const saved = await sendLead(Object.assign({ form_type: 'prebook_paid', payment_method: method, payment_id: id, amount: CFG.amount || 49 }, booking));
+      if (!saved) $('[data-done-text]', card).innerHTML = 'We could not record your payment automatically. Please tap <b>Share on WhatsApp</b> below so we can reserve your seat.';
       const msg = `Hello BPST Academy, I pre-booked "${booking.course_title}" for ₹49 (Diwali offer).\nBooking ref: ${booking.booking_ref}\nName: ${booking.name}\nPayment: ${method} ${id}`;
       $('[data-wa-confirm]', card).href = waLink(msg);
       go(3);
@@ -371,7 +382,10 @@
       if (enq.elements.website.value) return;
       if (!enq.checkValidity()) { enq.classList.add('was-validated'); return; }
       const f = enq.elements;
-      await sendLead({ form_type: 'enquiry', name: f.name.value.trim(), mobile: '+91' + f.mobile.value, course: f.course.value, message: f.message.value.trim(), consent: true });
+      const btns = $$('button[type=submit]', enq); btns.forEach((b) => { b.disabled = true; });
+      const saved = await sendLead({ form_type: 'enquiry', name: f.name.value.trim(), mobile: '+91' + f.mobile.value, course: f.course.value, message: f.message.value.trim(), consent: true });
+      btns.forEach((b) => { b.disabled = false; });
+      saveError(enq, !saved); if (!saved) return;
       $('[data-enquiry-ok]', enq).classList.remove('d-none'); enq.reset(); enq.classList.remove('was-validated');
     });
   }

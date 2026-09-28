@@ -1,0 +1,72 @@
+@model IReadOnlyList<Lead>
+@{
+    ViewData["Title"] = "Enquiries";
+    var kind = ViewData["Kind"] as string;
+    var q = ViewData["Query"] as string;
+    var ist = TimeSpan.FromMinutes(330); // India Standard Time, no daylight saving
+    string Chip(string? value, string label) =>
+        string.Equals(kind ?? "", value ?? "", StringComparison.OrdinalIgnoreCase) ? "filter-chip active" : "filter-chip";
+}
+
+<div class="page-head">
+    <div>
+        <h1>Enquiries</h1>
+        <p>Every enquiry and ₹49 pre-booking sent from the website, newest first. Pre-bookings are saved before payment.</p>
+    </div>
+</div>
+
+<div class="card">
+    <form class="toolbar" method="get" role="search">
+        <div class="input-icon"><i class="bi bi-search" aria-hidden="true"></i><input type="search" name="q" value="@q" class="form-control form-control-sm" placeholder="Search name, mobile, email or booking ref" aria-label="Search name, mobile, email or booking ref"></div>
+        @if (!string.IsNullOrEmpty(kind))
+        {
+            <input type="hidden" name="kind" value="@kind">
+        }
+        <div class="d-flex flex-wrap gap-2" role="group" aria-label="Filter">
+            <a class="@Chip(null, "All")" asp-route-q="@q">All</a>
+            <a class="@Chip("enquiry", "Enquiries")" asp-route-kind="enquiry" asp-route-q="@q">Enquiries</a>
+            <a class="@Chip("prebooking", "Pre-bookings")" asp-route-kind="prebooking" asp-route-q="@q">₹49 pre-bookings</a>
+            <a class="@Chip("paid", "Payment reported")" asp-route-kind="paid" asp-route-q="@q">Payment reported</a>
+        </div>
+        <span class="ms-auto caption">@Model.Count shown · @ViewData["Total"] in total</span>
+    </form>
+    @if (Model.Count == 0)
+    {
+        <div class="empty"><i class="bi bi-inbox"></i><div class="empty-title">No enquiries yet</div>Website enquiries and pre-bookings appear here as soon as they are sent.</div>
+    }
+    else
+    {
+        <div class="table-wrap">
+            <table class="table table-hover">
+                <thead><tr><th scope="col">Received</th><th scope="col">Name</th><th scope="col">Mobile</th><th class="d-none d-lg-table-cell" scope="col">Course</th><th scope="col">Type</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Open</span></th></tr></thead>
+                <tbody>
+                    @foreach (var l in Model)
+                    {
+                        <tr>
+                            <td class="text-nowrap">@l.CreatedAt.ToOffset(ist).ToString("dd MMM yyyy, h:mm tt")</td>
+                            <td>@l.Name</td>
+                            <td class="text-nowrap"><a href="tel:@l.Mobile">@l.Mobile</a></td>
+                            <td class="d-none d-lg-table-cell">@(l.CourseTitle ?? l.CourseSlug ?? "–")</td>
+                            <td>@(l.Kind == LeadKind.PreBooking ? "₹49 pre-booking" : "Enquiry")</td>
+                            <td>
+                                @if (l.Status == LeadStatus.PaymentReported)
+                                {
+                                    <span class="chip chip--warning">Payment reported</span>
+                                }
+                                else
+                                {
+                                    <span class="chip chip--info">New</span>
+                                }
+                            </td>
+                            <td class="text-end"><a asp-action="Details" asp-route-id="@l.Id" class="btn btn-outline-secondary btn-sm">Open</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        @if (Model.Count == BpstAcademy.Web.Areas.Crm.Controllers.LeadsController.PageSize)
+        {
+            <div class="card-footer caption">Showing the newest @Model.Count. Use search to find older ones.</div>
+        }
+    }
+</div>
