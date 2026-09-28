@@ -29,6 +29,62 @@ public class SiteAndPortalTests(AppFactory factory)
     }
 
     [Theory]
+    [InlineData("/about")]
+    [InlineData("/courses")]
+    [InlineData("/prebook")]
+    [InlineData("/contact")]
+    [InlineData("/verify")]
+    [InlineData("/courses/java-full-stack")]
+    [InlineData("/courses/soc-analyst")]
+    public async Task Site_pages_render_with_their_own_canonical(string path)
+    {
+        var html = await Client().GetStringAsync(path, TestContext.Current.CancellationToken);
+
+        Assert.Contains($"<link rel=\"canonical\" href=\"https://edu.bitprosofttech.com{path}\" />", html);
+        Assert.Contains("id=\"main-content\"", html);
+    }
+
+    [Theory]
+    [InlineData("/courses/no-such-course")]
+    [InlineData("/Contact.html")]
+    [InlineData("/courses/../appsettings")]
+    public async Task Unknown_site_pages_return_404(string path)
+    {
+        var response = await Client().GetAsync(path, TestContext.Current.CancellationToken);
+
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task Every_internal_link_on_the_public_site_resolves()
+    {
+        var client = Client();
+        var ct = TestContext.Current.CancellationToken;
+        var seen = new HashSet<string> { "/" };
+        var queue = new Queue<string>(seen);
+        var broken = new List<string>();
+
+        while (queue.Count > 0)
+        {
+            var page = queue.Dequeue();
+            var html = await client.GetStringAsync(page, ct);
+            foreach (System.Text.RegularExpressions.Match m in
+                     System.Text.RegularExpressions.Regex.Matches(html, "(?:href|src)=\"(/[^\"#?]*)"))
+            {
+                var path = m.Groups[1].Value;
+                if (path.StartsWith("/portal", StringComparison.Ordinal) || !seen.Add(path)) continue;
+
+                var response = await client.GetAsync(path, ct);
+                if (response.StatusCode != HttpStatusCode.OK) broken.Add($"{path} ({(int)response.StatusCode}, linked from {page})");
+                else if (response.Content.Headers.ContentType?.MediaType == "text/html") queue.Enqueue(path);
+            }
+        }
+
+        Assert.True(seen.Count > 100, $"Crawled only {seen.Count} URLs");
+        Assert.Empty(broken);
+    }
+
+    [Theory]
     [InlineData("/portal/me/dashboard")]
     [InlineData("/portal/me")]
     public async Task Portal_pages_redirect_anonymous_users_to_login(string url)

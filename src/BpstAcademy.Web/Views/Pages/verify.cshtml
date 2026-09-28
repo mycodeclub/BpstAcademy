@@ -1,0 +1,39 @@
+@* Verify a certificate. The prototype's verify.html only redirected to the portal prototype; online checks come with
+   the certificates module. Until then this page says how to confirm a certificate. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Verify a BPST Academy Certificate",
+        Description = "How to confirm that a BPST Academy certificate is genuine: call, WhatsApp or email us with the certificate number.",
+        CanonicalPath = "/verify",
+        Robots = SeoMeta.NoIndexRobots,
+    };
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Verify a Certificate</li>
+      </ol>
+    </nav>
+    <h1>Verify a Certificate</h1>
+    <p class="lead mb-0">Online certificate verification is coming soon. Until then, we confirm certificates by phone, WhatsApp or email.</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container" style="max-width: 760px">
+    <div class="bpst-card p-4 border shadow-sm">
+      <h2 class="h5 fw-bold mb-3">Send us the certificate details</h2>
+      <p>Share the <strong>certificate number</strong>, the <strong>student's name</strong> and the <strong>course</strong> printed on the certificate. We reply within one working day.</p>
+      <ul class="list-unstyled mb-4">
+        <li class="mb-2"><i class="bi bi-telephone-fill text-info me-2"></i><a href="tel:+918299101616">+91 82991 01616</a></li>
+        <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i><a href="https://wa.me/918299101616" target="_blank" rel="noopener">WhatsApp +91 82991 01616</a></li>
+        <li class="mb-2"><i class="bi bi-envelope-fill text-warning me-2"></i><a href="mailto:bitprosofttech@@gmail.com?subject=Certificate%20verification">bitprosofttech@@gmail.com</a></li>
+      </ul>
+      <a href="/contact" class="btn btn-primary">Contact page</a>
+    </div>
+  </div>
+</section>

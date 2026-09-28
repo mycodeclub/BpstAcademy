@@ -1,0 +1,776 @@
+@* Ported from NewLayout/Landing Page UI/software-testing.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Software Testing Course in Lucknow — Manual, Selenium, Playwright",
+        Description = "Manual testing, Selenium with Java, Playwright, API testing and CI — the most accessible route into IT for non-CS graduates. Pre-book for ₹49 till Diwali.",
+        CanonicalPath = "/software-testing",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "name": "Software Testing & QA",
+              "item": "https://edu.bitprosofttech.com/software-testing"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "Software Testing & QA courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/software-testing-masters",
+              "name": "Software Testing Masters (Manual + Selenium + Playwright + API)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/manual-software-testing",
+              "name": "Manual Software Testing"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "url": "https://edu.bitprosofttech.com/courses/automation-testing-selenium-playwright",
+              "name": "Automation Testing (Selenium + Playwright)"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Can non-CS graduates get a software testing job?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. Manual testing needs logical thinking, not programming. Many B.Com, B.Sc and BA graduates start as QA analysts and move to automation within a year."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Selenium or Playwright — which should I learn?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Learn both. Selenium still dominates enterprise projects, while Playwright hiring has grown fastest since 2024. The Masters program covers both frameworks."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">Software Testing &amp; QA</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-bug"></i> 3 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">Software Testing &amp; QA Automation Courses</h1>
+        <p class="lead mb-4">
+          Manual testing, Selenium with Java, Playwright, API testing and CI — the most accessible route into IT for non-CS graduates.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy teaches software testing in three formats: Manual Testing (6 weeks, no coding), Automation Testing with Selenium
+          &amp; Playwright (2–3 months) and the complete Software Testing Masters program (3–4 months) covering manual, automation,
+          API testing, JIRA and CI/CD.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 3 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20Software%20Testing%20%26%20QA%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/software-testing-masters"
+                ><i class="bi bi-bug text-info"></i
+                ><span>Software Testing Masters<br /><small class="text-white-50">3 – 4 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/manual-software-testing"
+                ><i class="bi bi-clipboard-check text-info"></i
+                ><span>Manual Software Testing<br /><small class="text-white-50">6 Weeks</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/automation-testing-selenium-playwright"
+                ><i class="bi bi-robot text-info"></i
+                ><span>Automation Testing<br /><small class="text-white-50">2 – 3 Months</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="Software Testing &amp; QA courses">
+      <button
+        class="tab-pill active"
+        id="t-software-testing-masters"
+        data-bs-toggle="pill"
+        data-bs-target="#software-testing-masters"
+        type="button"
+        role="tab"
+        aria-controls="software-testing-masters"
+        aria-selected="true"
+      >
+        Software Testing Masters</button
+      ><button
+        class="tab-pill"
+        id="t-manual-software-testing"
+        data-bs-toggle="pill"
+        data-bs-target="#manual-software-testing"
+        type="button"
+        role="tab"
+        aria-controls="manual-software-testing"
+        aria-selected="false"
+      >
+        Manual Software Testing</button
+      ><button
+        class="tab-pill"
+        id="t-automation-testing-selenium-playwright"
+        data-bs-toggle="pill"
+        data-bs-target="#automation-testing-selenium-playwright"
+        type="button"
+        role="tab"
+        aria-controls="automation-testing-selenium-playwright"
+        aria-selected="false"
+      >
+        Automation Testing
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="software-testing-masters"
+        role="tabpanel"
+        aria-labelledby="t-software-testing-masters"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-software-testing-masters">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · Complete QA engineer program — manual to automation</span>
+              <h2 id="h-software-testing-masters">
+                <a href="/courses/software-testing-masters" class="text-reset"
+                  >Software Testing Masters (Manual + Selenium + Playwright + API)</a
+                >
+              </h2>
+              <p>
+                Everything a QA engineer needs: SDLC/STLC, test design and JIRA, SQL for testers, Java with Selenium and TestNG,
+                Playwright with TypeScript, API testing with Postman and RestAssured, BDD with Cucumber, CI with Jenkins and
+                AI-assisted testing.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">Freshers of any stream, non-CS graduates and manual testers moving to automation.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=software-testing-masters"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/software-testing-masters"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 – 4 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Advanced</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Testing Fundamentals</div>
+                  <ul>
+                    <li>SDLC, STLC &amp; Agile</li>
+                    <li>Test design techniques</li>
+                    <li>Test cases &amp; bug reports</li>
+                    <li>JIRA &amp; TestRail</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">SQL &amp; Web Basics</div>
+                  <ul>
+                    <li>SQL for testers</li>
+                    <li>HTML/CSS locators</li>
+                    <li>Browser DevTools</li>
+                    <li>Test data</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Java + Selenium</div>
+                  <ul>
+                    <li>Java for testers</li>
+                    <li>Selenium WebDriver</li>
+                    <li>TestNG &amp; Page Object Model</li>
+                    <li>Data-driven frameworks</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Playwright</div>
+                  <ul>
+                    <li>TypeScript basics</li>
+                    <li>Playwright tests &amp; fixtures</li>
+                    <li>Auto-waits &amp; tracing</li>
+                    <li>Visual testing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">API Testing</div>
+                  <ul>
+                    <li>REST &amp; HTTP</li>
+                    <li>Postman collections</li>
+                    <li>RestAssured</li>
+                    <li>Contract testing basics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">BDD, CI &amp; AI Testing</div>
+                  <ul>
+                    <li>Cucumber BDD</li>
+                    <li>Jenkins / GitHub Actions</li>
+                    <li>Reporting (Allure)</li>
+                    <li>AI-assisted test generation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Hybrid Selenium framework for an e-commerce site</li>
+                    <li>Playwright suite with CI pipeline</li>
+                    <li>API test suite with Postman + RestAssured</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Write effective manual test cases</li>
+                    <li>Build automation frameworks from scratch</li>
+                    <li>Test APIs and integrate tests into CI</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">JIRA</span><span class="bpst-chip dark">SQL</span
+                    ><span class="bpst-chip dark">Java</span><span class="bpst-chip dark">Selenium</span
+                    ><span class="bpst-chip dark">TestNG</span><span class="bpst-chip dark">Playwright</span
+                    ><span class="bpst-chip dark">TypeScript</span><span class="bpst-chip dark">Postman</span
+                    ><span class="bpst-chip dark">RestAssured</span><span class="bpst-chip dark">Cucumber</span
+                    ><span class="bpst-chip dark">Jenkins</span><span class="bpst-chip dark">Git</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to ISTQB Foundation Level (CTFL)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="manual-software-testing">Next: Manual Software Testing ›</button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="manual-software-testing"
+        role="tabpanel"
+        aria-labelledby="t-manual-software-testing"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-manual-software-testing">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · The easiest entry into an IT job — no coding</span>
+              <h2 id="h-manual-software-testing">
+                <a href="/courses/manual-software-testing" class="text-reset">Manual Software Testing</a>
+              </h2>
+              <p>
+                Learn professional manual testing: SDLC and STLC, test scenarios and cases, defect life cycle, JIRA, Agile ceremonies,
+                SQL basics and mobile/web testing — with ISTQB preparation.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Graduates of any stream (B.Com, B.Sc, BA, BBA) and career switchers.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=manual-software-testing"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/manual-software-testing"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">6 Weeks</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Software Lifecycle</div>
+                  <ul>
+                    <li>SDLC models</li>
+                    <li>STLC phases</li>
+                    <li>Agile &amp; Scrum</li>
+                    <li>QA vs QC</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Test Design</div>
+                  <ul>
+                    <li>Equivalence partitioning</li>
+                    <li>Boundary value analysis</li>
+                    <li>Decision tables</li>
+                    <li>Exploratory testing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Test Documentation</div>
+                  <ul>
+                    <li>Test plans</li>
+                    <li>Test scenarios &amp; cases</li>
+                    <li>Traceability matrix</li>
+                    <li>Test summary reports</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Defect Management</div>
+                  <ul>
+                    <li>Bug life cycle</li>
+                    <li>Severity vs priority</li>
+                    <li>JIRA workflows</li>
+                    <li>Writing great bug reports</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Web, Mobile &amp; DB Testing</div>
+                  <ul>
+                    <li>Cross-browser testing</li>
+                    <li>Mobile app testing</li>
+                    <li>SQL basics for testers</li>
+                    <li>Usability &amp; accessibility</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">ISTQB &amp; Interviews</div>
+                  <ul>
+                    <li>ISTQB syllabus revision</li>
+                    <li>Mock tests</li>
+                    <li>Resume for QA</li>
+                    <li>Mock interviews</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Test plan &amp; 100+ test cases for a live web app</li>
+                    <li>Bug-hunting sprint with JIRA</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Test web and mobile apps professionally</li>
+                    <li>Report defects clearly</li>
+                    <li>Clear ISTQB Foundation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">JIRA</span><span class="bpst-chip dark">TestRail</span
+                    ><span class="bpst-chip dark">SQL</span><span class="bpst-chip dark">Chrome DevTools</span
+                    ><span class="bpst-chip dark">BrowserStack</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to ISTQB Foundation Level (CTFL)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="software-testing-masters">‹ Software Testing Masters</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="automation-testing-selenium-playwright">
+            Next: Automation Testing ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="automation-testing-selenium-playwright"
+        role="tabpanel"
+        aria-labelledby="t-automation-testing-selenium-playwright"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-automation-testing-selenium-playwright">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 03 · From manual tester to automation engineer</span>
+              <h2 id="h-automation-testing-selenium-playwright">
+                <a href="/courses/automation-testing-selenium-playwright" class="text-reset"
+                  >Automation Testing (Selenium + Playwright)</a
+                >
+              </h2>
+              <p>
+                For testers who know the basics: Java and TypeScript for automation, Selenium WebDriver with TestNG and POM,
+                Playwright, API automation and CI integration.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Manual testers and freshers with basic testing knowledge.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=automation-testing-selenium-playwright"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/automation-testing-selenium-playwright"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">2 – 3 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Programming for Testers</div>
+                  <ul>
+                    <li>Java basics &amp; OOP</li>
+                    <li>TypeScript basics</li>
+                    <li>Git</li>
+                    <li>IDE setup</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Selenium WebDriver</div>
+                  <ul>
+                    <li>Locators &amp; waits</li>
+                    <li>Actions &amp; frames</li>
+                    <li>TestNG</li>
+                    <li>Page Object Model</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Framework Design</div>
+                  <ul>
+                    <li>Data-driven &amp; hybrid frameworks</li>
+                    <li>Maven</li>
+                    <li>Logging &amp; reports</li>
+                    <li>Parallel runs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Playwright</div>
+                  <ul>
+                    <li>Test runner &amp; fixtures</li>
+                    <li>Network mocking</li>
+                    <li>Tracing &amp; debugging</li>
+                    <li>Cross-browser runs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">API Automation</div>
+                  <ul>
+                    <li>RestAssured</li>
+                    <li>Playwright API testing</li>
+                    <li>Schema validation</li>
+                    <li>Auth flows</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">CI/CD</div>
+                  <ul>
+                    <li>Jenkins pipelines</li>
+                    <li>GitHub Actions</li>
+                    <li>Docker Selenium Grid</li>
+                    <li>Test reporting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Selenium hybrid framework</li>
+                    <li>Playwright suite running in GitHub Actions</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Automate web and API tests</li>
+                    <li>Design maintainable frameworks</li>
+                    <li>Run tests in CI</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Java</span><span class="bpst-chip dark">Selenium</span
+                    ><span class="bpst-chip dark">TestNG</span><span class="bpst-chip dark">Maven</span
+                    ><span class="bpst-chip dark">Playwright</span><span class="bpst-chip dark">TypeScript</span
+                    ><span class="bpst-chip dark">RestAssured</span><span class="bpst-chip dark">Jenkins</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BPST Automation Testing certificate
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="manual-software-testing">‹ Manual Software Testing</button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">Software Testing &amp; QA — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                Can non-CS graduates get a software testing job?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Yes. Manual testing needs logical thinking, not programming. Many B.Com, B.Sc and BA graduates start as QA analysts
+                and move to automation within a year.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c1"
+                aria-expanded="false"
+                aria-controls="catFaq-c1"
+              >
+                Selenium or Playwright — which should I learn?
+              </button>
+            </h3>
+            <div id="catFaq-c1" class="accordion-collapse collapse" aria-labelledby="catFaq-h1" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Learn both. Selenium still dominates enterprise projects, while Playwright hiring has grown fastest since 2024. The
+                Masters program covers both frameworks.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any software testing &amp; qa course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

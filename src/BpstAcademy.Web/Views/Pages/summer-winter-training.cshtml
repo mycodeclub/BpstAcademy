@@ -1,0 +1,736 @@
+@* Ported from NewLayout/Landing Page UI/summer-winter-training.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Summer & Winter Training in Lucknow — 45 Days with Certificate",
+        Description = "Use your semester break to finish a 45-day industrial training in any track, with a live project and a training certificate for your college.",
+        CanonicalPath = "/summer-winter-training",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "name": "Summer & Winter Training",
+              "item": "https://edu.bitprosofttech.com/summer-winter-training"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "Summer & Winter Training courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/summer-winter-training-45-days",
+              "name": "45-Day Summer / Winter Industrial Training"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "When do summer training batches start?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Summer batches run from May to July and winter batches from December to January. Pre-book now to lock your seat at the Diwali offer price."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Can I do summer training online?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes — live online batches follow the same schedule and project work as the Lucknow classroom."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">Summer &amp; Winter Training</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-sun"></i> 1 course · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">Summer &amp; Winter Training (45 Days)</h1>
+        <p class="lead mb-4">
+          Use your semester break to finish a 45-day industrial training in any track, with a live project and a training certificate
+          for your college.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy summer training runs May to July and winter training runs December to January. It is a 45-day, project-based
+          program in any of our tracks — Full Stack, Python, Java, Data Analytics, AI, Cloud, Cyber Security, Mobile or Game
+          Development — with a training certificate.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 1 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20Summer%20%26%20Winter%20Training%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/summer-winter-training-45-days"
+                ><i class="bi bi-sun text-info"></i
+                ><span>45-Day Summer / Winter Industrial Training<br /><small class="text-white-50">45 Days</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="Summer &amp; Winter Training courses">
+      <button
+        class="tab-pill active"
+        id="t-summer-winter-training-45-days"
+        data-bs-toggle="pill"
+        data-bs-target="#summer-winter-training-45-days"
+        type="button"
+        role="tab"
+        aria-controls="summer-winter-training-45-days"
+        aria-selected="true"
+      >
+        45-Day Summer / Winter Industrial Training
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="summer-winter-training-45-days"
+        role="tabpanel"
+        aria-labelledby="t-summer-winter-training-45-days"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-summer-winter-training-45-days">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · Summer: May – July · Winter: December – January</span>
+              <h2 id="h-summer-winter-training-45-days">
+                <a href="/courses/summer-winter-training-45-days" class="text-reset"
+                  >45-Day Summer / Winter Industrial Training</a
+                >
+              </h2>
+              <p>
+                Use your semester break to complete a 45-day industrial training in any BPST track or a single programming language.
+                You build and deploy a mini project, work in an Agile team and receive a training certificate for your college.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >B.Tech, BCA, MCA, Polytechnic and Diploma students who need summer/winter industrial training.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=summer-winter-training-45-days"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/summer-winter-training-45-days"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Week 1 — Foundations</div>
+                  <ul>
+                    <li>Programming or web fundamentals for your track</li>
+                    <li>Git &amp; GitHub setup</li>
+                    <li>Team formation</li>
+                    <li>Project requirement briefing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Week 2 — Core Skills</div>
+                  <ul>
+                    <li>Framework / tool deep-dive</li>
+                    <li>Daily coding drills</li>
+                    <li>Mini assignments</li>
+                    <li>Code reviews</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Week 3 — Data &amp; APIs</div>
+                  <ul>
+                    <li>Database design &amp; SQL</li>
+                    <li>REST APIs or data pipelines</li>
+                    <li>Integration work</li>
+                    <li>Testing basics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Week 4 — Build Sprint</div>
+                  <ul>
+                    <li>Agile sprint planning</li>
+                    <li>Daily stand-ups</li>
+                    <li>Feature development</li>
+                    <li>Bug fixing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Week 5 — Deploy</div>
+                  <ul>
+                    <li>Docker basics</li>
+                    <li>Cloud hosting</li>
+                    <li>Domain &amp; SSL</li>
+                    <li>Live demo URL</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Final Phase — Showcase</div>
+                  <ul>
+                    <li>Project report for college</li>
+                    <li>Demo presentation</li>
+                    <li>Certificate</li>
+                    <li>Next-step roadmap</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>A deployed mini project in your chosen track</li>
+                    <li>Project report formatted for college submission</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Complete your college industrial training requirement</li>
+                    <li>Show a live project on your resume</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Your track stack</span><span class="bpst-chip dark">Git &amp; GitHub</span
+                    ><span class="bpst-chip dark">Docker</span><span class="bpst-chip dark">Cloud hosting</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech industrial training certificate
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white border-top" aria-labelledby="rel-title">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-4">
+      <span class="bpst-pill bpst-pill-blue mb-2">Also consider</span>
+      <h2 class="fw-bold" id="rel-title">Related Industrial Training Tracks</h2>
+      <p class="text-muted">Project-based 45-day, 3-month and 6-month tracks that pair well with summer &amp; winter training.</p>
+    </div>
+    <div class="row g-4">
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="software development &amp; full stack (.net + react) from fundamentals to real-world applications c# asp.net core mvc asp.net core web api java python react sql server ef core bootstrap 5 docker github actions azure industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-hot-badge"><i class="bi bi-fire"></i> In demand</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/dotnet.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/react.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            /><img src="/site/img/tech/sql.svg" alt="" width="93" height="28" loading="lazy" />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/full-stack-development"
+              >Software Development &amp; Full Stack (.NET + React)</a
+            >
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">From Fundamentals to Real-World Applications</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Get practical, industry-oriented software development training that takes you from core programming fundamentals to modern
+            web and backend engineering, with hands-on projects, real…
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">C# / .NET</span><span class="bpst-tech-pill">ASP.NET Core MVC</span
+              ><span class="bpst-tech-pill">REST APIs</span><span class="bpst-tech-pill">Java</span
+              ><span class="bpst-tech-pill">Python</span><span class="bpst-tech-pill text-primary fw-bold">+6 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/full-stack-development" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=full-stack-development" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=full-stack-development#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="data analytics &amp; data science from raw data to real decisions excel sql python pandas numpy matplotlib power bi industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-course-number">02</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/python.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/powerbi.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            /><img src="/site/img/tech/sql.svg" alt="" width="93" height="28" loading="lazy" />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/data-analytics-data-science">Data Analytics &amp; Data Science</a>
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">From Raw Data to Real Decisions</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Turn raw data into actionable insights with industry tools, analytics methodologies, interactive dashboards, and
+            real-world case studies.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">Advanced Excel</span><span class="bpst-tech-pill">SQL Queries</span
+              ><span class="bpst-tech-pill">Python (Pandas, NumPy)</span><span class="bpst-tech-pill">Matplotlib &amp; Seaborn</span
+              ><span class="bpst-tech-pill">Power BI</span><span class="bpst-tech-pill text-primary fw-bold">+2 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/data-analytics-data-science" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=data-analytics-data-science" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=data-analytics-data-science#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="generative ai &amp; agentic ai create | automate | augment | build the next ai era python openai api gemini claude langchain llamaindex chromadb pinecone fastapi industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-hot-badge"><i class="bi bi-fire"></i> In demand</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/langchain.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/openai.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            /><img src="/site/img/tech/python.svg" alt="" width="93" height="28" loading="lazy" />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/generative-ai-agentic-ai">Generative AI &amp; Agentic AI</a>
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Create | Automate | Augment | Build the Next AI Era</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Learn the cutting-edge generation of AI with Large Language Models (LLMs), Retrieval Augmented Generation (RAG),
+            autonomous AI agents, and intelligent workflows.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">Prompt Engineering</span><span class="bpst-tech-pill">LLMs (OpenAI, Gemini, Claude)</span
+              ><span class="bpst-tech-pill">RAG Architectures</span><span class="bpst-tech-pill">Vector DBs (Chroma, Pinecone)</span
+              ><span class="bpst-tech-pill">LangChain &amp; LlamaIndex</span
+              ><span class="bpst-tech-pill text-primary fw-bold">+3 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/generative-ai-agentic-ai" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=generative-ai-agentic-ai" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=generative-ai-agentic-ai#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="cloud computing &amp; devops build | deploy | scale | power the digital world linux bash git docker kubernetes github actions aws azure industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-course-number">04</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/aws.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/azure.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            /><img src="/site/img/tech/docker.svg" alt="" width="93" height="28" loading="lazy" />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/cloud-computing-devops">Cloud Computing &amp; DevOps</a>
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Build | Deploy | Scale | Power the Digital World</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Master cloud infrastructure, modern DevOps automation tools, CI/CD pipelines, containerization, and deployment practices
+            for high-availability systems.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">AWS / Azure Basics</span><span class="bpst-tech-pill">Docker Containers</span
+              ><span class="bpst-tech-pill">Git &amp; GitHub Actions</span><span class="bpst-tech-pill">CI/CD Pipelines</span
+              ><span class="bpst-tech-pill">Linux Administration</span
+              ><span class="bpst-tech-pill text-primary fw-bold">+3 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/cloud-computing-devops" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=cloud-computing-devops" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=cloud-computing-devops#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="programming-languages"
+        data-search="python programming course (basic &amp; advanced) ai, data &amp; automation python 3 vs code pycharm jupyter flask fastapi pandas programming languages"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Languages</span>
+            <span class="bpst-hot-badge"><i class="bi bi-fire"></i> In demand</span>
+          </div>
+          <div class="bpst-course-logos"><img src="/site/img/tech/python.svg" alt="" width="93" height="28" loading="lazy" /></div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/python-programming-course"
+              >Python Programming Course (Basic &amp; Advanced)</a
+            >
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">AI, data &amp; automation</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            The most versatile language today — scripting, web, data, AI. Easy to start, powerful enough for production.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">Python 3</span><span class="bpst-tech-pill">VS Code</span
+              ><span class="bpst-tech-pill">PyCharm</span><span class="bpst-tech-pill">Jupyter</span
+              ><span class="bpst-tech-pill">Flask</span><span class="bpst-tech-pill text-primary fw-bold">+2 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>Basic 1.5 Months + Advanced 2 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Basic → Advanced</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/python-programming-course" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=python-programming-course" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=python-programming-course#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="programming-languages"
+        data-search="java programming course (basic &amp; advanced) enterprise &amp; android jdk 21 intellij idea eclipse maven mysql spring boot programming languages"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Languages</span>
+            <span class="bpst-course-number">06</span>
+          </div>
+          <div class="bpst-course-logos"><img src="/site/img/tech/java.svg" alt="" width="93" height="28" loading="lazy" /></div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/java-programming-course"
+              >Java Programming Course (Basic &amp; Advanced)</a
+            >
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Enterprise &amp; Android</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            The most-hired language in Indian IT services. From core Java and OOP to collections, JDBC, Spring Boot and REST APIs.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">JDK 21</span><span class="bpst-tech-pill">IntelliJ IDEA</span
+              ><span class="bpst-tech-pill">Eclipse</span><span class="bpst-tech-pill">Maven</span
+              ><span class="bpst-tech-pill">MySQL</span><span class="bpst-tech-pill text-primary fw-bold">+1 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>Basic 2 Months + Advanced 2.5 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Basic → Advanced</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/java-programming-course" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=java-programming-course" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=java-programming-course#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">Summer &amp; Winter Training — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                When do summer training batches start?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Summer batches run from May to July and winter batches from December to January. Pre-book now to lock your seat at the
+                Diwali offer price.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c1"
+                aria-expanded="false"
+                aria-controls="catFaq-c1"
+              >
+                Can I do summer training online?
+              </button>
+            </h3>
+            <div id="catFaq-c1" class="accordion-collapse collapse" aria-labelledby="catFaq-h1" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Yes — live online batches follow the same schedule and project work as the Lucknow classroom.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any summer &amp; winter training course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

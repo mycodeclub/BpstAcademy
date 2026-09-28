@@ -1,0 +1,73 @@
+@* Ported from NewLayout/Landing Page UI/privacy.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Privacy Policy | BPST Academy",
+        Description = "How BPST Academy collects, uses and protects personal data from pre-bookings and enquiries.",
+        CanonicalPath = "/privacy",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://edu.bitprosofttech.com/privacy" }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Privacy Policy</li>
+      </ol>
+    </nav>
+    <h1>Privacy Policy</h1>
+    <p class="lead mb-0">
+      Effective 2026-09-25. BPST Software Education (BPST Academy), a unit of BitProSoftTech Software Solutions, 3rd Floor, Sahay Complex,
+      Near IIM Tiraha, Mubarakpur, Lucknow – 226013, Uttar Pradesh.
+    </p>
+  </div>
+</section>
+<section class="py-5 bg-white bpst-legal">
+  <div class="container" style="max-width: 860px">
+    <h2>1. What we collect</h2>
+    <p>
+      When you pre-book or enquire we collect your name, mobile number, email (optional), city, selected course, duration, mode,
+      qualification and any message you send. Payments are processed by Razorpay or your UPI app; we do not store card or UPI PIN
+      details.
+    </p>
+    <h2>2. Why we use it</h2>
+    <p>
+      To confirm your booking, contact you about your course and batch, share fee details, and send important updates on phone,
+      WhatsApp or email.
+    </p>
+    <h2>3. Sharing</h2>
+    <p>
+      We do not sell your data. We share it only with service providers needed to run bookings (for example the payment gateway) and
+      when required by law.
+    </p>
+    <h2>4. Retention and your rights</h2>
+    <p>
+      We keep booking records as long as needed for admissions, accounting and legal requirements. You can ask us to access, correct
+      or delete your data, in line with India's Digital Personal Data Protection Act, 2023.
+    </p>
+    <h2>5. Cookies</h2>
+    <p>
+      This site stores small preferences in your browser (for example, a dismissed offer bar). We do not use advertising cookies on
+      this site.
+    </p>
+    <p class="mt-4 small text-muted">
+      Questions? Email <a href="mailto:bitprosofttech@@gmail.com">bitprosofttech@@gmail.com</a> or call +91 82991 01616.
+    </p>
+  </div>
+</section>

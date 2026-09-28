@@ -1,0 +1,250 @@
+@* Ported from NewLayout/Landing Page UI/about.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "About BPST Academy — Software Training Institute in Lucknow",
+        Description = "BPST Academy, the education division of BitProSoftTech Software Solutions, Lucknow: practical IT training with live projects, Agile teams and expert mentors.",
+        CanonicalPath = "/about",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "About", "item": "https://edu.bitprosofttech.com/about" }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Who founded BPST Academy?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "BPST Academy (BPST Software Education) is the educational division of BitProSoftTech Software Solutions, founded by Director Ankit Sahay. The team is made up of working software developers, project managers and solution architects."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "How is BPST Academy different from other institutes?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "We run each batch like a small software company: strong fundamentals first, then cross-functional teams, Agile sprints, daily stand-ups, code reviews, testing and live cloud deployment — guided by working IT professionals."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Does BPST Academy guarantee placement?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "No. We do not make placement-guarantee claims. We provide job assistance: real projects, resume and LinkedIn reviews, mock interviews and relevant opportunities."
+              }
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "AboutPage",
+          "name": "About BPST Academy",
+          "url": "https://edu.bitprosofttech.com/about",
+          "about": { "@@id": "https://edu.bitprosofttech.com/#organization" }
+        }
+    </script>
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">About</li>
+      </ol>
+    </nav>
+    <h1>About BPST Academy — Bridging the Gap Between Education &amp; Industry</h1>
+    <p class="lead mb-0">
+      BPST Software Education is the educational division of BitProSoftTech Software Solutions in Lucknow. We turn degrees into
+      practical, job-ready tech skills through live projects, Agile teamwork and mentorship from working IT professionals.
+    </p>
+  </div>
+</section>
+<section class="py-5 bpst-section-light">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <span class="bpst-pill bpst-pill-blue mb-2">Our Mission</span>
+        <h2 class="fw-bold mb-3">Why Does BPST Academy Exist?</h2>
+        <p>
+          Today's education system often gives concepts, but not enough practical exposure to real industry environments. BPST Academy
+          bridges this gap with industry-oriented training: strong fundamentals, hands-on coding, live projects, team-based
+          collaboration, Agile/Scrum exposure, testing and deployment experience.
+        </p>
+        <p>
+          Our goal is to transform learners into confident, skilled, industry-ready professionals who can contribute from day one —
+          whether they are school students, B.Tech/BCA/MCA/Polytechnic graduates or working professionals upskilling in AI, data,
+          cloud, testing or SAP.
+        </p>
+        <div class="bpst-answer bpst-answer-light mt-3">
+          <div class="bpst-answer-label"><i class="bi bi-info-circle-fill"></i> At a glance</div>
+          BPST Academy · 3rd Floor, Sahay Complex, Near IIM Tiraha, Mubarakpur, Lucknow – 226013, Uttar Pradesh · 58 courses in 14
+          categories · classroom and live online · Director: Ankit Sahay.
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bpst-video-keynote-section">
+          <div class="bpst-video-device-frame">
+            <div class="bpst-video-embed-ratio">
+              <button
+                type="button"
+                class="bpst-yt"
+                data-yt="CIx4rt5vqeY"
+                style="background-image: url(&quot;https://i.ytimg.com/vi/CIx4rt5vqeY/hqdefault.jpg&quot;)"
+                aria-label="Play the Director's talk"
+              >
+                <span class="bpst-yt-play"><i class="bi bi-play-fill"></i></span>
+              </button>
+            </div>
+          </div>
+          <p class="text-white-50 small mt-3 mb-0">
+            <i class="bi bi-person-fill text-warning"></i> Director Ankit Sahay on why you should choose software development (9.5
+            min)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bpst-section-dark py-5">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-4">
+      <span class="bpst-pill bpst-pill-cyan mb-2">How We Teach</span>
+      <h2 class="fw-bold text-white">A Simulated Software Company, Not a Classroom</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4">
+        <div class="bpst-card-dark h-100">
+          <i class="bi bi-1-circle-fill text-info fs-3"></i>
+          <h3 class="h5 text-white mt-2">Fundamentals first</h3>
+          <p class="text-light-muted small mb-0">Core programming logic and problem solving before any framework.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="bpst-card-dark h-100">
+          <i class="bi bi-2-circle-fill text-info fs-3"></i>
+          <h3 class="h5 text-white mt-2">Team formation</h3>
+          <p class="text-light-muted small mb-0">Frontend, backend, database and QA roles — just like a real team.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="bpst-card-dark h-100">
+          <i class="bi bi-3-circle-fill text-info fs-3"></i>
+          <h3 class="h5 text-white mt-2">Agile sprints</h3>
+          <p class="text-light-muted small mb-0">Sprint planning, daily 15-minute stand-ups and demos.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="bpst-card-dark h-100">
+          <i class="bi bi-4-circle-fill text-info fs-3"></i>
+          <h3 class="h5 text-white mt-2">Code reviews & testing</h3>
+          <p class="text-light-muted small mb-0">Pull requests, peer reviews, unit tests and bug fixing.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="bpst-card-dark h-100">
+          <i class="bi bi-5-circle-fill text-info fs-3"></i>
+          <h3 class="h5 text-white mt-2">Live deployment</h3>
+          <p class="text-light-muted small mb-0">Domains, cloud hosting, Docker and CI/CD — projects go live.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="bpst-card-dark h-100">
+          <i class="bi bi-6-circle-fill text-info fs-3"></i>
+          <h3 class="h5 text-white mt-2">Career launch</h3>
+          <p class="text-light-muted small mb-0">Portfolio, demo day, resume, LinkedIn and mock interviews.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4">About BPST Academy — FAQs</h2>
+        <div class="accordion bpst-faq-accordion" id="aboutFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="aboutFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#aboutFaq-c0"
+                aria-expanded="true"
+                aria-controls="aboutFaq-c0"
+              >
+                Who founded BPST Academy?
+              </button>
+            </h3>
+            <div id="aboutFaq-c0" class="accordion-collapse collapse show" aria-labelledby="aboutFaq-h0" data-bs-parent="#aboutFaq">
+              <div class="accordion-body">
+                BPST Academy (BPST Software Education) is the educational division of BitProSoftTech Software Solutions, founded by
+                Director Ankit Sahay. The team is made up of working software developers, project managers and solution architects.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="aboutFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#aboutFaq-c1"
+                aria-expanded="false"
+                aria-controls="aboutFaq-c1"
+              >
+                How is BPST Academy different from other institutes?
+              </button>
+            </h3>
+            <div id="aboutFaq-c1" class="accordion-collapse collapse" aria-labelledby="aboutFaq-h1" data-bs-parent="#aboutFaq">
+              <div class="accordion-body">
+                We run each batch like a small software company: strong fundamentals first, then cross-functional teams, Agile
+                sprints, daily stand-ups, code reviews, testing and live cloud deployment — guided by working IT professionals.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="aboutFaq-h2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#aboutFaq-c2"
+                aria-expanded="false"
+                aria-controls="aboutFaq-c2"
+              >
+                Does BPST Academy guarantee placement?
+              </button>
+            </h3>
+            <div id="aboutFaq-c2" class="accordion-collapse collapse" aria-labelledby="aboutFaq-h2" data-bs-parent="#aboutFaq">
+              <div class="accordion-body">
+                No. We do not make placement-guarantee claims. We provide job assistance: real projects, resume and LinkedIn reviews,
+                mock interviews and relevant opportunities.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

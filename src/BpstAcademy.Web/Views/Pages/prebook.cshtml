@@ -1,0 +1,633 @@
+@* Ported from NewLayout/Landing Page UI/prebook.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Pre-book Any Course for ₹49 — Diwali Offer | BPST Academy Lucknow",
+        Description = "Diwali gift from BPST Academy: reserve your seat in any of 58 IT, AI, data, cloud, testing or SAP courses for ₹49, adjusted in your fee. Valid till 8 Nov 2026.",
+        CanonicalPath = "/prebook",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Diwali Pre-booking", "item": "https://edu.bitprosofttech.com/prebook" }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "What is the BPST Academy ₹49 Diwali pre-booking offer?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "A Diwali gift for students and working professionals: pay just ₹49 online to reserve your seat in any of our 58 courses. The ₹49 is adjusted in your course fee when you enrol. Valid until 11:59 PM IST on Sunday, 8 November 2026 (Diwali)."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "How do I pay the ₹49?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Fill in the short form, then pay by UPI (GPay, PhonePe, Paytm, BHIM), debit/credit card, netbanking or wallet through Razorpay — or scan our UPI QR code and enter the transaction ID."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Is the ₹49 adjusted in my course fee?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. The full ₹49 is deducted from your course fee when you enrol in the course you pre-booked."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Can I change my course after pre-booking?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. Message the admissions desk on WhatsApp with your booking reference before your batch starts and we will move your booking to another course."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Is the ₹49 refundable?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "If BPST Academy cancels or cannot start your chosen batch, the ₹49 is refunded in full. Please read the refund policy for complete details."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Does the offer work for online classes?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. You can pre-book for the Lucknow classroom or for live online classes from anywhere in India."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Diwali Pre-booking</li>
+      </ol>
+    </nav>
+    <h1>Happy Diwali! Pre-book Any Course for <span class="bpst-gold-gradient-text">₹49</span></h1>
+    <p class="lead mb-0">
+      Reserve your seat in any of 58 BPST Academy courses — classroom in Lucknow or live online. The ₹49 is adjusted in your course fee.
+      Offer valid till Diwali, 8 Nov 2026, 11:59 PM IST.
+    </p>
+    <div class="mt-3 bpst-offer-live">
+      <span class="bpst-countdown bpst-countdown-lg" data-countdown aria-label="Offer ends Diwali, 8 Nov 2026"
+        ><span data-d>--</span><small>d</small> <span data-h>--</span><small>h</small> <span data-m>--</span><small>m</small>
+        <span data-s>--</span><small>s</small></span
+      >
+    </div>
+  </div>
+</section>
+<section class="bpst-prebook-section" style="padding-top: 50px">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-7 order-lg-2">
+        <div class="bpst-form-card" id="pageBook-card" data-prebook>
+          <div class="bpst-steps" aria-hidden="true">
+            <span class="on" data-step-ind="1">1 · Your details</span><span data-step-ind="2">2 · Pay ₹49</span
+            ><span data-step-ind="3">3 · Seat confirmed</span>
+          </div>
+
+          <!-- Step 1: details -->
+          <form class="needs-validation" novalidate data-step="1" aria-label="Pre-booking form">
+            <div class="d-flex justify-content-between align-items-start mb-3 gap-2">
+              <div>
+                <h3 class="fw-bold text-dark mb-0 h4">
+                  <span class="bpst-offer-live">Pre-book Your Seat for ₹49</span
+                  ><span class="bpst-offer-closed-only">Enquire for the Next Batch</span>
+                </h3>
+                <small class="text-muted bpst-offer-live">Diwali gift · ₹49 is adjusted in your course fee</small>
+              </div>
+              <span class="badge bg-warning text-dark fw-bold px-3 py-2 bpst-offer-live">₹49 only</span>
+            </div>
+            <input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="pageBook-name">Full Name <span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light"><i class="bi bi-person text-muted"></i></span>
+                  <input
+                    id="pageBook-name"
+                    name="name"
+                    class="form-control"
+                    placeholder="e.g. Rahul Sharma"
+                    required
+                    minlength="2"
+                    maxlength="100"
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="pageBook-mobile">Mobile (WhatsApp) <span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light">+91</span>
+                  <input
+                    id="pageBook-mobile"
+                    name="mobile"
+                    type="tel"
+                    inputmode="numeric"
+                    class="form-control"
+                    placeholder="10-digit mobile"
+                    pattern="[6-9][0-9]{9}"
+                    maxlength="10"
+                    required
+                    autocomplete="tel-national"
+                  />
+                </div>
+                <div class="invalid-feedback">Enter a valid 10-digit Indian mobile number.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="pageBook-email">Email</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-light"><i class="bi bi-envelope text-muted"></i></span>
+                  <input
+                    id="pageBook-email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="you@@example.com"
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="pageBook-city">City <span class="text-danger">*</span></label>
+                <input
+                  id="pageBook-city"
+                  name="city"
+                  class="form-control"
+                  placeholder="e.g. Lucknow"
+                  required
+                  autocomplete="address-level2"
+                />
+                <div class="invalid-feedback">Please enter your city.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="pageBook-course">Course <span class="text-danger">*</span></label>
+                <select id="pageBook-course" name="course" class="form-select" required>
+                  <option value="">Select a course…</option>
+                  <optgroup label="Industrial Training">
+                    <option value="full-stack-development">Software Development &amp; Full Stack (.NET + React)</option>
+                    <option value="advanced-ui-angular-react">Advanced UI Development (Angular &amp; React)</option>
+                    <option value="data-analytics-data-science">Data Analytics &amp; Data Science</option>
+                    <option value="artificial-intelligence-machine-learning">Artificial Intelligence &amp; Machine Learning</option>
+                    <option value="generative-ai-agentic-ai">Generative AI &amp; Agentic AI</option>
+                    <option value="cloud-computing-devops">Cloud Computing &amp; DevOps</option>
+                    <option value="cyber-security-ethical-hacking">Cyber Security &amp; Ethical Hacking</option>
+                    <option value="mobile-app-development">Mobile App Development (Android &amp; iOS)</option>
+                    <option value="game-development-unity">Game Development (Unity + C#)</option>
+                  </optgroup>
+                  <optgroup label="AI &amp; Generative AI">
+                    <option value="agentic-ai-engineering">Agentic AI Engineering</option>
+                    <option value="generative-ai-for-everyone">Generative AI for Everyone (Prompt Engineering)</option>
+                    <option value="mlops-llmops">MLOps &amp; LLMOps</option>
+                    <option value="artificial-intelligence-specialization">Artificial Intelligence (AI + Generative AI)</option>
+                    <option value="machine-learning-specialization">Machine Learning</option>
+                  </optgroup>
+                  <optgroup label="Data Analytics &amp; Engineering">
+                    <option value="data-analyst-pro">Data Analyst Pro (Excel + SQL + Power BI + Tableau + Python)</option>
+                    <option value="data-engineering">Data Engineering (Spark, Databricks, Snowflake, Azure/AWS)</option>
+                  </optgroup>
+                  <optgroup label="Cloud &amp; DevOps">
+                    <option value="devops-sre-terraform">DevOps + SRE + Terraform</option>
+                    <option value="google-cloud-engineer">Google Cloud (GCP) Cloud Engineer</option>
+                    <option value="cloud-certification-bootcamp">
+                      Cloud Certification Bootcamp (AZ-900, AZ-104, AWS CCP, AWS SAA)
+                    </option>
+                  </optgroup>
+                  <optgroup label="Cyber Security &amp; Networking">
+                    <option value="soc-analyst">SOC Analyst (Blue Team)</option>
+                    <option value="ethical-hacking-vapt">Ethical Hacking &amp; VAPT (CEH Preparation)</option>
+                    <option value="cloud-security">Cloud Security (AWS &amp; Azure)</option>
+                    <option value="ccna-network-security">CCNA + Network Security</option>
+                  </optgroup>
+                  <optgroup label="Full Stack Development">
+                    <option value="mern-full-stack-genai">MERN Full Stack + Generative AI</option>
+                    <option value="java-full-stack">Java Full Stack (Spring Boot + React)</option>
+                    <option value="python-full-stack">Python Full Stack (Django + React)</option>
+                    <option value="golang-microservices">Golang Microservices</option>
+                  </optgroup>
+                  <optgroup label="Software Testing &amp; QA">
+                    <option value="software-testing-masters">Software Testing Masters (Manual + Selenium + Playwright + API)</option>
+                    <option value="manual-software-testing">Manual Software Testing</option>
+                    <option value="automation-testing-selenium-playwright">Automation Testing (Selenium + Playwright)</option>
+                  </optgroup>
+                  <optgroup label="SAP, Salesforce &amp; Enterprise IT">
+                    <option value="sap-s4hana-fico">SAP S/4HANA FICO</option>
+                    <option value="sap-mm-sd">SAP MM &amp; SD (Materials Management + Sales &amp; Distribution)</option>
+                    <option value="sap-abap-s4hana">SAP ABAP on S/4HANA (RAP, CDS)</option>
+                    <option value="salesforce-admin-developer">Salesforce Admin + Developer (with Agentforce)</option>
+                    <option value="servicenow-admin-developer">ServiceNow Admin + Developer</option>
+                    <option value="rpa-uipath-agentic-automation">RPA with UiPath + Agentic Automation</option>
+                    <option value="oracle-sql-plsql">Oracle SQL + PL/SQL</option>
+                  </optgroup>
+                  <optgroup label="Business, Design, Marketing &amp; Accounting">
+                    <option value="digital-marketing-ai">Digital Marketing + AI (SEO, GEO, Ads)</option>
+                    <option value="ui-ux-design-figma">UI/UX Design (Figma + AI)</option>
+                    <option value="business-analyst-agile">Business Analyst (with Agile)</option>
+                    <option value="ai-product-management">AI Product Management</option>
+                    <option value="tally-prime-gst-excel">Tally Prime + GST + Advanced Excel</option>
+                  </optgroup>
+                  <optgroup label="Programming Languages">
+                    <option value="c-programming-course">C Programming Course (Basic &amp; Advanced)</option>
+                    <option value="cpp-programming-course">C++ Programming Course (Basic &amp; Advanced)</option>
+                    <option value="java-programming-course">Java Programming Course (Basic &amp; Advanced)</option>
+                    <option value="python-programming-course">Python Programming Course (Basic &amp; Advanced)</option>
+                  </optgroup>
+                  <optgroup label="School Coding &amp; Robotics">
+                    <option value="robotics-coding-ai-for-kids">Robotics, Coding &amp; AI for Kids (Grades 3–12)</option>
+                    <option value="python-coding-class-9-10">Coding Foundations with Python</option>
+                    <option value="cbse-computer-science-python-class-11-12">Computer Science with Python (CBSE)</option>
+                    <option value="icse-isc-java-computer-applications">Computer Applications &amp; Science with Java</option>
+                    <option value="engineering-headstart-c-cpp">Engineering Head-start: C, C++ &amp; Problem Solving</option>
+                  </optgroup>
+                  <optgroup label="College Programs">
+                    <option value="btech-career-track">B.Tech Career Track</option>
+                    <option value="bca-career-track">BCA Career Track</option>
+                    <option value="mca-industry-track">MCA Industry Track</option>
+                    <option value="polytechnic-diploma-track">Polytechnic Diploma Track</option>
+                  </optgroup>
+                  <optgroup label="Career &amp; Placement Readiness">
+                    <option value="dsa-placement-preparation">DSA &amp; Placement Preparation</option>
+                    <option value="job-readiness-program">Job-Readiness Program (Communication, Resume, Mock Interviews)</option>
+                  </optgroup>
+                  <optgroup label="Summer &amp; Winter Training">
+                    <option value="summer-winter-training-45-days">45-Day Summer / Winter Industrial Training</option>
+                  </optgroup>
+                  <option value="not-sure">Not sure yet — help me choose after booking</option>
+                </select>
+                <div class="invalid-feedback">Please choose a course.</div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="pageBook-duration">Duration</label>
+                <select id="pageBook-duration" name="duration" class="form-select">
+                  <option value="As per course">As per course</option>
+                  <option value="45-Day Crash Course">45-Day Crash Course</option>
+                  <option value="3-Month Program">3-Month Program</option>
+                  <option value="6-Month Industry Program">6-Month Industry Program</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="pageBook-mode">Mode</label>
+                <select id="pageBook-mode" name="mode" class="form-select">
+                  <option>Classroom (Lucknow)</option>
+                  <option>Live online</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="pageBook-qual">You are</label>
+                <select id="pageBook-qual" name="qualification" class="form-select">
+                  <option>School student (Class 6–12)</option>
+                  <option>B.Tech / B.E.</option>
+                  <option>BCA</option>
+                  <option>MCA</option>
+                  <option>Polytechnic / Diploma</option>
+                  <option>B.Sc / M.Sc (IT/CS)</option>
+                  <option>B.Com / BBA / MBA</option>
+                  <option>Other graduate</option>
+                  <option>Working professional</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="pageBook-msg">Questions (optional)</label
+                ><textarea
+                  id="pageBook-msg"
+                  name="message"
+                  class="form-control"
+                  rows="2"
+                  placeholder="Preferred batch timing, college, anything else…"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="yes" id="pageBook-consent" name="consent" required />
+                  <label class="form-check-label small text-muted" for="pageBook-consent"
+                    >I agree to the <a href="/terms" target="_blank">Terms</a> and
+                    <a href="/refund-policy" target="_blank">Refund Policy</a>, and to be contacted on phone/WhatsApp about my
+                    booking.</label
+                  >
+                  <div class="invalid-feedback">Please accept to continue.</div>
+                </div>
+              </div>
+              <div class="col-12 mt-2">
+                <button type="submit" class="btn btn-bpst-gold bpst-shine btn-lg w-100 bpst-offer-live">
+                  <i class="bi bi-lock-fill"></i> Continue to Pay ₹49
+                </button>
+                <button type="submit" class="btn btn-bpst-primary btn-lg w-100 bpst-offer-closed-only">
+                  <i class="bi bi-send-fill"></i> Send Enquiry
+                </button>
+                <div class="d-flex justify-content-center flex-wrap gap-3 text-muted small mt-2">
+                  <span><i class="bi bi-shield-check text-success"></i> Secure payment</span>
+                  <span><i class="bi bi-arrow-repeat text-primary"></i> Adjusted in fee</span>
+                  <span><i class="bi bi-lock-fill text-secondary"></i> Details kept private</span>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <!-- Step 2: payment -->
+          <div data-step="2" hidden>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h3 class="h5 fw-bold mb-0">Pay ₹49 to confirm your seat</h3>
+              <button type="button" class="btn btn-link btn-sm p-0" data-back><i class="bi bi-arrow-left"></i> Edit details</button>
+            </div>
+            <p class="small text-muted mb-3">
+              Booking reference <span class="bpst-ref" data-ref>—</span> · <span data-course-name></span>
+            </p>
+            <div class="bpst-pay-tabs" role="tablist">
+              <button type="button" class="bpst-pay-tab active" data-pay-tab="razorpay" role="tab" aria-selected="true">
+                <i class="bi bi-credit-card-2-front"></i> Card / UPI / Netbanking
+              </button>
+              <button type="button" class="bpst-pay-tab" data-pay-tab="upi" role="tab" aria-selected="false">
+                <i class="bi bi-qr-code"></i> Scan UPI QR
+              </button>
+            </div>
+            <div data-pay-pane="razorpay">
+              <p class="small text-muted">Pay securely through Razorpay with any UPI app, debit/credit card, netbanking or wallet.</p>
+              <button type="button" class="btn btn-bpst-primary btn-lg w-100" data-razorpay>
+                <i class="bi bi-shield-lock-fill"></i> Pay ₹49 securely
+              </button>
+              <p class="small text-danger mt-2 mb-0" data-razorpay-msg hidden></p>
+            </div>
+            <div data-pay-pane="upi" hidden>
+              <div class="row g-3 align-items-center">
+                <div class="col-sm-auto text-center">
+                  <div class="bpst-qr-box" data-upi-qr aria-label="UPI QR code for ₹49"></div>
+                </div>
+                <div class="col">
+                  <p class="small mb-2">Scan with any UPI app (GPay, PhonePe, Paytm, BHIM), or tap below on your phone:</p>
+                  <a class="btn btn-success w-100 mb-2 d-sm-none" data-upi-link href="#"
+                    ><i class="bi bi-phone"></i> Open UPI app & pay ₹49</a
+                  >
+                  <p class="small text-muted mb-2">
+                    UPI ID: <strong data-upi-id>—</strong> · Amount <strong>₹49</strong> · Note: <strong data-ref>—</strong>
+                  </p>
+                  <label class="form-label small mb-1" for="pageBook-utr"
+                    >After paying, enter the 12-digit UTR / transaction ID</label
+                  >
+                  <div class="input-group">
+                    <input
+                      id="pageBook-utr"
+                      class="form-control"
+                      data-utr
+                      inputmode="numeric"
+                      placeholder="e.g. 412345678901"
+                      maxlength="22"
+                    />
+                    <button type="button" class="btn btn-bpst-primary" data-utr-submit>Confirm</button>
+                  </div>
+                  <div class="small text-danger mt-1" data-utr-msg hidden>
+                    Please enter the UTR / transaction ID shown in your UPI app.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: confirmation -->
+          <div data-step="3" hidden class="text-center py-3">
+            <div class="mb-2 text-success"><i class="bi bi-patch-check-fill" style="font-size: 4rem"></i></div>
+            <h3 class="fw-bold text-dark mb-2 h4" data-done-title>Seat reserved — Happy Diwali!</h3>
+            <p class="text-muted mb-3" data-done-text>Your booking reference is <span class="bpst-ref" data-ref>—</span>.</p>
+            <div class="p-3 bg-light rounded-3 text-start mb-3 border">
+              <h4 class="h6 fw-bold mb-2 text-dark"><i class="bi bi-info-circle text-primary me-1"></i> What happens next?</h4>
+              <ul class="small text-muted mb-0 ps-3">
+                <li>Our admissions desk confirms your payment and seat on WhatsApp.</li>
+                <li>You receive the batch start date, timing options and full fee details for your course.</li>
+                <li>Your ₹49 is adjusted in the course fee when you enrol.</li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+              <a
+                class="btn btn-success"
+                data-wa-confirm
+                target="_blank"
+                rel="noopener"
+                href="https://wa.me/918299101616?text=Hello%20BPST%20Academy%2C%20I%20just%20pre-booked%20a%20course."
+                ><i class="bi bi-whatsapp me-1"></i> Share on WhatsApp</a
+              >
+              <a class="btn btn-outline-primary" href="/site/docs/BPST_Edu_Quick_Overview.pdf" target="_blank" rel="noopener"
+                ><i class="bi bi-file-earmark-pdf me-1"></i> Quick Overview (PDF)</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 order-lg-1">
+        <div class="d-flex align-items-center gap-2 mb-3 flex-wrap">
+          <span class="bpst-pill bpst-pill-gold"><span class="bpst-diya sm" aria-hidden="true"></span> Happy Diwali Gift</span>
+          <span class="badge bg-success px-2 py-1 bpst-offer-live"><span class="bpst-pulse-glow me-1"></span> Seats open</span>
+        </div>
+        <h2 class="fw-bold text-white mb-3" style="font-size: clamp(2rem, 3.5vw, 2.75rem)">
+          Pre-book Any Course for Just <span class="bpst-gold-gradient-text">₹49</span>
+        </h2>
+        <p class="text-light-muted mb-4 lead" style="font-size: 1.05rem">
+          Our Diwali gift to students and working professionals: reserve your seat in any of 58 courses for ₹49. The amount is
+          adjusted in your course fee when you enrol, so it costs you nothing extra.
+        </p>
+        <div class="bpst-diwali-card mb-4 bpst-offer-live">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <span class="bpst-diya" aria-hidden="true"></span>
+              <div>
+                <div class="small text-uppercase fw-bold" style="letter-spacing: 0.08em; color: #fcd34d">
+                  Offer ends Diwali · 8 Nov 2026
+                </div>
+                <div class="bpst-price-tag"><sup>₹</sup>49</div>
+              </div>
+            </div>
+            <span class="bpst-countdown bpst-countdown-lg" data-countdown aria-label="Offer ends Diwali, 8 Nov 2026"
+              ><span data-d>--</span><small>d</small> <span data-h>--</span><small>h</small> <span data-m>--</span><small>m</small>
+              <span data-s>--</span><small>s</small></span
+            >
+          </div>
+        </div>
+        <ul class="list-unstyled bpst-perks mb-4">
+          <li>
+            <i class="bi bi-bookmark-star-fill"></i
+            ><span
+              ><strong class="text-white">Seat locked in the next batch</strong> of your chosen course, classroom or live
+              online.</span
+            >
+          </li>
+          <li>
+            <i class="bi bi-arrow-repeat"></i
+            ><span><strong class="text-white">₹49 adjusted in your fee</strong>, so the Diwali gift costs you nothing extra.</span>
+          </li>
+          <li>
+            <i class="bi bi-whatsapp"></i
+            ><span><strong class="text-white">Confirmation on WhatsApp</strong> with the batch date and full fee details.</span>
+          </li>
+        </ul>
+        <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15)">
+          <p class="small text-white mb-1"><strong>Questions before you book?</strong> Message the admissions desk:</p>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20the%20%E2%82%B949%20Diwali%20pre-booking."
+            target="_blank"
+            rel="noopener"
+            class="fw-bold text-warning"
+            ><i class="bi bi-whatsapp text-success me-1"></i> WhatsApp +91 82991 01616</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 bg-white" aria-labelledby="offer-faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="offer-faq">₹49 Pre-booking — Questions &amp; Answers</h2>
+
+        <div class="accordion bpst-faq-accordion" id="offerFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="offerFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#offerFaq-c0"
+                aria-expanded="true"
+                aria-controls="offerFaq-c0"
+              >
+                What is the BPST Academy ₹49 Diwali pre-booking offer?
+              </button>
+            </h3>
+            <div id="offerFaq-c0" class="accordion-collapse collapse show" aria-labelledby="offerFaq-h0" data-bs-parent="#offerFaq">
+              <div class="accordion-body">
+                A Diwali gift for students and working professionals: pay just ₹49 online to reserve your seat in any of our 58
+                courses. The ₹49 is adjusted in your course fee when you enrol. Valid until 11:59 PM IST on Sunday, 8 November 2026
+                (Diwali).
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="offerFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#offerFaq-c1"
+                aria-expanded="false"
+                aria-controls="offerFaq-c1"
+              >
+                How do I pay the ₹49?
+              </button>
+            </h3>
+            <div id="offerFaq-c1" class="accordion-collapse collapse" aria-labelledby="offerFaq-h1" data-bs-parent="#offerFaq">
+              <div class="accordion-body">
+                Fill in the short form, then pay by UPI (GPay, PhonePe, Paytm, BHIM), debit/credit card, netbanking or wallet through
+                Razorpay — or scan our UPI QR code and enter the transaction ID.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="offerFaq-h2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#offerFaq-c2"
+                aria-expanded="false"
+                aria-controls="offerFaq-c2"
+              >
+                Is the ₹49 adjusted in my course fee?
+              </button>
+            </h3>
+            <div id="offerFaq-c2" class="accordion-collapse collapse" aria-labelledby="offerFaq-h2" data-bs-parent="#offerFaq">
+              <div class="accordion-body">
+                Yes. The full ₹49 is deducted from your course fee when you enrol in the course you pre-booked.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="offerFaq-h3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#offerFaq-c3"
+                aria-expanded="false"
+                aria-controls="offerFaq-c3"
+              >
+                Can I change my course after pre-booking?
+              </button>
+            </h3>
+            <div id="offerFaq-c3" class="accordion-collapse collapse" aria-labelledby="offerFaq-h3" data-bs-parent="#offerFaq">
+              <div class="accordion-body">
+                Yes. Message the admissions desk on WhatsApp with your booking reference before your batch starts and we will move
+                your booking to another course.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="offerFaq-h4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#offerFaq-c4"
+                aria-expanded="false"
+                aria-controls="offerFaq-c4"
+              >
+                Is the ₹49 refundable?
+              </button>
+            </h3>
+            <div id="offerFaq-c4" class="accordion-collapse collapse" aria-labelledby="offerFaq-h4" data-bs-parent="#offerFaq">
+              <div class="accordion-body">
+                If BPST Academy cancels or cannot start your chosen batch, the ₹49 is refunded in full. Please read the refund policy for
+                complete details.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="offerFaq-h5">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#offerFaq-c5"
+                aria-expanded="false"
+                aria-controls="offerFaq-c5"
+              >
+                Does the offer work for online classes?
+              </button>
+            </h3>
+            <div id="offerFaq-c5" class="accordion-collapse collapse" aria-labelledby="offerFaq-h5" data-bs-parent="#offerFaq">
+              <div class="accordion-body">
+                Yes. You can pre-book for the Lucknow classroom or for live online classes from anywhere in India.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="small text-muted text-center mt-3">
+          By pre-booking you agree to our <a href="/terms">Terms</a> and <a href="/refund-policy">Refund Policy</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

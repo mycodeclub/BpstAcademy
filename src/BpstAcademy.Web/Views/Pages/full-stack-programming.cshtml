@@ -1,0 +1,1191 @@
+@* Ported from NewLayout/Landing Page UI/full-stack-programming.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Full Stack Developer Courses | BPST Academy",
+        Description = "MERN + GenAI, Java Full Stack (Spring Boot), Python Full Stack (Django) and Golang microservices — job-focused programs with deployed portfolio apps.",
+        CanonicalPath = "/full-stack-programming",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "name": "Full Stack Development",
+              "item": "https://edu.bitprosofttech.com/full-stack-programming"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "Full Stack Development courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/mern-full-stack-genai",
+              "name": "MERN Full Stack + Generative AI"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/java-full-stack",
+              "name": "Java Full Stack (Spring Boot + React)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "url": "https://edu.bitprosofttech.com/courses/python-full-stack",
+              "name": "Python Full Stack (Django + React)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 4,
+              "url": "https://edu.bitprosofttech.com/courses/golang-microservices",
+              "name": "Golang Microservices"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Which full stack course has the most jobs in India?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Java full stack is the largest hiring pool in IT services companies; MERN is most common in startups; .NET is strong in enterprise and product companies. All three are good choices — pick the stack that matches the companies you target."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Do I need to know coding before joining?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "No. Every full stack program starts with programming fundamentals and HTML/CSS/JavaScript before moving to frameworks."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">Full Stack Development</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-code-square"></i> 4 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">Full Stack Developer Courses</h1>
+        <p class="lead mb-4">
+          MERN + GenAI, Java Full Stack (Spring Boot), Python Full Stack (Django) and Golang microservices — job-focused programs with
+          deployed portfolio apps.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy offers full stack developer courses in MERN + Generative AI, Java (Spring Boot + React), Python (Django + React)
+          and .NET (ASP.NET Core + React), plus a Golang microservices add-on. Programs run 4–6 months and end with a deployed full
+          stack project and interview preparation.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 4 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20Full%20Stack%20Development%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/mern-full-stack-genai"
+                ><i class="bi bi-filetype-jsx text-info"></i
+                ><span>MERN Full Stack + Generative AI<br /><small class="text-white-50">4 – 6 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/java-full-stack"
+                ><i class="bi bi-cup-hot text-info"></i
+                ><span>Java Full Stack<br /><small class="text-white-50">5 – 6 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/python-full-stack"
+                ><i class="bi bi-filetype-py text-info"></i
+                ><span>Python Full Stack<br /><small class="text-white-50">5 – 6 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/golang-microservices"
+                ><i class="bi bi-lightning text-info"></i
+                ><span>Golang Microservices<br /><small class="text-white-50">6 – 8 Weeks</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="Full Stack Development courses">
+      <button
+        class="tab-pill active"
+        id="t-mern-full-stack-genai"
+        data-bs-toggle="pill"
+        data-bs-target="#mern-full-stack-genai"
+        type="button"
+        role="tab"
+        aria-controls="mern-full-stack-genai"
+        aria-selected="true"
+      >
+        MERN Full Stack + Generative AI</button
+      ><button
+        class="tab-pill"
+        id="t-java-full-stack"
+        data-bs-toggle="pill"
+        data-bs-target="#java-full-stack"
+        type="button"
+        role="tab"
+        aria-controls="java-full-stack"
+        aria-selected="false"
+      >
+        Java Full Stack</button
+      ><button
+        class="tab-pill"
+        id="t-python-full-stack"
+        data-bs-toggle="pill"
+        data-bs-target="#python-full-stack"
+        type="button"
+        role="tab"
+        aria-controls="python-full-stack"
+        aria-selected="false"
+      >
+        Python Full Stack</button
+      ><button
+        class="tab-pill"
+        id="t-golang-microservices"
+        data-bs-toggle="pill"
+        data-bs-target="#golang-microservices"
+        type="button"
+        role="tab"
+        aria-controls="golang-microservices"
+        aria-selected="false"
+      >
+        Golang Microservices
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="mern-full-stack-genai"
+        role="tabpanel"
+        aria-labelledby="t-mern-full-stack-genai"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-mern-full-stack-genai">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · MongoDB, Express, React, Node — with AI built in</span>
+              <h2 id="h-mern-full-stack-genai">
+                <a href="/courses/mern-full-stack-genai" class="text-reset">MERN Full Stack + Generative AI</a>
+              </h2>
+              <p>
+                Become a modern full stack JavaScript developer: HTML/CSS/JS, React, Node and Express, MongoDB, TypeScript and Next.js
+                — plus AI API integration so your apps include chat, search and automation. Ends with a deployed SaaS project and
+                DSA/interview prep.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">Students, freshers and career switchers targeting startups and product companies.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=mern-full-stack-genai"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/mern-full-stack-genai"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">4 – 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Advanced</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Web Fundamentals</div>
+                  <ul>
+                    <li>HTML5 &amp; CSS3</li>
+                    <li>Flexbox, Grid &amp; Tailwind</li>
+                    <li>JavaScript ES6+</li>
+                    <li>DOM &amp; fetch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">React</div>
+                  <ul>
+                    <li>Components, props &amp; state</li>
+                    <li>Hooks</li>
+                    <li>React Router</li>
+                    <li>Redux Toolkit / Zustand</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Node &amp; Express</div>
+                  <ul>
+                    <li>REST API design</li>
+                    <li>Middleware</li>
+                    <li>JWT auth &amp; RBAC</li>
+                    <li>File uploads &amp; email</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">MongoDB</div>
+                  <ul>
+                    <li>Schema design with Mongoose</li>
+                    <li>Aggregation</li>
+                    <li>Indexing</li>
+                    <li>Transactions</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">TypeScript &amp; Next.js</div>
+                  <ul>
+                    <li>TypeScript essentials</li>
+                    <li>Next.js app router</li>
+                    <li>Server components</li>
+                    <li>SEO &amp; performance</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">AI Integration &amp; Deployment</div>
+                  <ul>
+                    <li>OpenAI/Claude APIs</li>
+                    <li>RAG search in apps</li>
+                    <li>Docker &amp; CI/CD</li>
+                    <li>Vercel/AWS deploy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>AI-powered SaaS dashboard</li>
+                    <li>E-commerce store with payments</li>
+                    <li>Real-time chat app with AI assistant</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build and deploy full stack JS apps</li>
+                    <li>Integrate AI features into products</li>
+                    <li>Clear full stack interviews</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">HTML/CSS</span><span class="bpst-chip dark">JavaScript</span
+                    ><span class="bpst-chip dark">React</span><span class="bpst-chip dark">Node.js</span
+                    ><span class="bpst-chip dark">Express</span><span class="bpst-chip dark">MongoDB</span
+                    ><span class="bpst-chip dark">TypeScript</span><span class="bpst-chip dark">Next.js</span
+                    ><span class="bpst-chip dark">Tailwind</span><span class="bpst-chip dark">OpenAI API</span
+                    ><span class="bpst-chip dark">Docker</span><span class="bpst-chip dark">Git</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Optional: Meta Front-End Developer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="java-full-stack">Next: Java Full Stack ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="java-full-stack" role="tabpanel" aria-labelledby="t-java-full-stack" tabindex="0">
+        <article class="course" aria-labelledby="h-java-full-stack">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · The most-hired stack in Indian IT services</span>
+              <h2 id="h-java-full-stack">
+                <a href="/courses/java-full-stack" class="text-reset">Java Full Stack (Spring Boot + React)</a>
+              </h2>
+              <p>
+                Core and advanced Java, JDBC and Hibernate, Spring Boot REST APIs and microservices, SQL, React front-end, testing
+                with JUnit, Docker and cloud deployment — with placement preparation for service and product companies.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >B.Tech, BCA, MCA students and freshers targeting TCS, Infosys, Wipro, Accenture-type roles.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=java-full-stack"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/java-full-stack"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">5 – 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Advanced</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Core Java</div>
+                  <ul>
+                    <li>OOP in depth</li>
+                    <li>Collections &amp; generics</li>
+                    <li>Exceptions &amp; I/O</li>
+                    <li>Java 8+ streams</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Advanced Java &amp; SQL</div>
+                  <ul>
+                    <li>JDBC</li>
+                    <li>Multithreading</li>
+                    <li>MySQL / Oracle SQL</li>
+                    <li>Hibernate &amp; JPA</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Spring Boot</div>
+                  <ul>
+                    <li>Spring core &amp; DI</li>
+                    <li>REST controllers</li>
+                    <li>Spring Data JPA</li>
+                    <li>Spring Security &amp; JWT</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Microservices</div>
+                  <ul>
+                    <li>Service decomposition</li>
+                    <li>Spring Cloud gateway &amp; config</li>
+                    <li>Kafka messaging</li>
+                    <li>Resilience patterns</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">React Front-end</div>
+                  <ul>
+                    <li>React fundamentals</li>
+                    <li>Forms &amp; validation</li>
+                    <li>Consuming REST APIs</li>
+                    <li>Responsive UI</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Testing, DevOps &amp; Placement</div>
+                  <ul>
+                    <li>JUnit &amp; Mockito</li>
+                    <li>Docker</li>
+                    <li>AWS deploy</li>
+                    <li>Aptitude &amp; mock interviews</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Banking microservices system</li>
+                    <li>Job portal with Spring Boot + React</li>
+                    <li>Inventory management API</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build enterprise Java applications</li>
+                    <li>Design microservices with Spring Cloud</li>
+                    <li>Clear Java developer interviews</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Java 21</span><span class="bpst-chip dark">Spring Boot</span
+                    ><span class="bpst-chip dark">Hibernate</span><span class="bpst-chip dark">MySQL</span
+                    ><span class="bpst-chip dark">React</span><span class="bpst-chip dark">Kafka</span
+                    ><span class="bpst-chip dark">JUnit</span><span class="bpst-chip dark">Docker</span
+                    ><span class="bpst-chip dark">AWS</span><span class="bpst-chip dark">IntelliJ</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to Oracle Java SE certification
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="mern-full-stack-genai">
+            ‹ MERN Full Stack + Generative AI
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="python-full-stack">Next: Python Full Stack ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="python-full-stack" role="tabpanel" aria-labelledby="t-python-full-stack" tabindex="0">
+        <article class="course" aria-labelledby="h-python-full-stack">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 03 · One language for web, data and AI</span>
+              <h2 id="h-python-full-stack">
+                <a href="/courses/python-full-stack" class="text-reset">Python Full Stack (Django + React)</a>
+              </h2>
+              <p>
+                Python programming, Django and Django REST Framework, PostgreSQL, React front-end, FastAPI, testing and deployment — a
+                stack that also opens doors to data and AI roles.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Students and freshers who want a versatile, beginner-friendly stack.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=python-full-stack"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/python-full-stack"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">5 – 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Advanced</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Python Programming</div>
+                  <ul>
+                    <li>Syntax &amp; data structures</li>
+                    <li>OOP</li>
+                    <li>Modules &amp; packages</li>
+                    <li>File &amp; error handling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Databases</div>
+                  <ul>
+                    <li>SQL with PostgreSQL</li>
+                    <li>ORM concepts</li>
+                    <li>Migrations</li>
+                    <li>Query optimisation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Django</div>
+                  <ul>
+                    <li>MVT architecture</li>
+                    <li>Models, views, templates</li>
+                    <li>Auth &amp; admin</li>
+                    <li>Django REST Framework</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">FastAPI</div>
+                  <ul>
+                    <li>Async APIs</li>
+                    <li>Pydantic models</li>
+                    <li>OAuth2/JWT</li>
+                    <li>API documentation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">React Front-end</div>
+                  <ul>
+                    <li>Components &amp; hooks</li>
+                    <li>Routing</li>
+                    <li>State management</li>
+                    <li>API integration</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Deploy &amp; Placement</div>
+                  <ul>
+                    <li>Testing with pytest</li>
+                    <li>Docker</li>
+                    <li>Cloud deployment</li>
+                    <li>Mock interviews</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Learning management system (Django + React)</li>
+                    <li>REST API for a food-delivery app</li>
+                    <li>AI-enabled blog with FastAPI</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build full stack Python apps</li>
+                    <li>Design secure REST APIs</li>
+                    <li>Deploy Python apps to cloud</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python</span><span class="bpst-chip dark">Django</span
+                    ><span class="bpst-chip dark">DRF</span><span class="bpst-chip dark">FastAPI</span
+                    ><span class="bpst-chip dark">PostgreSQL</span><span class="bpst-chip dark">React</span
+                    ><span class="bpst-chip dark">pytest</span><span class="bpst-chip dark">Docker</span
+                    ><span class="bpst-chip dark">Git</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BPST Python Full Stack certificate
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="java-full-stack">‹ Java Full Stack</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="golang-microservices">Next: Golang Microservices ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="golang-microservices" role="tabpanel" aria-labelledby="t-golang-microservices" tabindex="0">
+        <article class="course" aria-labelledby="h-golang-microservices">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 04 · Fast, cloud-native back-ends in Go</span>
+              <h2 id="h-golang-microservices">
+                <a href="/courses/golang-microservices" class="text-reset">Golang Microservices</a>
+              </h2>
+              <p>
+                A focused add-on for developers: Go syntax, goroutines and channels, REST and gRPC services, testing, and deployment
+                on Docker and Kubernetes.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Developers who know at least one programming language.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=golang-microservices"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/golang-microservices"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">6 – 8 Weeks</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Go Fundamentals</div>
+                  <ul>
+                    <li>Types, structs &amp; interfaces</li>
+                    <li>Error handling</li>
+                    <li>Packages &amp; modules</li>
+                    <li>Tooling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Concurrency</div>
+                  <ul>
+                    <li>Goroutines</li>
+                    <li>Channels &amp; select</li>
+                    <li>sync package</li>
+                    <li>Worker pools</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Web Services</div>
+                  <ul>
+                    <li>net/http &amp; Gin</li>
+                    <li>REST APIs</li>
+                    <li>Middleware</li>
+                    <li>Validation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">gRPC &amp; Data</div>
+                  <ul>
+                    <li>Protocol Buffers</li>
+                    <li>gRPC services</li>
+                    <li>PostgreSQL with sqlc/GORM</li>
+                    <li>Redis caching</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Testing &amp; Observability</div>
+                  <ul>
+                    <li>Unit &amp; table tests</li>
+                    <li>Benchmarks</li>
+                    <li>Logging &amp; tracing</li>
+                    <li>Profiling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Cloud Native Deploy</div>
+                  <ul>
+                    <li>Docker multi-stage builds</li>
+                    <li>Kubernetes</li>
+                    <li>CI/CD</li>
+                    <li>Capstone service</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>URL shortener with Redis</li>
+                    <li>gRPC order service on Kubernetes</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Write idiomatic, concurrent Go</li>
+                    <li>Build and deploy microservices</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Go</span><span class="bpst-chip dark">Gin</span
+                    ><span class="bpst-chip dark">gRPC</span><span class="bpst-chip dark">PostgreSQL</span
+                    ><span class="bpst-chip dark">Redis</span><span class="bpst-chip dark">Docker</span
+                    ><span class="bpst-chip dark">Kubernetes</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> BPST Golang certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="python-full-stack">‹ Python Full Stack</button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white border-top" aria-labelledby="rel-title">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-4">
+      <span class="bpst-pill bpst-pill-blue mb-2">Also consider</span>
+      <h2 class="fw-bold" id="rel-title">Related Industrial Training Tracks</h2>
+      <p class="text-muted">Project-based 45-day, 3-month and 6-month tracks that pair well with full stack development.</p>
+    </div>
+    <div class="row g-4">
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="software development &amp; full stack (.net + react) from fundamentals to real-world applications c# asp.net core mvc asp.net core web api java python react sql server ef core bootstrap 5 docker github actions azure industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-hot-badge"><i class="bi bi-fire"></i> In demand</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/dotnet.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/react.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            /><img src="/site/img/tech/sql.svg" alt="" width="93" height="28" loading="lazy" />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/full-stack-development"
+              >Software Development &amp; Full Stack (.NET + React)</a
+            >
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">From Fundamentals to Real-World Applications</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Get practical, industry-oriented software development training that takes you from core programming fundamentals to modern
+            web and backend engineering, with hands-on projects, real…
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">C# / .NET</span><span class="bpst-tech-pill">ASP.NET Core MVC</span
+              ><span class="bpst-tech-pill">REST APIs</span><span class="bpst-tech-pill">Java</span
+              ><span class="bpst-tech-pill">Python</span><span class="bpst-tech-pill text-primary fw-bold">+6 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/full-stack-development" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=full-stack-development" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=full-stack-development#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="advanced ui development (angular &amp; react) craft high-performance, enterprise web experiences html5 css3 javascript typescript react angular rxjs redux jest industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-course-number">02</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/angular.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/react.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            /><img src="/site/img/tech/typescript.svg" alt="" width="93" height="28" loading="lazy" />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/advanced-ui-angular-react"
+              >Advanced UI Development (Angular &amp; React)</a
+            >
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Craft High-Performance, Enterprise Web Experiences</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Focus exclusively on modern frontend architecture, state management, component lifecycles, responsive layouts, and modern
+            single-page applications using Angular and React.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">React.js</span><span class="bpst-tech-pill">Angular</span
+              ><span class="bpst-tech-pill">TypeScript</span><span class="bpst-tech-pill">JavaScript ES6+</span
+              ><span class="bpst-tech-pill">HTML5/CSS3</span><span class="bpst-tech-pill text-primary fw-bold">+4 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/advanced-ui-angular-react" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=advanced-ui-angular-react" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=advanced-ui-angular-react#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="mobile app development (android &amp; ios) build apps. shape the future. kotlin java android studio jetpack compose room retrofit swift flutter firebase industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-course-number">03</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/android.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/flutter.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/mobile-app-development">Mobile App Development (Android &amp; iOS)</a>
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Build Apps. Shape the Future.</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Build powerful, beautiful mobile applications for Android and iOS platforms with responsive mobile interfaces, API
+            integration, and real projects.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">Android (Kotlin / Java)</span><span class="bpst-tech-pill">iOS (Swift basics)</span
+              ><span class="bpst-tech-pill">Mobile UI/UX</span><span class="bpst-tech-pill">REST APIs &amp; JSON</span
+              ><span class="bpst-tech-pill">SQLite / Room DB</span><span class="bpst-tech-pill text-primary fw-bold">+3 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/mobile-app-development" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=mobile-app-development" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=mobile-app-development#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="game development (unity + c#) play. create. build careers. unity c# visual studio blender basics git industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-course-number">04</span>
+          </div>
+          <div class="bpst-course-logos"><img src="/site/img/tech/unity.svg" alt="" width="93" height="28" loading="lazy" /></div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/game-development-unity">Game Development (Unity + C#)</a>
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Play. Create. Build Careers.</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Turn your ideas into interactive worlds with game programming, 2D/3D mechanics, physics engines, character animation, and
+            level design.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">C# Programming</span><span class="bpst-tech-pill">Game Physics</span
+              ><span class="bpst-tech-pill">Unity / Game Engine Basics</span><span class="bpst-tech-pill">2D/3D Math</span
+              ><span class="bpst-tech-pill">Game UI / UX</span><span class="bpst-tech-pill text-primary fw-bold">+3 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/game-development-unity" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=game-development-unity" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=game-development-unity#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">Full Stack Development — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                Which full stack course has the most jobs in India?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Java full stack is the largest hiring pool in IT services companies; MERN is most common in startups; .NET is strong
+                in enterprise and product companies. All three are good choices — pick the stack that matches the companies you
+                target.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c1"
+                aria-expanded="false"
+                aria-controls="catFaq-c1"
+              >
+                Do I need to know coding before joining?
+              </button>
+            </h3>
+            <div id="catFaq-c1" class="accordion-collapse collapse" aria-labelledby="catFaq-h1" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                No. Every full stack program starts with programming fundamentals and HTML/CSS/JavaScript before moving to frameworks.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any full stack development course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

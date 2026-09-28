@@ -1,0 +1,191 @@
+@* Ported from NewLayout/Landing Page UI/locations.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Computer & IT Training Institute in Lucknow and UP | BPST Academy",
+        Description = "BPST Academy classroom in Lucknow (near IIM Tiraha) for Barabanki, Unnao, Sitapur, Hardoi, Rae Bareli and Kanpur learners, plus live online classes across UP.",
+        CanonicalPath = "/locations",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Locations", "item": "https://edu.bitprosofttech.com/locations" }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Where is BPST Academy located in Lucknow?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "At 3rd Floor, Sahay Complex, Near IIM Tiraha, Mubarakpur, Lucknow – 226013, Uttar Pradesh, near IIM Tiraha, Lucknow. Learners come from nearby areas such as Jankipuram, Aliganj, Kursi Road, Madiyaon and Vikas Nagar."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Can students from Barabanki, Sitapur, Unnao or Kanpur attend?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. Many students travel to our Lucknow classroom from nearby districts, and every course is also available as live online classes."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Is there a BPST Academy centre in my city?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Our classroom is in Lucknow. Learners in all other UP cities and across India join the same batches live online."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Locations</li>
+      </ol>
+    </nav>
+    <h1>IT &amp; Software Training Across Uttar Pradesh</h1>
+    <p class="lead mb-0">
+      Classroom training in Lucknow for learners from Barabanki, Unnao, Sitapur, Hardoi, Rae Bareli, Kanpur — and live online classes
+      for every city in UP and India.
+    </p>
+  </div>
+</section>
+<section class="py-5 bpst-section-light">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="bpst-card h-100">
+          <h2 class="h4 fw-bold"><i class="bi bi-building text-primary"></i> Lucknow Classroom</h2>
+          <p>3rd Floor, Sahay Complex, Near IIM Tiraha, Mubarakpur, Lucknow – 226013, Uttar Pradesh. Open Monday – Saturday.</p>
+          <p class="small text-muted mb-2">Convenient for learners from:</p>
+          <div class="tag-row mb-3">
+            <span class="bpst-chip dark">Lucknow</span><span class="bpst-chip dark">Barabanki</span
+            ><span class="bpst-chip dark">Unnao</span><span class="bpst-chip dark">Sitapur</span
+            ><span class="bpst-chip dark">Hardoi</span><span class="bpst-chip dark">Rae Bareli</span
+            ><span class="bpst-chip dark">Kanpur</span><span class="bpst-chip dark">Jankipuram</span
+            ><span class="bpst-chip dark">Aliganj</span><span class="bpst-chip dark">Kursi Road</span
+            ><span class="bpst-chip dark">Sitapur Road</span><span class="bpst-chip dark">Madiyaon</span
+            ><span class="bpst-chip dark">Vikas Nagar</span>
+          </div>
+          <a href="https://maps.app.goo.gl/HBnbzEwxJ5npkkAfA" target="_blank" rel="noopener" class="btn btn-sm btn-primary"
+            ><i class="bi bi-geo-alt-fill"></i> Directions</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bpst-card h-100">
+          <h2 class="h4 fw-bold"><i class="bi bi-laptop text-primary"></i> Live Online Across UP</h2>
+          <p>Join the same live batches from:</p>
+          <div class="tag-row">
+            <span class="bpst-chip">Prayagraj</span><span class="bpst-chip">Varanasi</span><span class="bpst-chip">Gorakhpur</span
+            ><span class="bpst-chip">Ayodhya</span><span class="bpst-chip">Bareilly</span><span class="bpst-chip">Agra</span
+            ><span class="bpst-chip">Meerut</span><span class="bpst-chip">Noida</span><span class="bpst-chip">Ghaziabad</span
+            ><span class="bpst-chip">Aligarh</span><span class="bpst-chip">Moradabad</span><span class="bpst-chip">Jhansi</span
+            ><span class="bpst-chip">Mathura</span><span class="bpst-chip">Saharanpur</span><span class="bpst-chip">Azamgarh</span
+            ><span class="bpst-chip">Sultanpur</span><span class="bpst-chip">Gonda</span><span class="bpst-chip">Bahraich</span
+            ><span class="bpst-chip">Lakhimpur Kheri</span><span class="bpst-chip">Shahjahanpur</span
+            ><span class="bpst-chip">Etawah</span><span class="bpst-chip">Mirzapur</span><span class="bpst-chip">Basti</span
+            ><span class="bpst-chip">Deoria</span><span class="bpst-chip">Faizabad</span>
+          </div>
+          <p class="small text-muted mt-3 mb-0">
+            Also Bihar, Uttarakhand, Madhya Pradesh, Delhi NCR, Rajasthan and the rest of India.
+          </p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-4 text-muted" lang="hi">
+      लखनऊ में BPST Academy — कंप्यूटर और IT कोर्स: पायथन, जावा, फुल स्टैक, डेटा एनालिटिक्स, AI, क्लाउड, सॉफ्टवेयर टेस्टिंग और SAP। दिवाली
+      ऑफर: सिर्फ़ ₹49 में सीट बुक करें।
+    </p>
+  </div>
+</section>
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4">Locations — FAQs</h2>
+        <div class="accordion bpst-faq-accordion" id="locFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="locFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#locFaq-c0"
+                aria-expanded="true"
+                aria-controls="locFaq-c0"
+              >
+                Where is BPST Academy located in Lucknow?
+              </button>
+            </h3>
+            <div id="locFaq-c0" class="accordion-collapse collapse show" aria-labelledby="locFaq-h0" data-bs-parent="#locFaq">
+              <div class="accordion-body">
+                At 3rd Floor, Sahay Complex, Near IIM Tiraha, Mubarakpur, Lucknow – 226013, Uttar Pradesh, near IIM Tiraha, Lucknow.
+                Learners come from nearby areas such as Jankipuram, Aliganj, Kursi Road, Madiyaon and Vikas Nagar.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="locFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#locFaq-c1"
+                aria-expanded="false"
+                aria-controls="locFaq-c1"
+              >
+                Can students from Barabanki, Sitapur, Unnao or Kanpur attend?
+              </button>
+            </h3>
+            <div id="locFaq-c1" class="accordion-collapse collapse" aria-labelledby="locFaq-h1" data-bs-parent="#locFaq">
+              <div class="accordion-body">
+                Yes. Many students travel to our Lucknow classroom from nearby districts, and every course is also available as live
+                online classes.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="locFaq-h2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#locFaq-c2"
+                aria-expanded="false"
+                aria-controls="locFaq-c2"
+              >
+                Is there a BPST Academy centre in my city?
+              </button>
+            </h3>
+            <div id="locFaq-c2" class="accordion-collapse collapse" aria-labelledby="locFaq-h2" data-bs-parent="#locFaq">
+              <div class="accordion-body">
+                Our classroom is in Lucknow. Learners in all other UP cities and across India join the same batches live online.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
