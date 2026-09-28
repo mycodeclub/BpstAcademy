@@ -36,4 +36,4 @@ User-agent: Bingbot
 Allow: /
 Disallow: /portal/
 
-Sitemap: https://edu.bitprosofttech.com/sitemap.xml
+Sitemap: https://www.bpstacademy.com/sitemap.xml
