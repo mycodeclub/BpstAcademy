@@ -13,7 +13,7 @@ public class SiteAndPortalTests(AppFactory factory)
     {
         var html = await Client().GetStringAsync("/", TestContext.Current.CancellationToken);
 
-        Assert.Contains("<link rel=\"canonical\" href=\"https://edu.bitprosofttech.com/\" />", html);
+        Assert.Contains("<link rel=\"canonical\" href=\"https://www.bpstacademy.com/\" />", html);
         Assert.Contains("<meta name=\"robots\" content=\"index, follow", html);
         Assert.Contains("\"@context\": \"https://schema.org\"", html);
         Assert.Contains("₹49", html);
@@ -40,8 +40,33 @@ public class SiteAndPortalTests(AppFactory factory)
     {
         var html = await Client().GetStringAsync(path, TestContext.Current.CancellationToken);
 
-        Assert.Contains($"<link rel=\"canonical\" href=\"https://edu.bitprosofttech.com{path}\" />", html);
+        Assert.Contains($"<link rel=\"canonical\" href=\"https://www.bpstacademy.com{path}\" />", html);
         Assert.Contains("id=\"main-content\"", html);
+    }
+
+    [Fact]
+    public async Task Bare_domain_redirects_permanently_to_www()
+    {
+        var client = Client();
+        client.BaseAddress = new Uri("http://bpstacademy.com");
+
+        var response = await client.GetAsync("/courses/java-full-stack?x=1", TestContext.Current.CancellationToken);
+
+        Assert.Equal(HttpStatusCode.MovedPermanently, response.StatusCode);
+        Assert.Equal("https://www.bpstacademy.com/courses/java-full-stack?x=1", response.Headers.Location!.ToString());
+    }
+
+    [Fact]
+    public async Task Sitemap_lists_only_pages_that_exist()
+    {
+        var client = Client();
+        var ct = TestContext.Current.CancellationToken;
+        var xml = await client.GetStringAsync("/sitemap.xml", ct);
+        var urls = System.Text.RegularExpressions.Regex.Matches(xml, "<loc>https://www\\.bpstacademy\\.com(/[^<]*)</loc>");
+
+        Assert.True(urls.Count > 80, $"Sitemap has only {urls.Count} URLs");
+        foreach (System.Text.RegularExpressions.Match url in urls)
+            Assert.Equal(HttpStatusCode.OK, (await client.GetAsync(url.Groups[1].Value, ct)).StatusCode);
     }
 
     [Theory]

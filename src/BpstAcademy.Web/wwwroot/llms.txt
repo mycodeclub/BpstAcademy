@@ -8,131 +8,131 @@
 - Open: Monday – Saturday
 - Modes: classroom (Lucknow) and live online (all India)
 - Formats: 45-day crash course, 3-month program (recommended), 6-month industry program; language courses in Basic/Advanced levels
-- Diwali 2026 offer: pre-book a seat in any course for ₹49 until 8 November 2026, 23:59 IST; the ₹49 is adjusted in the course fee. Book: https://edu.bitprosofttech.com/prebook.html
+- Diwali 2026 offer: pre-book a seat in any course for ₹49 until 8 November 2026, 23:59 IST; the ₹49 is adjusted in the course fee. Book: https://www.bpstacademy.com/prebook
 - Audience: school students (Class 3–12), B.Tech, BCA, MCA, Polytechnic/Diploma students, graduates of any stream and working professionals
 
 ## Industrial Training
 Industrial training at BPST Academy, Lucknow is hands-on software training where students build and deploy real projects in Agile teams. You choose one of nine tracks — Full Stack, Advanced UI, Data Analytics, AI/ML, Generative AI, Cloud & DevOps, Cyber Security, Mobile Apps or Game Development — in a 45-day, 3-month or 6-month format, classroom or live online.
-- Category page: https://edu.bitprosofttech.com/industrial-training.html
-- [Software Development & Full Stack (.NET + React)](https://edu.bitprosofttech.com/courses/full-stack-development.html): 45 Days · 3 Months · 6 Months; Beginner friendly. From Fundamentals to Real-World Applications.
-- [Advanced UI Development (Angular & React)](https://edu.bitprosofttech.com/courses/advanced-ui-angular-react.html): 45 Days · 3 Months · 6 Months; Beginner friendly. Craft High-Performance, Enterprise Web Experiences.
-- [Data Analytics & Data Science](https://edu.bitprosofttech.com/courses/data-analytics-data-science.html): 45 Days · 3 Months · 6 Months; Beginner friendly. From Raw Data to Real Decisions.
-- [Artificial Intelligence & Machine Learning](https://edu.bitprosofttech.com/courses/artificial-intelligence-machine-learning.html): 45 Days · 3 Months · 6 Months; Beginner friendly. Learn Intelligence. Build Real Solutions..
-- [Generative AI & Agentic AI](https://edu.bitprosofttech.com/courses/generative-ai-agentic-ai.html): 45 Days · 3 Months · 6 Months; Beginner friendly. Create | Automate | Augment | Build the Next AI Era.
-- [Cloud Computing & DevOps](https://edu.bitprosofttech.com/courses/cloud-computing-devops.html): 45 Days · 3 Months · 6 Months; Beginner friendly. Build | Deploy | Scale | Power the Digital World.
-- [Cyber Security & Ethical Hacking](https://edu.bitprosofttech.com/courses/cyber-security-ethical-hacking.html): 45 Days · 3 Months · 6 Months; Beginner friendly. Learn | Protect | Defend | Build a Safer Digital Tomorrow.
-- [Mobile App Development (Android & iOS)](https://edu.bitprosofttech.com/courses/mobile-app-development.html): 45 Days · 3 Months · 6 Months; Beginner friendly. Build Apps. Shape the Future..
-- [Game Development (Unity + C#)](https://edu.bitprosofttech.com/courses/game-development-unity.html): 45 Days · 3 Months · 6 Months; Beginner friendly. Play. Create. Build Careers..
+- Category page: https://www.bpstacademy.com/industrial-training
+- [Software Development & Full Stack (.NET + React)](https://www.bpstacademy.com/courses/full-stack-development): 45 Days · 3 Months · 6 Months; Beginner friendly. From Fundamentals to Real-World Applications.
+- [Advanced UI Development (Angular & React)](https://www.bpstacademy.com/courses/advanced-ui-angular-react): 45 Days · 3 Months · 6 Months; Beginner friendly. Craft High-Performance, Enterprise Web Experiences.
+- [Data Analytics & Data Science](https://www.bpstacademy.com/courses/data-analytics-data-science): 45 Days · 3 Months · 6 Months; Beginner friendly. From Raw Data to Real Decisions.
+- [Artificial Intelligence & Machine Learning](https://www.bpstacademy.com/courses/artificial-intelligence-machine-learning): 45 Days · 3 Months · 6 Months; Beginner friendly. Learn Intelligence. Build Real Solutions..
+- [Generative AI & Agentic AI](https://www.bpstacademy.com/courses/generative-ai-agentic-ai): 45 Days · 3 Months · 6 Months; Beginner friendly. Create | Automate | Augment | Build the Next AI Era.
+- [Cloud Computing & DevOps](https://www.bpstacademy.com/courses/cloud-computing-devops): 45 Days · 3 Months · 6 Months; Beginner friendly. Build | Deploy | Scale | Power the Digital World.
+- [Cyber Security & Ethical Hacking](https://www.bpstacademy.com/courses/cyber-security-ethical-hacking): 45 Days · 3 Months · 6 Months; Beginner friendly. Learn | Protect | Defend | Build a Safer Digital Tomorrow.
+- [Mobile App Development (Android & iOS)](https://www.bpstacademy.com/courses/mobile-app-development): 45 Days · 3 Months · 6 Months; Beginner friendly. Build Apps. Shape the Future..
+- [Game Development (Unity + C#)](https://www.bpstacademy.com/courses/game-development-unity): 45 Days · 3 Months · 6 Months; Beginner friendly. Play. Create. Build Careers..
 
 ## AI & Generative AI
 BPST Academy offers five AI courses in Lucknow and live online: Agentic AI Engineering, Generative AI for Everyone (prompt engineering, no coding), MLOps/LLMOps, an AI specialization and a Machine Learning specialization. Courses run 4 weeks to 5 months and every learner builds a working AI project.
-- Category page: https://edu.bitprosofttech.com/ai-generative-ai.html
-- [Agentic AI Engineering](https://edu.bitprosofttech.com/courses/agentic-ai-engineering.html): 3 – 5 Months; Intermediate. Build AI agents that reason, use tools and get work done.
-- [Generative AI for Everyone (Prompt Engineering)](https://edu.bitprosofttech.com/courses/generative-ai-for-everyone.html): 4 – 8 Weeks; Beginner. Use ChatGPT, Claude, Gemini & Copilot to work 10× smarter — no coding.
-- [MLOps & LLMOps](https://edu.bitprosofttech.com/courses/mlops-llmops.html): 3 – 6 Months; Advanced. Take ML and LLM models from notebook to production.
-- [Artificial Intelligence (AI + Generative AI)](https://edu.bitprosofttech.com/courses/artificial-intelligence-specialization.html): 4 Months; Python basics required. Specialization program.
-- [Machine Learning](https://edu.bitprosofttech.com/courses/machine-learning-specialization.html): 4 Months; Python basics required. Specialization program.
+- Category page: https://www.bpstacademy.com/ai-generative-ai
+- [Agentic AI Engineering](https://www.bpstacademy.com/courses/agentic-ai-engineering): 3 – 5 Months; Intermediate. Build AI agents that reason, use tools and get work done.
+- [Generative AI for Everyone (Prompt Engineering)](https://www.bpstacademy.com/courses/generative-ai-for-everyone): 4 – 8 Weeks; Beginner. Use ChatGPT, Claude, Gemini & Copilot to work 10× smarter — no coding.
+- [MLOps & LLMOps](https://www.bpstacademy.com/courses/mlops-llmops): 3 – 6 Months; Advanced. Take ML and LLM models from notebook to production.
+- [Artificial Intelligence (AI + Generative AI)](https://www.bpstacademy.com/courses/artificial-intelligence-specialization): 4 Months; Python basics required. Specialization program.
+- [Machine Learning](https://www.bpstacademy.com/courses/machine-learning-specialization): 4 Months; Python basics required. Specialization program.
 
 ## Data Analytics & Engineering
 BPST Academy teaches data skills at two levels: Data Analyst Pro (Excel, SQL, Power BI, Tableau, Python — 3 to 4 months, beginner friendly) and Data Engineering (PySpark, Databricks, Snowflake, Airflow — 3 to 4 months, SQL required). Both include capstone projects on real datasets.
-- Category page: https://edu.bitprosofttech.com/data-analytics-engineering.html
-- [Data Analyst Pro (Excel + SQL + Power BI + Tableau + Python)](https://edu.bitprosofttech.com/courses/data-analyst-pro.html): 3 – 4 Months; Beginner friendly. From raw data to business decisions.
-- [Data Engineering (Spark, Databricks, Snowflake, Azure/AWS)](https://edu.bitprosofttech.com/courses/data-engineering.html): 3 – 4 Months; Intermediate. Build the pipelines every data team depends on.
+- Category page: https://www.bpstacademy.com/data-analytics-engineering
+- [Data Analyst Pro (Excel + SQL + Power BI + Tableau + Python)](https://www.bpstacademy.com/courses/data-analyst-pro): 3 – 4 Months; Beginner friendly. From raw data to business decisions.
+- [Data Engineering (Spark, Databricks, Snowflake, Azure/AWS)](https://www.bpstacademy.com/courses/data-engineering): 3 – 4 Months; Intermediate. Build the pipelines every data team depends on.
 
 ## Cloud & DevOps
 BPST Academy runs cloud and DevOps training in Lucknow and live online: DevOps + SRE + Terraform (3–4 months), Google Cloud Engineer (6–8 weeks) and short certification bootcamps for AZ-900, AZ-104, AWS Cloud Practitioner and AWS Solutions Architect Associate. All courses are lab-based on real cloud accounts.
-- Category page: https://edu.bitprosofttech.com/cloud-devops.html
-- [DevOps + SRE + Terraform](https://edu.bitprosofttech.com/courses/devops-sre-terraform.html): 3 – 4 Months; Intermediate. Automate, deploy and run software at scale.
-- [Google Cloud (GCP) Cloud Engineer](https://edu.bitprosofttech.com/courses/google-cloud-engineer.html): 6 – 8 Weeks; Intermediate. The third big cloud — BigQuery, GKE and Vertex AI.
-- [Cloud Certification Bootcamp (AZ-900, AZ-104, AWS CCP, AWS SAA)](https://edu.bitprosofttech.com/courses/cloud-certification-bootcamp.html): 3 – 6 Weeks per exam; Beginner → Intermediate. Short, exam-focused cloud certification prep.
+- Category page: https://www.bpstacademy.com/cloud-devops
+- [DevOps + SRE + Terraform](https://www.bpstacademy.com/courses/devops-sre-terraform): 3 – 4 Months; Intermediate. Automate, deploy and run software at scale.
+- [Google Cloud (GCP) Cloud Engineer](https://www.bpstacademy.com/courses/google-cloud-engineer): 6 – 8 Weeks; Intermediate. The third big cloud — BigQuery, GKE and Vertex AI.
+- [Cloud Certification Bootcamp (AZ-900, AZ-104, AWS CCP, AWS SAA)](https://www.bpstacademy.com/courses/cloud-certification-bootcamp): 3 – 6 Weeks per exam; Beginner → Intermediate. Short, exam-focused cloud certification prep.
 
 ## Cyber Security & Networking
 BPST Academy offers four security courses: SOC Analyst (blue team, 2–3 months), Ethical Hacking & VAPT with CEH preparation (2–3 months), Cloud Security for AWS/Azure (6–8 weeks) and CCNA + Network Security (2–3 months). Each is lab-based and maps to an industry certification.
-- Category page: https://edu.bitprosofttech.com/cyber-security.html
-- [SOC Analyst (Blue Team)](https://edu.bitprosofttech.com/courses/soc-analyst.html): 2 – 3 Months; Beginner → Intermediate. Detect, investigate and respond to cyber attacks.
-- [Ethical Hacking & VAPT (CEH Preparation)](https://edu.bitprosofttech.com/courses/ethical-hacking-vapt.html): 2 – 3 Months; Beginner friendly. Think like an attacker, defend like a pro.
-- [Cloud Security (AWS & Azure)](https://edu.bitprosofttech.com/courses/cloud-security.html): 6 – 8 Weeks; Intermediate. Secure identities, networks and workloads in the cloud.
-- [CCNA + Network Security](https://edu.bitprosofttech.com/courses/ccna-network-security.html): 2 – 3 Months; Beginner. Networking fundamentals every IT career needs.
+- Category page: https://www.bpstacademy.com/cyber-security
+- [SOC Analyst (Blue Team)](https://www.bpstacademy.com/courses/soc-analyst): 2 – 3 Months; Beginner → Intermediate. Detect, investigate and respond to cyber attacks.
+- [Ethical Hacking & VAPT (CEH Preparation)](https://www.bpstacademy.com/courses/ethical-hacking-vapt): 2 – 3 Months; Beginner friendly. Think like an attacker, defend like a pro.
+- [Cloud Security (AWS & Azure)](https://www.bpstacademy.com/courses/cloud-security): 6 – 8 Weeks; Intermediate. Secure identities, networks and workloads in the cloud.
+- [CCNA + Network Security](https://www.bpstacademy.com/courses/ccna-network-security): 2 – 3 Months; Beginner. Networking fundamentals every IT career needs.
 
 ## Full Stack Development
 BPST Academy offers full stack developer courses in MERN + Generative AI, Java (Spring Boot + React), Python (Django + React) and .NET (ASP.NET Core + React), plus a Golang microservices add-on. Programs run 4–6 months and end with a deployed full stack project and interview preparation.
-- Category page: https://edu.bitprosofttech.com/full-stack-programming.html
-- [MERN Full Stack + Generative AI](https://edu.bitprosofttech.com/courses/mern-full-stack-genai.html): 4 – 6 Months; Beginner → Advanced. MongoDB, Express, React, Node — with AI built in.
-- [Java Full Stack (Spring Boot + React)](https://edu.bitprosofttech.com/courses/java-full-stack.html): 5 – 6 Months; Beginner → Advanced. The most-hired stack in Indian IT services.
-- [Python Full Stack (Django + React)](https://edu.bitprosofttech.com/courses/python-full-stack.html): 5 – 6 Months; Beginner → Advanced. One language for web, data and AI.
-- [Golang Microservices](https://edu.bitprosofttech.com/courses/golang-microservices.html): 6 – 8 Weeks; Intermediate. Fast, cloud-native back-ends in Go.
+- Category page: https://www.bpstacademy.com/full-stack-programming
+- [MERN Full Stack + Generative AI](https://www.bpstacademy.com/courses/mern-full-stack-genai): 4 – 6 Months; Beginner → Advanced. MongoDB, Express, React, Node — with AI built in.
+- [Java Full Stack (Spring Boot + React)](https://www.bpstacademy.com/courses/java-full-stack): 5 – 6 Months; Beginner → Advanced. The most-hired stack in Indian IT services.
+- [Python Full Stack (Django + React)](https://www.bpstacademy.com/courses/python-full-stack): 5 – 6 Months; Beginner → Advanced. One language for web, data and AI.
+- [Golang Microservices](https://www.bpstacademy.com/courses/golang-microservices): 6 – 8 Weeks; Intermediate. Fast, cloud-native back-ends in Go.
 
 ## Software Testing & QA
 BPST Academy teaches software testing in three formats: Manual Testing (6 weeks, no coding), Automation Testing with Selenium & Playwright (2–3 months) and the complete Software Testing Masters program (3–4 months) covering manual, automation, API testing, JIRA and CI/CD.
-- Category page: https://edu.bitprosofttech.com/software-testing.html
-- [Software Testing Masters (Manual + Selenium + Playwright + API)](https://edu.bitprosofttech.com/courses/software-testing-masters.html): 3 – 4 Months; Beginner → Advanced. Complete QA engineer program — manual to automation.
-- [Manual Software Testing](https://edu.bitprosofttech.com/courses/manual-software-testing.html): 6 Weeks; Beginner. The easiest entry into an IT job — no coding.
-- [Automation Testing (Selenium + Playwright)](https://edu.bitprosofttech.com/courses/automation-testing-selenium-playwright.html): 2 – 3 Months; Intermediate. From manual tester to automation engineer.
+- Category page: https://www.bpstacademy.com/software-testing
+- [Software Testing Masters (Manual + Selenium + Playwright + API)](https://www.bpstacademy.com/courses/software-testing-masters): 3 – 4 Months; Beginner → Advanced. Complete QA engineer program — manual to automation.
+- [Manual Software Testing](https://www.bpstacademy.com/courses/manual-software-testing): 6 Weeks; Beginner. The easiest entry into an IT job — no coding.
+- [Automation Testing (Selenium + Playwright)](https://www.bpstacademy.com/courses/automation-testing-selenium-playwright): 2 – 3 Months; Intermediate. From manual tester to automation engineer.
 
 ## SAP, Salesforce & Enterprise IT
 BPST Academy offers enterprise platform training: SAP S/4HANA FICO, SAP MM/SD and SAP ABAP (2–4 months each), Salesforce Admin + Developer with Agentforce (6–10 weeks), ServiceNow Admin + Developer (6–10 weeks), UiPath RPA + agentic automation (6–8 weeks) and Oracle SQL + PL/SQL (6–8 weeks).
-- Category page: https://edu.bitprosofttech.com/sap-salesforce-enterprise.html
-- [SAP S/4HANA FICO](https://edu.bitprosofttech.com/courses/sap-s4hana-fico.html): 2 – 4 Months; Beginner → Intermediate. Finance & Controlling on SAP S/4HANA.
-- [SAP MM & SD (Materials Management + Sales & Distribution)](https://edu.bitprosofttech.com/courses/sap-mm-sd.html): 2 – 3 Months; Beginner → Intermediate. Procure-to-pay and order-to-cash on S/4HANA.
-- [SAP ABAP on S/4HANA (RAP, CDS)](https://edu.bitprosofttech.com/courses/sap-abap-s4hana.html): 2 – 3 Months; Intermediate. Develop modern SAP applications.
-- [Salesforce Admin + Developer (with Agentforce)](https://edu.bitprosofttech.com/courses/salesforce-admin-developer.html): 6 – 10 Weeks; Beginner → Intermediate. The world's #1 CRM — now with AI agents.
-- [ServiceNow Admin + Developer](https://edu.bitprosofttech.com/courses/servicenow-admin-developer.html): 6 – 10 Weeks; Beginner → Intermediate. IT service management on the Now Platform.
-- [RPA with UiPath + Agentic Automation](https://edu.bitprosofttech.com/courses/rpa-uipath-agentic-automation.html): 6 – 8 Weeks; Beginner → Intermediate. Automate office work with bots and AI agents.
-- [Oracle SQL + PL/SQL](https://edu.bitprosofttech.com/courses/oracle-sql-plsql.html): 6 – 8 Weeks; Beginner → Intermediate. Database skills banks and enterprises rely on.
+- Category page: https://www.bpstacademy.com/sap-salesforce-enterprise
+- [SAP S/4HANA FICO](https://www.bpstacademy.com/courses/sap-s4hana-fico): 2 – 4 Months; Beginner → Intermediate. Finance & Controlling on SAP S/4HANA.
+- [SAP MM & SD (Materials Management + Sales & Distribution)](https://www.bpstacademy.com/courses/sap-mm-sd): 2 – 3 Months; Beginner → Intermediate. Procure-to-pay and order-to-cash on S/4HANA.
+- [SAP ABAP on S/4HANA (RAP, CDS)](https://www.bpstacademy.com/courses/sap-abap-s4hana): 2 – 3 Months; Intermediate. Develop modern SAP applications.
+- [Salesforce Admin + Developer (with Agentforce)](https://www.bpstacademy.com/courses/salesforce-admin-developer): 6 – 10 Weeks; Beginner → Intermediate. The world's #1 CRM — now with AI agents.
+- [ServiceNow Admin + Developer](https://www.bpstacademy.com/courses/servicenow-admin-developer): 6 – 10 Weeks; Beginner → Intermediate. IT service management on the Now Platform.
+- [RPA with UiPath + Agentic Automation](https://www.bpstacademy.com/courses/rpa-uipath-agentic-automation): 6 – 8 Weeks; Beginner → Intermediate. Automate office work with bots and AI agents.
+- [Oracle SQL + PL/SQL](https://www.bpstacademy.com/courses/oracle-sql-plsql): 6 – 8 Weeks; Beginner → Intermediate. Database skills banks and enterprises rely on.
 
 ## Business, Design, Marketing & Accounting
 BPST Academy offers career courses beyond coding: Digital Marketing + AI (3–4 months), UI/UX Design with Figma (3–4 months), Business Analyst with Agile (2–3 months), AI Product Management (2–3 months) and Tally Prime + GST + Advanced Excel (1–3 months). Each includes portfolio or practical assignments.
-- Category page: https://edu.bitprosofttech.com/business-design-marketing.html
-- [Digital Marketing + AI (SEO, GEO, Ads)](https://edu.bitprosofttech.com/courses/digital-marketing-ai.html): 3 – 4 Months; Beginner. Grow any business online — with AI.
-- [UI/UX Design (Figma + AI)](https://edu.bitprosofttech.com/courses/ui-ux-design-figma.html): 3 – 4 Months; Beginner → Intermediate. Design products people love to use.
-- [Business Analyst (with Agile)](https://edu.bitprosofttech.com/courses/business-analyst-agile.html): 2 – 3 Months; Beginner → Intermediate. Bridge business needs and technology teams.
-- [AI Product Management](https://edu.bitprosofttech.com/courses/ai-product-management.html): 2 – 3 Months; Intermediate. Build and launch AI-powered products.
-- [Tally Prime + GST + Advanced Excel](https://edu.bitprosofttech.com/courses/tally-prime-gst-excel.html): 1 – 3 Months; Beginner. Job-ready accounting for Indian businesses.
+- Category page: https://www.bpstacademy.com/business-design-marketing
+- [Digital Marketing + AI (SEO, GEO, Ads)](https://www.bpstacademy.com/courses/digital-marketing-ai): 3 – 4 Months; Beginner. Grow any business online — with AI.
+- [UI/UX Design (Figma + AI)](https://www.bpstacademy.com/courses/ui-ux-design-figma): 3 – 4 Months; Beginner → Intermediate. Design products people love to use.
+- [Business Analyst (with Agile)](https://www.bpstacademy.com/courses/business-analyst-agile): 2 – 3 Months; Beginner → Intermediate. Bridge business needs and technology teams.
+- [AI Product Management](https://www.bpstacademy.com/courses/ai-product-management): 2 – 3 Months; Intermediate. Build and launch AI-powered products.
+- [Tally Prime + GST + Advanced Excel](https://www.bpstacademy.com/courses/tally-prime-gst-excel): 1 – 3 Months; Beginner. Job-ready accounting for Indian businesses.
 
 ## Programming Languages
 BPST Academy teaches C, C++, Java and Python in Lucknow and live online. Each language has a Basic level (1.5–2 months) and an Advanced level (1.5–2.5 months); you can take one level or both. Classes are practical, with daily coding and a small project per level.
-- Category page: https://edu.bitprosofttech.com/programming-languages.html
-- [C Programming Course (Basic & Advanced)](https://edu.bitprosofttech.com/courses/c-programming-course.html): Basic 1.5 Months + Advanced 1.5 Months; Basic → Advanced. Foundation language.
-- [C++ Programming Course (Basic & Advanced)](https://edu.bitprosofttech.com/courses/cpp-programming-course.html): Basic 2 Months + Advanced 2 Months; Basic → Advanced. OOP & competitive coding.
-- [Java Programming Course (Basic & Advanced)](https://edu.bitprosofttech.com/courses/java-programming-course.html): Basic 2 Months + Advanced 2.5 Months; Basic → Advanced. Enterprise & Android.
-- [Python Programming Course (Basic & Advanced)](https://edu.bitprosofttech.com/courses/python-programming-course.html): Basic 1.5 Months + Advanced 2 Months; Basic → Advanced. AI, data & automation.
+- Category page: https://www.bpstacademy.com/programming-languages
+- [C Programming Course (Basic & Advanced)](https://www.bpstacademy.com/courses/c-programming-course): Basic 1.5 Months + Advanced 1.5 Months; Basic → Advanced. Foundation language.
+- [C++ Programming Course (Basic & Advanced)](https://www.bpstacademy.com/courses/cpp-programming-course): Basic 2 Months + Advanced 2 Months; Basic → Advanced. OOP & competitive coding.
+- [Java Programming Course (Basic & Advanced)](https://www.bpstacademy.com/courses/java-programming-course): Basic 2 Months + Advanced 2.5 Months; Basic → Advanced. Enterprise & Android.
+- [Python Programming Course (Basic & Advanced)](https://www.bpstacademy.com/courses/python-programming-course): Basic 1.5 Months + Advanced 2 Months; Basic → Advanced. AI, data & automation.
 
 ## School Coding & Robotics
 BPST Academy teaches coding to school students in Lucknow and online: Python foundations (Class 9–10), CBSE Computer Science with Python (Class 11–12), ICSE/ISC Java (Class 9–12), an Engineering Head-start in C/C++ after boards, and Robotics, Coding & AI for Grades 3–12.
-- Category page: https://edu.bitprosofttech.com/school-coding.html
-- [Robotics, Coding & AI for Kids (Grades 3–12)](https://edu.bitprosofttech.com/courses/robotics-coding-ai-for-kids.html): 3 – 6 Months per level; Beginner (levelled). Build robots, games and AI projects.
-- [Coding Foundations with Python](https://edu.bitprosofttech.com/courses/python-coding-class-9-10.html): 3 Months; Beginner · no coding needed. Class 9 – 10.
-- [Computer Science with Python (CBSE)](https://edu.bitprosofttech.com/courses/cbse-computer-science-python-class-11-12.html): Full academic year · per class; Board syllabus + beyond. Class 11 – 12 · CBSE.
-- [Computer Applications & Science with Java](https://edu.bitprosofttech.com/courses/icse-isc-java-computer-applications.html): Full academic year · per class; Board syllabus + beyond. Class 9 – 12 · ICSE / ISC.
-- [Engineering Head-start: C, C++ & Problem Solving](https://edu.bitprosofttech.com/courses/engineering-headstart-c-cpp.html): 2 Months (summer / post-boards); Beginner → Intermediate. Class 11 – 12 · Any stream.
+- Category page: https://www.bpstacademy.com/school-coding
+- [Robotics, Coding & AI for Kids (Grades 3–12)](https://www.bpstacademy.com/courses/robotics-coding-ai-for-kids): 3 – 6 Months per level; Beginner (levelled). Build robots, games and AI projects.
+- [Coding Foundations with Python](https://www.bpstacademy.com/courses/python-coding-class-9-10): 3 Months; Beginner · no coding needed. Class 9 – 10.
+- [Computer Science with Python (CBSE)](https://www.bpstacademy.com/courses/cbse-computer-science-python-class-11-12): Full academic year · per class; Board syllabus + beyond. Class 11 – 12 · CBSE.
+- [Computer Applications & Science with Java](https://www.bpstacademy.com/courses/icse-isc-java-computer-applications): Full academic year · per class; Board syllabus + beyond. Class 9 – 12 · ICSE / ISC.
+- [Engineering Head-start: C, C++ & Problem Solving](https://www.bpstacademy.com/courses/engineering-headstart-c-cpp): 2 Months (summer / post-boards); Beginner → Intermediate. Class 11 – 12 · Any stream.
 
 ## College Programs
 BPST Academy runs year-wise career tracks for B.Tech, BCA, MCA and Polytechnic students. You pick modules per semester — programming, web, data, cloud or AI — and finish with an internship or industrial training certificate and interview preparation.
-- Category page: https://edu.bitprosofttech.com/college-programs.html
-- [B.Tech Career Track](https://edu.bitprosofttech.com/courses/btech-career-track.html): Pick per semester / year; 1st year → Final year. B.Tech · CS / IT / ECE.
-- [BCA Career Track](https://edu.bitprosofttech.com/courses/bca-career-track.html): Pick per semester / year; 1st year → Final year. BCA.
-- [MCA Industry Track](https://edu.bitprosofttech.com/courses/mca-industry-track.html): 3 / 6 Months (flexible); Intermediate → Advanced. MCA.
-- [Polytechnic Diploma Track](https://edu.bitprosofttech.com/courses/polytechnic-diploma-track.html): 45 Days / 3 Months; Beginner → Intermediate. Polytechnic · Diploma CS / IT / ECE.
+- Category page: https://www.bpstacademy.com/college-programs
+- [B.Tech Career Track](https://www.bpstacademy.com/courses/btech-career-track): Pick per semester / year; 1st year → Final year. B.Tech · CS / IT / ECE.
+- [BCA Career Track](https://www.bpstacademy.com/courses/bca-career-track): Pick per semester / year; 1st year → Final year. BCA.
+- [MCA Industry Track](https://www.bpstacademy.com/courses/mca-industry-track): 3 / 6 Months (flexible); Intermediate → Advanced. MCA.
+- [Polytechnic Diploma Track](https://www.bpstacademy.com/courses/polytechnic-diploma-track): 45 Days / 3 Months; Beginner → Intermediate. Polytechnic · Diploma CS / IT / ECE.
 
 ## Career & Placement Readiness
 BPST Academy prepares students for placements with two programs: DSA & Placement Prep (2–3 months: data structures, 300+ problems, aptitude, mock interviews) and the Job-Readiness Program (1 month: communication, resume, LinkedIn/Naukri, mock interviews). Job-readiness modules are included with every industrial training track.
-- Category page: https://edu.bitprosofttech.com/career-placement.html
-- [DSA & Placement Preparation](https://edu.bitprosofttech.com/courses/dsa-placement-preparation.html): 3 Months; Any one language required. Specialization program.
-- [Job-Readiness Program (Communication, Resume, Mock Interviews)](https://edu.bitprosofttech.com/courses/job-readiness-program.html): 1 Month · 3 sessions/week; All levels. Included with Industrial Training · also available standalone.
+- Category page: https://www.bpstacademy.com/career-placement
+- [DSA & Placement Preparation](https://www.bpstacademy.com/courses/dsa-placement-preparation): 3 Months; Any one language required. Specialization program.
+- [Job-Readiness Program (Communication, Resume, Mock Interviews)](https://www.bpstacademy.com/courses/job-readiness-program): 1 Month · 3 sessions/week; All levels. Included with Industrial Training · also available standalone.
 
 ## Summer & Winter Training
 BPST Academy summer training runs May to July and winter training runs December to January. It is a 45-day, project-based program in any of our tracks — Full Stack, Python, Java, Data Analytics, AI, Cloud, Cyber Security, Mobile or Game Development — with a training certificate.
-- Category page: https://edu.bitprosofttech.com/summer-winter-training.html
-- [45-Day Summer / Winter Industrial Training](https://edu.bitprosofttech.com/courses/summer-winter-training-45-days.html): 45 Days; Beginner friendly. Summer: May – July · Winter: December – January.
+- Category page: https://www.bpstacademy.com/summer-winter-training
+- [45-Day Summer / Winter Industrial Training](https://www.bpstacademy.com/courses/summer-winter-training-45-days): 45 Days; Beginner friendly. Summer: May – July · Winter: December – January.
 
 ## Certificates & student portal
 - Every BPST Academy certificate (course completion, industrial / summer-winter training, internship or project letter, staff experience letter) has a unique number such as BPST-C-2026-0187 and a QR code.
-- Anyone can check a certificate: https://edu.bitprosofttech.com/portal/pages/public/verify-certificate.html (short link: https://edu.bitprosofttech.com/verify.html?no=CERTIFICATE-NUMBER)
-- Enrolled students, trainers and staff sign in at https://edu.bitprosofttech.com/portal/ (classes, attendance, fees and GST receipts, ID card, certificates, payslips).
+- Anyone can have a certificate confirmed: https://www.bpstacademy.com/verify (by phone, WhatsApp or email; online checks are coming soon)
+- Enrolled students, trainers and staff sign in at https://www.bpstacademy.com/portal/ (classes, attendance, fees and GST receipts, ID card, certificates, payslips).
 
 ## Optional
-- [All courses](https://edu.bitprosofttech.com/courses.html)
-- [Live online classes](https://edu.bitprosofttech.com/online-courses.html)
-- [Locations across Uttar Pradesh](https://edu.bitprosofttech.com/locations.html)
-- [About and teaching method](https://edu.bitprosofttech.com/about.html)
-- [Refund policy](https://edu.bitprosofttech.com/refund-policy.html)
+- [All courses](https://www.bpstacademy.com/courses)
+- [Live online classes](https://www.bpstacademy.com/online-courses)
+- [Locations across Uttar Pradesh](https://www.bpstacademy.com/locations)
+- [About and teaching method](https://www.bpstacademy.com/about)
+- [Refund policy](https://www.bpstacademy.com/refund-policy)

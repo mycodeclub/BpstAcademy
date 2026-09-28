@@ -6,7 +6,7 @@ public sealed class SiteOptions
     public const string SectionName = "Site";
 
     /// <summary>Public address used for canonical, Open Graph and JSON-LD URLs. No trailing slash.</summary>
-    public string BaseUrl { get; set; } = "https://edu.bitprosofttech.com";
+    public string BaseUrl { get; set; } = "https://www.bpstacademy.com";
 
     /// <summary>End of the ₹49 pre-booking offer (offer strip countdown).</summary>
     public DateTimeOffset OfferDeadline { get; set; }

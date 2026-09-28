@@ -7,6 +7,7 @@ using BpstAcademy.Infrastructure.Persistence.Seed;
 using BpstAcademy.Web.Options;
 using BpstAcademy.Web.Security;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.Extensions.WebEncoders;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -74,6 +75,23 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseStatusCodePagesWithReExecute("/error/{0}");
+
+// One public address: bpstacademy.com (no www) redirects permanently to the Site:BaseUrl host, keeping path and query.
+var canonicalHost = new Uri(app.Services.GetRequiredService<IOptions<SiteOptions>>().Value.BaseUrl).Host;
+if (canonicalHost.StartsWith("www.", StringComparison.OrdinalIgnoreCase))
+{
+    var bareHost = canonicalHost[4..];
+    app.Use(async (context, next) =>
+    {
+        if (!string.Equals(context.Request.Host.Host, bareHost, StringComparison.OrdinalIgnoreCase))
+        {
+            await next();
+            return;
+        }
+        var request = context.Request;
+        context.Response.Redirect($"https://{canonicalHost}{request.PathBase}{request.Path}{request.QueryString}", permanent: true);
+    });
+}
 
 app.UseHttpsRedirection();
 app.UseRouting();
