@@ -1,0 +1,79 @@
+@* Ported from NewLayout/Landing Page UI/refund-policy.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Refund & Cancellation Policy | BPST Academy",
+        Description = "Refund and cancellation policy for the BPST Academy ₹49 Diwali pre-booking and course fees.",
+        CanonicalPath = "/refund-policy",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "name": "Refund & Cancellation Policy",
+              "item": "https://edu.bitprosofttech.com/refund-policy"
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Refund &amp; Cancellation Policy</li>
+      </ol>
+    </nav>
+    <h1>Refund & Cancellation Policy</h1>
+    <p class="lead mb-0">
+      Effective 2026-09-25. BPST Software Education (BPST Academy), a unit of BitProSoftTech Software Solutions, 3rd Floor, Sahay Complex,
+      Near IIM Tiraha, Mubarakpur, Lucknow – 226013, Uttar Pradesh.
+    </p>
+  </div>
+</section>
+<section class="py-5 bg-white bpst-legal">
+  <div class="container" style="max-width: 860px">
+    <h2>1. ₹49 Diwali pre-booking</h2>
+    <ul>
+      <li>The ₹49 pre-booking amount is adjusted in the course fee when you enrol.</li>
+      <li>If BPST Academy cancels your batch or cannot start it, the ₹49 is refunded in full to the original payment method.</li>
+      <li>
+        You can transfer your pre-booking to another course or batch by messaging us with your booking reference before your batch
+        starts.
+      </li>
+      <li>Apart from the cases above, the ₹49 pre-booking amount is non-refundable.</li>
+    </ul>
+    <h2>2. Duplicate or failed payments</h2>
+    <p>
+      If you are charged twice or a payment fails but money is debited, share the transaction ID with us; verified duplicate amounts
+      are refunded in full.
+    </p>
+    <h2>3. Course fees</h2>
+    <p>Refunds of course fees follow the fee terms shared in writing at enrolment.</p>
+    <h2>4. Refund timelines</h2>
+    <p>
+      Approved refunds are initiated within 7 working days to the original payment method. Banks may take 5–10 working days to credit
+      the amount.
+    </p>
+    <h2>5. How to request</h2>
+    <p>
+      WhatsApp <a href="https://wa.me/918299101616?text=Refund%20request%20%E2%80%94%20booking%20reference%3A">+91 82991 01616</a> or
+      email bitprosofttech@@gmail.com with your name, mobile number and booking reference.
+    </p>
+    <p class="mt-4 small text-muted">
+      Questions? Email <a href="mailto:bitprosofttech@@gmail.com">bitprosofttech@@gmail.com</a> or call +91 82991 01616.
+    </p>
+  </div>
+</section>

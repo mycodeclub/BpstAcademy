@@ -1,0 +1,907 @@
+@* Ported from NewLayout/Landing Page UI/college-programs.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "College Career Tracks — B.Tech, BCA, MCA, Polytechnic | BPST Academy",
+        Description = "Semester-wise skill tracks mapped to your degree year, with internships, training certificates and placement preparation. Pre-book for ₹49 till Diwali.",
+        CanonicalPath = "/college-programs",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            { "@@type": "ListItem", "position": 3, "name": "College Programs", "item": "https://edu.bitprosofttech.com/college-programs" }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "College Programs courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/btech-career-track",
+              "name": "B.Tech Career Track"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/bca-career-track",
+              "name": "BCA Career Track"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "url": "https://edu.bitprosofttech.com/courses/mca-industry-track",
+              "name": "MCA Industry Track"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 4,
+              "url": "https://edu.bitprosofttech.com/courses/polytechnic-diploma-track",
+              "name": "Polytechnic Diploma Track"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "When should a B.Tech student start industry training?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Ideally from the 2nd year, so you have two portfolio projects and an internship before final-year placements begin."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">College Programs</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-mortarboard"></i> 4 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">College Career Tracks — B.Tech, BCA, MCA, Polytechnic</h1>
+        <p class="lead mb-4">
+          Semester-wise skill tracks mapped to your degree year, with internships, training certificates and placement preparation.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy runs year-wise career tracks for B.Tech, BCA, MCA and Polytechnic students. You pick modules per semester —
+          programming, web, data, cloud or AI — and finish with an internship or industrial training certificate and interview
+          preparation.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 4 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20College%20Programs%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/btech-career-track"
+                ><i class="bi bi-mortarboard text-info"></i
+                ><span>B.Tech Career Track<br /><small class="text-white-50">Pick per semester / year</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/bca-career-track"
+                ><i class="bi bi-laptop text-info"></i
+                ><span>BCA Career Track<br /><small class="text-white-50">Pick per semester / year</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/mca-industry-track"
+                ><i class="bi bi-code-square text-info"></i
+                ><span>MCA Industry Track<br /><small class="text-white-50">3 / 6 Months (flexible)</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/polytechnic-diploma-track"
+                ><i class="bi bi-cpu text-info"></i
+                ><span>Polytechnic Diploma Track<br /><small class="text-white-50">45 Days / 3 Months</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="College Programs courses">
+      <button
+        class="tab-pill active"
+        id="t-btech-career-track"
+        data-bs-toggle="pill"
+        data-bs-target="#btech-career-track"
+        type="button"
+        role="tab"
+        aria-controls="btech-career-track"
+        aria-selected="true"
+      >
+        B.Tech Career Track</button
+      ><button
+        class="tab-pill"
+        id="t-bca-career-track"
+        data-bs-toggle="pill"
+        data-bs-target="#bca-career-track"
+        type="button"
+        role="tab"
+        aria-controls="bca-career-track"
+        aria-selected="false"
+      >
+        BCA Career Track</button
+      ><button
+        class="tab-pill"
+        id="t-mca-industry-track"
+        data-bs-toggle="pill"
+        data-bs-target="#mca-industry-track"
+        type="button"
+        role="tab"
+        aria-controls="mca-industry-track"
+        aria-selected="false"
+      >
+        MCA Industry Track</button
+      ><button
+        class="tab-pill"
+        id="t-polytechnic-diploma-track"
+        data-bs-toggle="pill"
+        data-bs-target="#polytechnic-diploma-track"
+        type="button"
+        role="tab"
+        aria-controls="polytechnic-diploma-track"
+        aria-selected="false"
+      >
+        Polytechnic Diploma Track
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="btech-career-track"
+        role="tabpanel"
+        aria-labelledby="t-btech-career-track"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-btech-career-track">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · B.Tech · CS / IT / ECE</span>
+              <h2 id="h-btech-career-track"><a href="/courses/btech-career-track" class="text-reset">B.Tech Career Track</a></h2>
+              <p>
+                A four-year companion to your degree: strong programming and DSA early, a specialization in 3rd year, industrial
+                training and placement preparation in final year.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">B.Tech CS, IT, ECE, EE students — from 1st year to final year.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=btech-career-track"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/btech-career-track"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">Pick per semester / year</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">1st year → Final year</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Programming Core</div>
+                  <ul>
+                    <li>C &amp; C++ with OOP</li>
+                    <li>Java or Python (choose)</li>
+                    <li>Pointers, memory, file I/O</li>
+                    <li>Clean-code habits</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Data Structures &amp; Algorithms</div>
+                  <ul>
+                    <li>Arrays, linked lists, stacks, queues</li>
+                    <li>Trees, graphs, hashing</li>
+                    <li>Sorting, searching, DP</li>
+                    <li>300+ LeetCode-style problems</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">CS Fundamentals (AKTU/University)</div>
+                  <ul>
+                    <li>DBMS &amp; SQL</li>
+                    <li>Operating Systems</li>
+                    <li>Computer Networks</li>
+                    <li>OOPs &amp; DAA — viva &amp; exam prep</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Specialization (3rd year)</div>
+                  <ul>
+                    <li>Full Stack .NET / MERN</li>
+                    <li>AI / ML or Data Analytics</li>
+                    <li>Cloud / DevOps or Cyber Security</li>
+                    <li>Mini project in your track</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Industrial Training</div>
+                  <ul>
+                    <li>45-day summer training (after 2nd/3rd yr)</li>
+                    <li>3 / 6-month final-year training</li>
+                    <li>Agile team project, live deployment</li>
+                    <li>Training report &amp; certificate</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Placement Preparation</div>
+                  <ul>
+                    <li>Aptitude &amp; reasoning</li>
+                    <li>Mock technical + HR interviews</li>
+                    <li>Resume, Naukri &amp; LinkedIn</li>
+                    <li>100% job assistance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Major project (final year) with live URL</li>
+                    <li>Mini project (3rd year) in chosen track</li>
+                    <li>DSA GitHub repository</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Crack coding rounds of service &amp; product companies</li>
+                    <li>Explain DBMS/OS/CN confidently in interviews</li>
+                    <li>Show 2–3 deployed projects on GitHub</li>
+                    <li>Complete required summer training with certificate</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">C/C++</span><span class="bpst-chip dark">Java</span
+                    ><span class="bpst-chip dark">Python</span><span class="bpst-chip dark">SQL</span
+                    ><span class="bpst-chip dark">Git</span><span class="bpst-chip dark">React</span
+                    ><span class="bpst-chip dark">.NET / Node</span><span class="bpst-chip dark">AWS / Azure</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> Internship + Training certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="bca-career-track">Next: BCA Career Track ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="bca-career-track" role="tabpanel" aria-labelledby="t-bca-career-track" tabindex="0">
+        <article class="course" aria-labelledby="h-bca-career-track">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · BCA</span>
+              <h2 id="h-bca-career-track"><a href="/courses/bca-career-track" class="text-reset">BCA Career Track</a></h2>
+              <p>
+                Turn BCA theory into employable skills: programming, web development, databases and a full-stack or data
+                specialization — with your final-year project done the industry way.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">BCA students (any university) and BCA graduates.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=bca-career-track"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/bca-career-track"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">Pick per semester / year</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">1st year → Final year</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Programming Foundations</div>
+                  <ul>
+                    <li>C programming</li>
+                    <li>C++ / OOP concepts</li>
+                    <li>Python basics</li>
+                    <li>Logic &amp; problem solving</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Web Development</div>
+                  <ul>
+                    <li>HTML5, CSS3, Bootstrap</li>
+                    <li>JavaScript ES6+</li>
+                    <li>Responsive design</li>
+                    <li>Hosting a website</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Java / Python &amp; DBMS</div>
+                  <ul>
+                    <li>Core Java or advanced Python</li>
+                    <li>SQL Server / MySQL</li>
+                    <li>Normalization, joins</li>
+                    <li>CRUD applications</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Full Stack or Data Track</div>
+                  <ul>
+                    <li>ASP.NET Core / React</li>
+                    <li>or Python + Pandas + Power BI</li>
+                    <li>REST APIs</li>
+                    <li>Authentication</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Final-Year Project</div>
+                  <ul>
+                    <li>Requirement &amp; SRS document</li>
+                    <li>Design, ER &amp; DFD diagrams</li>
+                    <li>Development in team sprints</li>
+                    <li>Report, PPT &amp; viva prep</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Placement Preparation</div>
+                  <ul>
+                    <li>Communication &amp; PDP</li>
+                    <li>Aptitude &amp; mock interviews</li>
+                    <li>Resume, Naukri &amp; LinkedIn</li>
+                    <li>100% job assistance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Final-year project with SRS &amp; report</li>
+                    <li>Responsive business website</li>
+                    <li>CRUD web app with login</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build and host full web applications</li>
+                    <li>Write optimized SQL queries</li>
+                    <li>Deliver a project that matches university guidelines</li>
+                    <li>Apply for developer / analyst roles</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">C</span><span class="bpst-chip dark">Python</span
+                    ><span class="bpst-chip dark">Java</span><span class="bpst-chip dark">HTML/CSS/JS</span
+                    ><span class="bpst-chip dark">Bootstrap</span><span class="bpst-chip dark">SQL Server</span
+                    ><span class="bpst-chip dark">React</span><span class="bpst-chip dark">Power BI</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> Internship + Training certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="btech-career-track">‹ B.Tech Career Track</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="mca-industry-track">Next: MCA Industry Track ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="mca-industry-track" role="tabpanel" aria-labelledby="t-mca-industry-track" tabindex="0">
+        <article class="course" aria-labelledby="h-mca-industry-track">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 03 · MCA</span>
+              <h2 id="h-mca-industry-track"><a href="/courses/mca-industry-track" class="text-reset">MCA Industry Track</a></h2>
+              <p>
+                For MCA students who need depth: enterprise full stack, cloud and AI — plus the mandatory final-semester
+                internship/major project done inside a real Agile team.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">MCA 1st &amp; 2nd year students, and MCA graduates.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=mca-industry-track"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/mca-industry-track"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 / 6 Months (flexible)</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Intermediate → Advanced</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Advanced Programming</div>
+                  <ul>
+                    <li>Advanced Java / C# / Python</li>
+                    <li>Design patterns</li>
+                    <li>SOLID principles</li>
+                    <li>Unit testing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Enterprise Full Stack</div>
+                  <ul>
+                    <li>ASP.NET Core Web API</li>
+                    <li>React / Angular + TypeScript</li>
+                    <li>SQL Server &amp; MongoDB</li>
+                    <li>JWT auth &amp; roles</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Cloud &amp; DevOps</div>
+                  <ul>
+                    <li>Docker containers</li>
+                    <li>GitHub Actions CI/CD</li>
+                    <li>AWS / Azure deployment</li>
+                    <li>Linux server basics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">AI / Data (elective)</div>
+                  <ul>
+                    <li>Python for ML</li>
+                    <li>Scikit-learn models</li>
+                    <li>GenAI: LLM APIs &amp; RAG</li>
+                    <li>Power BI dashboards</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Final-Semester Project</div>
+                  <ul>
+                    <li>Industry problem statement</li>
+                    <li>Sprint planning &amp; stand-ups</li>
+                    <li>Code reviews &amp; testing</li>
+                    <li>Live deployment + report</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Placement Preparation</div>
+                  <ul>
+                    <li>DSA revision</li>
+                    <li>System design basics</li>
+                    <li>Mock interviews</li>
+                    <li>100% job assistance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Multi-tenant SaaS portal</li>
+                    <li>AI knowledge assistant (RAG)</li>
+                    <li>CI/CD pipeline project</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Work on enterprise-grade architecture</li>
+                    <li>Deploy apps with CI/CD on cloud</li>
+                    <li>Complete university internship requirements</li>
+                    <li>Interview for developer / cloud / AI roles</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">C#</span><span class="bpst-chip dark">ASP.NET Core</span
+                    ><span class="bpst-chip dark">React</span><span class="bpst-chip dark">Angular</span
+                    ><span class="bpst-chip dark">Docker</span><span class="bpst-chip dark">AWS</span
+                    ><span class="bpst-chip dark">Azure</span><span class="bpst-chip dark">LangChain</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> 6-month internship letter</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="bca-career-track">‹ BCA Career Track</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="polytechnic-diploma-track">
+            Next: Polytechnic Diploma Track ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="polytechnic-diploma-track"
+        role="tabpanel"
+        aria-labelledby="t-polytechnic-diploma-track"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-polytechnic-diploma-track">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 04 · Polytechnic · Diploma CS / IT / ECE</span>
+              <h2 id="h-polytechnic-diploma-track">
+                <a href="/courses/polytechnic-diploma-track" class="text-reset">Polytechnic Diploma Track</a>
+              </h2>
+              <p>
+                Practical skills and mandatory summer/industrial training for diploma students — so you can join a job directly or
+                enter B.Tech lateral entry with a head-start.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Diploma (Polytechnic) students in CS, IT, ECE and allied branches.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=polytechnic-diploma-track"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/polytechnic-diploma-track"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days / 3 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Computer &amp; C Basics</div>
+                  <ul>
+                    <li>Computer fundamentals</li>
+                    <li>C programming</li>
+                    <li>Logic &amp; flowcharts</li>
+                    <li>Arrays, functions</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Web Designing</div>
+                  <ul>
+                    <li>HTML5 &amp; CSS3</li>
+                    <li>Bootstrap layouts</li>
+                    <li>JavaScript basics</li>
+                    <li>Hosting a site</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Python / Java Basics</div>
+                  <ul>
+                    <li>Syntax &amp; control flow</li>
+                    <li>OOP concepts</li>
+                    <li>File handling</li>
+                    <li>Mini programs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Database</div>
+                  <ul>
+                    <li>MySQL basics</li>
+                    <li>Tables, keys, queries</li>
+                    <li>Connecting app to DB</li>
+                    <li>CRUD operations</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Training Project</div>
+                  <ul>
+                    <li>Team project (2–4 students)</li>
+                    <li>Git basics</li>
+                    <li>Deployment</li>
+                    <li>Training report &amp; presentation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Career Basics</div>
+                  <ul>
+                    <li>Communication skills</li>
+                    <li>Resume for freshers</li>
+                    <li>Interview basics</li>
+                    <li>Job assistance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>College / shop website</li>
+                    <li>Student record app with database</li>
+                    <li>Training report &amp; PPT</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build and host a website</li>
+                    <li>Write basic programs in C and Python/Java</li>
+                    <li>Complete diploma industrial training with report</li>
+                    <li>Apply for junior developer / support roles</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">C</span><span class="bpst-chip dark">HTML</span
+                    ><span class="bpst-chip dark">CSS</span><span class="bpst-chip dark">Bootstrap</span
+                    ><span class="bpst-chip dark">JavaScript</span><span class="bpst-chip dark">Python</span
+                    ><span class="bpst-chip dark">MySQL</span><span class="bpst-chip dark">Git</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> Industrial training certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="mca-industry-track">‹ MCA Industry Track</button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">College Programs — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                When should a B.Tech student start industry training?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Ideally from the 2nd year, so you have two portfolio projects and an internship before final-year placements begin.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any college programs course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

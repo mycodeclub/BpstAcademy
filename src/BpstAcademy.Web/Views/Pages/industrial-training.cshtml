@@ -1,0 +1,2046 @@
+@* Ported from NewLayout/Landing Page UI/industrial-training.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Industrial Training in Lucknow — 9 Tracks, 45 Days to 6 Months",
+        Description = "Nine industry tracks for B.Tech, BCA, MCA and Polytechnic students. Agile team projects, code reviews, live cloud deployment and interview preparation — in…",
+        CanonicalPath = "/industrial-training",
+        OgDescription = "Nine industry tracks for B.Tech, BCA, MCA and Polytechnic students. Agile team projects, code reviews, live cloud deployment and interview preparation — in 45-day, 3-month or 6-month formats.",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "name": "Industrial Training",
+              "item": "https://edu.bitprosofttech.com/industrial-training"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "Industrial Training courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/full-stack-development",
+              "name": "Software Development & Full Stack (.NET + React)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/advanced-ui-angular-react",
+              "name": "Advanced UI Development (Angular & React)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "url": "https://edu.bitprosofttech.com/courses/data-analytics-data-science",
+              "name": "Data Analytics & Data Science"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 4,
+              "url": "https://edu.bitprosofttech.com/courses/artificial-intelligence-machine-learning",
+              "name": "Artificial Intelligence & Machine Learning"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 5,
+              "url": "https://edu.bitprosofttech.com/courses/generative-ai-agentic-ai",
+              "name": "Generative AI & Agentic AI"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 6,
+              "url": "https://edu.bitprosofttech.com/courses/cloud-computing-devops",
+              "name": "Cloud Computing & DevOps"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 7,
+              "url": "https://edu.bitprosofttech.com/courses/cyber-security-ethical-hacking",
+              "name": "Cyber Security & Ethical Hacking"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 8,
+              "url": "https://edu.bitprosofttech.com/courses/mobile-app-development",
+              "name": "Mobile App Development (Android & iOS)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 9,
+              "url": "https://edu.bitprosofttech.com/courses/game-development-unity",
+              "name": "Game Development (Unity + C#)"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Which industrial training track is best for B.Tech CS/IT students?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Most B.Tech CS/IT students choose Full Stack (.NET + React) or Generative AI because both lead directly to developer roles. If you enjoy numbers and dashboards, pick Data Analytics; if you like servers and automation, pick Cloud & DevOps."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Is 45-day industrial training enough for a college certificate?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. The 45-day format meets the summer/winter industrial training requirement of most AKTU, polytechnic and private university programs. You receive a training certificate plus a deployed mini project."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Do you provide an internship or training certificate?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. Every completed track includes a BitProSoftTech training certificate. The 6-month program includes an internship letter based on your project work."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">Industrial Training</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-briefcase"></i> 9 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">Industrial Training with Live Projects</h1>
+        <p class="lead mb-4">
+          Nine industry tracks for B.Tech, BCA, MCA and Polytechnic students. Agile team projects, code reviews, live cloud deployment
+          and interview preparation — in 45-day, 3-month or 6-month formats.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          Industrial training at BPST Academy, Lucknow is hands-on software training where students build and deploy real projects in
+          Agile teams. You choose one of nine tracks — Full Stack, Advanced UI, Data Analytics, AI/ML, Generative AI, Cloud &amp;
+          DevOps, Cyber Security, Mobile Apps or Game Development — in a 45-day, 3-month or 6-month format, classroom or live online.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 9 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20Industrial%20Training%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/full-stack-development"
+                ><i class="bi bi-code-square text-info"></i
+                ><span
+                  >Software Development &amp; Full Stack<br /><small class="text-white-50">45 Days · 3 Months · 6 Months</small></span
+                ></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/advanced-ui-angular-react"
+                ><i class="bi bi-window text-info"></i
+                ><span>Advanced UI Development<br /><small class="text-white-50">45 Days · 3 Months · 6 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/data-analytics-data-science"
+                ><i class="bi bi-graph-up text-info"></i
+                ><span
+                  >Data Analytics &amp; Data Science<br /><small class="text-white-50">45 Days · 3 Months · 6 Months</small></span
+                ></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/artificial-intelligence-machine-learning"
+                ><i class="bi bi-cpu text-info"></i
+                ><span
+                  >Artificial Intelligence &amp; Machine Learning<br /><small class="text-white-50"
+                    >45 Days · 3 Months · 6 Months</small
+                  ></span
+                ></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/generative-ai-agentic-ai"
+                ><i class="bi bi-stars text-info"></i
+                ><span
+                  >Generative AI &amp; Agentic AI<br /><small class="text-white-50">45 Days · 3 Months · 6 Months</small></span
+                ></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/cloud-computing-devops"
+                ><i class="bi bi-cloud-check text-info"></i
+                ><span>Cloud Computing &amp; DevOps<br /><small class="text-white-50">45 Days · 3 Months · 6 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/cyber-security-ethical-hacking"
+                ><i class="bi bi-shield-lock text-info"></i
+                ><span
+                  >Cyber Security &amp; Ethical Hacking<br /><small class="text-white-50">45 Days · 3 Months · 6 Months</small></span
+                ></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/mobile-app-development"
+                ><i class="bi bi-phone text-info"></i
+                ><span>Mobile App Development<br /><small class="text-white-50">45 Days · 3 Months · 6 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/game-development-unity"
+                ><i class="bi bi-controller text-info"></i
+                ><span>Game Development<br /><small class="text-white-50">45 Days · 3 Months · 6 Months</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="Industrial Training courses">
+      <button
+        class="tab-pill active"
+        id="t-full-stack-development"
+        data-bs-toggle="pill"
+        data-bs-target="#full-stack-development"
+        type="button"
+        role="tab"
+        aria-controls="full-stack-development"
+        aria-selected="true"
+      >
+        Software Development &amp; Full Stack</button
+      ><button
+        class="tab-pill"
+        id="t-advanced-ui-angular-react"
+        data-bs-toggle="pill"
+        data-bs-target="#advanced-ui-angular-react"
+        type="button"
+        role="tab"
+        aria-controls="advanced-ui-angular-react"
+        aria-selected="false"
+      >
+        Advanced UI Development</button
+      ><button
+        class="tab-pill"
+        id="t-data-analytics-data-science"
+        data-bs-toggle="pill"
+        data-bs-target="#data-analytics-data-science"
+        type="button"
+        role="tab"
+        aria-controls="data-analytics-data-science"
+        aria-selected="false"
+      >
+        Data Analytics &amp; Data Science</button
+      ><button
+        class="tab-pill"
+        id="t-artificial-intelligence-machine-learning"
+        data-bs-toggle="pill"
+        data-bs-target="#artificial-intelligence-machine-learning"
+        type="button"
+        role="tab"
+        aria-controls="artificial-intelligence-machine-learning"
+        aria-selected="false"
+      >
+        Artificial Intelligence &amp; Machine Learning</button
+      ><button
+        class="tab-pill"
+        id="t-generative-ai-agentic-ai"
+        data-bs-toggle="pill"
+        data-bs-target="#generative-ai-agentic-ai"
+        type="button"
+        role="tab"
+        aria-controls="generative-ai-agentic-ai"
+        aria-selected="false"
+      >
+        Generative AI &amp; Agentic AI</button
+      ><button
+        class="tab-pill"
+        id="t-cloud-computing-devops"
+        data-bs-toggle="pill"
+        data-bs-target="#cloud-computing-devops"
+        type="button"
+        role="tab"
+        aria-controls="cloud-computing-devops"
+        aria-selected="false"
+      >
+        Cloud Computing &amp; DevOps</button
+      ><button
+        class="tab-pill"
+        id="t-cyber-security-ethical-hacking"
+        data-bs-toggle="pill"
+        data-bs-target="#cyber-security-ethical-hacking"
+        type="button"
+        role="tab"
+        aria-controls="cyber-security-ethical-hacking"
+        aria-selected="false"
+      >
+        Cyber Security &amp; Ethical Hacking</button
+      ><button
+        class="tab-pill"
+        id="t-mobile-app-development"
+        data-bs-toggle="pill"
+        data-bs-target="#mobile-app-development"
+        type="button"
+        role="tab"
+        aria-controls="mobile-app-development"
+        aria-selected="false"
+      >
+        Mobile App Development</button
+      ><button
+        class="tab-pill"
+        id="t-game-development-unity"
+        data-bs-toggle="pill"
+        data-bs-target="#game-development-unity"
+        type="button"
+        role="tab"
+        aria-controls="game-development-unity"
+        aria-selected="false"
+      >
+        Game Development
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="full-stack-development"
+        role="tabpanel"
+        aria-labelledby="t-full-stack-development"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-full-stack-development">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · From Fundamentals to Real-World Applications</span>
+              <h2 id="h-full-stack-development">
+                <a href="/courses/full-stack-development" class="text-reset"
+                  >Software Development &amp; Full Stack (.NET + React)</a
+                >
+              </h2>
+              <p>
+                Get practical, industry-oriented software development training that takes you from core programming fundamentals to
+                modern web and backend engineering, with hands-on projects, real tools, and industry best practices.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >B.Tech (CS/IT/ECE), BCA, MCA, Diploma students, fresh graduates, and career starters wanting complete end-to-end
+                  engineering skills.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=full-stack-development"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/full-stack-development"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">C# &amp; OOP</div>
+                  <ul>
+                    <li>Syntax, types, collections</li>
+                    <li>Classes, interfaces, generics</li>
+                    <li>LINQ &amp; async/await</li>
+                    <li>Exception handling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Databases</div>
+                  <ul>
+                    <li>SQL Server design &amp; normalization</li>
+                    <li>Joins, views, stored procedures</li>
+                    <li>Entity Framework Core</li>
+                    <li>Query optimization</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">ASP.NET Core Web API</div>
+                  <ul>
+                    <li>REST principles</li>
+                    <li>Controllers, DI, middleware</li>
+                    <li>JWT auth &amp; role-based access</li>
+                    <li>Swagger documentation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">React Front-end</div>
+                  <ul>
+                    <li>Components, hooks, state</li>
+                    <li>Routing &amp; forms</li>
+                    <li>Consuming APIs</li>
+                    <li>Bootstrap 5 UI</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Architecture &amp; Testing</div>
+                  <ul>
+                    <li>Layered / clean architecture</li>
+                    <li>Unit tests (xUnit)</li>
+                    <li>Microservices intro</li>
+                    <li>Logging &amp; error handling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Deployment</div>
+                  <ul>
+                    <li>Git branching &amp; PRs</li>
+                    <li>Docker containers</li>
+                    <li>CI/CD with GitHub Actions</li>
+                    <li>Cloud hosting + domain + SSL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Multi-tenant SaaS management portal</li>
+                    <li>Containerized API with Docker</li>
+                    <li>E-commerce admin dashboard</li>
+                    <li>Enterprise Resource &amp; Employee Portal</li>
+                    <li>E-Commerce Microservices Engine</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build a full stack app end-to-end</li>
+                    <li>Design REST APIs with secure auth</li>
+                    <li>Containerize and deploy to cloud</li>
+                    <li>Work in a team using Git and code reviews</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">C#</span><span class="bpst-chip dark">ASP.NET Core MVC</span
+                    ><span class="bpst-chip dark">ASP.NET Core Web API</span><span class="bpst-chip dark">Java</span
+                    ><span class="bpst-chip dark">Python</span><span class="bpst-chip dark">React</span
+                    ><span class="bpst-chip dark">SQL Server</span><span class="bpst-chip dark">EF Core</span
+                    ><span class="bpst-chip dark">Bootstrap 5</span><span class="bpst-chip dark">Docker</span
+                    ><span class="bpst-chip dark">GitHub Actions</span><span class="bpst-chip dark">Azure</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="advanced-ui-angular-react">Next: Advanced UI Development ›</button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="advanced-ui-angular-react"
+        role="tabpanel"
+        aria-labelledby="t-advanced-ui-angular-react"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-advanced-ui-angular-react">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · Craft High-Performance, Enterprise Web Experiences</span>
+              <h2 id="h-advanced-ui-angular-react">
+                <a href="/courses/advanced-ui-angular-react" class="text-reset">Advanced UI Development (Angular &amp; React)</a>
+              </h2>
+              <p>
+                Focus exclusively on modern frontend architecture, state management, component lifecycles, responsive layouts, and
+                modern single-page applications using Angular and React.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Developers and learners who want to specialize in high-demand frontend roles and master component-driven web
+                  design.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=advanced-ui-angular-react"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/advanced-ui-angular-react"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Web Foundations</div>
+                  <ul>
+                    <li>Semantic HTML5</li>
+                    <li>CSS3, Flexbox, Grid</li>
+                    <li>Responsive &amp; mobile-first</li>
+                    <li>Accessibility basics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">JavaScript ES6+</div>
+                  <ul>
+                    <li>Scope, closures, promises</li>
+                    <li>Async/await &amp; fetch</li>
+                    <li>Modules</li>
+                    <li>DOM &amp; events</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">TypeScript</div>
+                  <ul>
+                    <li>Types &amp; interfaces</li>
+                    <li>Generics</li>
+                    <li>Classes &amp; decorators</li>
+                    <li>Strict mode</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">React</div>
+                  <ul>
+                    <li>Hooks &amp; context</li>
+                    <li>React Router</li>
+                    <li>Redux Toolkit / Zustand</li>
+                    <li>Performance tuning</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Angular</div>
+                  <ul>
+                    <li>Components &amp; modules</li>
+                    <li>Services &amp; DI</li>
+                    <li>RxJS &amp; observables</li>
+                    <li>Reactive forms, routing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Production UI</div>
+                  <ul>
+                    <li>Component libraries</li>
+                    <li>Unit testing (Jest)</li>
+                    <li>Build &amp; bundling</li>
+                    <li>Deploy SPA to cloud</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Admin dashboard in Angular</li>
+                    <li>React e-commerce storefront</li>
+                    <li>Reusable UI component kit</li>
+                    <li>Multi-Tenant SaaS Analytics Dashboard</li>
+                    <li>Patient Healthcare Management Portal</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build SPAs in both React and Angular</li>
+                    <li>Manage complex state cleanly</li>
+                    <li>Create reusable component libraries</li>
+                    <li>Ship responsive, accessible UIs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">HTML5</span><span class="bpst-chip dark">CSS3</span
+                    ><span class="bpst-chip dark">JavaScript</span><span class="bpst-chip dark">TypeScript</span
+                    ><span class="bpst-chip dark">React</span><span class="bpst-chip dark">Angular</span
+                    ><span class="bpst-chip dark">RxJS</span><span class="bpst-chip dark">Redux</span
+                    ><span class="bpst-chip dark">Jest</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="full-stack-development">
+            ‹ Software Development &amp; Full Stack
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="data-analytics-data-science">
+            Next: Data Analytics &amp; Data Science ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="data-analytics-data-science"
+        role="tabpanel"
+        aria-labelledby="t-data-analytics-data-science"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-data-analytics-data-science">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 03 · From Raw Data to Real Decisions</span>
+              <h2 id="h-data-analytics-data-science">
+                <a href="/courses/data-analytics-data-science" class="text-reset">Data Analytics &amp; Data Science</a>
+              </h2>
+              <p>
+                Turn raw data into actionable insights with industry tools, analytics methodologies, interactive dashboards, and
+                real-world case studies.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Students from engineering, computer applications, commerce, mathematics, and graduates seeking analytics
+                  roles.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=data-analytics-data-science"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/data-analytics-data-science"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Advanced Excel</div>
+                  <ul>
+                    <li>Formulas, lookups, XLOOKUP</li>
+                    <li>Pivot tables &amp; charts</li>
+                    <li>Data cleaning</li>
+                    <li>Dashboards</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">SQL for Analysis</div>
+                  <ul>
+                    <li>SELECT, joins, subqueries</li>
+                    <li>Window functions</li>
+                    <li>CTEs</li>
+                    <li>Business queries</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Python for Data</div>
+                  <ul>
+                    <li>NumPy arrays</li>
+                    <li>Pandas DataFrames</li>
+                    <li>Cleaning &amp; transformation</li>
+                    <li>EDA workflow</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Visualization</div>
+                  <ul>
+                    <li>Matplotlib &amp; Seaborn</li>
+                    <li>Storytelling with data</li>
+                    <li>Chart selection</li>
+                    <li>Report writing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Power BI</div>
+                  <ul>
+                    <li>Power Query</li>
+                    <li>Data modelling &amp; DAX</li>
+                    <li>Interactive dashboards</li>
+                    <li>Publishing &amp; sharing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Statistics &amp; Intro ML</div>
+                  <ul>
+                    <li>Descriptive statistics</li>
+                    <li>Probability &amp; distributions</li>
+                    <li>Hypothesis testing</li>
+                    <li>Regression basics</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Sales performance dashboard</li>
+                    <li>Customer churn analysis</li>
+                    <li>HR analytics report</li>
+                    <li>Retail Customer Retention &amp; Churn Analysis</li>
+                    <li>Hospital Operations Patient Flow Insights</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Clean and analyse real datasets</li>
+                    <li>Write business SQL queries</li>
+                    <li>Build Power BI dashboards</li>
+                    <li>Present insights to stakeholders</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Excel</span><span class="bpst-chip dark">SQL</span
+                    ><span class="bpst-chip dark">Python</span><span class="bpst-chip dark">Pandas</span
+                    ><span class="bpst-chip dark">NumPy</span><span class="bpst-chip dark">Matplotlib</span
+                    ><span class="bpst-chip dark">Power BI</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="advanced-ui-angular-react">‹ Advanced UI Development</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="artificial-intelligence-machine-learning">
+            Next: Artificial Intelligence &amp; Machine Learning ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="artificial-intelligence-machine-learning"
+        role="tabpanel"
+        aria-labelledby="t-artificial-intelligence-machine-learning"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-artificial-intelligence-machine-learning">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 04 · Learn Intelligence. Build Real Solutions.</span>
+              <h2 id="h-artificial-intelligence-machine-learning">
+                <a href="/courses/artificial-intelligence-machine-learning" class="text-reset"
+                  >Artificial Intelligence &amp; Machine Learning</a
+                >
+              </h2>
+              <p>
+                Build intelligent solutions with machine learning algorithms, predictive systems, and real-world AI applications from
+                math foundations to production models.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Engineering and computer science students aiming for roles in applied AI, machine learning engineering, and
+                  algorithmic problem solving.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=artificial-intelligence-machine-learning"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/artificial-intelligence-machine-learning"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Python for AI</div>
+                  <ul>
+                    <li>NumPy, Pandas</li>
+                    <li>Data visualization</li>
+                    <li>Jupyter notebooks</li>
+                    <li>Clean code</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Maths for ML</div>
+                  <ul>
+                    <li>Linear algebra essentials</li>
+                    <li>Statistics &amp; probability</li>
+                    <li>Calculus intuition</li>
+                    <li>Gradient descent</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Supervised Learning</div>
+                  <ul>
+                    <li>Linear &amp; logistic regression</li>
+                    <li>Decision trees, random forest</li>
+                    <li>SVM, KNN</li>
+                    <li>Model evaluation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Unsupervised Learning</div>
+                  <ul>
+                    <li>K-means clustering</li>
+                    <li>Hierarchical clustering</li>
+                    <li>PCA</li>
+                    <li>Anomaly detection</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Deep Learning Intro</div>
+                  <ul>
+                    <li>Neural networks</li>
+                    <li>TensorFlow / Keras basics</li>
+                    <li>CNN for images</li>
+                    <li>NLP basics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Deployment</div>
+                  <ul>
+                    <li>Feature engineering</li>
+                    <li>Model tuning</li>
+                    <li>FastAPI / Flask serving</li>
+                    <li>Deploy model to cloud</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>House price predictor</li>
+                    <li>Customer segmentation</li>
+                    <li>Image classifier web app</li>
+                    <li>Credit Risk &amp; Loan Default Classifier</li>
+                    <li>Automated Defect Detection in Manufacturing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build and evaluate ML models</li>
+                    <li>Choose the right algorithm for a problem</li>
+                    <li>Serve a model through an API</li>
+                    <li>Explain ML concepts in interviews</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python</span><span class="bpst-chip dark">Scikit-learn</span
+                    ><span class="bpst-chip dark">NumPy</span><span class="bpst-chip dark">Pandas</span
+                    ><span class="bpst-chip dark">TensorFlow</span><span class="bpst-chip dark">Keras</span
+                    ><span class="bpst-chip dark">FastAPI</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="data-analytics-data-science">
+            ‹ Data Analytics &amp; Data Science
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="generative-ai-agentic-ai">
+            Next: Generative AI &amp; Agentic AI ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="generative-ai-agentic-ai"
+        role="tabpanel"
+        aria-labelledby="t-generative-ai-agentic-ai"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-generative-ai-agentic-ai">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 05 · Create | Automate | Augment | Build the Next AI Era</span>
+              <h2 id="h-generative-ai-agentic-ai">
+                <a href="/courses/generative-ai-agentic-ai" class="text-reset">Generative AI &amp; Agentic AI</a>
+              </h2>
+              <p>
+                Learn the cutting-edge generation of AI with Large Language Models (LLMs), Retrieval Augmented Generation (RAG),
+                autonomous AI agents, and intelligent workflows.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Forward-looking developers and students who want to build modern agentic applications and generative AI
+                  systems.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=generative-ai-agentic-ai"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/generative-ai-agentic-ai"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">LLM Foundations</div>
+                  <ul>
+                    <li>How LLMs work</li>
+                    <li>Tokens, context, temperature</li>
+                    <li>OpenAI, Gemini, Claude APIs</li>
+                    <li>Cost &amp; safety</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Prompt Engineering</div>
+                  <ul>
+                    <li>Zero/few-shot prompting</li>
+                    <li>Chain-of-thought</li>
+                    <li>Structured outputs (JSON)</li>
+                    <li>Evaluation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">RAG Systems</div>
+                  <ul>
+                    <li>Embeddings</li>
+                    <li>Vector DBs: Chroma, Pinecone</li>
+                    <li>Chunking &amp; retrieval</li>
+                    <li>Citations</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Frameworks</div>
+                  <ul>
+                    <li>LangChain</li>
+                    <li>LlamaIndex</li>
+                    <li>Tool / function calling</li>
+                    <li>Memory</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Agentic AI</div>
+                  <ul>
+                    <li>Agent loops &amp; planning</li>
+                    <li>Multi-agent workflows</li>
+                    <li>Tool integration</li>
+                    <li>Guardrails</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Productionizing</div>
+                  <ul>
+                    <li>FastAPI back-end</li>
+                    <li>Chat UI</li>
+                    <li>Monitoring</li>
+                    <li>Cloud deployment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>AI-powered enterprise knowledge RAG assistant</li>
+                    <li>Resume-screening AI agent</li>
+                    <li>PDF chat app with citations</li>
+                    <li>Enterprise Technical Documentation RAG Assistant</li>
+                    <li>Multi-Agent Research &amp; Competitive Analysis Bot</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build chatbots over private documents</li>
+                    <li>Design AI agents that use tools</li>
+                    <li>Integrate LLM APIs into apps</li>
+                    <li>Deploy GenAI apps</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python</span><span class="bpst-chip dark">OpenAI API</span
+                    ><span class="bpst-chip dark">Gemini</span><span class="bpst-chip dark">Claude</span
+                    ><span class="bpst-chip dark">LangChain</span><span class="bpst-chip dark">LlamaIndex</span
+                    ><span class="bpst-chip dark">ChromaDB</span><span class="bpst-chip dark">Pinecone</span
+                    ><span class="bpst-chip dark">FastAPI</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="artificial-intelligence-machine-learning">
+            ‹ Artificial Intelligence &amp; Machine Learning
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="cloud-computing-devops">
+            Next: Cloud Computing &amp; DevOps ›
+          </button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="cloud-computing-devops" role="tabpanel" aria-labelledby="t-cloud-computing-devops" tabindex="0">
+        <article class="course" aria-labelledby="h-cloud-computing-devops">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 06 · Build | Deploy | Scale | Power the Digital World</span>
+              <h2 id="h-cloud-computing-devops">
+                <a href="/courses/cloud-computing-devops" class="text-reset">Cloud Computing &amp; DevOps</a>
+              </h2>
+              <p>
+                Master cloud infrastructure, modern DevOps automation tools, CI/CD pipelines, containerization, and deployment
+                practices for high-availability systems.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Engineering students and IT graduates seeking high-growth infrastructure, DevOps, and cloud engineering
+                  positions.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=cloud-computing-devops"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/cloud-computing-devops"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Linux Administration</div>
+                  <ul>
+                    <li>Commands &amp; file system</li>
+                    <li>Users &amp; permissions</li>
+                    <li>Shell scripting</li>
+                    <li>Networking basics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Git &amp; Collaboration</div>
+                  <ul>
+                    <li>Branching strategies</li>
+                    <li>Pull requests</li>
+                    <li>GitHub workflows</li>
+                    <li>Versioning</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Containers</div>
+                  <ul>
+                    <li>Docker images &amp; containers</li>
+                    <li>Dockerfile &amp; Compose</li>
+                    <li>Registries</li>
+                    <li>Kubernetes intro</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">CI/CD</div>
+                  <ul>
+                    <li>GitHub Actions</li>
+                    <li>Automated testing</li>
+                    <li>Build &amp; release pipelines</li>
+                    <li>Zero-downtime deploy</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">AWS</div>
+                  <ul>
+                    <li>EC2, S3, IAM</li>
+                    <li>RDS</li>
+                    <li>Load balancer &amp; auto-scaling</li>
+                    <li>CloudWatch</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Azure</div>
+                  <ul>
+                    <li>App Service</li>
+                    <li>Azure SQL</li>
+                    <li>Storage</li>
+                    <li>Monitoring</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Automated zero-downtime CI/CD pipeline</li>
+                    <li>Dockerized multi-service app</li>
+                    <li>Auto-scaling web app on AWS</li>
+                    <li>Automated Zero-Downtime CI/CD Pipeline</li>
+                    <li>Microservices Container Cluster Setup</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Administer Linux servers</li>
+                    <li>Containerize any application</li>
+                    <li>Build CI/CD pipelines</li>
+                    <li>Deploy highly available apps on AWS / Azure</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Linux</span><span class="bpst-chip dark">Bash</span
+                    ><span class="bpst-chip dark">Git</span><span class="bpst-chip dark">Docker</span
+                    ><span class="bpst-chip dark">Kubernetes</span><span class="bpst-chip dark">GitHub Actions</span
+                    ><span class="bpst-chip dark">AWS</span><span class="bpst-chip dark">Azure</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="generative-ai-agentic-ai">
+            ‹ Generative AI &amp; Agentic AI
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="cyber-security-ethical-hacking">
+            Next: Cyber Security &amp; Ethical Hacking ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="cyber-security-ethical-hacking"
+        role="tabpanel"
+        aria-labelledby="t-cyber-security-ethical-hacking"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-cyber-security-ethical-hacking">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 07 · Learn | Protect | Defend | Build a Safer Digital Tomorrow</span>
+              <h2 id="h-cyber-security-ethical-hacking">
+                <a href="/courses/cyber-security-ethical-hacking" class="text-reset">Cyber Security &amp; Ethical Hacking</a>
+              </h2>
+              <p>
+                Learn to protect systems, find vulnerabilities, assess security postures, and defend networks and web applications
+                from modern digital threats.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Students interested in information security, ethical hacking, digital defense, and security analyst career
+                  paths.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=cyber-security-ethical-hacking"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/cyber-security-ethical-hacking"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Networking</div>
+                  <ul>
+                    <li>OSI &amp; TCP/IP</li>
+                    <li>Ports, protocols</li>
+                    <li>Subnetting</li>
+                    <li>Firewalls</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Linux &amp; Kali</div>
+                  <ul>
+                    <li>Kali Linux set-up</li>
+                    <li>Command line</li>
+                    <li>Scripting</li>
+                    <li>Lab environment</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Reconnaissance &amp; Scanning</div>
+                  <ul>
+                    <li>Footprinting</li>
+                    <li>Nmap scanning</li>
+                    <li>Enumeration</li>
+                    <li>Wireshark packet analysis</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Web App Security</div>
+                  <ul>
+                    <li>OWASP Top 10</li>
+                    <li>SQL injection, XSS</li>
+                    <li>Burp Suite</li>
+                    <li>Secure coding</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">System Hacking &amp; Defense</div>
+                  <ul>
+                    <li>Password attacks</li>
+                    <li>Malware basics</li>
+                    <li>Privilege escalation</li>
+                    <li>Hardening</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Reporting</div>
+                  <ul>
+                    <li>Vulnerability assessment</li>
+                    <li>Pen-test reports</li>
+                    <li>Incident response basics</li>
+                    <li>Cyber law &amp; ethics</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Web app pen-test report</li>
+                    <li>Network scan &amp; hardening lab</li>
+                    <li>CTF challenge portfolio</li>
+                    <li>Web Application Vulnerability Audit &amp; Fixes</li>
+                    <li>Network Intrusion &amp; Anomaly Monitor</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Perform vulnerability assessments</li>
+                    <li>Test web apps against OWASP Top 10</li>
+                    <li>Analyse network traffic</li>
+                    <li>Write professional security reports</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Kali Linux</span><span class="bpst-chip dark">Nmap</span
+                    ><span class="bpst-chip dark">Wireshark</span><span class="bpst-chip dark">Burp Suite</span
+                    ><span class="bpst-chip dark">Metasploit</span><span class="bpst-chip dark">OWASP ZAP</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="cloud-computing-devops">
+            ‹ Cloud Computing &amp; DevOps
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="mobile-app-development">Next: Mobile App Development ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="mobile-app-development" role="tabpanel" aria-labelledby="t-mobile-app-development" tabindex="0">
+        <article class="course" aria-labelledby="h-mobile-app-development">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 08 · Build Apps. Shape the Future.</span>
+              <h2 id="h-mobile-app-development">
+                <a href="/courses/mobile-app-development" class="text-reset">Mobile App Development (Android &amp; iOS)</a>
+              </h2>
+              <p>
+                Build powerful, beautiful mobile applications for Android and iOS platforms with responsive mobile interfaces, API
+                integration, and real projects.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Students and beginners wanting to build smartphone apps and launch products on mobile platforms.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=mobile-app-development"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/mobile-app-development"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Programming Base</div>
+                  <ul>
+                    <li>Kotlin fundamentals</li>
+                    <li>Java for Android</li>
+                    <li>Swift basics</li>
+                    <li>OOP for mobile</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Android UI</div>
+                  <ul>
+                    <li>Layouts &amp; Jetpack Compose</li>
+                    <li>Activities &amp; fragments</li>
+                    <li>Navigation</li>
+                    <li>Material design</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Data &amp; Storage</div>
+                  <ul>
+                    <li>SQLite</li>
+                    <li>Room DB</li>
+                    <li>Shared preferences</li>
+                    <li>Offline-first</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Networking</div>
+                  <ul>
+                    <li>REST APIs with Retrofit</li>
+                    <li>JSON parsing</li>
+                    <li>Authentication</li>
+                    <li>Firebase</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">iOS &amp; Cross-platform</div>
+                  <ul>
+                    <li>SwiftUI basics</li>
+                    <li>Flutter intro</li>
+                    <li>Platform differences</li>
+                    <li>Testing on devices</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Publishing</div>
+                  <ul>
+                    <li>App signing</li>
+                    <li>Play Store listing</li>
+                    <li>Crash reporting</li>
+                    <li>Updates &amp; versioning</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Expense tracker app</li>
+                    <li>News app with API</li>
+                    <li>Chat app with Firebase</li>
+                    <li>Campus Events &amp; Community App</li>
+                    <li>Personal Finance &amp; Expense Tracker</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build Android apps with modern UI</li>
+                    <li>Store data locally and sync with APIs</li>
+                    <li>Understand iOS &amp; Flutter basics</li>
+                    <li>Publish an app to Play Store</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Kotlin</span><span class="bpst-chip dark">Java</span
+                    ><span class="bpst-chip dark">Android Studio</span><span class="bpst-chip dark">Jetpack Compose</span
+                    ><span class="bpst-chip dark">Room</span><span class="bpst-chip dark">Retrofit</span
+                    ><span class="bpst-chip dark">Swift</span><span class="bpst-chip dark">Flutter</span
+                    ><span class="bpst-chip dark">Firebase</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="cyber-security-ethical-hacking">
+            ‹ Cyber Security &amp; Ethical Hacking
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="game-development-unity">Next: Game Development ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="game-development-unity" role="tabpanel" aria-labelledby="t-game-development-unity" tabindex="0">
+        <article class="course" aria-labelledby="h-game-development-unity">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 09 · Play. Create. Build Careers.</span>
+              <h2 id="h-game-development-unity">
+                <a href="/courses/game-development-unity" class="text-reset">Game Development (Unity + C#)</a>
+              </h2>
+              <p>
+                Turn your ideas into interactive worlds with game programming, 2D/3D mechanics, physics engines, character animation,
+                and level design.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Creative minds, programmers, and students passionate about gaming, interactive simulations, and real-time 3D
+                  graphics.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=game-development-unity"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/game-development-unity"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">45 Days · 3 Months · 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner friendly</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">C# for Games</div>
+                  <ul>
+                    <li>C# basics</li>
+                    <li>OOP</li>
+                    <li>Coroutines</li>
+                    <li>Events &amp; delegates</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Unity Essentials</div>
+                  <ul>
+                    <li>Editor, scenes, prefabs</li>
+                    <li>GameObjects &amp; components</li>
+                    <li>Input system</li>
+                    <li>Cameras</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">2D Games</div>
+                  <ul>
+                    <li>Sprites &amp; tilemaps</li>
+                    <li>2D physics</li>
+                    <li>Platformer mechanics</li>
+                    <li>Scoring &amp; levels</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">3D Games</div>
+                  <ul>
+                    <li>3D physics &amp; colliders</li>
+                    <li>Lighting &amp; materials</li>
+                    <li>Character controller</li>
+                    <li>Enemy AI</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Animation &amp; Audio</div>
+                  <ul>
+                    <li>Animator &amp; state machines</li>
+                    <li>Character animation</li>
+                    <li>Particles</li>
+                    <li>Sound design</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Polish &amp; Publish</div>
+                  <ul>
+                    <li>UI &amp; menus</li>
+                    <li>Save systems</li>
+                    <li>Optimization</li>
+                    <li>Build for PC / Android</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>2D platformer</li>
+                    <li>3D endless runner</li>
+                    <li>Mobile puzzle game</li>
+                    <li>Retro 2D Cyberpunk Platformer</li>
+                    <li>3D First-Person Puzzle Exploration Game</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build complete 2D and 3D games</li>
+                    <li>Program game mechanics in C#</li>
+                    <li>Animate characters</li>
+                    <li>Publish games for PC &amp; mobile</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Unity</span><span class="bpst-chip dark">C#</span
+                    ><span class="bpst-chip dark">Visual Studio</span><span class="bpst-chip dark">Blender basics</span
+                    ><span class="bpst-chip dark">Git</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> BitProSoftTech training certificate; 6-month program includes an
+                    internship letter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="mobile-app-development">‹ Mobile App Development</button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">Industrial Training — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                Which industrial training track is best for B.Tech CS/IT students?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Most B.Tech CS/IT students choose Full Stack (.NET + React) or Generative AI because both lead directly to developer
+                roles. If you enjoy numbers and dashboards, pick Data Analytics; if you like servers and automation, pick Cloud &amp;
+                DevOps.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c1"
+                aria-expanded="false"
+                aria-controls="catFaq-c1"
+              >
+                Is 45-day industrial training enough for a college certificate?
+              </button>
+            </h3>
+            <div id="catFaq-c1" class="accordion-collapse collapse" aria-labelledby="catFaq-h1" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Yes. The 45-day format meets the summer/winter industrial training requirement of most AKTU, polytechnic and private
+                university programs. You receive a training certificate plus a deployed mini project.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c2"
+                aria-expanded="false"
+                aria-controls="catFaq-c2"
+              >
+                Do you provide an internship or training certificate?
+              </button>
+            </h3>
+            <div id="catFaq-c2" class="accordion-collapse collapse" aria-labelledby="catFaq-h2" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Yes. Every completed track includes a BitProSoftTech training certificate. The 6-month program includes an internship
+                letter based on your project work.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any industrial training course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

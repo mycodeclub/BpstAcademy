@@ -1,0 +1,1174 @@
+@* Ported from NewLayout/Landing Page UI/school-coding.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Coding, Robotics & AI Classes for School Students in Lucknow",
+        Description = "Python foundations for Class 9–10, CBSE Computer Science, ICSE/ISC Java, an engineering head-start and Robotics & AI for young learners.",
+        CanonicalPath = "/school-coding",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "name": "School Coding & Robotics",
+              "item": "https://edu.bitprosofttech.com/school-coding"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "School Coding & Robotics courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/robotics-coding-ai-for-kids",
+              "name": "Robotics, Coding & AI for Kids (Grades 3–12)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/python-coding-class-9-10",
+              "name": "Coding Foundations with Python"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "url": "https://edu.bitprosofttech.com/courses/cbse-computer-science-python-class-11-12",
+              "name": "Computer Science with Python (CBSE)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 4,
+              "url": "https://edu.bitprosofttech.com/courses/icse-isc-java-computer-applications",
+              "name": "Computer Applications & Science with Java"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 5,
+              "url": "https://edu.bitprosofttech.com/courses/engineering-headstart-c-cpp",
+              "name": "Engineering Head-start: C, C++ & Problem Solving"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "From which class can my child start coding?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Robotics, Coding & AI starts from Grade 3 with visual blocks. Text-based Python starts from Class 9."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Do you cover the board practical file and project?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. CBSE and ICSE/ISC courses follow the board syllabus and include practical file and project preparation."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">School Coding &amp; Robotics</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-backpack2"></i> 5 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">Coding, Robotics &amp; AI for School Students</h1>
+        <p class="lead mb-4">
+          Python foundations for Class 9–10, CBSE Computer Science, ICSE/ISC Java, an engineering head-start and Robotics &amp; AI for
+          young learners.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy teaches coding to school students in Lucknow and online: Python foundations (Class 9–10), CBSE Computer Science
+          with Python (Class 11–12), ICSE/ISC Java (Class 9–12), an Engineering Head-start in C/C++ after boards, and Robotics, Coding
+          &amp; AI for Grades 3–12.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 5 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20School%20Coding%20%26%20Robotics%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/robotics-coding-ai-for-kids"
+                ><i class="bi bi-joystick text-info"></i
+                ><span>Robotics, Coding &amp; AI for Kids<br /><small class="text-white-50">3 – 6 Months per level</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/python-coding-class-9-10"
+                ><i class="bi bi-emoji-smile text-info"></i
+                ><span>Coding Foundations with Python<br /><small class="text-white-50">3 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/cbse-computer-science-python-class-11-12"
+                ><i class="bi bi-journal-code text-info"></i
+                ><span>Computer Science with Python<br /><small class="text-white-50">Full academic year · per class</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/icse-isc-java-computer-applications"
+                ><i class="bi bi-cup-hot text-info"></i
+                ><span
+                  >Computer Applications &amp; Science with Java<br /><small class="text-white-50"
+                    >Full academic year · per class</small
+                  ></span
+                ></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/engineering-headstart-c-cpp"
+                ><i class="bi bi-rocket-takeoff text-info"></i
+                ><span
+                  >Engineering Head-start: C, C++ &amp; Problem Solving<br /><small class="text-white-50"
+                    >2 Months (summer / post-boards)</small
+                  ></span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="School Coding &amp; Robotics courses">
+      <button
+        class="tab-pill active"
+        id="t-robotics-coding-ai-for-kids"
+        data-bs-toggle="pill"
+        data-bs-target="#robotics-coding-ai-for-kids"
+        type="button"
+        role="tab"
+        aria-controls="robotics-coding-ai-for-kids"
+        aria-selected="true"
+      >
+        Robotics, Coding &amp; AI for Kids</button
+      ><button
+        class="tab-pill"
+        id="t-python-coding-class-9-10"
+        data-bs-toggle="pill"
+        data-bs-target="#python-coding-class-9-10"
+        type="button"
+        role="tab"
+        aria-controls="python-coding-class-9-10"
+        aria-selected="false"
+      >
+        Coding Foundations with Python</button
+      ><button
+        class="tab-pill"
+        id="t-cbse-computer-science-python-class-11-12"
+        data-bs-toggle="pill"
+        data-bs-target="#cbse-computer-science-python-class-11-12"
+        type="button"
+        role="tab"
+        aria-controls="cbse-computer-science-python-class-11-12"
+        aria-selected="false"
+      >
+        Computer Science with Python</button
+      ><button
+        class="tab-pill"
+        id="t-icse-isc-java-computer-applications"
+        data-bs-toggle="pill"
+        data-bs-target="#icse-isc-java-computer-applications"
+        type="button"
+        role="tab"
+        aria-controls="icse-isc-java-computer-applications"
+        aria-selected="false"
+      >
+        Computer Applications &amp; Science with Java</button
+      ><button
+        class="tab-pill"
+        id="t-engineering-headstart-c-cpp"
+        data-bs-toggle="pill"
+        data-bs-target="#engineering-headstart-c-cpp"
+        type="button"
+        role="tab"
+        aria-controls="engineering-headstart-c-cpp"
+        aria-selected="false"
+      >
+        Engineering Head-start: C, C++ &amp; Problem Solving
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="robotics-coding-ai-for-kids"
+        role="tabpanel"
+        aria-labelledby="t-robotics-coding-ai-for-kids"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-robotics-coding-ai-for-kids">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · Build robots, games and AI projects</span>
+              <h2 id="h-robotics-coding-ai-for-kids">
+                <a href="/courses/robotics-coding-ai-for-kids" class="text-reset"
+                  >Robotics, Coding &amp; AI for Kids (Grades 3–12)</a
+                >
+              </h2>
+              <p>
+                A levelled program for young learners: Scratch coding, Arduino robotics with sensors and motors, Python, AI and
+                machine learning for kids, drones and IoT basics, and Olympiad-style projects.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">School students from Grade 3 to Grade 12 (level-based batches).</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=robotics-coding-ai-for-kids"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/robotics-coding-ai-for-kids"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 – 6 Months per level</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner (levelled)</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Scratch &amp; Logic</div>
+                  <ul>
+                    <li>Block coding</li>
+                    <li>Animations &amp; stories</li>
+                    <li>Games</li>
+                    <li>Logical thinking</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Electronics Basics</div>
+                  <ul>
+                    <li>Circuits &amp; LEDs</li>
+                    <li>Breadboards</li>
+                    <li>Sensors</li>
+                    <li>Safety</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Arduino Robotics</div>
+                  <ul>
+                    <li>Arduino programming</li>
+                    <li>Motors &amp; servos</li>
+                    <li>Obstacle-avoiding robot</li>
+                    <li>Line follower</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Python for Kids</div>
+                  <ul>
+                    <li>Python basics</li>
+                    <li>Turtle graphics</li>
+                    <li>Mini games</li>
+                    <li>Problem solving</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">AI &amp; ML for Kids</div>
+                  <ul>
+                    <li>What is AI</li>
+                    <li>Teachable Machine</li>
+                    <li>Image &amp; voice recognition</li>
+                    <li>AI ethics for kids</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">IoT, Drones &amp; Projects</div>
+                  <ul>
+                    <li>IoT with sensors</li>
+                    <li>Drone basics</li>
+                    <li>Science-fair projects</li>
+                    <li>Olympiad practice</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Obstacle-avoiding robot</li>
+                    <li>AI image-classifier game</li>
+                    <li>Smart home IoT model</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Think logically and solve problems</li>
+                    <li>Build working robots and AI projects</li>
+                    <li>Prepare for robotics/coding olympiads</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Scratch</span><span class="bpst-chip dark">Arduino</span
+                    ><span class="bpst-chip dark">Tinkercad</span><span class="bpst-chip dark">Python</span
+                    ><span class="bpst-chip dark">Teachable Machine</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> BPST level certificates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="python-coding-class-9-10">
+            Next: Coding Foundations with Python ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="python-coding-class-9-10"
+        role="tabpanel"
+        aria-labelledby="t-python-coding-class-9-10"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-python-coding-class-9-10">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · Class 9 – 10</span>
+              <h2 id="h-python-coding-class-9-10">
+                <a href="/courses/python-coding-class-9-10" class="text-reset">Coding Foundations with Python</a>
+              </h2>
+              <p>
+                Start from zero. Build logical thinking, write real Python programs and make small games — the strongest base for
+                Class 11 Computer Science and any engineering branch.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Class 9 &amp; 10 students (any board) who want to start coding early.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=python-coding-class-9-10"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/python-coding-class-9-10"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner · no coding needed</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Computational Thinking</div>
+                  <ul>
+                    <li>Algorithms in daily life</li>
+                    <li>Flowcharts &amp; pseudo-code</li>
+                    <li>Problem decomposition</li>
+                    <li>Pattern recognition puzzles</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Python Basics</div>
+                  <ul>
+                    <li>Installing Python &amp; IDLE / VS Code</li>
+                    <li>Variables, data types, input/output</li>
+                    <li>Operators &amp; expressions</li>
+                    <li>Writing your first 20 programs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Decisions &amp; Loops</div>
+                  <ul>
+                    <li>if / elif / else</li>
+                    <li>for &amp; while loops</li>
+                    <li>Number patterns &amp; series</li>
+                    <li>Menu-driven programs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Strings, Lists &amp; Functions</div>
+                  <ul>
+                    <li>String slicing &amp; methods</li>
+                    <li>Lists &amp; list operations</li>
+                    <li>Defining functions &amp; parameters</li>
+                    <li>Modules: math, random</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Fun with Graphics &amp; Games</div>
+                  <ul>
+                    <li>Turtle graphics drawing</li>
+                    <li>Number-guessing game</li>
+                    <li>Quiz game with score</li>
+                    <li>Rock-paper-scissors</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Web Basics &amp; Cyber Safety</div>
+                  <ul>
+                    <li>HTML page structure</li>
+                    <li>CSS colours &amp; layout</li>
+                    <li>Your personal web page</li>
+                    <li>Passwords, phishing &amp; safe browsing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Quiz game with high score</li>
+                    <li>Turtle art generator</li>
+                    <li>Personal portfolio web page</li>
+                    <li>Mini calculator app</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Think logically and write algorithms before code</li>
+                    <li>Write Python programs confidently for school practicals</li>
+                    <li>Build small games and a personal web page</li>
+                    <li>Be ahead for Class 11 CS / IP</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python</span><span class="bpst-chip dark">IDLE / VS Code</span
+                    ><span class="bpst-chip dark">Turtle</span><span class="bpst-chip dark">HTML</span
+                    ><span class="bpst-chip dark">CSS</span><span class="bpst-chip dark">Scratch-to-Python bridge</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> BPST course certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="robotics-coding-ai-for-kids">
+            ‹ Robotics, Coding &amp; AI for Kids
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="cbse-computer-science-python-class-11-12">
+            Next: Computer Science with Python ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="cbse-computer-science-python-class-11-12"
+        role="tabpanel"
+        aria-labelledby="t-cbse-computer-science-python-class-11-12"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-cbse-computer-science-python-class-11-12">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 03 · Class 11 – 12 · CBSE</span>
+              <h2 id="h-cbse-computer-science-python-class-11-12">
+                <a href="/courses/cbse-computer-science-python-class-11-12" class="text-reset"
+                  >Computer Science with Python (CBSE)</a
+                >
+              </h2>
+              <p>
+                Complete CBSE Computer Science (083) coverage with extra practice, practical file preparation and board-level project
+                guidance — plus skills that carry into B.Tech/BCA.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">CBSE Class 11 &amp; 12 students with Computer Science (083).</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=cbse-computer-science-python-class-11-12"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/cbse-computer-science-python-class-11-12"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">Full academic year · per class</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Board syllabus + beyond</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Python Revision &amp; Tour</div>
+                  <ul>
+                    <li>Tokens, data types, mutability</li>
+                    <li>Flow of control</li>
+                    <li>Strings, lists, tuples</li>
+                    <li>Dictionaries &amp; nested data</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Functions &amp; Modules</div>
+                  <ul>
+                    <li>Arguments, scope, return values</li>
+                    <li>Built-in &amp; user modules</li>
+                    <li>Recursion basics</li>
+                    <li>Exception handling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">File Handling</div>
+                  <ul>
+                    <li>Text files — read/write/append</li>
+                    <li>Binary files with pickle</li>
+                    <li>CSV files with csv module</li>
+                    <li>File-based record programs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Data Structures</div>
+                  <ul>
+                    <li>Stack using list</li>
+                    <li>Push / pop operations</li>
+                    <li>Stack applications</li>
+                    <li>Queue concept</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Databases &amp; SQL</div>
+                  <ul>
+                    <li>RDBMS concepts, keys</li>
+                    <li>MySQL DDL &amp; DML</li>
+                    <li>Joins, GROUP BY, aggregate functions</li>
+                    <li>Python–MySQL connectivity</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Networks &amp; Board Prep</div>
+                  <ul>
+                    <li>Network types, topologies, devices</li>
+                    <li>Protocols &amp; web basics</li>
+                    <li>Sample papers &amp; previous years</li>
+                    <li>Practical exam &amp; viva drills</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Library / Student management system (Python + MySQL)</li>
+                    <li>CSV-based marks analyser</li>
+                    <li>Stack-based expression checker</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Score high in theory and practical exams</li>
+                    <li>Write clean, exam-ready Python code</li>
+                    <li>Connect Python to a MySQL database</li>
+                    <li>Present a board project with confidence</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python 3</span><span class="bpst-chip dark">MySQL</span
+                    ><span class="bpst-chip dark">pickle</span><span class="bpst-chip dark">csv module</span
+                    ><span class="bpst-chip dark">VS Code</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> Practical file + project</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="python-coding-class-9-10">
+            ‹ Coding Foundations with Python
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="icse-isc-java-computer-applications">
+            Next: Computer Applications &amp; Science with Java ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="icse-isc-java-computer-applications"
+        role="tabpanel"
+        aria-labelledby="t-icse-isc-java-computer-applications"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-icse-isc-java-computer-applications">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 04 · Class 9 – 12 · ICSE / ISC</span>
+              <h2 id="h-icse-isc-java-computer-applications">
+                <a href="/courses/icse-isc-java-computer-applications" class="text-reset"
+                  >Computer Applications &amp; Science with Java</a
+                >
+              </h2>
+              <p>
+                Java for ICSE Computer Applications (Class 9–10) and ISC Computer Science (Class 11–12) with BlueJ — concepts,
+                programs and heavy output-question practice.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">ICSE Class 9–10 and ISC Class 11–12 students.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=icse-isc-java-computer-applications"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/icse-isc-java-computer-applications"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">Full academic year · per class</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Board syllabus + beyond</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Java &amp; OOP Basics</div>
+                  <ul>
+                    <li>Classes, objects, BlueJ</li>
+                    <li>Data types, operators</li>
+                    <li>Input using Scanner</li>
+                    <li>Math library methods</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Control Structures</div>
+                  <ul>
+                    <li>Conditionals &amp; switch</li>
+                    <li>Loops &amp; nested loops</li>
+                    <li>Special numbers (Armstrong, Palindrome…)</li>
+                    <li>Pattern programs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Methods &amp; Constructors</div>
+                  <ul>
+                    <li>Method overloading</li>
+                    <li>Constructors &amp; types</li>
+                    <li>Call by value / reference</li>
+                    <li>Wrapper classes</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Arrays &amp; Strings</div>
+                  <ul>
+                    <li>1-D &amp; 2-D arrays</li>
+                    <li>Linear &amp; binary search</li>
+                    <li>Bubble &amp; selection sort</li>
+                    <li>String functions &amp; programs</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">ISC Advanced Topics</div>
+                  <ul>
+                    <li>Recursion</li>
+                    <li>Inheritance &amp; interfaces</li>
+                    <li>Linked list, stack, queue</li>
+                    <li>Boolean algebra &amp; K-maps</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Board Preparation</div>
+                  <ul>
+                    <li>Output &amp; error-finding questions</li>
+                    <li>Previous years’ papers</li>
+                    <li>Practical exam planning</li>
+                    <li>Project documentation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Bank account simulation (OOP)</li>
+                    <li>Matrix operations program</li>
+                    <li>Linked-list based student records</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Solve any ICSE/ISC Java program pattern</li>
+                    <li>Handle output-based questions accurately</li>
+                    <li>Understand OOP deeply — a head start for college</li>
+                    <li>Complete board project and practical</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Java</span><span class="bpst-chip dark">BlueJ</span
+                    ><span class="bpst-chip dark">JDK</span><span class="bpst-chip dark">Boolean algebra</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> Project + practical prep</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="cbse-computer-science-python-class-11-12">
+            ‹ Computer Science with Python
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="engineering-headstart-c-cpp">
+            Next: Engineering Head-start: C, C++ &amp; Problem Solving ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="engineering-headstart-c-cpp"
+        role="tabpanel"
+        aria-labelledby="t-engineering-headstart-c-cpp"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-engineering-headstart-c-cpp">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 05 · Class 11 – 12 · Any stream</span>
+              <h2 id="h-engineering-headstart-c-cpp">
+                <a href="/courses/engineering-headstart-c-cpp" class="text-reset"
+                  >Engineering Head-start: C, C++ &amp; Problem Solving</a
+                >
+              </h2>
+              <p>
+                Planning B.Tech / BCA? Arrive in first year already knowing C, C++ and the basics of Data Structures — the subjects
+                most students struggle with in semester 1 &amp; 2.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">Class 11–12 students (PCM or any stream) heading to B.Tech, BCA or Polytechnic.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=engineering-headstart-c-cpp"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/engineering-headstart-c-cpp"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">2 Months (summer / post-boards)</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">C Fundamentals</div>
+                  <ul>
+                    <li>Compilation, data types, I/O</li>
+                    <li>Operators &amp; control flow</li>
+                    <li>Functions &amp; recursion</li>
+                    <li>Arrays &amp; strings</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Pointers &amp; Memory</div>
+                  <ul>
+                    <li>Pointers &amp; addresses</li>
+                    <li>Pointer arithmetic</li>
+                    <li>Dynamic memory</li>
+                    <li>Structures</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">C++ &amp; OOP</div>
+                  <ul>
+                    <li>Classes &amp; objects</li>
+                    <li>Constructors, overloading</li>
+                    <li>Inheritance &amp; polymorphism</li>
+                    <li>STL vector, string, map</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Problem Solving</div>
+                  <ul>
+                    <li>Time complexity (Big-O) basics</li>
+                    <li>Searching &amp; sorting</li>
+                    <li>Two-pointer &amp; prefix sums</li>
+                    <li>Recursion &amp; backtracking intro</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Coding Platforms</div>
+                  <ul>
+                    <li>HackerRank, LeetCode, CodeChef set-up</li>
+                    <li>Solving 60+ easy problems</li>
+                    <li>Reading problem statements</li>
+                    <li>Debugging techniques</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Git &amp; Tools</div>
+                  <ul>
+                    <li>VS Code &amp; terminal</li>
+                    <li>Git &amp; GitHub basics</li>
+                    <li>Your first public repo</li>
+                    <li>Linux commands intro</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Student record system in C</li>
+                    <li>Library management in C++ (OOP)</li>
+                    <li>GitHub portfolio with 60+ solutions</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Write C/C++ programs without fear</li>
+                    <li>Solve beginner-level coding problems</li>
+                    <li>Have a GitHub profile before college starts</li>
+                    <li>Clear semester-1 programming easily</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">C</span><span class="bpst-chip dark">C++</span><span class="bpst-chip dark">STL</span
+                    ><span class="bpst-chip dark">GCC / VS Code</span><span class="bpst-chip dark">Git</span
+                    ><span class="bpst-chip dark">GitHub</span><span class="bpst-chip dark">LeetCode</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> BPST course certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="icse-isc-java-computer-applications">
+            ‹ Computer Applications &amp; Science with Java
+          </button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">School Coding &amp; Robotics — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                From which class can my child start coding?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Robotics, Coding &amp; AI starts from Grade 3 with visual blocks. Text-based Python starts from Class 9.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c1"
+                aria-expanded="false"
+                aria-controls="catFaq-c1"
+              >
+                Do you cover the board practical file and project?
+              </button>
+            </h3>
+            <div id="catFaq-c1" class="accordion-collapse collapse" aria-labelledby="catFaq-h1" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Yes. CBSE and ICSE/ISC courses follow the board syllabus and include practical file and project preparation.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any school coding &amp; robotics course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

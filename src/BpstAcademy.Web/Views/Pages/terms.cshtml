@@ -1,0 +1,79 @@
+@* Ported from NewLayout/Landing Page UI/terms.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Terms & Conditions | BPST Academy",
+        Description = "Terms for BPST Academy course pre-booking (₹49 Diwali offer), enrolment, certificates and career support.",
+        CanonicalPath = "/terms",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://edu.bitprosofttech.com/terms" }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Terms &amp; Conditions</li>
+      </ol>
+    </nav>
+    <h1>Terms & Conditions</h1>
+    <p class="lead mb-0">
+      Effective 2026-09-25. BPST Software Education (BPST Academy), a unit of BitProSoftTech Software Solutions, 3rd Floor, Sahay Complex,
+      Near IIM Tiraha, Mubarakpur, Lucknow – 226013, Uttar Pradesh.
+    </p>
+  </div>
+</section>
+<section class="py-5 bg-white bpst-legal">
+  <div class="container" style="max-width: 860px">
+    <h2>1. About these terms</h2>
+    <p>
+      These terms apply to course pre-bookings, enquiries and enrolments with BPST Academy made through this website, WhatsApp, phone or
+      at our Lucknow centre.
+    </p>
+    <h2>2. Diwali ₹49 pre-booking</h2>
+    <ul>
+      <li>The pre-booking amount is ₹49 (inclusive of any applicable taxes) per learner per course.</li>
+      <li>The offer is valid for bookings paid by 11:59 PM IST on 8 November 2026.</li>
+      <li>Pre-booking reserves a seat in the next available batch of the selected course and mode (classroom or live online).</li>
+      <li>
+        The ₹49 is adjusted against the course fee when the learner enrols in the pre-booked course (or another course agreed with
+        admissions).
+      </li>
+      <li>Course fees, batch dates and timings are confirmed by the admissions desk after pre-booking.</li>
+    </ul>
+    <h2>3. Enrolment and fees</h2>
+    <p>
+      Enrolment is complete when the learner pays the course fee (or first instalment) as confirmed in writing by BPST Academy. Fees vary
+      by course, duration and mode.
+    </p>
+    <h2>4. Certificates</h2>
+    <p>Certificates are issued on completing the course requirements, including attendance and project submission.</p>
+    <h2>5. Career support</h2>
+    <p>
+      BPST Academy provides job assistance (projects, resume and profile reviews, mock interviews and relevant opportunities). We do not
+      guarantee placement or any specific salary.
+    </p>
+    <h2>6. Conduct</h2>
+    <p>Learners must follow lab rules and use security tools only on authorised lab systems.</p>
+    <h2>7. Changes</h2>
+    <p>We may update these terms; the version on this page applies at the time of booking.</p>
+    <p class="mt-4 small text-muted">
+      Questions? Email <a href="mailto:bitprosofttech@@gmail.com">bitprosofttech@@gmail.com</a> or call +91 82991 01616.
+    </p>
+  </div>
+</section>

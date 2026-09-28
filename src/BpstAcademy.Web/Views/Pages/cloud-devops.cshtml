@@ -1,0 +1,844 @@
+@* Ported from NewLayout/Landing Page UI/cloud-devops.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Cloud & DevOps Courses in Lucknow — AWS, Azure, GCP, Kubernetes",
+        Description = "AWS, Azure and Google Cloud certification bootcamps, plus DevOps + SRE with Docker, Kubernetes, Terraform, GitHub Actions and observability.",
+        CanonicalPath = "/cloud-devops",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            { "@@type": "ListItem", "position": 3, "name": "Cloud & DevOps", "item": "https://edu.bitprosofttech.com/cloud-devops" }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "Cloud & DevOps courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/devops-sre-terraform",
+              "name": "DevOps + SRE + Terraform"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/google-cloud-engineer",
+              "name": "Google Cloud (GCP) Cloud Engineer"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "url": "https://edu.bitprosofttech.com/courses/cloud-certification-bootcamp",
+              "name": "Cloud Certification Bootcamp (AZ-900, AZ-104, AWS CCP, AWS SAA)"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Which cloud certification should I do first?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Start with AZ-900 or AWS Cloud Practitioner if you are new to cloud. Developers and admins with some Linux experience can go straight to AZ-104 or AWS Solutions Architect Associate."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Is exam fee included?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "No. Exam vouchers are paid directly to Microsoft, AWS or Google. We help you register and run mock exams before your attempt."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">Cloud &amp; DevOps</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-cloud-check"></i> 3 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">Cloud Computing &amp; DevOps Courses</h1>
+        <p class="lead mb-4">
+          AWS, Azure and Google Cloud certification bootcamps, plus DevOps + SRE with Docker, Kubernetes, Terraform, GitHub Actions
+          and observability.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy runs cloud and DevOps training in Lucknow and live online: DevOps + SRE + Terraform (3–4 months), Google Cloud
+          Engineer (6–8 weeks) and short certification bootcamps for AZ-900, AZ-104, AWS Cloud Practitioner and AWS Solutions
+          Architect Associate. All courses are lab-based on real cloud accounts.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 3 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20Cloud%20%26%20DevOps%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/devops-sre-terraform"
+                ><i class="bi bi-infinity text-info"></i
+                ><span>DevOps + SRE + Terraform<br /><small class="text-white-50">3 – 4 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/google-cloud-engineer"
+                ><i class="bi bi-cloud text-info"></i
+                ><span>Google Cloud (GCP) Cloud Engineer<br /><small class="text-white-50">6 – 8 Weeks</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/cloud-certification-bootcamp"
+                ><i class="bi bi-patch-check text-info"></i
+                ><span>Cloud Certification Bootcamp<br /><small class="text-white-50">3 – 6 Weeks per exam</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="Cloud &amp; DevOps courses">
+      <button
+        class="tab-pill active"
+        id="t-devops-sre-terraform"
+        data-bs-toggle="pill"
+        data-bs-target="#devops-sre-terraform"
+        type="button"
+        role="tab"
+        aria-controls="devops-sre-terraform"
+        aria-selected="true"
+      >
+        DevOps + SRE + Terraform</button
+      ><button
+        class="tab-pill"
+        id="t-google-cloud-engineer"
+        data-bs-toggle="pill"
+        data-bs-target="#google-cloud-engineer"
+        type="button"
+        role="tab"
+        aria-controls="google-cloud-engineer"
+        aria-selected="false"
+      >
+        Google Cloud (GCP) Cloud Engineer</button
+      ><button
+        class="tab-pill"
+        id="t-cloud-certification-bootcamp"
+        data-bs-toggle="pill"
+        data-bs-target="#cloud-certification-bootcamp"
+        type="button"
+        role="tab"
+        aria-controls="cloud-certification-bootcamp"
+        aria-selected="false"
+      >
+        Cloud Certification Bootcamp
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="devops-sre-terraform"
+        role="tabpanel"
+        aria-labelledby="t-devops-sre-terraform"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-devops-sre-terraform">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · Automate, deploy and run software at scale</span>
+              <h2 id="h-devops-sre-terraform">
+                <a href="/courses/devops-sre-terraform" class="text-reset">DevOps + SRE + Terraform</a>
+              </h2>
+              <p>
+                A complete DevOps engineering program: Linux, Git, CI/CD with Jenkins and GitHub Actions, Docker, Kubernetes and Helm,
+                Terraform and Ansible, Prometheus/Grafana observability, SRE practices and GitOps with ArgoCD.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">System admins, developers, support engineers and B.Tech/MCA graduates.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=devops-sre-terraform"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/devops-sre-terraform"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 – 4 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Linux &amp; Scripting</div>
+                  <ul>
+                    <li>Linux administration</li>
+                    <li>Bash scripting</li>
+                    <li>Networking &amp; SSH</li>
+                    <li>Nginx &amp; web servers</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Git &amp; CI/CD</div>
+                  <ul>
+                    <li>Git branching strategies</li>
+                    <li>Jenkins pipelines</li>
+                    <li>GitHub Actions</li>
+                    <li>Artifact management</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Containers</div>
+                  <ul>
+                    <li>Docker images &amp; compose</li>
+                    <li>Container security</li>
+                    <li>Kubernetes architecture</li>
+                    <li>Helm charts</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Infrastructure as Code</div>
+                  <ul>
+                    <li>Terraform modules &amp; state</li>
+                    <li>Ansible playbooks</li>
+                    <li>AWS/Azure provisioning</li>
+                    <li>Policy as code</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Observability &amp; SRE</div>
+                  <ul>
+                    <li>Prometheus &amp; Grafana</li>
+                    <li>Logging with ELK/Loki</li>
+                    <li>SLOs, SLIs &amp; error budgets</li>
+                    <li>Incident response</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">GitOps &amp; Capstone</div>
+                  <ul>
+                    <li>ArgoCD</li>
+                    <li>Blue-green &amp; canary deploys</li>
+                    <li>DevSecOps scanning</li>
+                    <li>End-to-end platform project</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Zero-downtime CI/CD pipeline to Kubernetes</li>
+                    <li>Terraform multi-environment cloud setup</li>
+                    <li>Monitoring stack with SLO alerts</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build CI/CD pipelines from scratch</li>
+                    <li>Run workloads on Kubernetes</li>
+                    <li>Provision cloud with Terraform</li>
+                    <li>Apply SRE practices to real incidents</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Linux</span><span class="bpst-chip dark">Git</span
+                    ><span class="bpst-chip dark">Jenkins</span><span class="bpst-chip dark">GitHub Actions</span
+                    ><span class="bpst-chip dark">Docker</span><span class="bpst-chip dark">Kubernetes</span
+                    ><span class="bpst-chip dark">Helm</span><span class="bpst-chip dark">Terraform</span
+                    ><span class="bpst-chip dark">Ansible</span><span class="bpst-chip dark">Prometheus</span
+                    ><span class="bpst-chip dark">Grafana</span><span class="bpst-chip dark">ArgoCD</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to CKA, HashiCorp Terraform Associate and Azure AZ-400
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="google-cloud-engineer">
+            Next: Google Cloud (GCP) Cloud Engineer ›
+          </button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="google-cloud-engineer" role="tabpanel" aria-labelledby="t-google-cloud-engineer" tabindex="0">
+        <article class="course" aria-labelledby="h-google-cloud-engineer">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · The third big cloud — BigQuery, GKE and Vertex AI</span>
+              <h2 id="h-google-cloud-engineer">
+                <a href="/courses/google-cloud-engineer" class="text-reset">Google Cloud (GCP) Cloud Engineer</a>
+              </h2>
+              <p>
+                Hands-on Google Cloud training for the Associate Cloud Engineer path: Compute Engine, GKE, IAM, VPC networking, Cloud
+                Storage, BigQuery, Vertex AI and Terraform on GCP.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">Developers, cloud/DevOps engineers and graduates targeting GCP-based companies.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=google-cloud-engineer"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/google-cloud-engineer"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">6 – 8 Weeks</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">GCP Foundations</div>
+                  <ul>
+                    <li>Projects, billing &amp; IAM</li>
+                    <li>Cloud Shell &amp; gcloud</li>
+                    <li>Regions &amp; zones</li>
+                    <li>Resource hierarchy</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Compute</div>
+                  <ul>
+                    <li>Compute Engine &amp; instance groups</li>
+                    <li>App Engine &amp; Cloud Run</li>
+                    <li>Load balancing</li>
+                    <li>Autoscaling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Networking &amp; Security</div>
+                  <ul>
+                    <li>VPC design</li>
+                    <li>Firewall rules</li>
+                    <li>Cloud NAT &amp; VPN</li>
+                    <li>Service accounts</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Containers</div>
+                  <ul>
+                    <li>GKE clusters</li>
+                    <li>Deployments &amp; services</li>
+                    <li>Artifact Registry</li>
+                    <li>Cloud Build</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Data &amp; AI</div>
+                  <ul>
+                    <li>Cloud Storage</li>
+                    <li>BigQuery</li>
+                    <li>Pub/Sub</li>
+                    <li>Vertex AI basics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Ops &amp; IaC</div>
+                  <ul>
+                    <li>Cloud Monitoring &amp; Logging</li>
+                    <li>Terraform on GCP</li>
+                    <li>Cost management</li>
+                    <li>Exam practice</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Autoscaling web app on GCP</li>
+                    <li>GKE microservice deployment</li>
+                    <li>BigQuery analytics pipeline</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Deploy and operate workloads on GCP</li>
+                    <li>Design secure VPCs and IAM</li>
+                    <li>Pass the Associate Cloud Engineer exam</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Google Cloud</span><span class="bpst-chip dark">gcloud CLI</span
+                    ><span class="bpst-chip dark">GKE</span><span class="bpst-chip dark">Cloud Run</span
+                    ><span class="bpst-chip dark">BigQuery</span><span class="bpst-chip dark">Vertex AI</span
+                    ><span class="bpst-chip dark">Terraform</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to Google Associate Cloud Engineer (ACE)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="devops-sre-terraform">‹ DevOps + SRE + Terraform</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="cloud-certification-bootcamp">
+            Next: Cloud Certification Bootcamp ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="cloud-certification-bootcamp"
+        role="tabpanel"
+        aria-labelledby="t-cloud-certification-bootcamp"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-cloud-certification-bootcamp">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 03 · Short, exam-focused cloud certification prep</span>
+              <h2 id="h-cloud-certification-bootcamp">
+                <a href="/courses/cloud-certification-bootcamp" class="text-reset"
+                  >Cloud Certification Bootcamp (AZ-900, AZ-104, AWS CCP, AWS SAA)</a
+                >
+              </h2>
+              <p>
+                Pick one certification and prepare in weeks: Azure Fundamentals (AZ-900), Azure Administrator (AZ-104), AWS Cloud
+                Practitioner or AWS Solutions Architect Associate — with hands-on labs, exam blueprint coverage and full mock tests.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Working professionals, students and IT support staff who want a recognised cloud certificate quickly.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=cloud-certification-bootcamp"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/cloud-certification-bootcamp"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 – 6 Weeks per exam</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Cloud Concepts</div>
+                  <ul>
+                    <li>IaaS, PaaS, SaaS</li>
+                    <li>Shared responsibility</li>
+                    <li>Pricing &amp; SLAs</li>
+                    <li>Global infrastructure</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Core Services</div>
+                  <ul>
+                    <li>Compute: VMs, containers, serverless</li>
+                    <li>Storage &amp; databases</li>
+                    <li>Networking basics</li>
+                    <li>Identity</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Azure Administrator (AZ-104)</div>
+                  <ul>
+                    <li>Entra ID &amp; RBAC</li>
+                    <li>Virtual networks</li>
+                    <li>VMs &amp; scale sets</li>
+                    <li>Monitor &amp; backup</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">AWS Solutions Architect (SAA)</div>
+                  <ul>
+                    <li>Well-Architected Framework</li>
+                    <li>VPC, EC2, S3, RDS</li>
+                    <li>High availability designs</li>
+                    <li>Cost optimisation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Security &amp; Governance</div>
+                  <ul>
+                    <li>IAM best practices</li>
+                    <li>Policies &amp; compliance</li>
+                    <li>Key management</li>
+                    <li>Governance tools</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Exam Readiness</div>
+                  <ul>
+                    <li>Domain-wise revision</li>
+                    <li>3 full mock exams</li>
+                    <li>Exam-day strategy</li>
+                    <li>Registration help</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Highly available 3-tier app (AWS or Azure)</li>
+                    <li>Secure VNet/VPC with monitoring</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Clear your chosen cloud certification</li>
+                    <li>Deploy core cloud services confidently</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Azure Portal</span><span class="bpst-chip dark">AWS Console</span
+                    ><span class="bpst-chip dark">Azure CLI</span><span class="bpst-chip dark">AWS CLI</span
+                    ><span class="bpst-chip dark">Practice exams</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> AZ-900, AZ-104, AWS Certified Cloud Practitioner, AWS SAA-C03 (exam fee
+                    paid to vendor)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="google-cloud-engineer">
+            ‹ Google Cloud (GCP) Cloud Engineer
+          </button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white border-top" aria-labelledby="rel-title">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-4">
+      <span class="bpst-pill bpst-pill-blue mb-2">Also consider</span>
+      <h2 class="fw-bold" id="rel-title">Related Industrial Training Tracks</h2>
+      <p class="text-muted">Project-based 45-day, 3-month and 6-month tracks that pair well with cloud &amp; devops.</p>
+    </div>
+    <div class="row g-4">
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="cloud computing &amp; devops build | deploy | scale | power the digital world linux bash git docker kubernetes github actions aws azure industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-course-number">01</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/aws.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/azure.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            /><img src="/site/img/tech/docker.svg" alt="" width="93" height="28" loading="lazy" />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/cloud-computing-devops">Cloud Computing &amp; DevOps</a>
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Build | Deploy | Scale | Power the Digital World</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Master cloud infrastructure, modern DevOps automation tools, CI/CD pipelines, containerization, and deployment practices
+            for high-availability systems.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">AWS / Azure Basics</span><span class="bpst-tech-pill">Docker Containers</span
+              ><span class="bpst-tech-pill">Git &amp; GitHub Actions</span><span class="bpst-tech-pill">CI/CD Pipelines</span
+              ><span class="bpst-tech-pill">Linux Administration</span
+              ><span class="bpst-tech-pill text-primary fw-bold">+3 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/cloud-computing-devops" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=cloud-computing-devops" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=cloud-computing-devops#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">Cloud &amp; DevOps — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                Which cloud certification should I do first?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Start with AZ-900 or AWS Cloud Practitioner if you are new to cloud. Developers and admins with some Linux experience
+                can go straight to AZ-104 or AWS Solutions Architect Associate.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c1"
+                aria-expanded="false"
+                aria-controls="catFaq-c1"
+              >
+                Is exam fee included?
+              </button>
+            </h3>
+            <div id="catFaq-c1" class="accordion-collapse collapse" aria-labelledby="catFaq-h1" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                No. Exam vouchers are paid directly to Microsoft, AWS or Google. We help you register and run mock exams before your
+                attempt.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any cloud &amp; devops course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

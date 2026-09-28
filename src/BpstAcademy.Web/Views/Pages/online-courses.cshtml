@@ -1,0 +1,678 @@
+@* Ported from NewLayout/Landing Page UI/online-courses.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Live Online IT Courses — All India | BPST Academy",
+        Description = "Live instructor-led online classes for all 58 BPST Academy courses: AI, data, cloud, testing, SAP, full stack. Same projects and certificate. Pre-book ₹49.",
+        CanonicalPath = "/online-courses",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "name": "Live Online Classes",
+              "item": "https://edu.bitprosofttech.com/online-courses"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Are BPST Academy online classes live or recorded?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Live. Online learners join the same instructor-led batch as the Lucknow classroom, with screen sharing, doubt-solving, team projects and code reviews."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Can I join from outside Uttar Pradesh?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. Live online batches are open to learners anywhere in India, including Bihar, Uttarakhand, Madhya Pradesh, Delhi NCR and Rajasthan."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "What do I need for online classes?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "A laptop or desktop (8 GB RAM recommended for development courses), a stable internet connection and a headset."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Live Online Classes</li>
+      </ol>
+    </nav>
+    <h1>Live Online IT Courses — Learn From Anywhere in India</h1>
+    <p class="lead mb-0">
+      Every BPST Academy course is available as live, instructor-led online classes: the same syllabus, projects, Agile team work and
+      certificate as our Lucknow classroom.
+    </p>
+  </div>
+</section>
+<section class="py-5 bpst-section-light">
+  <div class="container">
+    <div class="bpst-answer bpst-answer-light mb-5 mx-auto">
+      <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+      Yes — you can learn any of our 58 courses online. Classes are live (not pre-recorded videos), with real-time doubt-solving, team
+      projects, code reviews and the same certificate as classroom learners. Pre-book an online seat for ₹49 until Diwali.
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-briefcase text-primary"></i> <a href="/industrial-training" class="text-reset">Industrial Training</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/full-stack-development"
+          ><span class="fw-semibold small">Software Development &amp; Full Stack</span
+          ><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/advanced-ui-angular-react"
+          ><span class="fw-semibold small">Advanced UI Development</span><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/data-analytics-data-science"
+          ><span class="fw-semibold small">Data Analytics &amp; Data Science</span
+          ><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/artificial-intelligence-machine-learning"
+          ><span class="fw-semibold small">Artificial Intelligence &amp; Machine Learning</span
+          ><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/generative-ai-agentic-ai"
+          ><span class="fw-semibold small">Generative AI &amp; Agentic AI</span
+          ><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/cloud-computing-devops"
+          ><span class="fw-semibold small">Cloud Computing &amp; DevOps</span
+          ><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/cyber-security-ethical-hacking"
+          ><span class="fw-semibold small">Cyber Security &amp; Ethical Hacking</span
+          ><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/mobile-app-development"
+          ><span class="fw-semibold small">Mobile App Development</span><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/game-development-unity"
+          ><span class="fw-semibold small">Game Development</span><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-robot text-primary"></i> <a href="/ai-generative-ai" class="text-reset">AI &amp; Generative AI</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/agentic-ai-engineering"
+          ><span class="fw-semibold small">Agentic AI Engineering</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 – 5 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/generative-ai-for-everyone"
+          ><span class="fw-semibold small">Generative AI for Everyone</span
+          ><span class="bpst-chip ms-2 text-nowrap">4 – 8 Weeks</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/mlops-llmops"
+          ><span class="fw-semibold small">MLOps &amp; LLMOps</span><span class="bpst-chip ms-2 text-nowrap">3 – 6 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/artificial-intelligence-specialization"
+          ><span class="fw-semibold small">Artificial Intelligence</span><span class="bpst-chip ms-2 text-nowrap">4 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/machine-learning-specialization"
+          ><span class="fw-semibold small">Machine Learning</span><span class="bpst-chip ms-2 text-nowrap">4 Months</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-bar-chart-line text-primary"></i>
+      <a href="/data-analytics-engineering" class="text-reset">Data Analytics &amp; Engineering</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/data-analyst-pro"
+          ><span class="fw-semibold small">Data Analyst Pro</span><span class="bpst-chip ms-2 text-nowrap">3 – 4 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/data-engineering"
+          ><span class="fw-semibold small">Data Engineering</span><span class="bpst-chip ms-2 text-nowrap">3 – 4 Months</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-cloud-check text-primary"></i> <a href="/cloud-devops" class="text-reset">Cloud &amp; DevOps</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/devops-sre-terraform"
+          ><span class="fw-semibold small">DevOps + SRE + Terraform</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 – 4 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/google-cloud-engineer"
+          ><span class="fw-semibold small">Google Cloud (GCP) Cloud Engineer</span
+          ><span class="bpst-chip ms-2 text-nowrap">6 – 8 Weeks</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/cloud-certification-bootcamp"
+          ><span class="fw-semibold small">Cloud Certification Bootcamp</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 – 6 Weeks per exam</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-shield-lock text-primary"></i>
+      <a href="/cyber-security" class="text-reset">Cyber Security &amp; Networking</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/soc-analyst"
+          ><span class="fw-semibold small">SOC Analyst</span><span class="bpst-chip ms-2 text-nowrap">2 – 3 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/ethical-hacking-vapt"
+          ><span class="fw-semibold small">Ethical Hacking &amp; VAPT</span
+          ><span class="bpst-chip ms-2 text-nowrap">2 – 3 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/cloud-security"
+          ><span class="fw-semibold small">Cloud Security</span><span class="bpst-chip ms-2 text-nowrap">6 – 8 Weeks</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/ccna-network-security"
+          ><span class="fw-semibold small">CCNA + Network Security</span
+          ><span class="bpst-chip ms-2 text-nowrap">2 – 3 Months</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-code-square text-primary"></i>
+      <a href="/full-stack-programming" class="text-reset">Full Stack Development</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/mern-full-stack-genai"
+          ><span class="fw-semibold small">MERN Full Stack + Generative AI</span
+          ><span class="bpst-chip ms-2 text-nowrap">4 – 6 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/java-full-stack"
+          ><span class="fw-semibold small">Java Full Stack</span><span class="bpst-chip ms-2 text-nowrap">5 – 6 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/python-full-stack"
+          ><span class="fw-semibold small">Python Full Stack</span><span class="bpst-chip ms-2 text-nowrap">5 – 6 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/golang-microservices"
+          ><span class="fw-semibold small">Golang Microservices</span><span class="bpst-chip ms-2 text-nowrap">6 – 8 Weeks</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-bug text-primary"></i> <a href="/software-testing" class="text-reset">Software Testing &amp; QA</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/software-testing-masters"
+          ><span class="fw-semibold small">Software Testing Masters</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 – 4 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/manual-software-testing"
+          ><span class="fw-semibold small">Manual Software Testing</span><span class="bpst-chip ms-2 text-nowrap">6 Weeks</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/automation-testing-selenium-playwright"
+          ><span class="fw-semibold small">Automation Testing</span><span class="bpst-chip ms-2 text-nowrap">2 – 3 Months</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-building-gear text-primary"></i>
+      <a href="/sap-salesforce-enterprise" class="text-reset">SAP, Salesforce &amp; Enterprise IT</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/sap-s4hana-fico"
+          ><span class="fw-semibold small">SAP S/4HANA FICO</span><span class="bpst-chip ms-2 text-nowrap">2 – 4 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/sap-mm-sd"
+          ><span class="fw-semibold small">SAP MM &amp; SD</span><span class="bpst-chip ms-2 text-nowrap">2 – 3 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/sap-abap-s4hana"
+          ><span class="fw-semibold small">SAP ABAP on S/4HANA</span><span class="bpst-chip ms-2 text-nowrap">2 – 3 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/salesforce-admin-developer"
+          ><span class="fw-semibold small">Salesforce Admin + Developer</span
+          ><span class="bpst-chip ms-2 text-nowrap">6 – 10 Weeks</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/servicenow-admin-developer"
+          ><span class="fw-semibold small">ServiceNow Admin + Developer</span
+          ><span class="bpst-chip ms-2 text-nowrap">6 – 10 Weeks</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/rpa-uipath-agentic-automation"
+          ><span class="fw-semibold small">RPA with UiPath + Agentic Automation</span
+          ><span class="bpst-chip ms-2 text-nowrap">6 – 8 Weeks</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/oracle-sql-plsql"
+          ><span class="fw-semibold small">Oracle SQL + PL/SQL</span><span class="bpst-chip ms-2 text-nowrap">6 – 8 Weeks</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-palette text-primary"></i>
+      <a href="/business-design-marketing" class="text-reset">Business, Design, Marketing &amp; Accounting</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/digital-marketing-ai"
+          ><span class="fw-semibold small">Digital Marketing + AI</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 – 4 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/ui-ux-design-figma"
+          ><span class="fw-semibold small">UI/UX Design</span><span class="bpst-chip ms-2 text-nowrap">3 – 4 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/business-analyst-agile"
+          ><span class="fw-semibold small">Business Analyst</span><span class="bpst-chip ms-2 text-nowrap">2 – 3 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/ai-product-management"
+          ><span class="fw-semibold small">AI Product Management</span><span class="bpst-chip ms-2 text-nowrap">2 – 3 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/tally-prime-gst-excel"
+          ><span class="fw-semibold small">Tally Prime + GST + Advanced Excel</span
+          ><span class="bpst-chip ms-2 text-nowrap">1 – 3 Months</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-code-slash text-primary"></i> <a href="/programming-languages" class="text-reset">Programming Languages</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/c-programming-course"
+          ><span class="fw-semibold small">C Programming Course</span
+          ><span class="bpst-chip ms-2 text-nowrap">Basic 1.5 Months + Advanced 1.5 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/cpp-programming-course"
+          ><span class="fw-semibold small">C++ Programming Course</span
+          ><span class="bpst-chip ms-2 text-nowrap">Basic 2 Months + Advanced 2 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/java-programming-course"
+          ><span class="fw-semibold small">Java Programming Course</span
+          ><span class="bpst-chip ms-2 text-nowrap">Basic 2 Months + Advanced 2.5 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/python-programming-course"
+          ><span class="fw-semibold small">Python Programming Course</span
+          ><span class="bpst-chip ms-2 text-nowrap">Basic 1.5 Months + Advanced 2 Months</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-backpack2 text-primary"></i> <a href="/school-coding" class="text-reset">School Coding &amp; Robotics</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/robotics-coding-ai-for-kids"
+          ><span class="fw-semibold small">Robotics, Coding &amp; AI for Kids</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 – 6 Months per level</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/python-coding-class-9-10"
+          ><span class="fw-semibold small">Coding Foundations with Python</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/cbse-computer-science-python-class-11-12"
+          ><span class="fw-semibold small">Computer Science with Python</span
+          ><span class="bpst-chip ms-2 text-nowrap">Full academic year</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/icse-isc-java-computer-applications"
+          ><span class="fw-semibold small">Computer Applications &amp; Science with Java</span
+          ><span class="bpst-chip ms-2 text-nowrap">Full academic year</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/engineering-headstart-c-cpp"
+          ><span class="fw-semibold small">Engineering Head-start: C, C++ &amp; Problem Solving</span
+          ><span class="bpst-chip ms-2 text-nowrap">2 Months (summer / post-boards)</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-mortarboard text-primary"></i> <a href="/college-programs" class="text-reset">College Programs</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/btech-career-track"
+          ><span class="fw-semibold small">B.Tech Career Track</span
+          ><span class="bpst-chip ms-2 text-nowrap">Pick per semester / year</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/bca-career-track"
+          ><span class="fw-semibold small">BCA Career Track</span
+          ><span class="bpst-chip ms-2 text-nowrap">Pick per semester / year</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/mca-industry-track"
+          ><span class="fw-semibold small">MCA Industry Track</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 / 6 Months (flexible)</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/polytechnic-diploma-track"
+          ><span class="fw-semibold small">Polytechnic Diploma Track</span
+          ><span class="bpst-chip ms-2 text-nowrap">45 Days / 3 Months</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-person-check text-primary"></i>
+      <a href="/career-placement" class="text-reset">Career &amp; Placement Readiness</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/dsa-placement-preparation"
+          ><span class="fw-semibold small">DSA &amp; Placement Preparation</span
+          ><span class="bpst-chip ms-2 text-nowrap">3 Months</span></a
+        >
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/job-readiness-program"
+          ><span class="fw-semibold small">Job-Readiness Program</span><span class="bpst-chip ms-2 text-nowrap">1 Month</span></a
+        >
+      </div>
+    </div>
+    <h2 class="h4 fw-bold mt-4 mb-3">
+      <i class="bi bi-sun text-primary"></i> <a href="/summer-winter-training" class="text-reset">Summer &amp; Winter Training</a>
+    </h2>
+    <div class="row g-2 mb-2">
+      <div class="col-md-6 col-lg-4">
+        <a
+          class="d-flex justify-content-between align-items-center p-3 bg-white border rounded-3 h-100 text-dark"
+          href="/courses/summer-winter-training-45-days"
+          ><span class="fw-semibold small">45-Day Summer / Winter Industrial Training</span
+          ><span class="bpst-chip ms-2 text-nowrap">45 Days</span></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4">Online Classes — FAQs</h2>
+        <div class="accordion bpst-faq-accordion" id="onlineFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="onlineFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#onlineFaq-c0"
+                aria-expanded="true"
+                aria-controls="onlineFaq-c0"
+              >
+                Are BPST Academy online classes live or recorded?
+              </button>
+            </h3>
+            <div
+              id="onlineFaq-c0"
+              class="accordion-collapse collapse show"
+              aria-labelledby="onlineFaq-h0"
+              data-bs-parent="#onlineFaq"
+            >
+              <div class="accordion-body">
+                Live. Online learners join the same instructor-led batch as the Lucknow classroom, with screen sharing, doubt-solving,
+                team projects and code reviews.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="onlineFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#onlineFaq-c1"
+                aria-expanded="false"
+                aria-controls="onlineFaq-c1"
+              >
+                Can I join from outside Uttar Pradesh?
+              </button>
+            </h3>
+            <div id="onlineFaq-c1" class="accordion-collapse collapse" aria-labelledby="onlineFaq-h1" data-bs-parent="#onlineFaq">
+              <div class="accordion-body">
+                Yes. Live online batches are open to learners anywhere in India, including Bihar, Uttarakhand, Madhya Pradesh, Delhi
+                NCR and Rajasthan.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="onlineFaq-h2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#onlineFaq-c2"
+                aria-expanded="false"
+                aria-controls="onlineFaq-c2"
+              >
+                What do I need for online classes?
+              </button>
+            </h3>
+            <div id="onlineFaq-c2" class="accordion-collapse collapse" aria-labelledby="onlineFaq-h2" data-bs-parent="#onlineFaq">
+              <div class="accordion-body">
+                A laptop or desktop (8 GB RAM recommended for development courses), a stable internet connection and a headset.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

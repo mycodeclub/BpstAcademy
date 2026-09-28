@@ -1,0 +1,1510 @@
+@* Ported from NewLayout/Landing Page UI/sap-salesforce-enterprise.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "SAP, Salesforce, ServiceNow, RPA & Oracle Courses in Lucknow",
+        Description = "SAP S/4HANA (FICO, MM/SD, ABAP), Salesforce with Agentforce, ServiceNow, UiPath RPA and Oracle PL/SQL — the platforms large enterprises run on.",
+        CanonicalPath = "/sap-salesforce-enterprise",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "name": "SAP, Salesforce & Enterprise IT",
+              "item": "https://edu.bitprosofttech.com/sap-salesforce-enterprise"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "SAP, Salesforce & Enterprise IT courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/sap-s4hana-fico",
+              "name": "SAP S/4HANA FICO"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/sap-mm-sd",
+              "name": "SAP MM & SD (Materials Management + Sales & Distribution)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "url": "https://edu.bitprosofttech.com/courses/sap-abap-s4hana",
+              "name": "SAP ABAP on S/4HANA (RAP, CDS)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 4,
+              "url": "https://edu.bitprosofttech.com/courses/salesforce-admin-developer",
+              "name": "Salesforce Admin + Developer (with Agentforce)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 5,
+              "url": "https://edu.bitprosofttech.com/courses/servicenow-admin-developer",
+              "name": "ServiceNow Admin + Developer"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 6,
+              "url": "https://edu.bitprosofttech.com/courses/rpa-uipath-agentic-automation",
+              "name": "RPA with UiPath + Agentic Automation"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 7,
+              "url": "https://edu.bitprosofttech.com/courses/oracle-sql-plsql",
+              "name": "Oracle SQL + PL/SQL"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Why is SAP S/4HANA in demand in 2026?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "SAP ends mainstream maintenance for ECC at the end of 2027, so thousands of companies are migrating to S/4HANA now. Migration projects need functional consultants and ABAP developers."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Can commerce graduates learn SAP FICO?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes — SAP FICO is designed around accounting processes, so B.Com, M.Com, MBA Finance and CA/CMA students are ideal candidates."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">SAP, Salesforce &amp; Enterprise IT</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-building-gear"></i> 7 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">SAP, Salesforce &amp; Enterprise IT Courses</h1>
+        <p class="lead mb-4">
+          SAP S/4HANA (FICO, MM/SD, ABAP), Salesforce with Agentforce, ServiceNow, UiPath RPA and Oracle PL/SQL — the platforms large
+          enterprises run on.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy offers enterprise platform training: SAP S/4HANA FICO, SAP MM/SD and SAP ABAP (2–4 months each), Salesforce Admin +
+          Developer with Agentforce (6–10 weeks), ServiceNow Admin + Developer (6–10 weeks), UiPath RPA + agentic automation (6–8
+          weeks) and Oracle SQL + PL/SQL (6–8 weeks).
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 7 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20SAP%2C%20Salesforce%20%26%20Enterprise%20IT%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/sap-s4hana-fico"
+                ><i class="bi bi-currency-rupee text-info"></i
+                ><span>SAP S/4HANA FICO<br /><small class="text-white-50">2 – 4 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/sap-mm-sd"
+                ><i class="bi bi-truck text-info"></i
+                ><span>SAP MM &amp; SD<br /><small class="text-white-50">2 – 3 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/sap-abap-s4hana"
+                ><i class="bi bi-braces text-info"></i
+                ><span>SAP ABAP on S/4HANA<br /><small class="text-white-50">2 – 3 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/salesforce-admin-developer"
+                ><i class="bi bi-cloud-arrow-up text-info"></i
+                ><span>Salesforce Admin + Developer<br /><small class="text-white-50">6 – 10 Weeks</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/servicenow-admin-developer"
+                ><i class="bi bi-headset text-info"></i
+                ><span>ServiceNow Admin + Developer<br /><small class="text-white-50">6 – 10 Weeks</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/rpa-uipath-agentic-automation"
+                ><i class="bi bi-cpu text-info"></i
+                ><span>RPA with UiPath + Agentic Automation<br /><small class="text-white-50">6 – 8 Weeks</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/oracle-sql-plsql"
+                ><i class="bi bi-database text-info"></i
+                ><span>Oracle SQL + PL/SQL<br /><small class="text-white-50">6 – 8 Weeks</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="SAP, Salesforce &amp; Enterprise IT courses">
+      <button
+        class="tab-pill active"
+        id="t-sap-s4hana-fico"
+        data-bs-toggle="pill"
+        data-bs-target="#sap-s4hana-fico"
+        type="button"
+        role="tab"
+        aria-controls="sap-s4hana-fico"
+        aria-selected="true"
+      >
+        SAP S/4HANA FICO</button
+      ><button
+        class="tab-pill"
+        id="t-sap-mm-sd"
+        data-bs-toggle="pill"
+        data-bs-target="#sap-mm-sd"
+        type="button"
+        role="tab"
+        aria-controls="sap-mm-sd"
+        aria-selected="false"
+      >
+        SAP MM &amp; SD</button
+      ><button
+        class="tab-pill"
+        id="t-sap-abap-s4hana"
+        data-bs-toggle="pill"
+        data-bs-target="#sap-abap-s4hana"
+        type="button"
+        role="tab"
+        aria-controls="sap-abap-s4hana"
+        aria-selected="false"
+      >
+        SAP ABAP on S/4HANA</button
+      ><button
+        class="tab-pill"
+        id="t-salesforce-admin-developer"
+        data-bs-toggle="pill"
+        data-bs-target="#salesforce-admin-developer"
+        type="button"
+        role="tab"
+        aria-controls="salesforce-admin-developer"
+        aria-selected="false"
+      >
+        Salesforce Admin + Developer</button
+      ><button
+        class="tab-pill"
+        id="t-servicenow-admin-developer"
+        data-bs-toggle="pill"
+        data-bs-target="#servicenow-admin-developer"
+        type="button"
+        role="tab"
+        aria-controls="servicenow-admin-developer"
+        aria-selected="false"
+      >
+        ServiceNow Admin + Developer</button
+      ><button
+        class="tab-pill"
+        id="t-rpa-uipath-agentic-automation"
+        data-bs-toggle="pill"
+        data-bs-target="#rpa-uipath-agentic-automation"
+        type="button"
+        role="tab"
+        aria-controls="rpa-uipath-agentic-automation"
+        aria-selected="false"
+      >
+        RPA with UiPath + Agentic Automation</button
+      ><button
+        class="tab-pill"
+        id="t-oracle-sql-plsql"
+        data-bs-toggle="pill"
+        data-bs-target="#oracle-sql-plsql"
+        type="button"
+        role="tab"
+        aria-controls="oracle-sql-plsql"
+        aria-selected="false"
+      >
+        Oracle SQL + PL/SQL
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="sap-s4hana-fico" role="tabpanel" aria-labelledby="t-sap-s4hana-fico" tabindex="0">
+        <article class="course" aria-labelledby="h-sap-s4hana-fico">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · Finance &amp; Controlling on SAP S/4HANA</span>
+              <h2 id="h-sap-s4hana-fico"><a href="/courses/sap-s4hana-fico" class="text-reset">SAP S/4HANA FICO</a></h2>
+              <p>
+                Configure and run SAP S/4HANA Finance and Controlling: enterprise structure, General Ledger and the Universal Journal,
+                accounts payable and receivable, asset and bank accounting, cost centres and profitability, period-end close and
+                integration with MM/SD.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">B.Com, M.Com, MBA Finance, CA/CMA students, accountants and finance professionals.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=sap-s4hana-fico"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/sap-s4hana-fico"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">2 – 4 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">SAP &amp; S/4HANA Basics</div>
+                  <ul>
+                    <li>ERP concepts</li>
+                    <li>SAP navigation &amp; Fiori</li>
+                    <li>S/4HANA architecture</li>
+                    <li>Enterprise structure</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">General Ledger</div>
+                  <ul>
+                    <li>Chart of accounts</li>
+                    <li>Universal Journal (ACDOCA)</li>
+                    <li>Document types &amp; posting keys</li>
+                    <li>GL postings</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Payables &amp; Receivables</div>
+                  <ul>
+                    <li>Vendor &amp; customer master (Business Partner)</li>
+                    <li>Invoices &amp; payments</li>
+                    <li>Automatic payment program</li>
+                    <li>Dunning</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Asset &amp; Bank Accounting</div>
+                  <ul>
+                    <li>Asset classes &amp; depreciation</li>
+                    <li>Asset transactions</li>
+                    <li>Bank statements</li>
+                    <li>Cash journal</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Controlling</div>
+                  <ul>
+                    <li>Cost elements &amp; cost centres</li>
+                    <li>Internal orders</li>
+                    <li>Profit centres</li>
+                    <li>Profitability analysis</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Close &amp; Integration</div>
+                  <ul>
+                    <li>Period-end closing</li>
+                    <li>MM/SD integration</li>
+                    <li>GST in SAP</li>
+                    <li>Migration &amp; interview prep</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Configure a company code end-to-end</li>
+                    <li>Month-end close simulation</li>
+                    <li>Procure-to-pay &amp; order-to-cash finance postings</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Configure SAP FI and CO</li>
+                    <li>Run financial processes in S/4HANA</li>
+                    <li>Work on S/4HANA migration projects</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">SAP S/4HANA</span><span class="bpst-chip dark">SAP Fiori</span
+                    ><span class="bpst-chip dark">SAP GUI</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to SAP C_S4FCF (S/4HANA Financial Accounting)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="sap-mm-sd">Next: SAP MM &amp; SD ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="sap-mm-sd" role="tabpanel" aria-labelledby="t-sap-mm-sd" tabindex="0">
+        <article class="course" aria-labelledby="h-sap-mm-sd">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · Procure-to-pay and order-to-cash on S/4HANA</span>
+              <h2 id="h-sap-mm-sd">
+                <a href="/courses/sap-mm-sd" class="text-reset"
+                  >SAP MM &amp; SD (Materials Management + Sales &amp; Distribution)</a
+                >
+              </h2>
+              <p>
+                Learn SAP S/4HANA logistics: organisational structure, master data, procurement, inventory and invoice verification in
+                MM; and sales orders, pricing, delivery, billing and output in SD.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">Graduates, MBA (Operations/Marketing) students and supply-chain professionals.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=sap-mm-sd"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/sap-mm-sd"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">2 – 3 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Logistics Foundations</div>
+                  <ul>
+                    <li>Org structure: plants, storage, sales areas</li>
+                    <li>Business Partner</li>
+                    <li>Material master</li>
+                    <li>Fiori apps</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Procurement (MM)</div>
+                  <ul>
+                    <li>Purchase requisitions &amp; orders</li>
+                    <li>Source determination</li>
+                    <li>Release strategy</li>
+                    <li>Contracts</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Inventory &amp; Invoice (MM)</div>
+                  <ul>
+                    <li>Goods receipt &amp; issue</li>
+                    <li>Stock transfers</li>
+                    <li>Physical inventory</li>
+                    <li>Invoice verification</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Sales (SD)</div>
+                  <ul>
+                    <li>Sales document types</li>
+                    <li>Availability check</li>
+                    <li>Credit management</li>
+                    <li>Returns</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Pricing, Delivery &amp; Billing (SD)</div>
+                  <ul>
+                    <li>Condition technique pricing</li>
+                    <li>Outbound delivery</li>
+                    <li>Billing</li>
+                    <li>Output determination</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Integration &amp; Projects</div>
+                  <ul>
+                    <li>MM–FI &amp; SD–FI integration</li>
+                    <li>GST configuration</li>
+                    <li>S/4HANA changes</li>
+                    <li>Interview prep</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>End-to-end procure-to-pay cycle</li>
+                    <li>End-to-end order-to-cash cycle</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Configure MM and SD processes</li>
+                    <li>Support S/4HANA logistics projects</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">SAP S/4HANA</span><span class="bpst-chip dark">SAP Fiori</span
+                    ><span class="bpst-chip dark">SAP GUI</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to SAP C_TS452 (Procurement) / C_TS462 (Sales)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="sap-s4hana-fico">‹ SAP S/4HANA FICO</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="sap-abap-s4hana">Next: SAP ABAP on S/4HANA ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="sap-abap-s4hana" role="tabpanel" aria-labelledby="t-sap-abap-s4hana" tabindex="0">
+        <article class="course" aria-labelledby="h-sap-abap-s4hana">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 03 · Develop modern SAP applications</span>
+              <h2 id="h-sap-abap-s4hana">
+                <a href="/courses/sap-abap-s4hana" class="text-reset">SAP ABAP on S/4HANA (RAP, CDS)</a>
+              </h2>
+              <p>
+                ABAP programming for S/4HANA: data dictionary, internal tables, reports and ALV, object-oriented ABAP, CDS views,
+                AMDP, the RESTful Application Programming model (RAP), OData and Fiori, and an introduction to SAP BTP.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">Developers, B.Tech/MCA graduates and SAP functional consultants learning development.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=sap-abap-s4hana"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/sap-abap-s4hana"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">2 – 3 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">ABAP Basics</div>
+                  <ul>
+                    <li>ABAP workbench &amp; Eclipse ADT</li>
+                    <li>Data types</li>
+                    <li>Data dictionary</li>
+                    <li>Modularisation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Reports &amp; Tables</div>
+                  <ul>
+                    <li>Internal tables</li>
+                    <li>Open SQL</li>
+                    <li>Classical &amp; ALV reports</li>
+                    <li>Selection screens</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">OOP ABAP</div>
+                  <ul>
+                    <li>Classes &amp; interfaces</li>
+                    <li>Exceptions</li>
+                    <li>Design patterns</li>
+                    <li>BAdIs &amp; enhancements</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">CDS &amp; AMDP</div>
+                  <ul>
+                    <li>Core Data Services views</li>
+                    <li>Annotations</li>
+                    <li>AMDP</li>
+                    <li>HANA optimisation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">RAP &amp; Fiori</div>
+                  <ul>
+                    <li>RESTful Application Programming model</li>
+                    <li>Behaviour definitions</li>
+                    <li>OData services</li>
+                    <li>Fiori elements</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">BTP &amp; Projects</div>
+                  <ul>
+                    <li>SAP BTP intro</li>
+                    <li>Clean core principles</li>
+                    <li>Migration code checks</li>
+                    <li>Interview prep</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Fiori app using RAP</li>
+                    <li>CDS-based analytical report</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Develop ABAP for S/4HANA</li>
+                    <li>Build RAP-based Fiori apps</li>
+                    <li>Support clean-core migrations</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">ABAP</span><span class="bpst-chip dark">Eclipse ADT</span
+                    ><span class="bpst-chip dark">CDS</span><span class="bpst-chip dark">RAP</span
+                    ><span class="bpst-chip dark">OData</span><span class="bpst-chip dark">SAP Fiori</span
+                    ><span class="bpst-chip dark">SAP BTP</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to SAP C_ABAPD (Back-End Developer – ABAP Cloud)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="sap-mm-sd">‹ SAP MM &amp; SD</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="salesforce-admin-developer">
+            Next: Salesforce Admin + Developer ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="salesforce-admin-developer"
+        role="tabpanel"
+        aria-labelledby="t-salesforce-admin-developer"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-salesforce-admin-developer">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 04 · The world's #1 CRM — now with AI agents</span>
+              <h2 id="h-salesforce-admin-developer">
+                <a href="/courses/salesforce-admin-developer" class="text-reset"
+                  >Salesforce Admin + Developer (with Agentforce)</a
+                >
+              </h2>
+              <p>
+                Become a Salesforce professional: CRM data model, security and sharing, Flows, reports and dashboards, Apex, SOQL,
+                Lightning Web Components, integrations and Agentforce AI agents.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Freshers, graduates and professionals in sales, support or IT.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=salesforce-admin-developer"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/salesforce-admin-developer"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">6 – 10 Weeks</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">CRM &amp; Data Model</div>
+                  <ul>
+                    <li>Salesforce orgs &amp; Trailhead</li>
+                    <li>Objects, fields &amp; relationships</li>
+                    <li>Record types &amp; page layouts</li>
+                    <li>Data import</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Security &amp; Sharing</div>
+                  <ul>
+                    <li>Profiles &amp; permission sets</li>
+                    <li>Roles &amp; sharing rules</li>
+                    <li>Field-level security</li>
+                    <li>Audit</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Automation</div>
+                  <ul>
+                    <li>Flow Builder</li>
+                    <li>Approval processes</li>
+                    <li>Validation rules</li>
+                    <li>Email alerts</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Reports &amp; Service</div>
+                  <ul>
+                    <li>Reports &amp; dashboards</li>
+                    <li>Sales Cloud</li>
+                    <li>Service Cloud cases</li>
+                    <li>Omni-channel basics</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Apex &amp; SOQL</div>
+                  <ul>
+                    <li>Apex classes &amp; triggers</li>
+                    <li>SOQL &amp; SOSL</li>
+                    <li>Governor limits</li>
+                    <li>Test classes</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">LWC, Integration &amp; Agentforce</div>
+                  <ul>
+                    <li>Lightning Web Components</li>
+                    <li>REST integrations</li>
+                    <li>Agentforce AI agents</li>
+                    <li>Certification prep</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Sales CRM for an education company</li>
+                    <li>Service case automation with Flows</li>
+                    <li>Agentforce support agent</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Administer a Salesforce org</li>
+                    <li>Automate business processes</li>
+                    <li>Develop with Apex and LWC</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Salesforce</span><span class="bpst-chip dark">Flow Builder</span
+                    ><span class="bpst-chip dark">Apex</span><span class="bpst-chip dark">SOQL</span
+                    ><span class="bpst-chip dark">LWC</span><span class="bpst-chip dark">Agentforce</span
+                    ><span class="bpst-chip dark">VS Code</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to Salesforce Administrator and Platform Developer I
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="sap-abap-s4hana">‹ SAP ABAP on S/4HANA</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="servicenow-admin-developer">
+            Next: ServiceNow Admin + Developer ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="servicenow-admin-developer"
+        role="tabpanel"
+        aria-labelledby="t-servicenow-admin-developer"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-servicenow-admin-developer">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 05 · IT service management on the Now Platform</span>
+              <h2 id="h-servicenow-admin-developer">
+                <a href="/courses/servicenow-admin-developer" class="text-reset">ServiceNow Admin + Developer</a>
+              </h2>
+              <p>
+                Learn ServiceNow ITSM (incident, problem, change), CMDB, forms and lists, client scripts, business rules, Flow
+                Designer, IntegrationHub and REST, with an introduction to ITOM.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">IT support engineers, freshers and graduates targeting ITSM roles.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=servicenow-admin-developer"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/servicenow-admin-developer"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">6 – 10 Weeks</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Platform Basics</div>
+                  <ul>
+                    <li>Instances &amp; navigation</li>
+                    <li>Users, groups &amp; roles</li>
+                    <li>Tables &amp; forms</li>
+                    <li>Update sets</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">ITSM Processes</div>
+                  <ul>
+                    <li>Incident management</li>
+                    <li>Problem management</li>
+                    <li>Change management</li>
+                    <li>Service catalog</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">CMDB</div>
+                  <ul>
+                    <li>CI classes</li>
+                    <li>Relationships</li>
+                    <li>Discovery basics</li>
+                    <li>Data quality</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Scripting</div>
+                  <ul>
+                    <li>Client scripts &amp; UI policies</li>
+                    <li>Business rules</li>
+                    <li>Script includes</li>
+                    <li>GlideRecord</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Automation &amp; Integration</div>
+                  <ul>
+                    <li>Flow Designer</li>
+                    <li>IntegrationHub</li>
+                    <li>REST APIs</li>
+                    <li>Notifications</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">ITOM &amp; Certification</div>
+                  <ul>
+                    <li>Event management intro</li>
+                    <li>Reporting &amp; dashboards</li>
+                    <li>CSA exam prep</li>
+                    <li>CAD exam prep</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Service catalog with approval flows</li>
+                    <li>Incident auto-assignment with business rules</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Administer ServiceNow ITSM</li>
+                    <li>Script and automate on the Now Platform</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">ServiceNow</span><span class="bpst-chip dark">Flow Designer</span
+                    ><span class="bpst-chip dark">IntegrationHub</span><span class="bpst-chip dark">JavaScript</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> Maps to ServiceNow CSA and CAD</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="salesforce-admin-developer">
+            ‹ Salesforce Admin + Developer
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="rpa-uipath-agentic-automation">
+            Next: RPA with UiPath + Agentic Automation ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="rpa-uipath-agentic-automation"
+        role="tabpanel"
+        aria-labelledby="t-rpa-uipath-agentic-automation"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-rpa-uipath-agentic-automation">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 06 · Automate office work with bots and AI agents</span>
+              <h2 id="h-rpa-uipath-agentic-automation">
+                <a href="/courses/rpa-uipath-agentic-automation" class="text-reset">RPA with UiPath + Agentic Automation</a>
+              </h2>
+              <p>
+                Build software robots with UiPath Studio: selectors, data scraping, Excel and email automation, REFramework,
+                Orchestrator and Document Understanding — then combine them with UiPath AI agents.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Graduates, operations/finance staff and developers.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=rpa-uipath-agentic-automation"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/rpa-uipath-agentic-automation"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">6 – 8 Weeks</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">RPA Foundations</div>
+                  <ul>
+                    <li>What to automate</li>
+                    <li>UiPath Studio</li>
+                    <li>Variables &amp; control flow</li>
+                    <li>Debugging</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">UI Automation</div>
+                  <ul>
+                    <li>Selectors</li>
+                    <li>Recorders</li>
+                    <li>Data scraping</li>
+                    <li>Web &amp; desktop apps</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Excel, Email &amp; PDF</div>
+                  <ul>
+                    <li>Excel automation</li>
+                    <li>Outlook/Gmail automation</li>
+                    <li>PDF extraction</li>
+                    <li>File handling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Enterprise Framework</div>
+                  <ul>
+                    <li>REFramework</li>
+                    <li>Exception handling</li>
+                    <li>Queues</li>
+                    <li>Logging</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Orchestrator</div>
+                  <ul>
+                    <li>Publishing &amp; robots</li>
+                    <li>Triggers &amp; schedules</li>
+                    <li>Assets &amp; credentials</li>
+                    <li>Monitoring</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">AI &amp; Agents</div>
+                  <ul>
+                    <li>Document Understanding</li>
+                    <li>UiPath AI agents</li>
+                    <li>Human-in-the-loop</li>
+                    <li>Certification prep</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Invoice processing bot</li>
+                    <li>Report-generation bot with email delivery</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Build and deploy UiPath bots</li>
+                    <li>Combine RPA with AI agents</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">UiPath Studio</span><span class="bpst-chip dark">Orchestrator</span
+                    ><span class="bpst-chip dark">Document Understanding</span><span class="bpst-chip dark">Excel</span
+                    ><span class="bpst-chip dark">Outlook</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to UiPath Certified RPA Associate (UiRPA)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="servicenow-admin-developer">
+            ‹ ServiceNow Admin + Developer
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="oracle-sql-plsql">Next: Oracle SQL + PL/SQL ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="oracle-sql-plsql" role="tabpanel" aria-labelledby="t-oracle-sql-plsql" tabindex="0">
+        <article class="course" aria-labelledby="h-oracle-sql-plsql">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 07 · Database skills banks and enterprises rely on</span>
+              <h2 id="h-oracle-sql-plsql"><a href="/courses/oracle-sql-plsql" class="text-reset">Oracle SQL + PL/SQL</a></h2>
+              <p>
+                Master Oracle SQL and PL/SQL: queries, joins and subqueries, PL/SQL blocks, cursors, procedures, functions and
+                packages, triggers, exception handling and performance tuning.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Freshers, developers, testers and support engineers.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=oracle-sql-plsql"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/oracle-sql-plsql"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">6 – 8 Weeks</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner → Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">SQL Fundamentals</div>
+                  <ul>
+                    <li>Oracle architecture</li>
+                    <li>SELECT &amp; filtering</li>
+                    <li>Functions</li>
+                    <li>Sorting &amp; grouping</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Advanced SQL</div>
+                  <ul>
+                    <li>Joins</li>
+                    <li>Subqueries</li>
+                    <li>Set operators</li>
+                    <li>Analytic functions</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">DDL, DML &amp; Objects</div>
+                  <ul>
+                    <li>Tables &amp; constraints</li>
+                    <li>Views &amp; sequences</li>
+                    <li>Indexes</li>
+                    <li>Transactions</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">PL/SQL Basics</div>
+                  <ul>
+                    <li>Blocks &amp; variables</li>
+                    <li>Control structures</li>
+                    <li>Cursors</li>
+                    <li>Exceptions</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Stored Programs</div>
+                  <ul>
+                    <li>Procedures &amp; functions</li>
+                    <li>Packages</li>
+                    <li>Triggers</li>
+                    <li>Collections &amp; bulk operations</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Performance</div>
+                  <ul>
+                    <li>Explain plans</li>
+                    <li>Indexing strategy</li>
+                    <li>Query tuning</li>
+                    <li>Interview prep</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Banking database with PL/SQL packages</li>
+                    <li>Payroll processing procedures</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Write complex Oracle SQL</li>
+                    <li>Build PL/SQL programs</li>
+                    <li>Tune slow queries</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Oracle Database</span><span class="bpst-chip dark">SQL Developer</span
+                    ><span class="bpst-chip dark">PL/SQL</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> Maps to Oracle 1Z0-071</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="rpa-uipath-agentic-automation">
+            ‹ RPA with UiPath + Agentic Automation
+          </button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">SAP, Salesforce &amp; Enterprise IT — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                Why is SAP S/4HANA in demand in 2026?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                SAP ends mainstream maintenance for ECC at the end of 2027, so thousands of companies are migrating to S/4HANA now.
+                Migration projects need functional consultants and ABAP developers.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c1"
+                aria-expanded="false"
+                aria-controls="catFaq-c1"
+              >
+                Can commerce graduates learn SAP FICO?
+              </button>
+            </h3>
+            <div id="catFaq-c1" class="accordion-collapse collapse" aria-labelledby="catFaq-h1" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Yes — SAP FICO is designed around accounting processes, so B.Com, M.Com, MBA Finance and CA/CMA students are ideal
+                candidates.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any sap, salesforce &amp; enterprise it course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course
+      fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

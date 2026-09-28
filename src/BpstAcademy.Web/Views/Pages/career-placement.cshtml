@@ -1,0 +1,559 @@
+@* Ported from NewLayout/Landing Page UI/career-placement.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "Placement Preparation, DSA & Job Readiness in Lucknow | BPST Academy",
+        Description = "DSA & coding interviews, personality development, communication, mock interviews, resume, LinkedIn/Naukri profiles and job-hunting strategy.",
+        CanonicalPath = "/career-placement",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "name": "Career & Placement Readiness",
+              "item": "https://edu.bitprosofttech.com/career-placement"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "Career & Placement Readiness courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/dsa-placement-preparation",
+              "name": "DSA & Placement Preparation"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/job-readiness-program",
+              "name": "Job-Readiness Program (Communication, Resume, Mock Interviews)"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Do you guarantee placement?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "No. We do not make placement guarantee claims. We give you job assistance — real projects, resume and profile reviews, mock interviews and relevant hiring opportunities — so you can compete genuinely."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">Career &amp; Placement Readiness</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-person-check"></i> 2 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">Career &amp; Placement Readiness</h1>
+        <p class="lead mb-4">
+          DSA &amp; coding interviews, personality development, communication, mock interviews, resume, LinkedIn/Naukri profiles and
+          job-hunting strategy.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy prepares students for placements with two programs: DSA &amp; Placement Prep (2–3 months: data structures, 300+
+          problems, aptitude, mock interviews) and the Job-Readiness Program (1 month: communication, resume, LinkedIn/Naukri, mock
+          interviews). Job-readiness modules are included with every industrial training track.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 2 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20Career%20%26%20Placement%20Readiness%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/dsa-placement-preparation"
+                ><i class="bi bi-diagram-3 text-info"></i
+                ><span>DSA &amp; Placement Preparation<br /><small class="text-white-50">3 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/job-readiness-program"
+                ><i class="bi bi-person-check text-info"></i
+                ><span>Job-Readiness Program<br /><small class="text-white-50">1 Month · 3 sessions/week</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="Career &amp; Placement Readiness courses">
+      <button
+        class="tab-pill active"
+        id="t-dsa-placement-preparation"
+        data-bs-toggle="pill"
+        data-bs-target="#dsa-placement-preparation"
+        type="button"
+        role="tab"
+        aria-controls="dsa-placement-preparation"
+        aria-selected="true"
+      >
+        DSA &amp; Placement Preparation</button
+      ><button
+        class="tab-pill"
+        id="t-job-readiness-program"
+        data-bs-toggle="pill"
+        data-bs-target="#job-readiness-program"
+        type="button"
+        role="tab"
+        aria-controls="job-readiness-program"
+        aria-selected="false"
+      >
+        Job-Readiness Program
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="dsa-placement-preparation"
+        role="tabpanel"
+        aria-labelledby="t-dsa-placement-preparation"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-dsa-placement-preparation">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · Specialization program</span>
+              <h2 id="h-dsa-placement-preparation">
+                <a href="/courses/dsa-placement-preparation" class="text-reset">DSA &amp; Placement Preparation</a>
+              </h2>
+              <p>
+                Crack coding interviews. Pattern-based DSA in your choice of C++, Java or Python with 300+ curated problems and weekly
+                contests.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">B.Tech, BCA, MCA students preparing for placements.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=dsa-placement-preparation"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/dsa-placement-preparation"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Any one language required</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Complexity &amp; Basics</div>
+                  <ul>
+                    <li>Big-O time &amp; space</li>
+                    <li>Recursion</li>
+                    <li>Maths for DSA</li>
+                    <li>Bit manipulation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Linear Structures</div>
+                  <ul>
+                    <li>Arrays &amp; strings</li>
+                    <li>Two pointers, sliding window</li>
+                    <li>Linked lists</li>
+                    <li>Stacks &amp; queues</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Searching &amp; Sorting</div>
+                  <ul>
+                    <li>Binary search patterns</li>
+                    <li>Merge &amp; quick sort</li>
+                    <li>Hashing</li>
+                    <li>Prefix sums</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Trees</div>
+                  <ul>
+                    <li>Binary trees &amp; traversals</li>
+                    <li>BST</li>
+                    <li>Heaps &amp; priority queue</li>
+                    <li>Tries</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Graphs</div>
+                  <ul>
+                    <li>BFS &amp; DFS</li>
+                    <li>Shortest paths (Dijkstra)</li>
+                    <li>Topological sort</li>
+                    <li>Union-find, MST</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">DP &amp; Interview Prep</div>
+                  <ul>
+                    <li>Memoization &amp; tabulation</li>
+                    <li>Classic DP patterns</li>
+                    <li>Greedy &amp; backtracking</li>
+                    <li>Mock coding interviews</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>300+ problem GitHub repository</li>
+                    <li>Weekly contest leaderboard</li>
+                    <li>Personal DSA cheat-sheet</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Recognise problem patterns quickly</li>
+                    <li>Solve medium-level LeetCode problems</li>
+                    <li>Explain time/space complexity</li>
+                    <li>Clear online coding rounds</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">C++ STL</span><span class="bpst-chip dark">Java Collections</span
+                    ><span class="bpst-chip dark">Python</span><span class="bpst-chip dark">LeetCode</span
+                    ><span class="bpst-chip dark">HackerRank</span><span class="bpst-chip dark">CodeChef</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> BPST certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="job-readiness-program">Next: Job-Readiness Program ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="job-readiness-program" role="tabpanel" aria-labelledby="t-job-readiness-program" tabindex="0">
+        <article class="course" aria-labelledby="h-job-readiness-program">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · Included with Industrial Training · also available standalone</span>
+              <h2 id="h-job-readiness-program">
+                <a href="/courses/job-readiness-program" class="text-reset"
+                  >Job-Readiness Program (Communication, Resume, Mock Interviews)</a
+                >
+              </h2>
+              <p>
+                Skills get you in, preparation keeps you ahead. Personality development, communication, mock interviews, ATS-friendly
+                resumes, Naukri and LinkedIn profiles and a job-hunting strategy — the six modules interviewers notice first.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Final-year students, freshers and graduates preparing for campus or off-campus placements.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=job-readiness-program"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/job-readiness-program"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">1 Month · 3 sessions/week</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">All levels</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Personality Development (PDP)</div>
+                  <ul>
+                    <li>Self-introduction &amp; elevator pitch</li>
+                    <li>Body language &amp; grooming</li>
+                    <li>Time management &amp; goal setting</li>
+                    <li>Workplace etiquette &amp; email writing</li>
+                    <li>Team work &amp; leadership activities</li>
+                    <li>Stress &amp; interview-anxiety handling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Communication Skills</div>
+                  <ul>
+                    <li>Spoken English practice sessions</li>
+                    <li>Technical articulation — explain your project</li>
+                    <li>Group discussion (GD) practice</li>
+                    <li>Presentations &amp; demo day</li>
+                    <li>Listening &amp; answering structure (STAR)</li>
+                    <li>Professional writing: emails, reports</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Mock Interviews</div>
+                  <ul>
+                    <li>Technical interview on your stack</li>
+                    <li>Coding round under time limit</li>
+                    <li>Project deep-dive questions</li>
+                    <li>System design basics (for 6-month)</li>
+                    <li>HR round — salary, relocation, strengths</li>
+                    <li>Written feedback &amp; improvement plan</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Resume Building</div>
+                  <ul>
+                    <li>ATS-friendly format &amp; keywords</li>
+                    <li>Project descriptions with impact</li>
+                    <li>GitHub &amp; live project links</li>
+                    <li>Tailored versions per role</li>
+                    <li>Cover letter template</li>
+                    <li>Final review by mentor</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Naukri &amp; LinkedIn Profiles</div>
+                  <ul>
+                    <li>Naukri profile creation &amp; resume headline</li>
+                    <li>Key-skills &amp; profile-summary optimisation</li>
+                    <li>Regular Naukri profile refresh (stay on top)</li>
+                    <li>LinkedIn headline, about &amp; featured projects</li>
+                    <li>Networking &amp; recruiter outreach templates</li>
+                    <li>GitHub profile README &amp; pinned repos</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Job Hunting &amp; Placement Support</div>
+                  <ul>
+                    <li>Job-search strategy &amp; daily application plan</li>
+                    <li>Portals: Naukri, LinkedIn, Indeed, Instahyre</li>
+                    <li>Referrals &amp; hiring-drive connections</li>
+                    <li>Interview scheduling &amp; preparation per company</li>
+                    <li>Offer comparison &amp; negotiation guidance</li>
+                    <li>Follow-up after course completion</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>ATS-friendly resume reviewed by mentors</li>
+                    <li>Optimised LinkedIn &amp; Naukri profiles</li>
+                    <li>Recorded mock interview with feedback</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Introduce yourself with confidence</li>
+                    <li>Clear HR and technical rounds</li>
+                    <li>Run a focused job search</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">LinkedIn</span><span class="bpst-chip dark">Naukri</span
+                    ><span class="bpst-chip dark">ATS resume templates</span
+                    ><span class="bpst-chip dark">Mock interview recordings</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> BPST Job-Readiness certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="dsa-placement-preparation">
+            ‹ DSA &amp; Placement Preparation
+          </button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">Career &amp; Placement Readiness — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                Do you guarantee placement?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                No. We do not make placement guarantee claims. We give you job assistance — real projects, resume and profile reviews,
+                mock interviews and relevant hiring opportunities — so you can compete genuinely.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any career &amp; placement readiness course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course
+      fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>

@@ -1,0 +1,1320 @@
+@* Ported from NewLayout/Landing Page UI/ai-generative-ai.html. *@
+@{
+    ViewData["Seo"] = new SeoMeta
+    {
+        Title = "AI, Generative AI & Agentic AI Courses in Lucknow | BPST Academy",
+        Description = "From ChatGPT productivity for non-coders to building production AI agents with LangGraph, RAG and MLOps — the fastest-growing skill set in Indian IT hiring.",
+        CanonicalPath = "/ai-generative-ai",
+        OgImage = "/site/img/og-bpst-diwali.png",
+        OgImageAlt = "BPST Academy — Diwali offer: pre-book any course for ₹49",
+    };
+}
+
+@section Head {
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home", "item": "https://edu.bitprosofttech.com/" },
+            { "@@type": "ListItem", "position": 2, "name": "Programs", "item": "https://edu.bitprosofttech.com/courses" },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "name": "AI & Generative AI",
+              "item": "https://edu.bitprosofttech.com/ai-generative-ai"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "ItemList",
+          "name": "AI & Generative AI courses at BPST Academy",
+          "itemListElement": [
+            {
+              "@@type": "ListItem",
+              "position": 1,
+              "url": "https://edu.bitprosofttech.com/courses/agentic-ai-engineering",
+              "name": "Agentic AI Engineering"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 2,
+              "url": "https://edu.bitprosofttech.com/courses/generative-ai-for-everyone",
+              "name": "Generative AI for Everyone (Prompt Engineering)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 3,
+              "url": "https://edu.bitprosofttech.com/courses/mlops-llmops",
+              "name": "MLOps & LLMOps"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 4,
+              "url": "https://edu.bitprosofttech.com/courses/artificial-intelligence-specialization",
+              "name": "Artificial Intelligence (AI + Generative AI)"
+            },
+            {
+              "@@type": "ListItem",
+              "position": 5,
+              "url": "https://edu.bitprosofttech.com/courses/machine-learning-specialization",
+              "name": "Machine Learning"
+            }
+          ]
+        }
+    </script>
+    <script type="application/ld+json">
+      {
+          "@@context": "https://schema.org",
+          "@@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@@type": "Question",
+              "name": "Which AI course should a beginner choose?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "If you do not code, start with Generative AI for Everyone (4–8 weeks). If you know basic Python, choose the AI specialization or Agentic AI Engineering to build RAG apps and AI agents."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Is Agentic AI a good career in 2026?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Yes. Gartner expects around 40% of enterprise applications to include task-specific AI agents by the end of 2026, and NASSCOM reports a large gap between AI talent demand and supply in India."
+              }
+            },
+            {
+              "@@type": "Question",
+              "name": "Do AI courses include projects?",
+              "acceptedAnswer": {
+                "@@type": "Answer",
+                "text": "Every AI course ends with a capstone: a RAG chatbot, a multi-agent workflow or a deployed ML model, pushed to GitHub with a live demo."
+              }
+            }
+          ]
+        }
+    </script>
+}
+
+<section class="bpst-page-hero" aria-labelledby="cat-title">
+  <div class="container">
+    <nav class="bpst-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/courses">Programs</a></li>
+        <li aria-current="page">AI &amp; Generative AI</li>
+      </ol>
+    </nav>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <span class="bpst-pill bpst-pill-cyan mb-3"><i class="bi bi-robot"></i> 5 courses · Lucknow &amp; Live Online</span>
+        <h1 id="cat-title">AI, Generative AI &amp; Agentic AI Courses</h1>
+        <p class="lead mb-4">
+          From ChatGPT productivity for non-coders to building production AI agents with LangGraph, RAG and MLOps — the
+          fastest-growing skill set in Indian IT hiring.
+        </p>
+        <div class="bpst-answer mb-4">
+          <div class="bpst-answer-label"><i class="bi bi-lightning-charge-fill"></i> Quick answer</div>
+          BPST Academy offers five AI courses in Lucknow and live online: Agentic AI Engineering, Generative AI for Everyone (prompt
+          engineering, no coding), MLOps/LLMOps, an AI specialization and a Machine Learning specialization. Courses run 4 weeks to 5
+          months and every learner builds a working AI project.
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="/prebook" class="btn btn-bpst-gold bpst-shine bpst-offer-live"
+            ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book any course ₹49</a
+          >
+          <a href="#courses" class="btn btn-bpst-outline"><i class="bi bi-list-ul"></i> See all 5 courses</a>
+          <a
+            href="https://wa.me/918299101616?text=Hi%20BPST%20Academy%2C%20I%20have%20a%20question%20about%20AI%20%26%20Generative%20AI%20courses."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline-light"
+            ><i class="bi bi-whatsapp text-success"></i> Ask on WhatsApp</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block">
+        <div class="bpst-card-dark">
+          <p class="small text-uppercase fw-bold text-info mb-2" style="letter-spacing: 0.08em">Courses in this category</p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/agentic-ai-engineering"
+                ><i class="bi bi-robot text-info"></i
+                ><span>Agentic AI Engineering<br /><small class="text-white-50">3 – 5 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/generative-ai-for-everyone"
+                ><i class="bi bi-stars text-info"></i
+                ><span>Generative AI for Everyone<br /><small class="text-white-50">4 – 8 Weeks</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/mlops-llmops"
+                ><i class="bi bi-gear-wide-connected text-info"></i
+                ><span>MLOps &amp; LLMOps<br /><small class="text-white-50">3 – 6 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/artificial-intelligence-specialization"
+                ><i class="bi bi-cpu-fill text-info"></i
+                ><span>Artificial Intelligence<br /><small class="text-white-50">4 Months</small></span></a
+              >
+            </li>
+            <li class="mb-2">
+              <a class="text-white d-flex gap-2 align-items-start" href="/courses/machine-learning-specialization"
+                ><i class="bi bi-diagram-2 text-info"></i
+                ><span>Machine Learning<br /><small class="text-white-50">4 Months</small></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tabbar" id="courses">
+  <div class="container">
+    <div class="tabbar-inner nav" role="tablist" aria-label="AI &amp; Generative AI courses">
+      <button
+        class="tab-pill active"
+        id="t-agentic-ai-engineering"
+        data-bs-toggle="pill"
+        data-bs-target="#agentic-ai-engineering"
+        type="button"
+        role="tab"
+        aria-controls="agentic-ai-engineering"
+        aria-selected="true"
+      >
+        Agentic AI Engineering</button
+      ><button
+        class="tab-pill"
+        id="t-generative-ai-for-everyone"
+        data-bs-toggle="pill"
+        data-bs-target="#generative-ai-for-everyone"
+        type="button"
+        role="tab"
+        aria-controls="generative-ai-for-everyone"
+        aria-selected="false"
+      >
+        Generative AI for Everyone</button
+      ><button
+        class="tab-pill"
+        id="t-mlops-llmops"
+        data-bs-toggle="pill"
+        data-bs-target="#mlops-llmops"
+        type="button"
+        role="tab"
+        aria-controls="mlops-llmops"
+        aria-selected="false"
+      >
+        MLOps &amp; LLMOps</button
+      ><button
+        class="tab-pill"
+        id="t-artificial-intelligence-specialization"
+        data-bs-toggle="pill"
+        data-bs-target="#artificial-intelligence-specialization"
+        type="button"
+        role="tab"
+        aria-controls="artificial-intelligence-specialization"
+        aria-selected="false"
+      >
+        Artificial Intelligence</button
+      ><button
+        class="tab-pill"
+        id="t-machine-learning-specialization"
+        data-bs-toggle="pill"
+        data-bs-target="#machine-learning-specialization"
+        type="button"
+        role="tab"
+        aria-controls="machine-learning-specialization"
+        aria-selected="false"
+      >
+        Machine Learning
+      </button>
+    </div>
+    <span class="tabs-note"><i class="bi bi-hand-index"></i> Tap a course</span>
+  </div>
+</div>
+
+<section class="bpst-section-light pb-4" aria-label="Course details">
+  <div class="container">
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="agentic-ai-engineering"
+        role="tabpanel"
+        aria-labelledby="t-agentic-ai-engineering"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-agentic-ai-engineering">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 01 · Build AI agents that reason, use tools and get work done</span>
+              <h2 id="h-agentic-ai-engineering">
+                <a href="/courses/agentic-ai-engineering" class="text-reset">Agentic AI Engineering</a>
+              </h2>
+              <p>
+                Go beyond chatbots. Learn to build production AI agents with LLM APIs, RAG, LangGraph and CrewAI, connect them to real
+                tools through function calling and MCP, and ship them with evaluation, guardrails and tracing.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Developers, B.Tech/MCA final-year students and working professionals with basic Python.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=agentic-ai-engineering"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/agentic-ai-engineering"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 – 5 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Intermediate</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">LLM Foundations &amp; Prompting</div>
+                  <ul>
+                    <li>How LLMs work: tokens, context, temperature</li>
+                    <li>Prompt patterns &amp; structured output</li>
+                    <li>OpenAI, Claude &amp; Gemini APIs</li>
+                    <li>Cost and latency control</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">RAG &amp; Vector Databases</div>
+                  <ul>
+                    <li>Embeddings &amp; chunking strategies</li>
+                    <li>FAISS, Chroma &amp; pgvector</li>
+                    <li>Hybrid search &amp; re-ranking</li>
+                    <li>Citations and grounding</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Tool Calling &amp; MCP</div>
+                  <ul>
+                    <li>Function / tool calling</li>
+                    <li>Model Context Protocol (MCP) servers</li>
+                    <li>Calling REST APIs &amp; databases</li>
+                    <li>Safe action design</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Agent Frameworks</div>
+                  <ul>
+                    <li>LangGraph state machines</li>
+                    <li>CrewAI &amp; AutoGen multi-agent teams</li>
+                    <li>Planning, memory &amp; reflection</li>
+                    <li>Human-in-the-loop approvals</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Evaluation &amp; Guardrails</div>
+                  <ul>
+                    <li>LLM evals &amp; test sets</li>
+                    <li>Hallucination &amp; safety checks</li>
+                    <li>Tracing with LangSmith</li>
+                    <li>Prompt-injection defence</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Deploying Agents</div>
+                  <ul>
+                    <li>FastAPI backends &amp; streaming</li>
+                    <li>Docker &amp; cloud deployment</li>
+                    <li>Monitoring &amp; cost dashboards</li>
+                    <li>Capstone demo day</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Customer-support agent with RAG over company docs</li>
+                    <li>Multi-agent research &amp; report writer</li>
+                    <li>Email/CRM automation agent with human approval</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Design and ship an AI agent end-to-end</li>
+                    <li>Build reliable RAG pipelines with citations</li>
+                    <li>Evaluate and monitor LLM apps in production</li>
+                    <li>Explain agent architecture confidently in interviews</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python</span><span class="bpst-chip dark">OpenAI / Claude / Gemini APIs</span
+                    ><span class="bpst-chip dark">LangChain</span><span class="bpst-chip dark">LangGraph</span
+                    ><span class="bpst-chip dark">CrewAI</span><span class="bpst-chip dark">MCP</span
+                    ><span class="bpst-chip dark">FAISS / Chroma</span><span class="bpst-chip dark">FastAPI</span
+                    ><span class="bpst-chip dark">Docker</span><span class="bpst-chip dark">LangSmith</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to Microsoft AI-102 and AWS Certified AI Practitioner
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <span></span>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="generative-ai-for-everyone">
+            Next: Generative AI for Everyone ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="generative-ai-for-everyone"
+        role="tabpanel"
+        aria-labelledby="t-generative-ai-for-everyone"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-generative-ai-for-everyone">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 02 · Use ChatGPT, Claude, Gemini &amp; Copilot to work 10× smarter — no coding</span>
+              <h2 id="h-generative-ai-for-everyone">
+                <a href="/courses/generative-ai-for-everyone" class="text-reset"
+                  >Generative AI for Everyone (Prompt Engineering)</a
+                >
+              </h2>
+              <p>
+                A practical, no-code course for students, office professionals, teachers and business owners. Master prompt
+                engineering, AI for Excel, PowerPoint and documents, image and video generation, and simple no-code automations.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted">Students of any stream, working professionals, managers, teachers and business owners.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=generative-ai-for-everyone"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/generative-ai-for-everyone"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">4 – 8 Weeks</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Beginner</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">How Generative AI Works</div>
+                  <ul>
+                    <li>LLMs in plain language</li>
+                    <li>What AI can and cannot do</li>
+                    <li>Choosing ChatGPT, Claude, Gemini or Copilot</li>
+                    <li>Privacy &amp; responsible use</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Prompt Engineering</div>
+                  <ul>
+                    <li>Role, context, task &amp; format</li>
+                    <li>Few-shot examples</li>
+                    <li>Chain-of-thought &amp; step prompts</li>
+                    <li>Reusable prompt templates</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">AI for Office Work</div>
+                  <ul>
+                    <li>Excel formulas &amp; analysis with AI</li>
+                    <li>PowerPoint decks in minutes</li>
+                    <li>Emails, reports &amp; summaries</li>
+                    <li>Meeting notes &amp; action items</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Creative AI</div>
+                  <ul>
+                    <li>Image generation &amp; editing</li>
+                    <li>AI video &amp; voice tools</li>
+                    <li>Social media content</li>
+                    <li>Brand consistency</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">No-code Automation</div>
+                  <ul>
+                    <li>Custom GPTs &amp; projects</li>
+                    <li>n8n / Zapier basics</li>
+                    <li>Auto-reply &amp; lead workflows</li>
+                    <li>Research assistants</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">AI Career Toolkit</div>
+                  <ul>
+                    <li>Resume &amp; LinkedIn with AI</li>
+                    <li>Interview prep with AI</li>
+                    <li>Portfolio of AI work</li>
+                    <li>AI ethics &amp; policy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Personal prompt library for your job</li>
+                    <li>AI-generated sales deck &amp; report</li>
+                    <li>No-code lead-reply automation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Write prompts that get reliable results</li>
+                    <li>Automate repetitive office tasks</li>
+                    <li>Create content and presentations with AI</li>
+                    <li>Use AI safely at work</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">ChatGPT</span><span class="bpst-chip dark">Claude</span
+                    ><span class="bpst-chip dark">Gemini</span><span class="bpst-chip dark">Microsoft Copilot</span
+                    ><span class="bpst-chip dark">Canva AI</span><span class="bpst-chip dark">n8n</span
+                    ><span class="bpst-chip dark">Zapier</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to Google AI Essentials and Microsoft AI-900 fundamentals
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="agentic-ai-engineering">‹ Agentic AI Engineering</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="mlops-llmops">Next: MLOps &amp; LLMOps ›</button>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="mlops-llmops" role="tabpanel" aria-labelledby="t-mlops-llmops" tabindex="0">
+        <article class="course" aria-labelledby="h-mlops-llmops">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 03 · Take ML and LLM models from notebook to production</span>
+              <h2 id="h-mlops-llmops"><a href="/courses/mlops-llmops" class="text-reset">MLOps &amp; LLMOps</a></h2>
+              <p>
+                Learn the engineering that keeps AI running: experiment tracking, data versioning, CI/CD for models, model serving,
+                monitoring and drift detection, and LLM evaluation and cost control on AWS and Azure.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b>
+                <span class="text-muted"
+                  >Data scientists, ML engineers, DevOps engineers and developers moving into AI platforms.</span
+                >
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=mlops-llmops"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/mlops-llmops"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">3 – 6 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Advanced</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">ML Lifecycle</div>
+                  <ul>
+                    <li>Problem framing to deployment</li>
+                    <li>Reproducible projects</li>
+                    <li>Feature stores intro</li>
+                    <li>Model registry concepts</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Tracking &amp; Versioning</div>
+                  <ul>
+                    <li>MLflow experiments</li>
+                    <li>DVC data versioning</li>
+                    <li>Model registry</li>
+                    <li>Artifact storage</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Containers &amp; Pipelines</div>
+                  <ul>
+                    <li>Docker for ML</li>
+                    <li>Kubernetes basics</li>
+                    <li>Kubeflow / Airflow pipelines</li>
+                    <li>GitHub Actions CI/CD</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Model Serving</div>
+                  <ul>
+                    <li>FastAPI &amp; BentoML</li>
+                    <li>vLLM for LLMs</li>
+                    <li>Batch vs real-time</li>
+                    <li>Autoscaling</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Monitoring</div>
+                  <ul>
+                    <li>Data &amp; concept drift</li>
+                    <li>Prometheus &amp; Grafana</li>
+                    <li>LLM evals in production</li>
+                    <li>Alerting</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Cloud ML Platforms</div>
+                  <ul>
+                    <li>AWS SageMaker</li>
+                    <li>Azure ML</li>
+                    <li>Cost optimisation</li>
+                    <li>Capstone deployment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>End-to-end ML pipeline with CI/CD</li>
+                    <li>LLM serving with vLLM + monitoring</li>
+                    <li>Drift detection dashboard</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Productionise ML and LLM models</li>
+                    <li>Automate training &amp; deployment pipelines</li>
+                    <li>Monitor model quality and cost</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python</span><span class="bpst-chip dark">MLflow</span
+                    ><span class="bpst-chip dark">DVC</span><span class="bpst-chip dark">Docker</span
+                    ><span class="bpst-chip dark">Kubernetes</span><span class="bpst-chip dark">FastAPI</span
+                    ><span class="bpst-chip dark">vLLM</span><span class="bpst-chip dark">Prometheus</span
+                    ><span class="bpst-chip dark">Grafana</span><span class="bpst-chip dark">SageMaker</span
+                    ><span class="bpst-chip dark">Azure ML</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="bi bi-award text-warning"></i> Maps to AWS ML Engineer Associate and Azure DP-100
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="generative-ai-for-everyone">
+            ‹ Generative AI for Everyone
+          </button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="artificial-intelligence-specialization">
+            Next: Artificial Intelligence ›
+          </button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="artificial-intelligence-specialization"
+        role="tabpanel"
+        aria-labelledby="t-artificial-intelligence-specialization"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-artificial-intelligence-specialization">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 04 · Specialization program</span>
+              <h2 id="h-artificial-intelligence-specialization">
+                <a href="/courses/artificial-intelligence-specialization" class="text-reset"
+                  >Artificial Intelligence (AI + Generative AI)</a
+                >
+              </h2>
+              <p>
+                Understand how intelligent systems work and build real AI products — search, reasoning, NLP, computer vision and
+                modern LLM-powered agents.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Students and developers curious about building AI products.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=artificial-intelligence-specialization"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/artificial-intelligence-specialization"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">4 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Python basics required</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">AI Foundations</div>
+                  <ul>
+                    <li>What is AI · types of AI</li>
+                    <li>Intelligent agents</li>
+                    <li>Search: BFS, DFS, A*</li>
+                    <li>Knowledge representation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Python for AI</div>
+                  <ul>
+                    <li>NumPy &amp; Pandas</li>
+                    <li>Data handling</li>
+                    <li>APIs &amp; JSON</li>
+                    <li>Jupyter workflow</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">NLP</div>
+                  <ul>
+                    <li>Text preprocessing</li>
+                    <li>Sentiment analysis</li>
+                    <li>Embeddings</li>
+                    <li>Transformers overview</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Computer Vision</div>
+                  <ul>
+                    <li>Images as data</li>
+                    <li>OpenCV basics</li>
+                    <li>Face / object detection</li>
+                    <li>Pre-trained models</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Generative AI</div>
+                  <ul>
+                    <li>LLM APIs (OpenAI, Gemini, Claude)</li>
+                    <li>Prompt engineering</li>
+                    <li>RAG with vector DBs</li>
+                    <li>LangChain</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">AI Agents &amp; Ethics</div>
+                  <ul>
+                    <li>Tool-using agents</li>
+                    <li>Multi-step workflows</li>
+                    <li>Responsible AI &amp; bias</li>
+                    <li>Deploying AI apps</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Document Q&amp;A chatbot (RAG)</li>
+                    <li>Face-detection attendance app</li>
+                    <li>AI study-assistant agent</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Explain core AI concepts clearly</li>
+                    <li>Build NLP and vision mini-apps</li>
+                    <li>Create a RAG chatbot over documents</li>
+                    <li>Build a simple AI agent</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python</span><span class="bpst-chip dark">OpenCV</span
+                    ><span class="bpst-chip dark">Hugging Face</span><span class="bpst-chip dark">OpenAI API</span
+                    ><span class="bpst-chip dark">LangChain</span><span class="bpst-chip dark">ChromaDB</span
+                    ><span class="bpst-chip dark">Streamlit</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> BPST AI Certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="mlops-llmops">‹ MLOps &amp; LLMOps</button>
+          <button class="btn btn-bpst-primary btn-sm" data-tab-go="machine-learning-specialization">Next: Machine Learning ›</button>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="machine-learning-specialization"
+        role="tabpanel"
+        aria-labelledby="t-machine-learning-specialization"
+        tabindex="0"
+      >
+        <article class="course" aria-labelledby="h-machine-learning-specialization">
+          <div class="course-head">
+            <div>
+              <span class="bpst-chip">Course 05 · Specialization program</span>
+              <h2 id="h-machine-learning-specialization">
+                <a href="/courses/machine-learning-specialization" class="text-reset">Machine Learning</a>
+              </h2>
+              <p>
+                A rigorous, hands-on ML course — maths intuition, classical algorithms, model evaluation, deep learning basics and
+                deployment.
+              </p>
+              <p class="small mt-2 mb-0">
+                <b>Best for:</b> <span class="text-muted">Engineering / CS / maths students targeting ML engineer roles.</span>
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-2">
+              <a class="btn btn-bpst-gold btn-sm bpst-offer-live" href="/prebook?course=machine-learning-specialization"
+                ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book ₹49</a
+              >
+              <a class="btn btn-bpst-outline-dark btn-sm" href="/courses/machine-learning-specialization"
+                >Full syllabus <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="course-facts">
+            <div>
+              <div class="k">Duration</div>
+              <div class="v">4 Months</div>
+            </div>
+            <div>
+              <div class="k">Level</div>
+              <div class="v">Python basics required</div>
+            </div>
+            <div>
+              <div class="k">Mode</div>
+              <div class="v">Classroom (Lucknow) / Live online</div>
+            </div>
+            <div>
+              <div class="k">Pre-book</div>
+              <div class="v gold">₹49 till Diwali</div>
+            </div>
+          </div>
+          <div class="course-body">
+            <h3>Syllabus — module by module</h3>
+            <div class="row g-3">
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 01</div>
+                  <div class="mt">Maths &amp; Statistics</div>
+                  <ul>
+                    <li>Vectors &amp; matrices</li>
+                    <li>Probability &amp; distributions</li>
+                    <li>Descriptive stats</li>
+                    <li>Gradient descent</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 02</div>
+                  <div class="mt">Data Preparation</div>
+                  <ul>
+                    <li>EDA with Pandas</li>
+                    <li>Missing values &amp; outliers</li>
+                    <li>Encoding &amp; scaling</li>
+                    <li>Feature engineering</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 03</div>
+                  <div class="mt">Regression &amp; Classification</div>
+                  <ul>
+                    <li>Linear, polynomial, logistic</li>
+                    <li>KNN, Naive Bayes, SVM</li>
+                    <li>Decision trees</li>
+                    <li>Random forest &amp; XGBoost</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 04</div>
+                  <div class="mt">Unsupervised Learning</div>
+                  <ul>
+                    <li>K-means</li>
+                    <li>Hierarchical clustering</li>
+                    <li>PCA</li>
+                    <li>Recommendation systems</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 05</div>
+                  <div class="mt">Model Evaluation</div>
+                  <ul>
+                    <li>Train/test, cross-validation</li>
+                    <li>Accuracy, precision, recall, F1</li>
+                    <li>ROC-AUC</li>
+                    <li>Hyper-parameter tuning</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="module">
+                  <div class="mno">Module 06</div>
+                  <div class="mt">Deep Learning &amp; MLOps</div>
+                  <ul>
+                    <li>Neural networks</li>
+                    <li>Keras / TensorFlow</li>
+                    <li>Model serving with FastAPI</li>
+                    <li>Deploy on cloud</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-hammer text-primary"></i> Projects you build</h4>
+                  <ul class="ticks">
+                    <li>Loan-approval predictor</li>
+                    <li>Movie recommender</li>
+                    <li>Handwritten digit recognizer</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-trophy text-success"></i> You will be able to</h4>
+                  <ul class="ticks">
+                    <li>Choose, train and tune the right algorithm</li>
+                    <li>Evaluate models with correct metrics</li>
+                    <li>Build a neural network</li>
+                    <li>Deploy an ML model as an API</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="side-box">
+                  <h4><i class="bi bi-tools" style="color: var(--bpst-purple-500)"></i> Tools &amp; tech</h4>
+                  <div class="tag-row">
+                    <span class="bpst-chip dark">Python</span><span class="bpst-chip dark">Scikit-learn</span
+                    ><span class="bpst-chip dark">XGBoost</span><span class="bpst-chip dark">TensorFlow</span
+                    ><span class="bpst-chip dark">Keras</span><span class="bpst-chip dark">Pandas</span
+                    ><span class="bpst-chip dark">FastAPI</span>
+                  </div>
+                  <p class="small text-muted mt-3 mb-0"><i class="bi bi-award text-warning"></i> BPST ML Certificate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="pane-nav">
+          <button class="btn btn-bpst-outline-dark btn-sm" data-tab-go="artificial-intelligence-specialization">
+            ‹ Artificial Intelligence
+          </button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white border-top" aria-labelledby="rel-title">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-4">
+      <span class="bpst-pill bpst-pill-blue mb-2">Also consider</span>
+      <h2 class="fw-bold" id="rel-title">Related Industrial Training Tracks</h2>
+      <p class="text-muted">Project-based 45-day, 3-month and 6-month tracks that pair well with ai &amp; generative ai.</p>
+    </div>
+    <div class="row g-4">
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="generative ai &amp; agentic ai create | automate | augment | build the next ai era python openai api gemini claude langchain llamaindex chromadb pinecone fastapi industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-hot-badge"><i class="bi bi-fire"></i> In demand</span>
+          </div>
+          <div class="bpst-course-logos">
+            <img src="/site/img/tech/langchain.svg" alt="" width="93" height="28" loading="lazy" /><img
+              src="/site/img/tech/openai.svg"
+              alt=""
+              width="93"
+              height="28"
+              loading="lazy"
+            /><img src="/site/img/tech/python.svg" alt="" width="93" height="28" loading="lazy" />
+          </div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/generative-ai-agentic-ai">Generative AI &amp; Agentic AI</a>
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Create | Automate | Augment | Build the Next AI Era</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Learn the cutting-edge generation of AI with Large Language Models (LLMs), Retrieval Augmented Generation (RAG),
+            autonomous AI agents, and intelligent workflows.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">Prompt Engineering</span><span class="bpst-tech-pill">LLMs (OpenAI, Gemini, Claude)</span
+              ><span class="bpst-tech-pill">RAG Architectures</span><span class="bpst-tech-pill">Vector DBs (Chroma, Pinecone)</span
+              ><span class="bpst-tech-pill">LangChain &amp; LlamaIndex</span
+              ><span class="bpst-tech-pill text-primary fw-bold">+3 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/generative-ai-agentic-ai" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=generative-ai-agentic-ai" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=generative-ai-agentic-ai#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 bpst-course-col"
+        data-category="industrial-training"
+        data-search="artificial intelligence &amp; machine learning learn intelligence. build real solutions. python scikit-learn numpy pandas tensorflow keras fastapi industrial training"
+      >
+        <article class="bpst-course-card">
+          <div class="bpst-course-header">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-2 py-1">Industrial Training</span>
+            <span class="bpst-course-number">02</span>
+          </div>
+          <div class="bpst-course-logos"><img src="/site/img/tech/python.svg" alt="" width="93" height="28" loading="lazy" /></div>
+          <h3 class="fw-bold mb-2" style="font-size: 1.2rem">
+            <a class="bpst-course-title" href="/courses/artificial-intelligence-machine-learning"
+              >Artificial Intelligence &amp; Machine Learning</a
+            >
+          </h3>
+          <p class="text-primary fw-semibold small mb-2">Learn Intelligence. Build Real Solutions.</p>
+          <p class="text-muted small mb-3 flex-grow-1">
+            Build intelligent solutions with machine learning algorithms, predictive systems, and real-world AI applications from math
+            foundations to production models.
+          </p>
+          <div class="mb-3">
+            <strong class="d-block small text-dark mb-1">Key Technologies:</strong>
+            <div class="bpst-tech-pill-list">
+              <span class="bpst-tech-pill">Python for AI</span><span class="bpst-tech-pill">Scikit-Learn</span
+              ><span class="bpst-tech-pill">NumPy &amp; Pandas</span><span class="bpst-tech-pill">Supervised Learning</span
+              ><span class="bpst-tech-pill">Unsupervised Learning</span
+              ><span class="bpst-tech-pill text-primary fw-bold">+3 more</span>
+            </div>
+          </div>
+          <div class="p-2 bg-light rounded-2 mb-3 d-flex justify-content-between gap-2 flex-wrap">
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-clock text-primary me-1"></i><strong>45 Days · 3 Months · 6 Months</strong></small
+            >
+            <small class="text-muted" style="font-size: 0.75rem"
+              ><i class="bi bi-bar-chart-steps text-primary me-1"></i>Beginner friendly</small
+            >
+          </div>
+          <div class="d-grid gap-2 pt-2 border-top">
+            <a href="/courses/artificial-intelligence-machine-learning" class="btn btn-outline-primary btn-sm"
+              ><i class="bi bi-file-text me-1"></i> View Syllabus &amp; Roadmap</a
+            >
+            <a href="/prebook?course=artificial-intelligence-machine-learning" class="btn btn-bpst-gold btn-sm bpst-offer-live"
+              ><span class="bpst-diya sm" aria-hidden="true"></span> Pre-book for ₹49</a
+            >
+            <a
+              href="/contact?course=artificial-intelligence-machine-learning#enquiry"
+              class="btn btn-light btn-sm text-dark border bpst-offer-closed-only"
+              >Enquire for this course</a
+            >
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bpst-section-light border-top" aria-labelledby="catfaq-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="fw-bold text-center mb-4" id="catfaq-title">AI &amp; Generative AI — Frequently Asked Questions</h2>
+
+        <div class="accordion bpst-faq-accordion" id="catFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h0">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c0"
+                aria-expanded="true"
+                aria-controls="catFaq-c0"
+              >
+                Which AI course should a beginner choose?
+              </button>
+            </h3>
+            <div id="catFaq-c0" class="accordion-collapse collapse show" aria-labelledby="catFaq-h0" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                If you do not code, start with Generative AI for Everyone (4–8 weeks). If you know basic Python, choose the AI
+                specialization or Agentic AI Engineering to build RAG apps and AI agents.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c1"
+                aria-expanded="false"
+                aria-controls="catFaq-c1"
+              >
+                Is Agentic AI a good career in 2026?
+              </button>
+            </h3>
+            <div id="catFaq-c1" class="accordion-collapse collapse" aria-labelledby="catFaq-h1" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Yes. Gartner expects around 40% of enterprise applications to include task-specific AI agents by the end of 2026, and
+                NASSCOM reports a large gap between AI talent demand and supply in India.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="catFaq-h2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#catFaq-c2"
+                aria-expanded="false"
+                aria-controls="catFaq-c2"
+              >
+                Do AI courses include projects?
+              </button>
+            </h3>
+            <div id="catFaq-c2" class="accordion-collapse collapse" aria-labelledby="catFaq-h2" data-bs-parent="#catFaq">
+              <div class="accordion-body">
+                Every AI course ends with a capstone: a RAG chatbot, a multi-agent workflow or a deployed ML model, pushed to GitHub
+                with a live demo.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="bpst-updated text-center mt-3"><i class="bi bi-arrow-clockwise"></i> Last updated 2026-09-25</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bpst-gap-cta-strip container mb-5">
+  <div>
+    <h2 class="h5 fw-bold text-white mb-1">
+      <span class="bpst-diya sm" aria-hidden="true"></span> Diwali gift: seat pre-booking for ₹49
+    </h2>
+    <p class="text-white-50 small mb-0">
+      Pick any ai &amp; generative ai course and lock your seat before Diwali, 8 Nov 2026. ₹49 is adjusted in your course fee.
+    </p>
+  </div>
+  <a href="/prebook" class="btn btn-bpst-gold btn-sm bpst-offer-live">Pre-book for ₹49</a>
+  <a href="/contact#enquiry" class="btn btn-bpst-gold btn-sm bpst-offer-closed-only">Enquire now</a>
+</section>
